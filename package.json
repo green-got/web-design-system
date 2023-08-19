@@ -1,11 +1,13 @@
 {
-  "name": "green-got-web-design-system",
+  "name": "@green-got/web-design-system",
   "version": "0.0.1",
   "description": "Green-Got design system",
   "homepage": "https://green-got.github.io/web-design-system/",
   "repository": "https://github.com/green-got/web-design-system",
   "author": "fabien-h <fabien.huet@gmail.com>",
   "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
   "scripts": {
     "build-docs": "node utils/build-docs.mjs",
     "build": "ladle build",
