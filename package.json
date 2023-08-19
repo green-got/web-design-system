@@ -7,12 +7,14 @@
   "author": "fabien-h <fabien.huet@gmail.com>",
   "private": true,
   "scripts": {
+    "build-docs": "node utils/build-docs.mjs",
     "build": "ladle build",
     "commit": "git-cz",
     "dev": "ladle serve",
     "eslint": "eslint .",
     "format": "npm run prettier -- --write",
-    "prettier": "prettier ."
+    "prettier": "prettier .",
+    "preview-build": "ladle preview"
   },
   "dependencies": {
     "@ladle/react": "^2.17.2",
