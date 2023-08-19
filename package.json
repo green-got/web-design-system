@@ -1,0 +1,52 @@
+{
+  "name": "green-got-web-design-system",
+  "version": "0.0.1",
+  "description": "Green-Got design system",
+  "homepage": "https://github.com/--",
+  "repository": "https://github.com/--",
+  "bugs": {
+    "url": "https://github.com/--",
+    "email": "fabien.huet@gmail.com"
+  },
+  "author": "fabien-h <fabien.huet@gmail.com>",
+  "private": true,
+  "scripts": {
+    "build": "ladle build",
+    "commit": "git-cz",
+    "dev": "ladle serve",
+    "eslint": "eslint .",
+    "format": "npm run prettier -- --write",
+    "prettier": "prettier ."
+  },
+  "dependencies": {
+    "@ladle/react": "^2.17.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/node": "^20.5.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "typescript": "^5.1.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,yml,yaml,css,scss,ts,tsx,md}": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
