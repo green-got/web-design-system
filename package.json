@@ -2,12 +2,8 @@
   "name": "green-got-web-design-system",
   "version": "0.0.1",
   "description": "Green-Got design system",
-  "homepage": "https://github.com/--",
-  "repository": "https://github.com/--",
-  "bugs": {
-    "url": "https://github.com/--",
-    "email": "fabien.huet@gmail.com"
-  },
+  "homepage": "https://green-got.github.io/web-design-system/",
+  "repository": "https://github.com/green-got/web-design-system",
   "author": "fabien-h <fabien.huet@gmail.com>",
   "private": true,
   "scripts": {
