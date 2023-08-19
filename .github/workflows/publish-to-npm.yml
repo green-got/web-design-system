@@ -1,0 +1,26 @@
+on:
+  push:
+    branches: main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup a node environement
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      
+      - name: Generate package-lock.json and install dependencies
+        run: npm install
+      
+      # - name: Test our code
+      #   run: npm test
+      
+      - name: Publish to npm
+        uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
