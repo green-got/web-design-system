@@ -5,4 +5,6 @@ export default {
   title: 'Components / Pagination',
 } satisfies StoryDefault;
 
-export const Salut: Story = () => <p>Here is a pagination component story.</p>;
+export const PaginationStory: Story = () => (
+  <p>Here is a pagination component story.</p>
+);
