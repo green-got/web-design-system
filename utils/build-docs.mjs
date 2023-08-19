@@ -34,9 +34,9 @@ console.log('Building documentation.');
 child_process.execSync(`pnpm build`, { stdio: 'inherit' });
 
 const indexPath = 'docs/index.html';
-let indexContents = fs.readFileSync(indexPath, 'utf8');
-indexContents.replace(/\"\/assets\//g, '"/web-design-system/assets/');
-fs.writeFileSync(indexPath, indexContents, 'utf8');
+const indexContents = fs.readFileSync(indexPath, 'utf8');
+const newContent = indexContents.replace(/\"\/assets\//g, '"/web-design-system/assets/');
+fs.writeFileSync(indexPath, newContent, 'utf8');
 
 console.log('\u001b[42m\u001b[97mDocumentation build.\u001b[0m');
 
