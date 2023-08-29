@@ -29,6 +29,7 @@
     "@types/node": "^20.5.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "prettier": "^3.0.3",
     "typescript": "^5.1.6"
   },
   "engines": {

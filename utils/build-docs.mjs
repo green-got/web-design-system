@@ -1,10 +1,10 @@
 /**
  * This script will build the documentation with Ladle
- * and publish it as a static website to 
+ * and publish it as a static website to
  * https://green-got.github.io/web-design-system/
- * 
+ *
  * This is a Github page.
-*/
+ */
 
 import fs from 'fs';
 import child_process from 'child_process';
@@ -13,8 +13,10 @@ import child_process from 'child_process';
  * We check that the repo is clean
  */
 const gitStatusMessage = child_process.execSync('git status').toString();
-if(!gitStatusMessage.includes('working tree clean')) {
-  console.error('\u001b[41m\u001b[37mClean your repository before building the documentation.\u001b[0m');
+if (!gitStatusMessage.includes('working tree clean')) {
+  console.error(
+    '\u001b[41m\u001b[37mClean your repository before building the documentation.\u001b[0m',
+  );
   process.exit(0);
 }
 
@@ -29,20 +31,23 @@ console.log('\u001b[42m\u001b[97mHistory cleaned.\u001b[0m');
 
 /**
  * Build the documentation
-*/
+ */
 console.log('Building documentation.');
 child_process.execSync(`pnpm build`, { stdio: 'inherit' });
 
 const indexPath = 'docs/index.html';
 const indexContents = fs.readFileSync(indexPath, 'utf8');
-const newContent = indexContents.replace(/\"\/assets\//g, '"/web-design-system/assets/');
+const newContent = indexContents.replace(
+  /\"\/assets\//g,
+  '"/web-design-system/assets/',
+);
 fs.writeFileSync(indexPath, newContent, 'utf8');
 
 console.log('\u001b[42m\u001b[97mDocumentation build.\u001b[0m');
 
 /**
  * Git tasks
-*/
+ */
 const formatDate = (date) => {
   const yyyy = date.getFullYear();
   const MM = String(date.getMonth() + 1).padStart(2, '0');
@@ -52,9 +57,13 @@ const formatDate = (date) => {
   const ss = String(date.getSeconds()).padStart(2, '0');
 
   return `${yyyy}/${MM}/${dd} ${hh}:${mm}:${ss}`;
-}
+};
 child_process.execSync('git add .');
-child_process.execSync(`git commit -m "docs(build): build the static documentation ${formatDate(new Date())}"`);
+child_process.execSync(
+  `git commit -m "docs(build): build the static documentation ${formatDate(
+    new Date(),
+  )}"`,
+);
 
 /**
  * Summary
