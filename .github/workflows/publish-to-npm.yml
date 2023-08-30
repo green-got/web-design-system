@@ -12,7 +12,7 @@ jobs:
       - name: Setup a node environement
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Generate package-lock.json and install dependencies
         run: npm install

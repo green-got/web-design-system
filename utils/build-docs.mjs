@@ -33,7 +33,7 @@ console.log('\u001b[42m\u001b[97mHistory cleaned.\u001b[0m');
  * Build the documentation
  */
 console.log('Building documentation.');
-child_process.execSync(`pnpm build`, { stdio: 'inherit' });
+child_process.execSync('pnpm build', { stdio: 'inherit' });
 
 const indexPath = 'docs/index.html';
 const indexContents = fs.readFileSync(indexPath, 'utf8');

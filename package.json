@@ -13,10 +13,13 @@
     "build": "ladle build",
     "commit": "git-cz",
     "dev": "ladle serve",
-    "eslint": "eslint .",
-    "format": "npm run prettier -- --write",
-    "prettier": "prettier .",
-    "preview-build": "ladle preview"
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "pre-commit": "pnpm lint-staged",
+    "pre-push": "pnpm run lint && pnpm run typecheck && pnpm test",
+    "prepare": "husky install",
+    "preview-build": "ladle preview",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@ladle/react": "^2.17.2",
@@ -24,25 +27,23 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.0.0",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@types/node": "^20.5.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "prettier": "^3.0.3",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
     "typescript": "^5.1.6"
   },
   "engines": {
     "node": ">=18.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,json,yml,yaml,css,scss,ts,tsx,md}": [
-      "prettier --write"
+      "biome format --write .",
+      "biome lint ."
     ]
   },
   "config": {
