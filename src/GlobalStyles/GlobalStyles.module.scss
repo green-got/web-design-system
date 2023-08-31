@@ -1,0 +1,148 @@
+/**
+  Reset
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/**
+  Colors
+*/
+:root {
+  --colors-neutral-black: #000;
+  --colors-neutral-dark: #4d4c4a;
+  --colors-neutral-regular: #8a8886;
+  --colors-neutral-medium: #e5e2df;
+  --colors-neutral-light: #f9f8f6;
+  --colors-neutral-sand: #faf5ef;
+  --colors-neutral-white: #fff;
+
+  --colors-primary-dark: #134e4a;
+  --colors-primary: #0d9488;
+  --colors-primary-medium: #edf7f6;
+  --colors-primary-light: #e7f4f3;
+
+  --colors-error-dark: #923232;
+  --colors-error: #f87171;
+  --colors-error-medium: #ffb2b2;
+  --colors-error-light: #fff1f1;
+
+  --colors-success-dark: #1aa06f;
+  --colors-success: #34d399;
+  --colors-success-medium: #a1ffdc;
+  --colors-success-light: #eefff9;
+
+  --colors-warning-dark: #995a1f;
+  --colors-warning: #ffa855;
+  --colors-warning-medium: #ffcfa1;
+  --colors-warning-light: #fff6ee;
+}
+
+[data-theme="dark"] {
+  --colors-neutral-black: #fff;
+  --colors-neutral-dark: #faf5ef;
+  --colors-neutral-regular: #f9f8f6;
+  --colors-neutral-medium: #e5e2df;
+  --colors-neutral-light: #8a8886;
+  --colors-neutral-sand: #4d4c4a;
+  --colors-neutral-white: #000;
+
+  --colors-primary-dark: #134e4a;
+  --colors-primary: #0d9488;
+  --colors-primary-medium: #edf7f6;
+  --colors-primary-light: #e7f4f3;
+
+  --colors-error-dark: #923232;
+  --colors-error: #f87171;
+  --colors-error-medium: #ffb2b2;
+  --colors-error-light: #fff1f1;
+
+  --colors-success-dark: #1aa06f;
+  --colors-success: #34d399;
+  --colors-success-medium: #a1ffdc;
+  --colors-success-light: #eefff9;
+
+  --colors-warning-dark: #995a1f;
+  --colors-warning: #ffa855;
+  --colors-warning-medium: #ffcfa1;
+  --colors-warning-light: #fff6ee;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  background-color: var(--colors-neutral-sand);
+  color: var(--colors-primary-dark);
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:global(.ladle-background) {
+  display: none;
+}
+
+/**
+  Typography
+*/
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--colors-primary-dark);
+}
+
+:global(.strong) {
+  font-weight: 700;
+}
+
+:global(.caption) {
+  font-size: 1.2rem;
+}
+
+:global(.captionBold) {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
