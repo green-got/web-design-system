@@ -48,6 +48,11 @@
   --shadow-light: 0px 0px 8px 0px rgba(61, 60, 59, 0.08);
   --shadow-regular: 0px 0px 8px 0px rgba(61, 60, 59, 0.12);
   --shadow-deep: 0px 0px 16px 0px rgba(61, 60, 59, 0.15);
+
+  --corner--xsmall: 4px;
+  --corner--small: 8px;
+  --corner--medium: 12px;
+  --corner--big: 18px;
 }
 
 [data-theme="dark"] {
