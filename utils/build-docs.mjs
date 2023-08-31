@@ -38,8 +38,8 @@ child_process.execSync('pnpm build', { stdio: 'inherit' });
 const indexPath = 'docs/index.html';
 const indexContents = fs.readFileSync(indexPath, 'utf8');
 const newContent = indexContents.replace(
-  /\"\/assets\//g,
-  '"/web-design-system/assets/',
+  /<head>/g,
+  '<head><base href="/web-design-system/">',
 );
 fs.writeFileSync(indexPath, newContent, 'utf8');
 

@@ -3,7 +3,7 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { GlobalStyles } from './GlobalStyles';
 
 export default {
-  title: 'Foundations / GlobalStyless',
+  title: 'Foundations / Global Styles',
 } satisfies StoryDefault;
 
 export const GlobalStylesMain: Story = () => (
