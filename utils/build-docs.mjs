@@ -35,13 +35,20 @@ console.log('\u001b[42m\u001b[97mHistory cleaned.\u001b[0m');
 console.log('Building documentation.');
 child_process.execSync('pnpm build', { stdio: 'inherit' });
 
-const indexPath = 'docs/index.html';
-const indexContents = fs.readFileSync(indexPath, 'utf8');
-const newContent = indexContents.replace(
-  /<head>/g,
-  '<head><base href="/web-design-system/">',
-);
-fs.writeFileSync(indexPath, newContent, 'utf8');
+[
+  'docs/index.html',
+  ...fs
+    .readdirSync('./docs/assets')
+    .map((f) => `docs/assets/${f}`)
+    .filter((f) => f.endsWith('.js') || f.endsWith('.css')),
+].forEach((filePath) => {
+  const indexContents = fs.readFileSync(filePath, 'utf8');
+  const newContent = indexContents
+    .replace(/\"assets\//g, '"web-design-system/assets/')
+    .replace(/\"\/assets\//g, '"/web-design-system/assets/');
+
+  fs.writeFileSync(filePath, newContent, 'utf8');
+});
 
 console.log('\u001b[42m\u001b[97mDocumentation build.\u001b[0m');
 
