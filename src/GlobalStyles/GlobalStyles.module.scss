@@ -12,6 +12,9 @@
 
 /**
   Colors
+  Shadows
+  Spacings
+  Roundings
 */
 :root {
   --colors-neutral-black: #000;
@@ -41,6 +44,10 @@
   --colors-warning: #ffa855;
   --colors-warning-medium: #ffcfa1;
   --colors-warning-light: #fff6ee;
+
+  --shadow-light: 0px 0px 8px 0px rgba(61, 60, 59, 0.08);
+  --shadow-regular: 0px 0px 8px 0px rgba(61, 60, 59, 0.12);
+  --shadow-deep: 0px 0px 16px 0px rgba(61, 60, 59, 0.15);
 }
 
 [data-theme="dark"] {

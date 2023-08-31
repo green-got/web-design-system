@@ -57,19 +57,23 @@ export const Colors: Story = () => (
     </section>
 
     <section className={styles.container}>
-      <h2>Neutral</h2>
+      <h2>Primary</h2>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-primary-dark)' }} />
         <p>--colors-primary-dark</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-primary)' }} />
         <p>--colors-primary</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-primary-medium)' }} />
         <p>--colors-primary-medium</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-primary-light)' }} />
         <p>--colors-primary-light</p>
@@ -78,18 +82,22 @@ export const Colors: Story = () => (
 
     <section className={styles.container}>
       <h2>Error</h2>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-error-dark)' }} />
         <p>--colors-error-dark</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-error)' }} />
         <p>--colors-error</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-error-medium)' }} />
         <p>--colors-error-medium</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-error-light)' }} />
         <p>--colors-error-light</p>
@@ -98,18 +106,22 @@ export const Colors: Story = () => (
 
     <section className={styles.container}>
       <h2>Success</h2>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-success-dark)' }} />
         <p>--colors-success-dark</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-success)' }} />
         <p>--colors-success</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-success-medium)' }} />
         <p>--colors-success-medium</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-success-light)' }} />
         <p>--colors-success-light</p>
@@ -118,18 +130,22 @@ export const Colors: Story = () => (
 
     <section className={styles.container}>
       <h2>Warning</h2>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-warning-dark)' }} />
         <p>--colors-warning-dark</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-warning)' }} />
         <p>--colors-warning</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-warning-medium)' }} />
         <p>--colors-warning-medium</p>
       </div>
+
       <div>
         <div style={{ backgroundColor: 'var(--colors-warning-light)' }} />
         <p>--colors-warning-light</p>
