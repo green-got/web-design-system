@@ -8,7 +8,9 @@ export default {
 } satisfies StoryDefault;
 
 export const Colors: Story = () => (
-  <GlobalStyles>
+  <>
+    <GlobalStyles />
+
     <h1>Colors</h1>
 
     <hr />
@@ -151,5 +153,5 @@ export const Colors: Story = () => (
         <p>--colors-warning-light</p>
       </div>
     </section>
-  </GlobalStyles>
+  </>
 );

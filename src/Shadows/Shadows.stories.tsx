@@ -8,7 +8,9 @@ export default {
 } satisfies StoryDefault;
 
 export const Shadows: Story = () => (
-  <GlobalStyles>
+  <>
+    <GlobalStyles />
+
     <h1>Shadows</h1>
 
     <hr />
@@ -33,5 +35,5 @@ export const Shadows: Story = () => (
         <p>--shadow-deep</p>
       </div>
     </section>
-  </GlobalStyles>
+  </>
 );

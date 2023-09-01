@@ -7,10 +7,12 @@ export default {
 } satisfies StoryDefault;
 
 export const GlobalStylesMain: Story = () => (
-  <GlobalStyles>
+  <>
+    <GlobalStyles />
+
     <h1>
       This is an empty story to be a template including the global styles
       component.
     </h1>
-  </GlobalStyles>
+  </>
 );

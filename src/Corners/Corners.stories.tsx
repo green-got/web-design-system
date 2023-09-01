@@ -8,7 +8,9 @@ export default {
 } satisfies StoryDefault;
 
 export const Corners: Story = () => (
-  <GlobalStyles>
+  <>
+    <GlobalStyles />
+
     <h1>Corners</h1>
 
     <hr />
@@ -38,5 +40,5 @@ export const Corners: Story = () => (
         <p>--corner--big</p>
       </div>
     </section>
-  </GlobalStyles>
+  </>
 );

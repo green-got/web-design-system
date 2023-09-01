@@ -7,7 +7,9 @@ export default {
 } satisfies StoryDefault;
 
 export const Typography: Story = () => (
-  <GlobalStyles>
+  <>
+    <GlobalStyles />
+
     <h1>Typography</h1>
 
     <hr />
@@ -49,5 +51,5 @@ export const Typography: Story = () => (
       vivamus ullamcorper. Sit lobortis sed cras pharetra. Eget pharetra, eu
       vulputate eu. Donec gravida elit commodo, arcu, id diam sed turpis.
     </p>
-  </GlobalStyles>
+  </>
 );

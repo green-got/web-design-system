@@ -1,7 +1,6 @@
 import React from 'react';
+import './GlobalStyles.scss';
 
-import './GlobalStyles.module.scss';
-
-export const GlobalStyles = ({ children }) => {
-  return <>{children}</>;
+export const GlobalStyles = () => {
+  return <React.Fragment />;
 };

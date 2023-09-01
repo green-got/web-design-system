@@ -1,17 +1,20 @@
 import React from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { Button } from './Button';
+import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
 export default {
   title: 'Components / Buttons',
 } satisfies StoryDefault;
 
 export const ButtonMain: Story = () => (
-  <p>
+  <>
+    <GlobalStyles />
+
     <h1>button</h1>
 
     <Button />
-  </p>
+  </>
 );
 
 export const PrimaryButton: Story = () => (
