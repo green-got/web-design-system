@@ -1,0 +1,94 @@
+.container {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--colors-neutral-sand);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1.5s linear infinite;
+
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--colors-neutral-sand);
+    width: 6px;
+    height: 6px;
+    transform: translate(0px, 0px);
+    border-radius: 50%;
+  }
+
+  &:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: var(--colors-neutral-sand);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.small {
+  width: 16px;
+  height: 16px;
+  border-width: 1px;
+  animation: rotation 1s linear infinite;
+
+  &::after {
+    width: 4px;
+    height: 4px;
+  }
+
+  &:before {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.large {
+  width: 48px;
+  height: 48px;
+  border-width: 3px;
+  animation: rotation 2s linear infinite;
+
+  &::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  &:before {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.dark {
+  border: 2px solid var(--colors-primary);
+
+  &::after {
+    background: var(--colors-primary);
+  }
+
+  &:before {
+    background: var(--colors-primary);
+  }
+}
+
+.light {}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
