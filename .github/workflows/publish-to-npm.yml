@@ -17,8 +17,8 @@ jobs:
       - name: Generate package-lock.json and install dependencies
         run: npm install
 
-      # - name: Test our code
-      #   run: npm test
+      - name: Test our code
+        run: npm test
 
       - name: Publish to npm
         uses: JS-DevTools/npm-publish@v2
