@@ -19,7 +19,8 @@
     "pre-push": "pnpm run lint && pnpm run typecheck && pnpm test",
     "prepare": "husky install",
     "preview-build": "ladle preview",
-    "test": "vitest",
+    "test": "vitest run",
+    "test-watch": "vitest",
     "typecheck": "tsc"
   },
   "dependencies": {
