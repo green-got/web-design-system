@@ -1,0 +1,26 @@
+button[role="checkbox"] {
+	background-color: var(--colors-neutral-white);
+  border-color: var(--colors-neutral-regular);
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 2px;
+  color: var(--colors-neutral-white);
+  height: 24px;
+  margin: 0.8rem 0.8rem 0.8rem 0;
+  // opacity: disabled ? 0.3 : 1;
+  width: 24px;
+}
+
+button[role="checkbox"]:disabled {
+  opacity: 0.3;
+}
+
+button[role="checkbox"][aria-checked="true"] {
+  background-color: var(--colors-primary);
+  border-color: var(--colors-primary);
+}
+
+button[role="checkbox"][aria-checked="true"]:not(:disabled):hover {
+	background-color: var(--colors-primary-dark);
+	border-color: var(--colors-primary-dark);
+}
