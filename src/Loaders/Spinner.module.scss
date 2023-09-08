@@ -70,7 +70,8 @@
 }
 
 .dark {
-  border: 2px solid var(--colors-primary);
+  border-color: var(--colors-primary);
+
 
   &::after {
     background: var(--colors-primary);
