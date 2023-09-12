@@ -1,6 +1,6 @@
 import React from 'react';
 import * as RadixCheckbox from '@radix-ui/react-checkbox';
-import './Checkbox.module.scss';
+import styles from './Checkbox.module.scss';
 
 export const Checkbox = ({
   checked,
@@ -12,7 +12,7 @@ export const Checkbox = ({
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <RadixCheckbox.Root
-        className="CheckboxRoot"
+        className={styles.checkbox}
         checked={checked}
         disabled={disabled}
         id={id}
