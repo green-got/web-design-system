@@ -3,7 +3,10 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "jsx": "react-jsx",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "outDir": "typings",
+    "target": "ESNext",
     "types": ["vitest/globals"]
   },
   "exclude": ["src/**/*.stories.tsx", "src/**/*.test.tsx"],

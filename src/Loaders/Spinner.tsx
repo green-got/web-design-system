@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Spinner.module.scss';
+import { mergeClasses } from '../utils/mergeClasses';
 
 const SpinSizes = ['small', 'large'] as const;
 export type SpinSize = typeof SpinSizes[number];
@@ -26,14 +27,15 @@ export const Spinner: React.FC<ISpinner> = ({
   style,
   ...props
 }) => {
-  const classMerged = [
-    styles.container,
-    sizesClassNames[size],
-    themesClassNames[style],
-    className,
-  ]
-    .filter((value) => Boolean(value))
-    .join(' ');
-
-  return <span className={classMerged} {...props} />;
+  return (
+    <span
+      className={mergeClasses([
+        styles.container,
+        sizesClassNames[size],
+        themesClassNames[style],
+        className,
+      ])}
+      {...props}
+    />
+  );
 };
