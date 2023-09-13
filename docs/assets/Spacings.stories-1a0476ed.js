@@ -1,0 +1,1 @@
+import{j as t}from"./index-ff920237.js";import{G as e}from"./GlobalStyles-5a148353.js";const s={title:"Foundations / Spacings"},d=()=>t.jsxs(t.Fragment,{children:[t.jsx(e,{}),"Here some colors."]});typeof window<"u"&&window.document&&window.document.createElement&&document.documentElement.setAttribute("data-storyloaded","");export{d as Spacings,s as default};

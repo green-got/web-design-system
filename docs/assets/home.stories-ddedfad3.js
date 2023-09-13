@@ -1,0 +1,1 @@
+import{j as e}from"./index-ff920237.js";import{G as t}from"./GlobalStyles-5a148353.js";const n={title:"Home",parameters:{}},m=()=>e.jsxs(e.Fragment,{children:[e.jsx(t,{}),e.jsx("h1",{children:"Green-Got design system"})]});typeof window<"u"&&window.document&&window.document.createElement&&document.documentElement.setAttribute("data-storyloaded","");export{m as Home,n as default};
