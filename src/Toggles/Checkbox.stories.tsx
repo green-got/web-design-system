@@ -7,22 +7,39 @@ export default {
   title: 'Components / Checkbox',
 } satisfies StoryDefault;
 
-export const CheckboxMain: Story = () => (
-  <>
-    <GlobalStyles />
+export const CheckboxMain: Story = () => {
+  return (
+    <>
+      <GlobalStyles />
 
-    <h1>Checkbox</h1>
+      <h1>Checkbox</h1>
 
-    <div>
-      <Checkbox id="a" label="Accept terms and conditions." />
-    </div>
+      <div>
+        <Checkbox
+          id="a"
+          handleChange={() => {}}
+          label="Accept terms and conditions."
+        />
+      </div>
 
-    <div>
-      <Checkbox checked id="b" label="Accept terms and conditions." />
-    </div>
+      <div>
+        <Checkbox
+          checked
+          id="b"
+          handleChange={() => {}}
+          label="Accept terms and conditions."
+        />
+      </div>
 
-    <div>
-      <Checkbox checked disabled id="c" label="Accept terms and conditions." />
-    </div>
-  </>
-);
+      <div>
+        <Checkbox
+          checked
+          disabled
+          id="c"
+          handleChange={() => {}}
+          label="Accept terms and conditions."
+        />
+      </div>
+    </>
+  );
+};
