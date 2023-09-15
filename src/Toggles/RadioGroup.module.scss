@@ -1,0 +1,46 @@
+.radio-group {
+  border-width: 0;
+
+  .radio {
+    align-items: center;
+    display: flex;
+    margin: 1rem 0;
+
+    input {
+      appearance: none;
+      accent-color: var(--colors-primary);
+      border: 1.5px solid var(--colors-primary);
+      border-radius: 50%;
+      height: 2.4rem;
+      margin-inline-end: 0.8rem;
+      position: relative;
+      width: 2.4rem;
+
+      &[disabled],
+      &[aria-disabled=true] {
+        opacity: 0.3;
+      }
+
+      &::before {
+        bottom: 0;
+        content: '';
+        height: 0;
+        left: 0;
+        margin: auto;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+      }
+
+      &:checked::before {
+        border: 7px solid var(--colors-primary);
+        border-radius: 50%;
+        outline-offset: -8px;
+      }
+    }
+  }
+
+
+}
