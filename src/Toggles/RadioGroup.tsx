@@ -10,13 +10,13 @@ export interface IRadioProps {
   name: name;
 }
 
-export type IRadio = Omit<IRadioProps, 'name'>;
+export type TRadio = Omit<IRadioProps, 'name'>;
 
 export interface IRadioGroupProps {
   legend: string;
   name: name;
-  radios: IRadio[];
-  renderRadio: (radio: IRadio, name: name) => React.ReactElement;
+  radios: TRadio[];
+  renderRadio: (radio: TRadio, name: name) => React.ReactNode;
 }
 
 export function RadioGroup({

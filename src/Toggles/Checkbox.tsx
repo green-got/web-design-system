@@ -26,7 +26,7 @@ export const Checkbox = ({
         onChange={handleChange}
         type="checkbox"
       />
-      <label className="Label" htmlFor={id}>
+      <label className="label" htmlFor={id}>
         {label}
       </label>
     </div>

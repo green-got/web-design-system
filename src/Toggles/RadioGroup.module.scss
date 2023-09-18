@@ -1,6 +1,12 @@
 .radio-group {
   border-width: 0;
 
+  legend {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-inline-start: 0.2rem;
+  }
+
   .radio {
     align-items: center;
     display: flex;
