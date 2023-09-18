@@ -1,0 +1,40 @@
+.container {
+  label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-inline-start: 0.2rem;
+  }
+
+  .select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238a8886%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'), linear-gradient(0deg, var(--colors-neutral-light), var(--colors-neutral-light)),
+      linear-gradient(0deg, var(--colors-neutral-medium), var(--colors-neutral-medium));
+    background-position: right 0.6em top 50%, 0 0, 0 0;
+    background-repeat: no-repeat, repeat, repeat;
+    border: 2px solid var(--colors-neutral-medium);
+    border-radius: 1rem;
+    color: var(--colors-neutral-regular);
+    display: block;
+    font-size: 1.6rem;
+    height: 5.4rem;
+    line-height: 1.375;
+    padding-inline-start: 1.4rem;
+    width: 100%;
+
+    &:has(option:checked:not([value])),
+    &:has(option:checked:not([value=""])) {
+      // QUESTION: does not match with Figma file?
+      // Design System > Components > Fields > guy-tar@yompail.zip text
+      // color: #3D3C3B;
+      color: var(--colors-neutral-dark);
+    }
+
+    &:dir(rtl) {
+      background-position: left .6em top 50%, 0 0, 0 0;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+}
