@@ -9,18 +9,33 @@ interface ISelectProps {
   id: string;
   label: string;
   name: string;
+  required?: boolean;
+  value: string;
 }
 
-export function Select(props: ISelectProps) {
+export function Select({
+  children,
+  disabled,
+  handleChange,
+  label,
+  id,
+  name,
+  required,
+  value,
+}: ISelectProps) {
   return (
     <div className={styles.container}>
-      <label>{props.label}</label>
+      <label htmlFor={id}>{label}</label>
       <select
         className={styles.select}
-        disabled={props.disabled}
-        name={props.name}
+        disabled={disabled}
+        id={id}
+        name={name}
+        onChange={handleChange}
+        required={required}
+        value={value}
       >
-        {props.children}
+        {children}
       </select>
     </div>
   );

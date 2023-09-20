@@ -15,21 +15,28 @@ export const SelectMain: Story = () => {
       <h1>Select</h1>
 
       <div>
-        <Select handleChange={() => {}} id="a" label="Email" name="a">
+        <Select handleChange={() => {}} id="a" label="Email" name="a" value="">
           <option value="">echo@gmail.com</option>
           <option value="thomas">thomas@green-got.com</option>
         </Select>
       </div>
 
       <div>
-        <Select handleChange={() => {}} id="b" label="Email" name="b">
+        <Select handleChange={() => {}} id="b" label="Email" name="b" value="">
           <option value="">echo@gmail.com</option>
           <option value="thomas">thomas@green-got.com</option>
         </Select>
       </div>
 
       <div>
-        <Select disabled handleChange={() => {}} id="c" label="Email" name="c">
+        <Select
+          disabled
+          handleChange={() => {}}
+          id="c"
+          label="Email"
+          name="c"
+          value=""
+        >
           <option value="">echo@gmail.com</option>
           <option value="thomas">thomas@green-got.com</option>
         </Select>

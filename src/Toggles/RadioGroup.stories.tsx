@@ -8,6 +8,7 @@ export default {
 } satisfies StoryDefault;
 
 export const RadioGroupMain: Story = () => {
+  const [checked, setChecked] = React.useState<string | undefined>(undefined);
   return (
     <>
       <GlobalStyles />
@@ -16,19 +17,25 @@ export const RadioGroupMain: Story = () => {
 
       <div>
         <RadioGroup
+          checked={checked}
+          handleChange={(e) => setChecked(e.target.value)}
           legend="Group 1"
           name="one"
           radios={[
-            { id: 'a', label: 'A' },
-            { id: 'b', label: 'B' },
-            { id: 'c', label: 'C' },
+            { id: 'a', label: 'A', value: 'a' },
+            { id: 'b', label: 'B', value: 'b' },
+            { id: 'c', label: 'C', value: 'c' },
           ]}
-          renderRadio={(radio, name) => (
+          renderRadio={(radio, checked, handleChange, name, required) => (
             <Radio
+              checked={checked === radio.value}
+              handleChange={handleChange}
               id={radio.id}
               key={radio.id}
               label={radio.label}
               name={name}
+              required={required}
+              value={radio.value}
             />
           )}
         />
