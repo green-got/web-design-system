@@ -28,7 +28,8 @@
     color: var(--colors-neutral-regular);
   }
 
-  svg {
+  *:has(+ svg),
+  svg:has(+ *) {
     margin-inline-end: 0.8rem;
   }
 }
