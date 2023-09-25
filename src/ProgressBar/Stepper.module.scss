@@ -1,0 +1,15 @@
+.stepper {
+  column-gap: 0.8rem;
+  display: flex;
+
+  span {
+    background-color: var(--colors-neutral-medium);
+    border-radius: 0.2rem;
+    flex-grow: 1;
+    height: 0.4rem;
+
+    &.stepped {
+      background-color: var(--colors-primary);
+    }
+  }
+}
