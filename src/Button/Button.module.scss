@@ -26,6 +26,7 @@
   &:disabled {
     background-color: var(--colors-neutral-medium);
     color: var(--colors-neutral-regular);
+    cursor: auto;
   }
 
   *:has(+ svg),
