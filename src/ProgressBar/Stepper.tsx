@@ -15,7 +15,7 @@ export function Stepper({ step, steps }: IStepper) {
         <span
           className={step && i + 1 <= step ? styles.stepped : ''}
           // biome-ignore lint/suspicious/noArrayIndexKey: order will not change
-          key={`${i}`}
+          key={i}
           role="tab"
         />
       ))}
