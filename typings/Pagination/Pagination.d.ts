@@ -1,1 +1,1 @@
-export declare const Pagination: () => JSX.Element;
+export declare const Pagination: () => any;

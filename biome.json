@@ -4,7 +4,7 @@
     "enabled": true
   },
   "linter": {
-    "ignore": ["docs/", "*.yml", "*.yaml", "*.scss"],
+    "ignore": ["docs/", "typings/", "*.yml", "*.yaml", "*.scss"],
     "enabled": true,
     "rules": {
       "recommended": true
@@ -13,7 +13,7 @@
   "formatter": {
     "indentStyle": "space",
     "formatWithErrors": true,
-    "ignore": ["docs/", "*.yml", "*.yaml", "*.scss"]
+    "ignore": ["docs/", "typings/", "*.yml", "*.yaml", "*.scss"]
   },
   "javascript": {
     "formatter": {

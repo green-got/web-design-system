@@ -1,2 +1,2 @@
 import './GlobalStyles.scss';
-export declare const GlobalStyles: () => JSX.Element;
+export declare const GlobalStyles: () => any;

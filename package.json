@@ -14,7 +14,7 @@
     "commit": "git-cz",
     "dev": "ladle serve",
     "format": "biome format --write .",
-    "lint": "biome lint ./src",
+    "lint": "biome lint --apply ./src",
     "pre-commit": "pnpm lint-staged",
     "pre-push": "pnpm run lint && pnpm run typecheck && pnpm test",
     "prepare": "husky install",
@@ -52,7 +52,7 @@
   "lint-staged": {
     "*.{js,json,yml,yaml,css,scss,ts,tsx,md}": [
       "biome format --write .",
-      "biome lint ./src"
+      "biome lint"
     ]
   },
   "config": {

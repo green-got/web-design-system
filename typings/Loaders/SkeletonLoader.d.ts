@@ -1,1 +1,1 @@
-export declare const SkeletonLoader: () => JSX.Element;
+export declare const SkeletonLoader: () => any;

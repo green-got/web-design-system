@@ -1,5 +1,5 @@
 export interface IStepper {
-  step?: number;
-  steps: number;
+    step?: number;
+    steps: number;
 }
-export declare function Stepper({ step, steps }: IStepper): JSX.Element;
+export declare function Stepper({ step, steps }: IStepper): any;
