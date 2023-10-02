@@ -17,25 +17,21 @@ const themesClassNames = {
 };
 
 export interface ISpinner extends React.HTMLAttributes<HTMLSpanElement> {
+  className?: string;
   size?: SpinSize;
   theme?: Theme;
 }
 
-export const Spinner: React.FC<ISpinner> = ({
-  size,
-  className,
-  style,
-  ...props
-}) => {
+export function Spinner({ className, size, theme, ...props }: ISpinner) {
   return (
     <span
       className={mergeClasses([
         styles.container,
         sizesClassNames[size],
-        themesClassNames[style],
+        themesClassNames[theme],
         className,
       ])}
       {...props}
     />
   );
-};
+}

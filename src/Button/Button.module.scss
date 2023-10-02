@@ -2,7 +2,7 @@
   align-items: center;
   appearance: none;
   background-color: var(--colors-primary);
-  border-radius: 1.2rem;
+  border-radius: var(--corner-medium);
   border-width: 0;
   color: var(--colors-neutral-white);
   cursor: pointer;
@@ -14,7 +14,7 @@
   padding: 1.2rem;
 
   &.block {
-    border-radius: 1.8rem;
+    border-radius: var(--corner-big);
     display: flex;
     width: 100%;
   }

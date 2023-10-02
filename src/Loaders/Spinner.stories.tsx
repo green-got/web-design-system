@@ -22,27 +22,27 @@ export const SpinnerMain: Story = () => (
         marginTop: 50,
       }}
     >
+      <Spinner size="small" theme="dark" />
+
+      <span style={{ padding: 20 }} />
+
+      <Spinner theme="dark" />
+
+      <span style={{ padding: 20 }} />
+
+      <Spinner size="large" theme="dark" />
+    </div>
+
+    <div style={{ display: 'flex', alignItems: 'center', padding: 40 }}>
       <Spinner size="small" />
 
       <span style={{ padding: 20 }} />
 
-      <Spinner />
+      <Spinner theme="light" />
 
       <span style={{ padding: 20 }} />
 
       <Spinner size="large" />
-    </div>
-
-    <div style={{ display: 'flex', alignItems: 'center', padding: 40 }}>
-      <Spinner size="small" style="dark" />
-
-      <span style={{ padding: 20 }} />
-
-      <Spinner style="dark" />
-
-      <span style={{ padding: 20 }} />
-
-      <Spinner size="large" style="dark" />
     </div>
   </>
 );
