@@ -3,6 +3,7 @@ export * from './Fields';
 export * from './GlobalStyles';
 export * from './Icons';
 export * from './Loaders';
+export * from './Logo';
 export * from './Pagination';
 export * from './ProgressBar';
 export * from './Spacings';
