@@ -37,6 +37,7 @@
       inline-size: var(--thumb-size);
       pointer-events: auto;
       transform: translateX(var(--thumb-position));
+      transition: transform 0.1s ease-in-out;
     }
 
     &:checked {

@@ -1,0 +1,105 @@
+.container {
+  label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-inline-start: 0.2rem;
+  }
+
+  .validation-wrapper {
+    background-color: transparent;
+    border-radius: 1.4rem; // TODO: Existing corner variables don't support the design
+    padding: 0.2rem;
+
+    &:has(input:user-valid) {
+      background-color: color-mix(in srgb, var(--colors-primary), transparent 60%);
+    }
+
+    &:has(input:user-invalid) {
+      background-color: var(--colors-error-light);
+    }
+
+    input {
+      appearance: none;
+      background-color: var(--colors-neutral-light);
+      border: 0.2rem solid var(--colors-neutral-medium);
+      border-radius: var(--corner-medium);
+      // QUESTION: does not match with Figma file?
+      // Design System > Components > Fields > guy-tar@yompail.zip text
+      // color: #3D3C3B;
+      color: var(--colors-neutral-dark);
+      font-size: 1.6rem;
+      height: 5.4rem;
+      line-height: 1.375;
+      padding-inline-start: 1.4rem;
+      width: 100%;
+
+      &[type=search]::-webkit-search-cancel-button {
+        appearance: none;
+      }
+
+      &[type=number] {
+        appearance: textfield;
+        margin: 0;
+      }
+
+      &[type=number]::-webkit-inner-spin-button {
+        appearance: none;
+        margin: 0;
+      }
+
+      &:user-valid {
+        border-color: var(--colors-primary);
+      }
+
+      &:user-invalid {
+        border-color: var(--colors-error);
+      }
+
+      &:disabled {
+        opacity: 0.3;
+      }
+
+      &::after {
+        content: 'ans';
+        display: inline-block;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+      }
+
+      button.clear-btn {
+        appearance: none;
+        background-color: green;
+        border-width: 0;
+      }
+
+      +button[type="button"],
+      +abbr {
+        align-items: center;
+        appearance: none;
+        background-color: var(--colors-neutral-light);
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-width: 0;
+        color: var(--colors-neutral-regular);
+        display: flex;
+        height: 5rem;
+        padding-inline-end: 1.6rem;
+        padding-inline-start: 0.8rem;
+        position: absolute;
+        right: 0.4rem;
+        top: 0.4rem;
+
+      }
+
+      ~span {
+        color: var(--colors-error);
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-block-start: 0.8rem;
+        margin-block-end: 0.8rem;
+        margin-inline-start: 1.6rem;
+      }
+    }
+  }
+}
