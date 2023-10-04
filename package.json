@@ -43,8 +43,8 @@
     "lint-staged": "^14.0.1",
     "sass": "^1.66.1",
     "typescript": "^5.1.6",
-    "vite": "^4.4.9",
-    "vitest": "^0.34.3"
+    "vite": "^4.4.10",
+    "vitest": "^0.34.6"
   },
   "engines": {
     "node": ">=18.0.0"
