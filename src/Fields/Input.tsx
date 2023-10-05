@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 import styles from './Input.module.scss';
 
 export interface IInputProps {
-  attributes?: { [key: string]: number | string };
+  attributes?: {
+    maxLength?: number;
+    min?: number;
+    pattern?: string;
+    title?: string;
+  };
   disabled?: boolean;
   errorMessage?: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -15,6 +20,7 @@ export interface IInputProps {
 }
 
 export function Input({
+  attributes,
   disabled,
   errorMessage,
   id,
@@ -45,6 +51,7 @@ export function Input({
       </label>
       <div className={styles['validation-wrapper']}>
         <input
+          {...attributes}
           autoCorrect="off"
           disabled={disabled}
           id={id}

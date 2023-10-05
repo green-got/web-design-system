@@ -55,9 +55,12 @@ export const InputMain: Story = () => {
       />
 
       <Input
+        attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
         id="e"
-        label="Telephone"
-        handleChange={(e) => setE(e.target.value)}
+        label="US Telephone"
+        handleChange={(e) =>
+          setE(updateInputValue(e.target.value, e.nativeEvent.inputType))
+        }
         type="tel"
         value={e}
       />
@@ -116,11 +119,11 @@ export const InputUnit = () => {
       <h1>Input with units</h1>
 
       <UnitInput
+        attributes={{ min: 0 }}
         errorMessage="Value must be 0 or greater"
         id="a"
         label="Required non-negative number"
         handleChange={(e) => setA(e.target.value)}
-        attributes={{ min: 0 }}
         required
         type="number"
         unit="€"
@@ -130,3 +133,39 @@ export const InputUnit = () => {
     </>
   );
 };
+
+function updateInputValue(value, inputType) {
+  if (inputType === 'insertText' || inputType === 'insertFromPaste') {
+    return formatPhoneNumberUS(value);
+  }
+
+  if (inputType === 'deleteContentBackward') {
+    return unformatPhoneNumberUS(value);
+  }
+  return value;
+}
+
+function formatPhoneNumberUS(phoneNumber) {
+  const clean = phoneNumber.toString().replace(/\D/g, '');
+  const match = clean.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+  if (!match) {
+    return clean;
+  }
+
+  const areaCode = match[1].length === 3 ? `(${match[1]}) ` : `(${match[1]}`;
+  const firstThree = match[2]
+    ? match[2].length === 3
+      ? `${match[2]}-`
+      : match[2]
+    : '';
+  const lastFour = match[3];
+  return `${areaCode}${firstThree}${lastFour}`;
+}
+
+function unformatPhoneNumberUS(value) {
+  const match = value.match(/\D$/);
+  if (match) {
+    return unformatPhoneNumberUS(value.slice(0, -1));
+  }
+  return value;
+}

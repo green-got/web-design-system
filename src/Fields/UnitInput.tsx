@@ -46,6 +46,7 @@ export function UnitInput({
         style={{ position: 'relative' }}
       >
         <input
+          {...attributes}
           autoCorrect="off"
           disabled={disabled}
           id={id}
@@ -59,7 +60,6 @@ export function UnitInput({
           }}
           type={type}
           value={value}
-          {...attributes}
         />
         <abbr ref={unitRef} title={unitLabel}>
           {unit}

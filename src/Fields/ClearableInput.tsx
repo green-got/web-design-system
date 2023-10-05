@@ -5,6 +5,7 @@ import { IInputProps } from './Input';
 import styles from './Input.module.scss';
 
 export function ClearableInput({
+  attributes,
   disabled,
   errorMessage,
   id,
@@ -39,6 +40,7 @@ export function ClearableInput({
         style={{ position: 'relative' }}
       >
         <input
+          {...attributes}
           autoCorrect="off"
           disabled={disabled}
           id={id}
