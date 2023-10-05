@@ -1,7 +1,10 @@
 import React from 'react';
 export interface IInputProps {
     attributes?: {
-        [key: string]: number | string;
+        maxLength?: number;
+        min?: number;
+        pattern?: string;
+        title?: string;
     };
     disabled?: boolean;
     errorMessage?: string;
@@ -12,4 +15,4 @@ export interface IInputProps {
     type?: 'email' | 'number' | 'search' | 'tel' | 'text';
     value: string;
 }
-export declare function Input({ disabled, errorMessage, id, label, required, type, value, ...props }: IInputProps): any;
+export declare function Input({ attributes, disabled, errorMessage, id, label, required, type, value, ...props }: IInputProps): any;
