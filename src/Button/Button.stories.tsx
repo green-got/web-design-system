@@ -25,6 +25,10 @@ export const ButtonMain: Story = () => (
     <Button disabled handleClick={noop}>
       Disabled
     </Button>
+
+    <Button attributes={{ 'aria-disabled': true }} handleClick={noop}>
+      Aria disabled
+    </Button>
   </>
 );
 

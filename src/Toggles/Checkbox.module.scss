@@ -25,16 +25,19 @@
       width: 16px;
     }
 
+    &:not([aria-disabled="true"]):hover,
     &:not(:disabled):hover {
       background-color: var(--colors-primary-dark);
       border-color: var(--colors-primary-dark);
     }
   }
 
+  &[aria-disabled="true"],
   &:disabled {
     opacity: 0.3;
   }
 
+  &:not([aria-disabled="true"]),
   &:not(:disabled) {
     cursor: pointer;
 
@@ -43,6 +46,7 @@
     }
   }
 
+  &:not([aria-disabled="true"]):hover,
   &:not(:disabled):hover {
     border-color: var(--colors-neutral-dark);
   }

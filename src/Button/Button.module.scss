@@ -23,6 +23,7 @@
     background-color: var(--colors-primary-dark);
   }
 
+  &[aria-disabled="true"],
   &:disabled {
     background-color: var(--colors-neutral-medium);
     color: var(--colors-neutral-regular);

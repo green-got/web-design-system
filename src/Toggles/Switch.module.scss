@@ -45,6 +45,7 @@
       --thumb-position: calc((var(--track-size) - 100%) * var(--is-ltr));
     }
 
+    &[aria-disabled="true"],
     &:disabled {
       opacity: 0.3;
     }

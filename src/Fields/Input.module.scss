@@ -55,6 +55,7 @@
         border-color: var(--colors-error);
       }
 
+      &[aria-disabled="true"],
       &:disabled {
         opacity: 0.3;
       }
