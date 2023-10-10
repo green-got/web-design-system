@@ -17,6 +17,8 @@ export const InputMain: Story = () => {
   const [e, setE] = React.useState<string>('');
   const [f, setF] = React.useState<string>('');
   const [g, setG] = React.useState<string>('');
+  const [h, setH] = React.useState<string>('');
+  const [i, setI] = React.useState<string>(';lakj');
 
   return (
     <>
@@ -39,49 +41,68 @@ export const InputMain: Story = () => {
       />
 
       <Input
+        attributes={{ placeholder: 'harry@green-got.com' }}
         id="c"
-        label="Number"
+        label="Email with placeholder text"
         handleChange={(e) => setC(e.target.value)}
-        type="number"
         value={c}
       />
 
       <Input
         id="d"
-        label="Search"
+        label="Number"
         handleChange={(e) => setD(e.target.value)}
-        type="search"
+        type="number"
         value={d}
       />
 
       <Input
-        attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
         id="e"
-        label="US Telephone"
-        handleChange={(e) =>
-          setE(updateInputValue(e.target.value, e.nativeEvent.inputType))
-        }
-        type="tel"
+        label="Search"
+        handleChange={(e) => setE(e.target.value)}
+        type="search"
         value={e}
       />
 
       <Input
+        attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
         id="f"
-        label="Required text"
-        handleChange={(e) => setF(e.target.value)}
-        required
-        type="text"
+        label="US Telephone"
+        handleChange={(e) =>
+          setF(updateInputValue(e.target.value, e.nativeEvent.inputType))
+        }
+        type="tel"
         value={f}
       />
 
       <Input
-        errorMessage="This field is required."
         id="g"
-        label="Required text w/ error message"
+        label="Required text"
         handleChange={(e) => setG(e.target.value)}
         required
         type="text"
         value={g}
+      />
+
+      <Input
+        errorMessage="This field is required."
+        id="h"
+        label="Required text w/ error message"
+        handleChange={(e) => setH(e.target.value)}
+        required
+        type="text"
+        value={h}
+      />
+
+      <Input
+        attributes={{ pattern: 'right' }}
+        errorMessage="That's not right!"
+        id="i"
+        label="Programmatically invalid text"
+        handleChange={(e) => setI(e.target.value)}
+        isValid={false}
+        type="text"
+        value={i}
       />
     </>
   );

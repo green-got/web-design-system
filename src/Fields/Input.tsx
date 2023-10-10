@@ -7,12 +7,14 @@ export interface IInputProps {
     maxLength?: number;
     min?: number;
     pattern?: string;
+    placeholder?: string;
     title?: string;
   };
   disabled?: boolean;
   errorMessage?: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   id: string;
+  isValid?: boolean;
   label: string;
   required?: boolean;
   type?: 'email' | 'number' | 'search' | 'tel' | 'text';
@@ -24,23 +26,24 @@ export function Input({
   disabled,
   errorMessage,
   id,
+  isValid = true,
   label,
   required,
   type = 'text',
   value,
   ...props
 }: IInputProps) {
-  const [isValid, setIsValid] = useState<boolean>(true);
+  const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
 
   function handleChange(e) {
-    if (!isValid) {
-      setIsValid(e.target.validity.valid);
+    if (!isFieldValid) {
+      setIsFieldValid(e.target.validity.valid);
     }
     props.handleChange(e);
   }
 
   function handleBlur(e) {
-    setIsValid(e.target.validity.valid);
+    setIsFieldValid(e.target.validity.valid);
   }
 
   return (
@@ -61,7 +64,7 @@ export function Input({
           type={type}
           value={value}
         />
-        {!isValid && errorMessage && <span>{errorMessage}</span>}
+        {!isFieldValid && errorMessage && <span>{errorMessage}</span>}
       </div>
     </div>
   );
