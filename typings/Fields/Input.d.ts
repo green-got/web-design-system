@@ -7,6 +7,7 @@ export interface IInputProps {
         placeholder?: string;
         title?: string;
     };
+    className?: string;
     disabled?: boolean;
     errorMessage?: string;
     handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -17,4 +18,4 @@ export interface IInputProps {
     type?: 'email' | 'number' | 'search' | 'tel' | 'text';
     value: string;
 }
-export declare function Input({ attributes, disabled, errorMessage, id, isValid, label, required, type, value, ...props }: IInputProps): any;
+export declare const Input: any;

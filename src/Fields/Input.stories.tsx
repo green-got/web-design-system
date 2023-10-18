@@ -108,6 +108,36 @@ export const InputMain: Story = () => {
   );
 };
 
+export const InputFocus = () => {
+  const [a, setA] = React.useState('');
+  const inputRef = React.useRef(null);
+
+  return (
+    <>
+      <GlobalStyles />
+
+      <h1>Input focusing</h1>
+
+      <button
+        onClick={() => {
+          inputRef.current.focus();
+        }}
+        type="button"
+      >
+        Focus input
+      </button>
+      <Input
+        handleChange={(e) => setA(e.target.value)}
+        id="a"
+        label="Focusable"
+        ref={inputRef}
+        type="text"
+        value={a}
+      />
+    </>
+  );
+};
+
 export const InputClearable = () => {
   const [a, setA] = React.useState('');
 

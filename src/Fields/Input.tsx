@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Input.module.scss';
 
 export interface IInputProps {
@@ -10,6 +11,7 @@ export interface IInputProps {
     placeholder?: string;
     title?: string;
   };
+  className?: string;
   disabled?: boolean;
   errorMessage?: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -21,18 +23,22 @@ export interface IInputProps {
   value: string;
 }
 
-export function Input({
-  attributes,
-  disabled,
-  errorMessage,
-  id,
-  isValid = true,
-  label,
-  required,
-  type = 'text',
-  value,
-  ...props
-}: IInputProps) {
+export const Input = React.forwardRef(function Input(
+  {
+    attributes,
+    className,
+    disabled,
+    errorMessage,
+    id,
+    isValid = true,
+    label,
+    required,
+    type = 'text',
+    value,
+    ...props
+  }: IInputProps,
+  inputRef?: React.Ref<HTMLInputElement>,
+) {
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
 
   function handleChange(e) {
@@ -47,7 +53,7 @@ export function Input({
   }
 
   return (
-    <div className={styles.container}>
+    <div className={mergeClasses([styles.container, className])}>
       <label htmlFor={id}>
         {label}
         {required ? ' *' : ''}
@@ -60,6 +66,7 @@ export function Input({
           id={id}
           onBlur={handleBlur}
           onChange={handleChange}
+          ref={inputRef}
           required={required}
           type={type}
           value={value}
@@ -68,4 +75,4 @@ export function Input({
       </div>
     </div>
   );
-}
+});
