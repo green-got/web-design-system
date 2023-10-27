@@ -23,9 +23,6 @@
 
     &:has(option:checked:not([value])),
     &:has(option:checked:not([value=""])) {
-      // QUESTION: does not match with Figma file?
-      // Design System > Components > Fields > guy-tar@yompail.zip text
-      // color: #3D3C3B;
       color: var(--colors-neutral-dark);
     }
 

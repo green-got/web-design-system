@@ -19,6 +19,7 @@ export const InputMain: Story = () => {
   const [g, setG] = React.useState<string>('');
   const [h, setH] = React.useState<string>('');
   const [i, setI] = React.useState<string>(';lakj');
+  const [j, setJ] = React.useState<string>('');
 
   return (
     <>
@@ -73,6 +74,15 @@ export const InputMain: Story = () => {
         }
         type="tel"
         value={f}
+      />
+
+      <Input
+        attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
+        id="j"
+        label="Date"
+        handleChange={(e) => setJ(e.target.value)}
+        type="date"
+        value={j}
       />
 
       <Input

@@ -23,9 +23,6 @@
       background-color: var(--colors-neutral-light);
       border: 0.2rem solid var(--colors-neutral-medium);
       border-radius: var(--corner-medium);
-      // QUESTION: does not match with Figma file?
-      // Design System > Components > Fields > guy-tar@yompail.zip text
-      // color: #3D3C3B;
       color: var(--colors-neutral-dark);
       font-size: 1.6rem;
       height: 5.4rem;
@@ -58,14 +55,6 @@
       &[aria-disabled="true"],
       &:disabled {
         opacity: 0.3;
-      }
-
-      &::after {
-        content: 'ans';
-        display: inline-block;
-        position: absolute;
-        height: 100px;
-        width: 100px;
       }
 
       button.clear-btn {

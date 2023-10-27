@@ -15,7 +15,7 @@ export interface IInputProps {
     isValid?: boolean;
     label: string;
     required?: boolean;
-    type?: 'email' | 'number' | 'search' | 'tel' | 'text';
+    type?: 'date' | 'email' | 'number' | 'search' | 'tel' | 'text';
     value: string;
 }
 export declare const Input: any;
