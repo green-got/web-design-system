@@ -19,6 +19,7 @@ export interface IInputProps {
   isValid?: boolean;
   label: string;
   required?: boolean;
+  requiredText?: string;
   type?: 'date' | 'email' | 'number' | 'search' | 'tel' | 'text';
   value: string;
 }
@@ -33,6 +34,7 @@ export const Input = React.forwardRef(function Input(
     isValid = true,
     label,
     required,
+    requiredText,
     type = 'text',
     value,
     ...props
@@ -42,8 +44,9 @@ export const Input = React.forwardRef(function Input(
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
 
   function handleChange(e) {
-    if (!isFieldValid) {
-      setIsFieldValid(e.target.validity.valid);
+    const isValid = e.target.validity.valid;
+    if (!isFieldValid && isValid) {
+      setIsFieldValid(isValid);
     }
     props.handleChange(e);
   }
@@ -54,10 +57,17 @@ export const Input = React.forwardRef(function Input(
 
   return (
     <div className={mergeClasses([styles.container, className])}>
-      <label htmlFor={id}>
-        {label}
-        {required ? ' *' : ''}
-      </label>
+      {required && requiredText ? (
+        <div className={styles['required-text-wrapper']}>
+          <label htmlFor={id}>{label}</label>
+          <span>{requiredText}</span>
+        </div>
+      ) : (
+        <label htmlFor={id}>
+          {label}
+          {required && !requiredText ? ' *' : ''}
+        </label>
+      )}
       <div className={styles['validation-wrapper']}>
         <input
           {...attributes}

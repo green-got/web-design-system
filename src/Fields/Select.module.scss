@@ -5,34 +5,74 @@
     padding-inline-start: 0.2rem;
   }
 
-  .select {
-    appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238a8886%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'), linear-gradient(0deg, var(--colors-neutral-light), var(--colors-neutral-light)),
-      linear-gradient(0deg, var(--colors-neutral-medium), var(--colors-neutral-medium));
-    background-position: right 0.6em top 50%, 0 0, 0 0;
-    background-repeat: no-repeat, repeat, repeat;
-    border: 2px solid var(--colors-neutral-medium);
-    border-radius: 1rem;
-    color: var(--colors-neutral-regular);
-    display: block;
-    font-size: 1.6rem;
-    height: 5.4rem;
-    line-height: 1.375;
-    padding-inline-start: 1.4rem;
-    width: 100%;
+  .required-text-wrapper {
+    display: flex;
+    justify-content: space-between;
 
-    &:has(option:checked:not([value])),
-    &:has(option:checked:not([value=""])) {
+    >span {
       color: var(--colors-neutral-dark);
+      font-size: 1.2rem;
+    }
+  }
+
+  .validation-wrapper {
+    background-color: transparent;
+    border-radius: 1.4rem; // TODO: Existing corner variables don't support the design
+    padding: 0.2rem;
+
+    &:has(select:user-valid) {
+      background-color: color-mix(in srgb, var(--colors-primary), transparent 60%);
     }
 
-    &:dir(rtl) {
-      background-position: left .6em top 50%, 0 0, 0 0;
+    &:has(select:user-invalid) {
+      background-color: var(--colors-error-light);
     }
 
-    &[aria-disabled="true"],
-    &:disabled {
-      opacity: 0.3;
+    .select {
+      appearance: none;
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238a8886%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'), linear-gradient(0deg, var(--colors-neutral-light), var(--colors-neutral-light)),
+        linear-gradient(0deg, var(--colors-neutral-medium), var(--colors-neutral-medium));
+      background-position: right 0.6em top 50%, 0 0, 0 0;
+      background-repeat: no-repeat, repeat, repeat;
+      border: 2px solid var(--colors-neutral-medium);
+      border-radius: 1.2rem;
+      color: var(--colors-neutral-dark);
+      display: block;
+      font-size: 1.6rem;
+      height: 5.4rem;
+      line-height: 1.375;
+      padding-inline-start: 1.4rem;
+      width: 100%;
+
+      &:user-valid {
+        border-color: var(--colors-primary);
+      }
+
+      &:user-invalid {
+        border-color: var(--colors-error);
+      }
+
+      &:has(option[value=""]:checked) {
+        color: var(--colors-neutral-regular)
+      }
+
+      &:dir(rtl) {
+        background-position: left .6em top 50%, 0 0, 0 0;
+      }
+
+      &[aria-disabled="true"],
+      &:disabled {
+        opacity: 0.3;
+      }
+
+      ~span {
+        color: var(--colors-error);
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-block-start: 0.8rem;
+        margin-block-end: 0.8rem;
+        margin-inline-start: 1.6rem;
+      }
     }
   }
 }

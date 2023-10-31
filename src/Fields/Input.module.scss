@@ -5,6 +5,16 @@
     padding-inline-start: 0.2rem;
   }
 
+  .required-text-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    >span {
+      color: var(--colors-neutral-dark);
+      font-size: 1.2rem;
+    }
+  }
+
   .validation-wrapper {
     background-color: transparent;
     border-radius: 1.4rem; // TODO: Existing corner variables don't support the design

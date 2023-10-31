@@ -20,6 +20,7 @@ export const InputMain: Story = () => {
   const [h, setH] = React.useState<string>('');
   const [i, setI] = React.useState<string>(';lakj');
   const [j, setJ] = React.useState<string>('');
+  const [k, setK] = React.useState<string>('');
 
   return (
     <>
@@ -113,6 +114,17 @@ export const InputMain: Story = () => {
         isValid={false}
         type="text"
         value={i}
+      />
+
+      <Input
+        errorMessage="This field is required"
+        id="k"
+        label="Input with custom require text"
+        handleChange={(e) => setK(e.target.value)}
+        required
+        requiredText="Required"
+        type="text"
+        value={k}
       />
     </>
   );
