@@ -1,0 +1,30 @@
+.container {
+  background-color: var(--colors-neutral-light);
+  border-radius: var(--corner-small);
+  display: inline-grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+
+  li {
+    list-style: none;
+
+    button {
+      background-color: transparent;
+      border-radius: var(--corner-small);
+      border-width: 0;
+      color: var(--colors-neutral-regular);
+      cursor: pointer;
+      font-size: 1.4rem;
+      line-height: 0.7;
+      padding-block: var(--spacing-xxsmall);
+      padding-inline: var(--spacing-xxsmall);
+      text-align: center;
+      width: 100%;
+
+      &.active {
+        background-color: var(--colors-primary);
+        color: var(--colors-neutral-white);
+      }
+    }
+  }
+}
