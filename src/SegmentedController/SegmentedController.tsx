@@ -17,7 +17,7 @@ export function SegmentedController({
       {segments.map((segment) => {
         const selected = segment.id === activeId;
         return (
-          <li role="presentation">
+          <li key={segment.id} role="presentation">
             <button
               aria-selected={selected}
               aria-controls={segment.panelId}
