@@ -33,6 +33,7 @@ export {
   ListIcon,
   LockIcon,
   LoginIcon,
+  MenuIcon,
   MoreHorizontalIcon,
   MoreVerticalIcon,
   NoCardIcon,

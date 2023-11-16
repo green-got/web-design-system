@@ -36,6 +36,7 @@ import {
   ListIcon,
   LockIcon,
   LoginIcon,
+  MenuIcon,
   MoreHorizontalIcon,
   MoreVerticalIcon,
   NoCardIcon,
@@ -234,6 +235,9 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <SearchIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <MenuIcon height={16} width={16} />
       </div>
     </div>
     <h1 style={{ margin: '2rem 0' }}>Custom icons</h1>

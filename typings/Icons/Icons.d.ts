@@ -58,6 +58,7 @@ export declare function UpToTheRightIcon(props: IIconProps): any;
 export declare function ShieldIcon(props: IIconProps): any;
 export declare function SnowflakeIcon(props: IIconProps): any;
 export declare function SearchIcon(props: IIconProps): any;
+export declare function MenuIcon(props: IIconProps): any;
 export declare function BankIcon(props: IIconProps): any;
 export declare function StatementIcon(props: IIconProps): any;
 export declare function NoCardIcon(props: IIconProps): any;

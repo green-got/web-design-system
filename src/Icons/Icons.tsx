@@ -917,6 +917,25 @@ export function SearchIcon(props: IIconProps) {
   );
 }
 
+export function MenuIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Menu icon'}</title>
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
 export function BankIcon(props: IIconProps) {
   return (
     <Icon
