@@ -28,6 +28,7 @@ export {
   FaceIdIcon,
   GearIcon,
   HelpIcon,
+  HistoryTimerIcon,
   HomeIcon,
   InfoIcon,
   LeftRightArrowsIcon,
