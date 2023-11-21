@@ -49,6 +49,7 @@ export function ChevronRightIcon(props) {
     <>
       <Icon
         attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+        className={props.className}
         height={props.height}
         renderIcon={(title) => (
           <>
@@ -67,6 +68,7 @@ export function ChevronLeftIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -84,6 +86,7 @@ export function ChevronUpIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -101,6 +104,7 @@ export function ChevronDownIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -118,6 +122,7 @@ export function ExternalLinkIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -137,6 +142,7 @@ export function HelpIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -156,6 +162,7 @@ export function InfoIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -175,6 +182,7 @@ export function PaperclipIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -192,6 +200,7 @@ export function YoutubeIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -210,6 +219,7 @@ export function ClockIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -228,6 +238,7 @@ export function CircledXIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -247,6 +258,7 @@ export function TextFileIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -268,6 +280,7 @@ export function EditIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -285,6 +298,7 @@ export function EditLineIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -303,6 +317,7 @@ export function PlusIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -321,6 +336,7 @@ export function XIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -339,6 +355,7 @@ export function DownloadIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -358,6 +375,7 @@ export function TrashIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -376,6 +394,7 @@ export function CircledPlusIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -395,6 +414,7 @@ export function CheckedSquareIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -413,6 +433,7 @@ export function LockIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -431,6 +452,7 @@ export function UnlockIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -449,6 +471,7 @@ export function DeleteIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -468,6 +491,7 @@ export function ListIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -490,6 +514,7 @@ export function StarIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -507,6 +532,7 @@ export function UserIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -525,6 +551,7 @@ export function CheckmarkIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -542,6 +569,7 @@ export function BellIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -560,6 +588,7 @@ export function GearIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -578,6 +607,7 @@ export function EyeIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -596,6 +626,7 @@ export function EyeClosedIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -614,6 +645,7 @@ export function SlidersIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -639,6 +671,7 @@ export function BoltIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -656,6 +689,7 @@ export function MoreHorizontalIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -675,6 +709,7 @@ export function MoreVerticalIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -694,6 +729,7 @@ export function CopyIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -712,6 +748,7 @@ export function UsersIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -732,6 +769,7 @@ export function SendIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -750,6 +788,7 @@ export function LoginIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -769,6 +808,7 @@ export function CalendarIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -789,6 +829,7 @@ export function CardIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -807,6 +848,7 @@ export function PhoneIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -824,6 +866,7 @@ export function ArcIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -841,6 +884,7 @@ export function UpToTheRightIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -859,6 +903,7 @@ export function ShieldIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -877,6 +922,7 @@ export function SnowflakeIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -903,6 +949,7 @@ export function SearchIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -921,6 +968,7 @@ export function MenuIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -940,6 +988,7 @@ export function BankIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -962,6 +1011,7 @@ export function StatementIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -981,6 +1031,7 @@ export function NoCardIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1000,6 +1051,7 @@ export function SpeechBubblesIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1021,6 +1073,7 @@ export function LeftRightArrowsIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1041,6 +1094,7 @@ export function UpDownArrowsIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1061,6 +1115,7 @@ export function SmartphoneRingingIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1082,6 +1137,7 @@ export function FaceIdIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1106,6 +1162,7 @@ export function TouchIdIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1128,6 +1185,7 @@ export function AsteriskIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1145,6 +1203,7 @@ export function AlertTriangleIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1164,6 +1223,7 @@ export function RotateClockwiseIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1182,6 +1242,7 @@ export function CoinsIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1203,6 +1264,7 @@ export function NoSmokingIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1228,6 +1290,7 @@ export function NoPornographyIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1250,6 +1313,7 @@ export function NoWeaponIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1272,6 +1336,7 @@ export function NoOilIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
@@ -1294,6 +1359,7 @@ export function HomeIcon(props: IIconProps) {
   return (
     <Icon
       attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
