@@ -31,6 +31,7 @@ import {
   FaceIdIcon,
   GearIcon,
   HelpIcon,
+  HomeIcon,
   InfoIcon,
   LeftRightArrowsIcon,
   ListIcon,
@@ -307,6 +308,9 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <NoOilIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <HomeIcon height={16} width={16} />
       </div>
     </div>
   </>

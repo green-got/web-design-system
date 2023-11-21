@@ -28,6 +28,7 @@ export {
   FaceIdIcon,
   GearIcon,
   HelpIcon,
+  HomeIcon,
   InfoIcon,
   LeftRightArrowsIcon,
   ListIcon,

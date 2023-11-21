@@ -76,3 +76,4 @@ export declare function NoSmokingIcon(props: IIconProps): any;
 export declare function NoPornographyIcon(props: IIconProps): any;
 export declare function NoWeaponIcon(props: IIconProps): any;
 export declare function NoOilIcon(props: IIconProps): any;
+export declare function HomeIcon(props: IIconProps): any;
