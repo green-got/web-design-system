@@ -72,6 +72,24 @@ export const SelectMain: Story = () => {
           <option value="thomas">thomas@green-got.com</option>
         </Select>
       </div>
+
+      <h2 style={{ fontSize: '1.6rem' }}>
+        Usage with aria-label instead of label
+      </h2>
+      <div style={{ marginBlock: '2rem' }}>
+        <Select
+          ariaLabel="Email"
+          handleChange={() => {}}
+          id="d"
+          name="d"
+          required
+          requiredText="For sure required"
+          value=""
+        >
+          <option value="">echo@gmail.com</option>
+          <option value="thomas">thomas@green-got.com</option>
+        </Select>
+      </div>
     </>
   );
 };

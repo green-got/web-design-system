@@ -3,21 +3,31 @@
 import React, { useState } from 'react';
 import styles from './Select.module.scss';
 
-interface ISelectProps {
+type TAriaLabelProps = {
+  ariaLabel: string;
+  label?: never;
+};
+
+type THtmlLabelProps = {
+  ariaLabel?: never;
+  label: string;
+};
+
+type TSelectProps = {
   children: React.ReactNode;
   disabled?: boolean;
   errorMessage?: string;
   handleChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   id: string;
   isValid?: boolean;
-  label: string;
   name: string;
   required?: boolean;
   requiredText?: string;
   value: string;
-}
+} & (TAriaLabelProps | THtmlLabelProps);
 
 export function Select({
+  ariaLabel,
   children,
   disabled,
   errorMessage,
@@ -29,7 +39,7 @@ export function Select({
   requiredText,
   value,
   ...props
-}: ISelectProps) {
+}: TSelectProps) {
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
   function handleBlur(e) {
     setIsFieldValid(e.target.validity.valid);
@@ -43,21 +53,25 @@ export function Select({
     props.handleChange(e);
   }
 
+  const labelElement =
+    required && requiredText ? (
+      <div className={styles['required-text-wrapper']}>
+        <label htmlFor={id}>{label}</label>
+        <span>{requiredText}</span>
+      </div>
+    ) : (
+      <label htmlFor={id}>
+        {label}
+        {required && !requiredText ? ' *' : ''}
+      </label>
+    );
+
   return (
     <div className={styles.container}>
-      {required && requiredText ? (
-        <div className={styles['required-text-wrapper']}>
-          <label htmlFor={id}>{label}</label>
-          <span>{requiredText}</span>
-        </div>
-      ) : (
-        <label htmlFor={id}>
-          {label}
-          {required && !requiredText ? ' *' : ''}
-        </label>
-      )}
+      {label ? labelElement : null}
       <div className={styles['validation-wrapper']}>
         <select
+          aria-label={ariaLabel}
           className={styles.select}
           disabled={disabled}
           id={id}
