@@ -8,6 +8,7 @@ type THtmlLabelProps = {
     label: string;
 };
 type TSelectProps = {
+    className?: string;
     children: React.ReactNode;
     disabled?: boolean;
     errorMessage?: string;
@@ -19,5 +20,5 @@ type TSelectProps = {
     requiredText?: string;
     value: string;
 } & (TAriaLabelProps | THtmlLabelProps);
-export declare function Select({ ariaLabel, children, disabled, errorMessage, label, id, isValid, name, required, requiredText, value, ...props }: TSelectProps): any;
+export declare function Select({ ariaLabel, className, children, disabled, errorMessage, label, id, isValid, name, required, requiredText, value, ...props }: TSelectProps): any;
 export {};

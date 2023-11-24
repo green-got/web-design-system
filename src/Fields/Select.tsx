@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Select.module.scss';
 
 type TAriaLabelProps = {
@@ -14,6 +15,7 @@ type THtmlLabelProps = {
 };
 
 type TSelectProps = {
+  className?: string;
   children: React.ReactNode;
   disabled?: boolean;
   errorMessage?: string;
@@ -28,6 +30,7 @@ type TSelectProps = {
 
 export function Select({
   ariaLabel,
+  className,
   children,
   disabled,
   errorMessage,
@@ -67,7 +70,7 @@ export function Select({
     );
 
   return (
-    <div className={styles.container}>
+    <div className={mergeClasses([styles.container, className])}>
       {label ? labelElement : null}
       <div className={styles['validation-wrapper']}>
         <select
