@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { Checkbox } from './Checkbox';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default {
+export default ({
   title: 'Components / Checkbox',
-} satisfies StoryDefault;
+} satisfies StoryDefault);
 
 export const CheckboxMain: Story = () => {
   return (

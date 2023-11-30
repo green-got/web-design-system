@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 import styles from './Corners.module.scss';
 
-export default {
+export default ({
   title: 'Foundations / Corners',
-} satisfies StoryDefault;
+} satisfies StoryDefault);
 
 export const Corners: Story = () => (
   <>

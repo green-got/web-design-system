@@ -1,8 +1,8 @@
 import React from 'react';
 declare const SpinSizes: readonly ["small", "large"];
-export type SpinSize = typeof SpinSizes[number];
+export type SpinSize = (typeof SpinSizes)[number];
 declare const Themes: readonly ["dark", "light"];
-export type Theme = typeof Themes[number];
+export type Theme = (typeof Themes)[number];
 export interface ISpinner extends React.HTMLAttributes<HTMLSpanElement> {
     className?: string;
     size?: SpinSize;

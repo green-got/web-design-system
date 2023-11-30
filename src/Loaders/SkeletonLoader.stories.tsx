@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { SkeletonLoader } from './SkeletonLoader';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default {
+export default ({
   title: 'Components / SkeletonLoader',
-} satisfies StoryDefault;
+} satisfies StoryDefault);
 
 export const SkeletonLoaderMain: Story = () => (
   <>

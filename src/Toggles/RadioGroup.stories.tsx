@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { RadioGroup, Radio } from './RadioGroup';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default {
+export default ({
   title: 'Components / RadioGroup',
-} satisfies StoryDefault;
+} satisfies StoryDefault);
 
 export const RadioGroupMain: Story = () => {
   const [checked, setChecked] = React.useState<string | undefined>(undefined);

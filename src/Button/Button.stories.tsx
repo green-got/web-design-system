@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { Button } from './Button';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default {
+export default ({
   title: 'Components / Buttons',
-} satisfies StoryDefault;
+} satisfies StoryDefault);
 
 function noop() {}
 

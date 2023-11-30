@@ -2,10 +2,10 @@ import React from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { GlobalStyles } from './GlobalStyles/GlobalStyles';
 
-export default {
+export default ({
   title: 'Home',
   parameters: {},
-} satisfies StoryDefault;
+} satisfies StoryDefault);
 
 export const Home: Story = () => (
   <>

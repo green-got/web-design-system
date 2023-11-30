@@ -5,9 +5,9 @@ import { ClearableInput } from './ClearableInput';
 import { UnitInput } from './UnitInput';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default {
+export default ({
   title: 'Components / Input',
-} satisfies StoryDefault;
+} satisfies StoryDefault);
 
 export const InputMain: Story = () => {
   const [a, setA] = React.useState<string>('');

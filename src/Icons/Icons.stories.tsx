@@ -71,9 +71,9 @@ import {
   YoutubeIcon,
 } from './Icons';
 
-export default {
+export default ({
   title: 'Foundations / Icons',
-} satisfies StoryDefault;
+} satisfies StoryDefault);
 
 const cardStyles = {
   alignItems: 'center',

@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { ProgressBar } from './ProgressBar';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default {
+export default ({
   title: 'Components / ProgressBar',
-} satisfies StoryDefault;
+} satisfies StoryDefault);
 
 export const ProgressBarMain: Story = () => {
   const [progress, setProgress] = React.useState(50);
