@@ -1,0 +1,55 @@
+.container {
+  border-radius: var(--corner-medium);
+  padding-block: var(--spacing-small);
+  padding-inline: var(--spacing-small);
+  position: relative;
+
+  &.neutral {
+    background-color: var(--colors-neutral-light);
+  }
+
+  &.primary {
+    background-color: var(--colors-primary-light);
+  }
+
+  &.success {
+    background-color: var(--colors-success-light);
+  }
+
+  &.warning {
+    background-color: var(--colors-warning-light);
+  }
+
+  &.error {
+    background-color: var(--colors-error-light);
+  }
+
+  .button {
+    color: var(--colors-neutral-dark);
+    padding-block: 0;
+    padding-inline: 0;
+    position: absolute;
+    inset-block-start: var(--spacing-xsmall);
+    inset-inline-end: var(--spacing-xsmall);
+
+    &.neutral {
+      background-color: var(--colors-neutral-light);
+    }
+
+    &.primary {
+      background-color: var(--colors-primary-light);
+    }
+
+    &.success {
+      background-color: var(--colors-success-light);
+    }
+
+    &.warning {
+      background-color: var(--colors-warning-light);
+    }
+
+    &.error {
+      background-color: var(--colors-error-light);
+    }
+  }
+}

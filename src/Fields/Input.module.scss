@@ -78,18 +78,17 @@
         align-items: center;
         appearance: none;
         background-color: var(--colors-neutral-light);
-        border-bottom-right-radius: 1rem;
-        border-top-right-radius: 1rem;
+        border-start-end-radius: 1rem;
+        border-end-end-radius: 1rem;
         border-width: 0;
         color: var(--colors-neutral-regular);
         display: flex;
         height: 5rem;
+        inset-block-start: 0.4rem;
+        inset-inline-end: 0.4rem;
         padding-inline-end: 1.6rem;
         padding-inline-start: 0.8rem;
         position: absolute;
-        right: 0.4rem;
-        top: 0.4rem;
-
       }
 
       ~span {

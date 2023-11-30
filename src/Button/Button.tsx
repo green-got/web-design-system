@@ -9,9 +9,9 @@ export interface IButtonProps {
   // to be applied as aria-disabled="<disabled>"
   attributes?: { 'aria-disabled': boolean };
   block?: boolean; // TODO: I don't love the 'block' prop design
+  children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
-  children: React.ReactNode;
   handleClick?: (event: MouseEvent) => void;
   name?: string;
   type?: ButtonType;

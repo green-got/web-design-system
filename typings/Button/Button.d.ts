@@ -5,9 +5,9 @@ export interface IButtonProps {
         'aria-disabled': boolean;
     };
     block?: boolean;
+    children?: React.ReactNode;
     className?: string;
     disabled?: boolean;
-    children: React.ReactNode;
     handleClick?: (event: MouseEvent) => void;
     name?: string;
     type?: ButtonType;
