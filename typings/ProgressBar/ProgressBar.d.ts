@@ -1,6 +1,8 @@
-export declare function ProgressBar({ id, label, max, value, }: {
+export interface IProgressBar {
+    className?: string;
     id: string;
     label: string;
     max: string | number;
     value: string | number;
-}): any;
+}
+export declare function ProgressBar({ className, id, label, max, value, }: IProgressBar): any;

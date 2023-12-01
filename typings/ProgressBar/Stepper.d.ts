@@ -1,5 +1,6 @@
 export interface IStepper {
+    className?: string;
     step?: number;
     steps: number;
 }
-export declare function Stepper({ step, steps }: IStepper): any;
+export declare function Stepper({ className, step, steps }: IStepper): any;
