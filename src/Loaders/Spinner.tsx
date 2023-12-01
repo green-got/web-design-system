@@ -16,13 +16,13 @@ const themesClassNames = {
   light: styles.light,
 };
 
-export interface ISpinner extends React.HTMLAttributes<HTMLSpanElement> {
+export interface ISpinnerProps extends React.HTMLAttributes<HTMLSpanElement> {
   className?: string;
   size?: SpinSize;
   theme?: Theme;
 }
 
-export function Spinner({ className, size, theme, ...props }: ISpinner) {
+export function Spinner({ className, size, theme, ...props }: ISpinnerProps) {
   return (
     <span
       className={mergeClasses([

@@ -1,8 +1,17 @@
-export interface IProgressBar {
+type TProgressAriaLabel = {
+    ariaLabel: string;
+    label?: never;
+};
+type TProgressHtmlLabel = {
+    ariaLabel?: never;
+    label: string;
+};
+export type TProgressBarProps = {
     className?: string;
     id: string;
     label: string;
     max: string | number;
     value: string | number;
-}
-export declare function ProgressBar({ className, id, label, max, value, }: IProgressBar): any;
+} & (TProgressAriaLabel | TProgressHtmlLabel);
+export declare function ProgressBar({ ariaLabel, className, id, label, max, value, }: TProgressBarProps): any;
+export {};

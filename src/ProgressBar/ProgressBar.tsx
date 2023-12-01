@@ -1,24 +1,42 @@
 import React from 'react';
 import styles from './ProgressBar.module.scss';
 
-export interface IProgressBar {
+type TProgressAriaLabel = {
+  ariaLabel: string;
+  label?: never;
+};
+
+type TProgressHtmlLabel = {
+  ariaLabel?: never;
+  label: string;
+};
+
+export type TProgressBarProps = {
   className?: string;
   id: string;
   label: string;
   max: string | number;
   value: string | number;
-}
+} & (TProgressAriaLabel | TProgressHtmlLabel);
+
 export function ProgressBar({
+  ariaLabel,
   className,
   id,
   label,
   max,
   value,
-}: IProgressBar) {
+}: TProgressBarProps) {
   return (
     <div className={className}>
-      <label htmlFor={id}>{label}</label>
-      <progress className={styles.progress} id={id} max={max} value={value} />
+      {label ? <label htmlFor={id}>{label}</label> : null}
+      <progress
+        aria-label={ariaLabel}
+        className={styles.progress}
+        id={id}
+        max={max}
+        value={value}
+      />
     </div>
   );
 }

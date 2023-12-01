@@ -2,13 +2,13 @@ import React from 'react';
 import styles from './Stepper.module.scss';
 import { mergeClasses } from '../utils/mergeClasses';
 
-export interface IStepper {
+export interface IStepperProps {
   className?: string;
   step?: number;
   steps: number;
 }
 
-export function Stepper({ className, step, steps }: IStepper) {
+export function Stepper({ className, step, steps }: IStepperProps) {
   return (
     // TODO: Switch to role tablist/tab when stepper becomes interactive
     <div
