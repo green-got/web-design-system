@@ -1,8 +1,8 @@
-type TProgressAriaLabel = {
+export type TProgressAriaLabel = {
     ariaLabel: string;
     label?: never;
 };
-type TProgressHtmlLabel = {
+export type TProgressHtmlLabel = {
     ariaLabel?: never;
     label: string;
 };
@@ -14,4 +14,3 @@ export type TProgressBarProps = {
     value: string | number;
 } & (TProgressAriaLabel | TProgressHtmlLabel);
 export declare function ProgressBar({ ariaLabel, className, id, label, max, value, }: TProgressBarProps): any;
-export {};

@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './ProgressBar.module.scss';
 
-type TProgressAriaLabel = {
+export type TProgressAriaLabel = {
   ariaLabel: string;
   label?: never;
 };
 
-type TProgressHtmlLabel = {
+export type TProgressHtmlLabel = {
   ariaLabel?: never;
   label: string;
 };
