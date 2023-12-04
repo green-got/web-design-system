@@ -14,7 +14,6 @@ export type TProgressHtmlLabel = {
 export type TProgressBarProps = {
   className?: string;
   id: string;
-  label: string;
   max: string | number;
   value: string | number;
 } & (TProgressAriaLabel | TProgressHtmlLabel);
