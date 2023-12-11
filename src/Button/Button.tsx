@@ -5,9 +5,10 @@ import { mergeClasses } from '../utils/mergeClasses';
 export type ButtonType = 'button' | 'submit';
 
 export interface IButtonProps {
-  // Maybe we nix `attributes` and re-purpose `disabled`
-  // to be applied as aria-disabled="<disabled>"
-  attributes?: { 'aria-disabled': boolean };
+  // 1. Maybe we nix `attributes` ?
+  // 2. Re-purpose `disabled` to be applied
+  // as aria-disabled="<disabled>" ?
+  attributes?: { [key: string]: string | boolean };
   block?: boolean; // TODO: I don't love the 'block' prop design
   children?: React.ReactNode;
   className?: string;

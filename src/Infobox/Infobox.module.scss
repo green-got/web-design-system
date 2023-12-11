@@ -2,7 +2,7 @@
   border-radius: var(--corner-medium);
   padding-block: var(--spacing-small);
   padding-inline: var(--spacing-small);
-  position: relative;
+  position: relative; // TODO: Can we avoid position: relative
 
   &.neutral {
     background-color: var(--colors-neutral-light);

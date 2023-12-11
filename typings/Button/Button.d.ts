@@ -2,7 +2,7 @@ import React from 'react';
 export type ButtonType = 'button' | 'submit';
 export interface IButtonProps {
     attributes?: {
-        'aria-disabled': boolean;
+        [key: string]: string | boolean;
     };
     block?: boolean;
     children?: React.ReactNode;
