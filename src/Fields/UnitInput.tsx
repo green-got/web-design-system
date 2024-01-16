@@ -14,6 +14,7 @@ export function UnitInput({
   errorMessage,
   id,
   label,
+  name,
   required,
   type = 'text',
   unit,
@@ -50,6 +51,7 @@ export function UnitInput({
           autoCorrect="off"
           disabled={disabled}
           id={id}
+          name={name}
           onBlur={handleBlur}
           onChange={handleChange}
           required={required}

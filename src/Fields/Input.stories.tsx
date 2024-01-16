@@ -18,8 +18,8 @@ export const InputMain: Story = () => {
   const [f, setF] = React.useState<string>('');
   const [g, setG] = React.useState<string>('');
   const [h, setH] = React.useState<string>('');
-  const [i, setI] = React.useState<string>(';lakj');
-  const [j, setJ] = React.useState<string>('');
+  const [i, setI] = React.useState<string>('');
+  const [j, setJ] = React.useState<string>(';lakj');
   const [k, setK] = React.useState<string>('');
 
   return (
@@ -28,92 +28,103 @@ export const InputMain: Story = () => {
 
       <h1>Input</h1>
       <Input
+        handleChange={(e) => setA(e.target.value)}
         id="a"
         label="Text"
-        handleChange={(e) => setA(e.target.value)}
+        name="a"
         value={a}
       />
 
       <Input
+        handleChange={(e) => setB(e.target.value)}
         id="b"
         label="Email"
-        handleChange={(e) => setB(e.target.value)}
+        name="b"
         type="email"
         value={b}
       />
 
       <Input
         attributes={{ placeholder: 'harry@green-got.com' }}
+        handleChange={(e) => setC(e.target.value)}
         id="c"
         label="Email with placeholder text"
-        handleChange={(e) => setC(e.target.value)}
+        name="c"
+        type="email"
         value={c}
       />
 
       <Input
+        handleChange={(e) => setD(e.target.value)}
         id="d"
         label="Number"
-        handleChange={(e) => setD(e.target.value)}
+        name="d"
         type="number"
         value={d}
       />
 
       <Input
+        handleChange={(e) => setE(e.target.value)}
         id="e"
         label="Search"
-        handleChange={(e) => setE(e.target.value)}
+        name="e"
         type="search"
         value={e}
       />
 
       <Input
         attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
-        id="f"
-        label="US Telephone"
         handleChange={(e) =>
           setF(updateInputValue(e.target.value, e.nativeEvent.inputType))
         }
+        id="f"
+        label="US Telephone"
+        name="f"
         type="tel"
         value={f}
       />
 
       <Input
         attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
-        id="j"
-        label="Date"
         handleChange={(e) => setJ(e.target.value)}
-        type="date"
-        value={j}
-      />
-
-      <Input
         id="g"
-        label="Required text"
-        handleChange={(e) => setG(e.target.value)}
-        required
-        type="text"
+        label="Date"
+        name="g"
+        type="date"
         value={g}
       />
 
       <Input
-        errorMessage="This field is required."
+        handleChange={(e) => setG(e.target.value)}
         id="h"
-        label="Required text w/ error message"
-        handleChange={(e) => setH(e.target.value)}
+        label="Required text"
+        name="h"
         required
         type="text"
         value={h}
       />
 
       <Input
-        attributes={{ pattern: 'right' }}
-        errorMessage="That's not right!"
+        errorMessage="This field is required."
+        handleChange={(e) => setH(e.target.value)}
         id="i"
-        label="Programmatically invalid text"
-        handleChange={(e) => setI(e.target.value)}
-        isValid={false}
+        label="Required text w/ error message"
+        name="i"
+        required
         type="text"
         value={i}
+      />
+
+      <Input
+        attributes={{ pattern: 'right' }}
+        errorMessage="That's not right!"
+        handleChange={(e) => setI(e.target.value)}
+        id="j"
+        isValid={false}
+        label="Programmatically invalid text"
+        name="j"
+        type="text"
+        value={j}
       />
 
       <Input
@@ -174,6 +185,7 @@ export const InputClearable = () => {
         id="a"
         label="Required text w/ error message"
         handleChange={(e) => setA(e.target.value)}
+        name="clearly"
         required
         type="text"
         value={a}
@@ -197,6 +209,7 @@ export const InputUnit = () => {
         id="a"
         label="Required non-negative number"
         handleChange={(e) => setA(e.target.value)}
+        name="units"
         required
         type="number"
         unit="€"

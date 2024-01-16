@@ -14,6 +14,7 @@ export interface IInputProps {
     id: string;
     isValid?: boolean;
     label: string;
+    name: string;
     required?: boolean;
     requiredText?: string;
     type?: 'date' | 'email' | 'number' | 'search' | 'tel' | 'text';

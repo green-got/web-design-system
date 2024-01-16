@@ -10,6 +10,7 @@ export function ClearableInput({
   errorMessage,
   id,
   label,
+  name,
   required,
   type = 'text',
   value,
@@ -44,6 +45,7 @@ export function ClearableInput({
           autoCorrect="off"
           disabled={disabled}
           id={id}
+          name={name}
           onBlur={handleBlur}
           onChange={handleChange}
           ref={inputRef}

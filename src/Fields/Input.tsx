@@ -18,6 +18,7 @@ export interface IInputProps {
   id: string;
   isValid?: boolean;
   label: string;
+  name: string;
   required?: boolean;
   requiredText?: string;
   type?: 'date' | 'email' | 'number' | 'search' | 'tel' | 'text';
@@ -33,6 +34,7 @@ export const Input = React.forwardRef(function Input(
     id,
     isValid = true,
     label,
+    name,
     required,
     requiredText,
     type = 'text',
@@ -74,6 +76,7 @@ export const Input = React.forwardRef(function Input(
           autoCorrect="off"
           disabled={disabled}
           id={id}
+          name={name}
           onBlur={handleBlur}
           onChange={handleChange}
           ref={inputRef}
