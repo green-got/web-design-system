@@ -1,8 +1,11 @@
 name: Publish package to Github registry
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'package.json'
 
 jobs:
   publish:
