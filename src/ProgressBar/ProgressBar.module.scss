@@ -1,5 +1,6 @@
 .progress {
   border-radius: 2px;
+  display: block;
   width: 100%;
   height: 4px;
 }
@@ -12,4 +13,9 @@
 .progress::-webkit-progress-value {
   background-color: var(--colors-primary);
   border-radius: 2px;
+}
+
+.label:has(+ .progress) {
+  display: block;
+  margin-block-end: var(--spacing-xxsmall);
 }

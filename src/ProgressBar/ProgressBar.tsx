@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ProgressBar.module.scss';
+import { mergeClasses } from '../utils/mergeClasses';
 
 export type TProgressAriaLabel = {
   ariaLabel: string;
@@ -27,8 +28,12 @@ export function ProgressBar({
   value,
 }: TProgressBarProps) {
   return (
-    <div className={className}>
-      {label ? <label htmlFor={id}>{label}</label> : null}
+    <div className={mergeClasses([styles.progress, className])}>
+      {label ? (
+        <label className={styles.label} htmlFor={id}>
+          {label}
+        </label>
+      ) : null}
       <progress
         aria-label={ariaLabel}
         className={styles.progress}
