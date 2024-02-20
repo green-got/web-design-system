@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { SegmentedController } from './SegmentedController';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default ({
+export default {
   title: 'Components / SegmentedController',
-} satisfies StoryDefault);
+} satisfies StoryDefault;
 
 export const SegmentedControllerMain: Story = () => {
   const [a, setA] = React.useState<string>('identifier');

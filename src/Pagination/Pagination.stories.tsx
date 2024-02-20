@@ -2,9 +2,9 @@ import React from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default ({
+export default {
   title: 'Components / Pagination',
-} satisfies StoryDefault);
+} satisfies StoryDefault;
 
 export const PaginationStory: Story = () => (
   <>

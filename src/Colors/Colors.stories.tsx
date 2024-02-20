@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 import styles from './ColorsStory.module.scss';
 
-export default ({
+export default {
   title: 'Foundations / Colors',
-} satisfies StoryDefault);
+} satisfies StoryDefault;
 
 export const Colors: Story = () => (
   <>

@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 import { Bug, Lockup } from './Logo';
 
-export default ({
+export default {
   title: 'Foundations / Logo',
-} satisfies StoryDefault);
+} satisfies StoryDefault;
 
 export const LogoMain: Story = () => {
   return (

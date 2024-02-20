@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { Stepper } from './Stepper';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default ({
+export default {
   title: 'Components / Stepper',
-} satisfies StoryDefault);
+} satisfies StoryDefault;
 
 export const StepperMain: Story = () => {
   const [progress, setProgress] = React.useState(50);

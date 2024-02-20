@@ -2,9 +2,9 @@ import React from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { GlobalStyles } from './GlobalStyles';
 
-export default ({
+export default {
   title: 'Foundations / Global Styles',
-} satisfies StoryDefault);
+} satisfies StoryDefault;
 
 export const GlobalStylesMain: Story = () => (
   <>

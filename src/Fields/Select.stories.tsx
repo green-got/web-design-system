@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { Select } from './Select';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default ({
+export default {
   title: 'Components / Select',
-} satisfies StoryDefault);
+} satisfies StoryDefault;
 
 export const SelectMain: Story = () => {
   const [a, setA] = React.useState<string>('');

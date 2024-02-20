@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { Spinner } from './Spinner';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default ({
+export default {
   title: 'Components / Spinners',
-} satisfies StoryDefault);
+} satisfies StoryDefault;
 
 export const SpinnerMain: Story = () => (
   <>

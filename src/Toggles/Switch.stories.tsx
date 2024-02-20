@@ -3,9 +3,9 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { Switch } from './Switch';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
-export default ({
+export default {
   title: 'Components / Switch',
-} satisfies StoryDefault);
+} satisfies StoryDefault;
 
 export const SwitchMain: Story = () => {
   const [toggleA, setSwitchA] = React.useState(false);
