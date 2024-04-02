@@ -86,7 +86,7 @@ export const InputMain: Story = () => {
 
       <Input
         attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
-        handleChange={(e) => setJ(e.target.value)}
+        handleChange={(e) => setG(e.target.value)}
         id="g"
         label="Date"
         name="g"
@@ -95,7 +95,7 @@ export const InputMain: Story = () => {
       />
 
       <Input
-        handleChange={(e) => setG(e.target.value)}
+        handleChange={(e) => setH(e.target.value)}
         id="h"
         label="Required text"
         name="h"
@@ -106,7 +106,7 @@ export const InputMain: Story = () => {
 
       <Input
         errorMessage="This field is required."
-        handleChange={(e) => setH(e.target.value)}
+        handleChange={(e) => setI(e.target.value)}
         id="i"
         label="Required text w/ error message"
         name="i"
@@ -118,7 +118,7 @@ export const InputMain: Story = () => {
       <Input
         attributes={{ pattern: 'right' }}
         errorMessage="That's not right!"
-        handleChange={(e) => setI(e.target.value)}
+        handleChange={(e) => setJ(e.target.value)}
         id="j"
         isValid={false}
         label="Programmatically invalid text"
