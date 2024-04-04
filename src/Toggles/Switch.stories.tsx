@@ -12,6 +12,7 @@ export const SwitchMain: Story = () => {
   const [toggleB, setSwitchB] = React.useState(true);
   const [toggleC, setSwitchC] = React.useState(false);
   const [toggleD, setSwitchD] = React.useState(true);
+  const [toggleE, setSwitchE] = React.useState(true);
   return (
     <>
       <GlobalStyles />
@@ -45,6 +46,17 @@ export const SwitchMain: Story = () => {
         handleChange={() => setSwitchD(!toggleD)}
         id="d"
         label="Test D"
+      />
+
+      <br />
+
+      <p>Aria-labelled switch</p>
+
+      <Switch
+        ariaLabel="Aria label test"
+        checked={toggleE}
+        handleChange={() => setSwitchE(!toggleE)}
+        id="e"
       />
     </>
   );

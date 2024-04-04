@@ -3,27 +3,45 @@ import React from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Switch.module.scss';
 
-export interface ISwitchProps {
+type TAriaLabelProps = {
+  ariaLabel: string;
+  label?: never;
+};
+
+type THtmlLabelProps = {
+  ariaLabel?: never;
+  label: string;
+};
+
+export type TSwitchProps = {
   className?: string;
   checked: boolean;
   disabled?: boolean;
   handleChange: () => void;
   id: string;
-  label: string;
-}
+} & (TAriaLabelProps | THtmlLabelProps);
 
 export function Switch({
+  ariaLabel,
   className,
   checked,
   disabled = false,
   handleChange,
   id,
   label,
-}: ISwitchProps) {
+}: TSwitchProps) {
   return (
-    <label className={mergeClasses([styles.switch, className])} htmlFor={id}>
-      {label}
+    <div className={mergeClasses([styles.switch, className])}>
+      {label && (
+        <label
+          className={mergeClasses([styles.switch, className])}
+          htmlFor={id}
+        >
+          {label}
+        </label>
+      )}
       <input
+        aria-label={ariaLabel}
         aria-checked={checked}
         checked={checked}
         className={styles.track}
@@ -33,6 +51,6 @@ export function Switch({
         role="switch"
         type="checkbox"
       />
-    </label>
+    </div>
   );
 }

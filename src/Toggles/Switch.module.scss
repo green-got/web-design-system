@@ -25,7 +25,7 @@
     grid: [track] 1fr / [track] 1fr;
     inline-size: var(--track-size);
     padding: 0.2rem;
-    pointer-events: none;
+    // pointer-events: none;
 
     &::before {
       background-color: var(--colors-neutral-white);
@@ -35,7 +35,7 @@
       content: '';
       grid-area: track;
       inline-size: var(--thumb-size);
-      pointer-events: auto;
+      // pointer-events: auto;
       transform: translateX(var(--thumb-position));
       transition: transform 0.1s ease-in-out;
     }
