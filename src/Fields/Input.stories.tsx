@@ -196,6 +196,7 @@ export const InputClearable = () => {
 
 export const InputUnit = () => {
   const [a, setA] = React.useState('');
+  const [b, setB] = React.useState('');
 
   return (
     <>
@@ -215,6 +216,22 @@ export const InputUnit = () => {
         unit="€"
         unitLabel="Euros"
         value={a}
+      />
+
+      <h2>Input with leading unit</h2>
+      <UnitInput
+        attributes={{ min: 0 }}
+        errorMessage="Value must be 0 or greater"
+        id="b"
+        label="Required non-negative number"
+        handleChange={(e) => setB(e.target.value)}
+        name="units"
+        required
+        type="number"
+        unit="€"
+        unitLabel="Euros"
+        unitPlacement="start"
+        value={b}
       />
     </>
   );

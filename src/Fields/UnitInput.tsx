@@ -1,11 +1,12 @@
 'use client';
 import React, { useRef, useState } from 'react';
-import { IInputProps } from './Input';
+import type { IInputProps } from './Input';
 import styles from './Input.module.scss';
 
 interface IUnitInputProps extends IInputProps {
   unit: string;
   unitLabel: string;
+  unitPlacement?: 'start' | 'end';
 }
 
 export function UnitInput({
@@ -19,6 +20,7 @@ export function UnitInput({
   type = 'text',
   unit,
   unitLabel,
+  unitPlacement = 'end',
   value,
   ...props
 }: IUnitInputProps) {
@@ -56,14 +58,16 @@ export function UnitInput({
           onChange={handleChange}
           required={required}
           style={{
-            paddingInlineEnd: unitRef.current
+            [unitPlacement === 'end'
+              ? 'paddingInlineEnd'
+              : 'paddingInlineStart']: unitRef.current
               ? `${unitRef.current.getBoundingClientRect().width}px`
               : `calc(${unit.length}ex + 2.6rem)`,
           }}
           type={type}
           value={value}
         />
-        <abbr ref={unitRef} title={unitLabel}>
+        <abbr className={styles[unitPlacement]} ref={unitRef} title={unitLabel}>
           {unit}
         </abbr>
         {!isValid && errorMessage && <span>{errorMessage}</span>}

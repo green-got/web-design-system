@@ -89,6 +89,15 @@
         padding-inline-end: 1.6rem;
         padding-inline-start: 0.8rem;
         position: absolute;
+
+        &.start {
+          border-start-start-radius: 1rem;
+          border-start-end-radius: 0;
+          border-end-start-radius: 1rem;
+          border-end-end-radius: 0;
+          inset-inline-start: 0.4rem;
+          inset-inline-end: auto;
+        }
       }
 
       ~span {
