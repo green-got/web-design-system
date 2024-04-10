@@ -1,4 +1,4 @@
-import { IInputProps } from './Input';
+import type { IInputProps } from './Input';
 interface IUnitInputProps extends IInputProps {
     unit: string;
     unitLabel: string;

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { type ChangeEvent } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Switch.module.scss';
 
@@ -17,7 +17,7 @@ export type TSwitchProps = {
   className?: string;
   checked: boolean;
   disabled?: boolean;
-  handleChange: () => void;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   id: string;
 } & (TAriaLabelProps | THtmlLabelProps);
 
