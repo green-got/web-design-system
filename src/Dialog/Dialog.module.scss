@@ -1,0 +1,44 @@
+.dialog {
+  border-radius: var(--corner-big);
+  border-width: 0;
+  margin: auto;
+  padding: 4rem;
+  position: relative;
+
+  &::backdrop {
+    background-color: #00000088;
+  }
+
+  &.fullscreen {
+    border-radius: 0;
+    border-width: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    max-height: none;
+    max-width: none;
+    right: 0;
+    top: 0;
+    width: 100vw;
+  }
+
+  .chrome {
+    display: flex;
+    justify-content: flex-end;
+
+    .close-btn {
+      background-color: var(--colors-neutral-white);
+      color: var(--colors-neutral-dark);
+      padding: var(--spacing-xxsmall);
+
+      &:hover,
+      &:active {
+        background-color: var(--colors-neutral-medium);
+      }
+    }
+  }
+}
+
+.dialog body.modal-open {
+  overflow: hidden;
+}
