@@ -13,6 +13,7 @@ export const DialogMain: Story = () => {
   const [isOpenTwo, setIsOpenTwo] = React.useState<boolean>(false);
   const [isOpenThree, setIsOpenThree] = React.useState<boolean>(false);
   const [isOpenFour, setIsOpenFour] = React.useState<boolean>(false);
+  const [isOpenFive, setIsOpenFive] = React.useState<boolean>(false);
   return (
     <>
       <GlobalStyles />
@@ -63,6 +64,19 @@ export const DialogMain: Story = () => {
         isOpen={isOpenFour}
       >
         <h1>Fullscreen Dialog w/ close btn</h1>
+      </Dialog>
+
+      <Button handleClick={() => setIsOpenFive(true)}>
+        Match media determines fullscreen or not
+      </Button>
+      <Dialog
+        dismissable={true}
+        handleClose={() => setIsOpenFive(false)}
+        id="five"
+        isFullscreen={window.matchMedia('(max-width: 60rem)').matches}
+        isOpen={isOpenFive}
+      >
+        <h1>Fullscreen: yes or no?</h1>
       </Dialog>
     </>
   );

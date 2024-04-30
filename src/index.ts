@@ -1,4 +1,5 @@
 export * from './Button';
+export * from './Dialog';
 export * from './Fields';
 export * from './GlobalStyles';
 export * from './Icons';
