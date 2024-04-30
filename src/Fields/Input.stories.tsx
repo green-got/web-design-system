@@ -197,6 +197,7 @@ export const InputClearable = () => {
 export const InputUnit = () => {
   const [a, setA] = React.useState('');
   const [b, setB] = React.useState('');
+  const [c, setC] = React.useState('');
 
   return (
     <>
@@ -232,6 +233,26 @@ export const InputUnit = () => {
         unitLabel="Euros"
         unitPlacement="start"
         value={b}
+      />
+
+      <h2>Prevent non-numeric character input</h2>
+      <UnitInput
+        attributes={{ min: 0 }}
+        errorMessage="Value must be 0 or greater"
+        id="c"
+        label="Required non-negative number"
+        handleKeyDown={(e) => {
+          if (!e.key.match(/[0-9]/g)) {
+            e.preventDefault();
+          }
+        }}
+        handleChange={(e) => setC(e.target.value)}
+        name="units"
+        required
+        type="number"
+        unit="€"
+        unitLabel="Euros"
+        value={c}
       />
     </>
   );

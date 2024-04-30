@@ -15,6 +15,7 @@ export interface IInputProps {
   disabled?: boolean;
   errorMessage?: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   id: string;
   isValid?: boolean;
   label: string;
@@ -31,6 +32,7 @@ export const Input = React.forwardRef(function Input(
     className,
     disabled,
     errorMessage,
+    handleKeyDown = () => {},
     id,
     isValid = true,
     label,
@@ -79,6 +81,7 @@ export const Input = React.forwardRef(function Input(
           name={name}
           onBlur={handleBlur}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
           ref={inputRef}
           required={required}
           type={type}

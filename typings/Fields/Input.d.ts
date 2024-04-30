@@ -11,6 +11,7 @@ export interface IInputProps {
     disabled?: boolean;
     errorMessage?: string;
     handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    handleKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
     id: string;
     isValid?: boolean;
     label: string;
