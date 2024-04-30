@@ -249,7 +249,7 @@ export const InputUnit = () => {
         handleChange={(e) => setC(e.target.value)}
         name="units"
         required
-        type="number"
+        type="text"
         unit="€"
         unitLabel="Euros"
         value={c}

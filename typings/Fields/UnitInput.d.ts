@@ -4,5 +4,5 @@ interface IUnitInputProps extends IInputProps {
     unitLabel: string;
     unitPlacement?: 'start' | 'end';
 }
-export declare function UnitInput({ attributes, disabled, errorMessage, id, label, name, required, type, unit, unitLabel, unitPlacement, value, ...props }: IUnitInputProps): any;
+export declare function UnitInput({ attributes, disabled, errorMessage, handleKeyDown, id, label, name, required, type, unit, unitLabel, unitPlacement, value, ...props }: IUnitInputProps): any;
 export {};

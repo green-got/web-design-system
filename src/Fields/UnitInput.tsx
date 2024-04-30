@@ -13,6 +13,7 @@ export function UnitInput({
   attributes,
   disabled,
   errorMessage,
+  handleKeyDown = () => {},
   id,
   label,
   name,
@@ -56,6 +57,7 @@ export function UnitInput({
           name={name}
           onBlur={handleBlur}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
           required={required}
           style={{
             [unitPlacement === 'end'
