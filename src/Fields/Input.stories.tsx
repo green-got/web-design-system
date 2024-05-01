@@ -258,6 +258,38 @@ export const InputUnit = () => {
   );
 };
 
+export const InputWithCustomValidity = () => {
+  const [a, setA] = React.useState('');
+
+  return (
+    <>
+      <GlobalStyles />
+
+      <h1>Custom validity</h1>
+
+      <Input
+        errorMessage="We need a number that isn't zero in there somewhere!"
+        id="a"
+        label="Enter text w/ at least one digit greater than 0"
+        handleChange={(e) => {
+          setA(e.target.value);
+
+          // Validation
+          if (e.target.value.match(/[1-9]+/) === null) {
+            e.target.setCustomValidity('⚠️');
+          } else {
+            e.target.setCustomValidity('');
+          }
+        }}
+        name="custom"
+        required
+        type="text"
+        value={a}
+      />
+    </>
+  );
+};
+
 function updateInputValue(value, inputType) {
   if (inputType === 'insertText' || inputType === 'insertFromPaste') {
     return formatPhoneNumberUS(value);

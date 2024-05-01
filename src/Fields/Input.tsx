@@ -48,11 +48,12 @@ export const Input = React.forwardRef(function Input(
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
 
   function handleChange(e) {
+    props.handleChange(e);
+
     const isValid = e.target.validity.valid;
     if (!isFieldValid && isValid) {
       setIsFieldValid(isValid);
     }
-    props.handleChange(e);
   }
 
   function handleBlur(e) {
