@@ -174,3 +174,14 @@ hr {
   font-size: 1.2rem;
   font-weight: 700;
 }
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+}

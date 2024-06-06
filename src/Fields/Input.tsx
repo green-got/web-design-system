@@ -22,6 +22,7 @@ export interface IInputProps {
   name: string;
   required?: boolean;
   requiredText?: string;
+  title?: string;
   type?: 'date' | 'email' | 'number' | 'search' | 'tel' | 'text';
   value: string;
 }
@@ -39,6 +40,7 @@ export const Input = React.forwardRef(function Input(
     name,
     required,
     requiredText,
+    title,
     type = 'text',
     value,
     ...props
@@ -85,6 +87,7 @@ export const Input = React.forwardRef(function Input(
           onKeyDown={handleKeyDown}
           ref={inputRef}
           required={required}
+          title={title}
           type={type}
           value={value}
         />

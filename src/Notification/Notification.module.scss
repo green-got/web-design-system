@@ -1,0 +1,55 @@
+.container {
+  align-items: center;
+  display: flex;
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  position: fixed;
+  transform: translateX(-50%);
+}
+
+.notification {
+  animation-fill-mode: both;
+  border: 0.1rem solid var(--colors-neutral-medium);
+  border-radius: var(--corner-medium);
+  box-shadow: var(--shadow-light);
+  display: inline-flex;
+  color: var(--colors-neutral-dark);
+  font-size: 1.2rem;
+  gap: var(--spacing-xxsmall);
+  padding: 1.2rem; // TODO: Existing spacing variables don't support the design
+  transform: translateY(calc(var(--spacing-small) * -1));
+}
+
+.show {
+  animation-name: notify;
+  animation-duration: 3.5s;
+}
+
+@keyframes notify {
+  0% {
+    translate: 50% calc(var(--spacing-small) * -1);
+  }
+
+  5% {
+    translate: 50% var(--spacing-large);
+  }
+
+  95% {
+    translate: 50% var(--spacing-large);
+  }
+
+  100% {
+    translate: 50% calc(var(--spacing-small) * -1);
+  }
+}
+
+.circle {
+  align-items: center;
+  background-color: var(--colors-success);
+  border-radius: 50%;
+  color: var(--colors-neutral-white);
+  display: flex;
+  height: 1.4rem;
+  justify-content: center;
+  width: 1.4rem;
+}

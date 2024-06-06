@@ -1,6 +1,6 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 interface IInfoboxProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
     dismissHandler?: () => void;
     dismissible?: boolean;

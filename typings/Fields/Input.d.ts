@@ -18,6 +18,7 @@ export interface IInputProps {
     name: string;
     required?: boolean;
     requiredText?: string;
+    title?: string;
     type?: 'date' | 'email' | 'number' | 'search' | 'tel' | 'text';
     value: string;
 }
