@@ -1,4 +1,4 @@
-import React from 'react';
+import type { MouseEvent, ReactNode } from 'react';
 import styles from './Button.module.scss';
 import { mergeClasses } from '../utils/mergeClasses';
 
@@ -10,10 +10,10 @@ export interface IButtonProps {
   // as aria-disabled="<disabled>" ?
   attributes?: { [key: string]: string | boolean };
   block?: boolean; // TODO: I don't love the 'block' prop design
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
   disabled?: boolean;
-  handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  handleClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   name?: string;
   type?: ButtonType;
 }

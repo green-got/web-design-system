@@ -1,14 +1,14 @@
-import React from 'react';
+import type { MouseEvent, ReactNode } from 'react';
 export type ButtonType = 'button' | 'submit';
 export interface IButtonProps {
     attributes?: {
         [key: string]: string | boolean;
     };
     block?: boolean;
-    children?: React.ReactNode;
+    children?: ReactNode;
     className?: string;
     disabled?: boolean;
-    handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    handleClick?: (event: MouseEvent<HTMLButtonElement>) => void;
     name?: string;
     type?: ButtonType;
 }

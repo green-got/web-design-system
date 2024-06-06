@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { type ChangeEvent, type ReactNode, useState } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Select.module.scss';
 
@@ -16,10 +16,10 @@ type THtmlLabelProps = {
 
 type TSelectProps = {
   className?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   disabled?: boolean;
   errorMessage?: string;
-  handleChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  handleChange: (event: ChangeEvent<HTMLSelectElement>) => void;
   id: string;
   isValid?: boolean;
   name: string;

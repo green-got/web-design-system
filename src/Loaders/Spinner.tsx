@@ -1,4 +1,4 @@
-import React from 'react';
+import type { HTMLAttributes } from 'react';
 import styles from './Spinner.module.scss';
 import { mergeClasses } from '../utils/mergeClasses';
 
@@ -16,7 +16,7 @@ const themesClassNames = {
   light: styles.light,
 };
 
-export interface ISpinnerProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface ISpinnerProps extends HTMLAttributes<HTMLSpanElement> {
   className?: string;
   size?: SpinSize;
   theme?: Theme;

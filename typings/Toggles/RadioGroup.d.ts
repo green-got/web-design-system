@@ -1,6 +1,6 @@
-import React from 'react';
+import type { ChangeEvent, ReactNode } from 'react';
 export type name = string;
-export type TChangeEvent = React.ChangeEvent<HTMLInputElement>;
+export type TChangeEvent = ChangeEvent<HTMLInputElement>;
 export interface IRadioProps {
     checked: boolean;
     handleChange: (e: TChangeEvent) => void;
@@ -17,7 +17,7 @@ export interface IRadioGroupProps {
     legend: string;
     name: name;
     radios: TRadio[];
-    renderRadio: (radio: TRadio, checked: string, handleChange: (e: TChangeEvent) => void, name: name, required: boolean) => React.ReactNode;
+    renderRadio: (radio: TRadio, checked: string, handleChange: (e: TChangeEvent) => void, name: name, required: boolean) => ReactNode;
     required?: boolean;
 }
 export declare function RadioGroup({ checked, handleChange, legend, name, radios, renderRadio, required, }: IRadioGroupProps): any;

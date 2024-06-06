@@ -1,9 +1,9 @@
-import React from 'react';
+import type { ClickEvent } from 'react';
 import styles from './SegmentedController.module.scss';
 
 export interface ISegmentedControllerProps {
   activeId: string;
-  handleClick: (e: React.ClickEvent<HTMLAnchorElement>) => void;
+  handleClick: (e: ClickEvent<HTMLAnchorElement>) => void;
   segments: { id: string; label: string; panelId?: string }[];
 }
 

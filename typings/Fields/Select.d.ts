@@ -1,4 +1,4 @@
-import React from 'react';
+import { type ChangeEvent, type ReactNode } from 'react';
 type TAriaLabelProps = {
     ariaLabel: string;
     label?: never;
@@ -9,10 +9,10 @@ type THtmlLabelProps = {
 };
 type TSelectProps = {
     className?: string;
-    children: React.ReactNode;
+    children: ReactNode;
     disabled?: boolean;
     errorMessage?: string;
-    handleChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+    handleChange: (event: ChangeEvent<HTMLSelectElement>) => void;
     id: string;
     isValid?: boolean;
     name: string;

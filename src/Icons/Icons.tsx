@@ -1,4 +1,4 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 // export const Icons = {
 //   icon1: 'icon',
 //   icon2: 'icon',
@@ -13,7 +13,7 @@ export interface IIconProps {
 }
 
 export interface IIconBaseProps extends IIconProps {
-  renderIcon: (title: string) => React.ReactNode;
+  renderIcon: (title: string) => ReactNode;
 }
 
 function Icon({

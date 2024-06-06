@@ -25,6 +25,12 @@
   animation-duration: 3.5s;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .show {
+    animation-name: notify-reduced;
+  }
+}
+
 @keyframes notify {
   0% {
     translate: 50% calc(var(--spacing-small) * -1);
@@ -35,6 +41,24 @@
   }
 
   95% {
+    translate: 50% var(--spacing-large);
+  }
+
+  100% {
+    translate: 50% calc(var(--spacing-small) * -1);
+  }
+}
+
+@keyframes notify-reduced {
+  0% {
+    translate: 50% calc(var(--spacing-small) * -1);
+  }
+
+  1% {
+    translate: 50% var(--spacing-large);
+  }
+
+  99% {
     translate: 50% var(--spacing-large);
   }
 

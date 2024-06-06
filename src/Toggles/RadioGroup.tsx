@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
+import type { ChangeEvent, ReactNode } from 'react';
 import styles from './RadioGroup.module.scss';
 
 export type name = string;
-export type TChangeEvent = React.ChangeEvent<HTMLInputElement>;
+export type TChangeEvent = ChangeEvent<HTMLInputElement>;
 
 export interface IRadioProps {
   checked: boolean;
@@ -32,7 +32,7 @@ export interface IRadioGroupProps {
     handleChange: (e: TChangeEvent) => void,
     name: name,
     required: boolean,
-  ) => React.ReactNode;
+  ) => ReactNode;
   required?: boolean;
 }
 

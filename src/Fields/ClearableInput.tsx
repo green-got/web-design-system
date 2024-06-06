@@ -1,7 +1,7 @@
 'use client';
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { CircledXIcon } from '../Icons';
-import { IInputProps } from './Input';
+import type { IInputProps } from './Input';
 import styles from './Input.module.scss';
 
 export function ClearableInput({

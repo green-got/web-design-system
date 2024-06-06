@@ -1,10 +1,10 @@
-import React from 'react';
+import { type ChangeEvent } from 'react';
 interface ITextAreaProps {
     className?: string;
     cols?: number;
     disabled?: boolean;
     errorMessage?: string;
-    handleChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    handleChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
     id: string;
     isValid?: boolean;
     label: string;

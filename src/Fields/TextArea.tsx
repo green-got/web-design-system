@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { type ChangeEvent, useState } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './TextArea.module.scss';
 
@@ -8,7 +8,7 @@ interface ITextAreaProps {
   cols?: number;
   disabled?: boolean;
   errorMessage?: string;
-  handleChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  handleChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   id: string;
   isValid?: boolean;
   label: string;
