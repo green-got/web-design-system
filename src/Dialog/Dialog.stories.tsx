@@ -14,6 +14,7 @@ export const DialogMain: Story = () => {
   const [isOpenThree, setIsOpenThree] = React.useState<boolean>(false);
   const [isOpenFour, setIsOpenFour] = React.useState<boolean>(false);
   const [isOpenFive, setIsOpenFive] = React.useState<boolean>(false);
+  const [isOpenSix, setIsOpenSix] = React.useState<boolean>(false);
   return (
     <>
       <GlobalStyles />
@@ -77,6 +78,17 @@ export const DialogMain: Story = () => {
         isOpen={isOpenFive}
       >
         <h1>Fullscreen: yes or no?</h1>
+      </Dialog>
+
+      <Button handleClick={() => setIsOpenSix(true)}>Dialog w/ form</Button>
+      <Dialog
+        handleClose={() => setIsOpenSix(false)}
+        id="six"
+        isOpen={isOpenSix}
+      >
+        <form>
+          <input type="text" />
+        </form>
       </Dialog>
     </>
   );

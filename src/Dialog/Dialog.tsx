@@ -1,4 +1,4 @@
-import React, { type KeyboardEvent } from 'react';
+import React, { type KeyboardEvent, useEffect } from 'react';
 import { Button } from '../Button';
 import { XIcon } from '../Icons';
 import { mergeClasses } from '../utils/mergeClasses';
@@ -35,6 +35,15 @@ export function Dialog({
     }
   }
 
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+      return function cleanup() {
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }
+  }, [isOpen]);
+
   function handleKeyDown(e: KeyboardEvent<HTMLDialogElement>) {
     if (e.key === 'Escape') {
       handleClose();
@@ -49,7 +58,6 @@ export function Dialog({
         className,
       ])}
       id={id}
-      onKeyDown={handleKeyDown}
       ref={ref}
     >
       {dismissable && (
