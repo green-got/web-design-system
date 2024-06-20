@@ -1,6 +1,6 @@
 {
   "name": "@green-got/web-design-system",
-  "version": "0.0.67",
+  "version": "0.0.68",
   "description": "Green-Got design system",
   "homepage": "https://green-got.github.io/web-design-system/",
   "repository": {
@@ -17,7 +17,7 @@
     "commit": "git-cz",
     "dev": "ladle serve",
     "format": "biome format --write .",
-    "lint": "biome lint --apply ./src",
+    "lint": "biome lint --write ./src",
     "pre-commit": "pnpm lint-staged",
     "pre-push": "pnpm run lint && pnpm run typecheck && pnpm test",
     "prepare": "husky",
