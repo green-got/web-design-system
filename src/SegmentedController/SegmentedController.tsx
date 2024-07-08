@@ -1,19 +1,22 @@
 import type { ClickEvent } from 'react';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './SegmentedController.module.scss';
 
 export interface ISegmentedControllerProps {
   activeId: string;
+  className?: string;
   handleClick: (e: ClickEvent<HTMLAnchorElement>) => void;
   segments: { id: string; label: string; panelId?: string }[];
 }
 
 export function SegmentedController({
   activeId,
+  className,
   handleClick,
   segments,
 }: ISegmentedControllerProps) {
   return (
-    <ul className={styles.container} role="tablist">
+    <ul className={mergeClasses([styles.container, className])} role="tablist">
       {segments.map((segment) => {
         const selected = segment.id === activeId;
         return (

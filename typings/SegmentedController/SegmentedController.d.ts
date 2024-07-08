@@ -1,6 +1,7 @@
 import type { ClickEvent } from 'react';
 export interface ISegmentedControllerProps {
     activeId: string;
+    className?: string;
     handleClick: (e: ClickEvent<HTMLAnchorElement>) => void;
     segments: {
         id: string;
@@ -8,4 +9,4 @@ export interface ISegmentedControllerProps {
         panelId?: string;
     }[];
 }
-export declare function SegmentedController({ activeId, handleClick, segments, }: ISegmentedControllerProps): any;
+export declare function SegmentedController({ activeId, className, handleClick, segments, }: ISegmentedControllerProps): any;
