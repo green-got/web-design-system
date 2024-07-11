@@ -1,15 +1,22 @@
-import React, { type KeyboardEvent, useEffect } from 'react';
+import {
+  type KeyboardEvent,
+  type ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Button } from '../Button';
 import { XIcon } from '../Icons';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Dialog.module.scss';
 
 export interface IDialogProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   closeBtnAriaLabel?: string;
   dismissable?: boolean;
   handleClose: () => void;
+  hasOverflowIndicator?: boolean;
   id: string;
   isFullscreen?: boolean;
   isOpen: boolean;
@@ -21,11 +28,14 @@ export function Dialog({
   closeBtnAriaLabel = 'Close dialog',
   dismissable = false,
   handleClose,
+  hasOverflowIndicator = false,
   id,
   isFullscreen,
   isOpen,
 }: IDialogProps) {
-  const ref = React.useRef(null);
+  const [showOverflowIndicator, setShowOverflowIndicator] =
+    useState<boolean>(false);
+  const ref = useRef<HTMLDialogElement>(null);
 
   if (ref.current) {
     if (isOpen) {
@@ -38,11 +48,35 @@ export function Dialog({
   useEffect(() => {
     if (isOpen) {
       document.addEventListener('keydown', handleKeyDown);
+      const ro = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          const wrapper = entry.target.querySelector(`div.${styles.wrapper}`);
+          if (wrapper) {
+            if (wrapper.scrollHeight > wrapper.clientHeight) {
+              setShowOverflowIndicator(true);
+            } else {
+              setShowOverflowIndicator(false);
+            }
+          } else {
+            if (entry.target.scrollHeight > entry.target.clientHeight) {
+              setShowOverflowIndicator(true);
+            } else {
+              setShowOverflowIndicator(false);
+            }
+          }
+        }
+      });
+
+      if (hasOverflowIndicator && ref.current) {
+        ro.observe(ref.current);
+      }
+
       return function cleanup() {
         document.removeEventListener('keydown', handleKeyDown);
+        ro.disconnect();
       };
     }
-  }, [isOpen]);
+  }, [isOpen, hasOverflowIndicator]);
 
   function handleKeyDown(e: KeyboardEvent<HTMLDialogElement>) {
     if (e.key === 'Escape') {
@@ -55,13 +89,14 @@ export function Dialog({
       className={mergeClasses([
         styles.dialog,
         isFullscreen ? styles.fullscreen : undefined,
+        showOverflowIndicator ? styles.wrapped : undefined,
         className,
       ])}
       id={id}
       ref={ref}
     >
-      {dismissable && (
-        <div className={styles.chrome}>
+      {dismissable &&
+        (showOverflowIndicator ? (
           <Button
             attributes={{ 'aria-label': closeBtnAriaLabel }}
             className={styles['close-btn']}
@@ -69,9 +104,30 @@ export function Dialog({
           >
             <XIcon height={16} width={16} />
           </Button>
+        ) : (
+          <div className={styles.chrome}>
+            <Button
+              attributes={{ 'aria-label': closeBtnAriaLabel }}
+              className={styles['close-btn']}
+              handleClick={handleClose}
+            >
+              <XIcon height={16} width={16} />
+            </Button>
+          </div>
+        ))}
+      {showOverflowIndicator ? (
+        <div
+          className={mergeClasses([
+            styles.wrapper,
+            dismissable ? styles.dismissable : undefined,
+          ])}
+        >
+          {children}
         </div>
+      ) : (
+        children
       )}
-      {children}
+      {showOverflowIndicator && <div className={styles.mask} />}
     </dialog>
   );
 }

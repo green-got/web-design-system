@@ -1,5 +1,5 @@
 'use client';
-import React, { type ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Switch.module.scss';
 

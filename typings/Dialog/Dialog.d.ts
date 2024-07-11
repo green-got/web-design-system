@@ -1,6 +1,6 @@
-import React from 'react';
+import { type ReactNode } from 'react';
 export interface IDialogProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
     closeBtnAriaLabel?: string;
     dismissable?: boolean;
@@ -8,5 +8,6 @@ export interface IDialogProps {
     id: string;
     isFullscreen?: boolean;
     isOpen: boolean;
+    showOverflowIndicators?: boolean;
 }
-export declare function Dialog({ children, className, closeBtnAriaLabel, dismissable, handleClose, id, isFullscreen, isOpen, }: IDialogProps): any;
+export declare function Dialog({ children, className, closeBtnAriaLabel, dismissable, handleClose, id, isFullscreen, isOpen, showOverflowIndicators, }: IDialogProps): any;

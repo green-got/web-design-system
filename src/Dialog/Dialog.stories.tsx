@@ -15,6 +15,7 @@ export const DialogMain: Story = () => {
   const [isOpenFour, setIsOpenFour] = React.useState<boolean>(false);
   const [isOpenFive, setIsOpenFive] = React.useState<boolean>(false);
   const [isOpenSix, setIsOpenSix] = React.useState<boolean>(false);
+  const [isOpenSeven, setIsOpenSeven] = React.useState<boolean>(false);
   return (
     <>
       <GlobalStyles />
@@ -89,6 +90,53 @@ export const DialogMain: Story = () => {
         <form>
           <input type="text" />
         </form>
+      </Dialog>
+
+      <br />
+      <br />
+      <Button handleClick={() => setIsOpenSeven(true)}>
+        Dialog w/ lots o' content
+      </Button>
+      <Dialog
+        dismissable={true}
+        handleClose={() => setIsOpenSeven(false)}
+        hasOverflowIndicator={true}
+        id="seven"
+        isOpen={isOpenSeven}
+      >
+        <h2>Make my content overflow</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing elit dui, lobortis
+          cubilia hendrerit ante turpis pretium proin, vestibulum semper congue
+          interdum duis in platea. Nec cubilia dictumst sed, per congue morbi,
+          cursus sagittis. Curabitur purus scelerisque erat fringilla justo ut
+          velit morbi enim, in litora pellentesque placerat orci ridiculus fusce
+          lacinia, senectus phasellus pulvinar ornare rutrum nam porta viverra.
+        </p>
+        <p>
+          Felis turpis euismod neque dictum dui luctus placerat ligula rutrum
+          vel, pharetra tincidunt eleifend arcu scelerisque quisque rhoncus urna
+          proin tempor, magnis est gravida interdum senectus suspendisse quam
+          congue auctor. Magnis placerat arcu sagittis interdum convallis
+          iaculis felis, faucibus aliquam ullamcorper porta in per gravida, diam
+          magna pulvinar natoque aliquet integer. Interdum placerat vitae
+          inceptos augue arcu luctus hac senectus eu accumsan consequat semper
+          vestibulum dictumst, blandit sem varius elementum proin fermentum
+          mauris convallis magna tincidunt morbi lacinia felis ullamcorper,
+          eleifend praesent auctor nisi egestas metus malesuada mollis duis
+          libero venenatis dignissim molestie. Mollis duis scelerisque leo
+          pulvinar himenaeos lacus risus malesuada, vivamus inceptos lacinia
+          quisque aenean eros lobortis feugiat, luctus placerat donec egestas
+          venenatis accumsan class.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing elit dui, lobortis
+          cubilia hendrerit ante turpis pretium proin, vestibulum semper congue
+          interdum duis in platea. Nec cubilia dictumst sed, per congue morbi,
+          cursus sagittis. Curabitur purus scelerisque erat fringilla justo ut
+          velit morbi enim, in litora pellentesque placerat orci ridiculus fusce
+          lacinia, senectus phasellus pulvinar ornare rutrum nam porta viverra.
+        </p>
       </Dialog>
     </>
   );

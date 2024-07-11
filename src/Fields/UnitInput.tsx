@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import type { IInputProps } from './Input';
 import styles from './Input.module.scss';
 

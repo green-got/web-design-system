@@ -1,4 +1,4 @@
-import React from 'react';
+import { type ChangeEvent, type KeyboardEvent } from 'react';
 export interface IInputProps {
     attributes?: {
         maxLength?: number;
@@ -10,8 +10,8 @@ export interface IInputProps {
     className?: string;
     disabled?: boolean;
     errorMessage?: string;
-    handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    handleKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+    handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+    handleKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;
     id: string;
     isValid?: boolean;
     label: string;

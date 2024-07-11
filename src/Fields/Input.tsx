@@ -1,5 +1,11 @@
 'use client';
-import React, { useState } from 'react';
+import {
+  type ChangeEvent,
+  forwardRef,
+  type KeyboardEvent,
+  type Ref,
+  useState,
+} from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Input.module.scss';
 
@@ -14,8 +20,8 @@ export interface IInputProps {
   className?: string;
   disabled?: boolean;
   errorMessage?: string;
-  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  handleKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+  handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  handleKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;
   id: string;
   isValid?: boolean;
   label: string;
@@ -27,7 +33,7 @@ export interface IInputProps {
   value: string;
 }
 
-export const Input = React.forwardRef(function Input(
+export const Input = forwardRef(function Input(
   {
     attributes,
     className,
@@ -45,7 +51,7 @@ export const Input = React.forwardRef(function Input(
     value,
     ...props
   }: IInputProps,
-  inputRef?: React.Ref<HTMLInputElement>,
+  inputRef?: Ref<HTMLInputElement>,
 ) {
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
 

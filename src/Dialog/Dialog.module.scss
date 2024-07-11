@@ -1,12 +1,19 @@
 .dialog {
+  background-color: var(--colors-neutral-white);
   border-radius: var(--corner-big);
   border-width: 0;
+  color: var(--colors-neutral-dark);
   margin: auto;
   padding: 4rem;
   position: relative;
 
   &::backdrop {
-    background-color: #00000088;
+    background-color: rgb(from var(--colors-neutral-black) r g b / 53%);
+  }
+
+  &.wrapped {
+    overflow: hidden;
+    padding: 0;
   }
 
   &.fullscreen {
@@ -27,18 +34,56 @@
     justify-content: flex-end;
 
     .close-btn {
-      background-color: var(--colors-neutral-white);
-      color: var(--colors-neutral-dark);
-      padding: var(--spacing-xxsmall);
-
-      &:hover,
-      &:active {
-        background-color: var(--colors-neutral-medium);
-      }
+      position: static;
     }
+  }
+
+  .close-btn {
+    background-color: var(--colors-neutral-white);
+    color: var(--colors-neutral-dark);
+    padding: var(--spacing-xxsmall);
+    inset-block-start: 4rem;
+    inset-inline-end: 4rem;
+    position: absolute;
+
+    &:hover,
+    &:active {
+      background-color: var(--colors-neutral-medium);
+    }
+  }
+
+  .wrapper {
+    /* Default max-height for Dialog element */
+    height: calc(100vh - 3.8rem);
+    overflow: auto;
+    padding: 4rem;
+
+    &.dismissable {
+      padding-block-start: 7.2rem;
+    }
+  }
+
+  .mask {
+    /* border-style property is required to render border-image properly on Webkit */
+    border-style: solid;
+    border-image: linear-gradient(transparent, var(--colors-neutral-white) 70%) 20 / 2rem;
+    inset-block-end: 0;
+    height: 4rem;
+    pointer-events: none;
+    position: absolute;
+    user-select: none;
+    width: 100%;
   }
 }
 
-.dialog body.modal-open {
-  overflow: hidden;
+@media (prefers-color-scheme: dark) {
+  .dialog {
+    .close-btn {
+
+      &:hover,
+      &:active {
+        background-color: var(--colors-neutral-light);
+      }
+    }
+  }
 }
