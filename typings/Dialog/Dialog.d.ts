@@ -5,9 +5,9 @@ export interface IDialogProps {
     closeBtnAriaLabel?: string;
     dismissable?: boolean;
     handleClose: () => void;
+    hasOverflowIndicator?: boolean;
     id: string;
     isFullscreen?: boolean;
     isOpen: boolean;
-    showOverflowIndicators?: boolean;
 }
-export declare function Dialog({ children, className, closeBtnAriaLabel, dismissable, handleClose, id, isFullscreen, isOpen, showOverflowIndicators, }: IDialogProps): any;
+export declare function Dialog({ children, className, closeBtnAriaLabel, dismissable, handleClose, hasOverflowIndicator, id, isFullscreen, isOpen, }: IDialogProps): any;
