@@ -21,22 +21,22 @@ export const Corners: Story = () => (
 
     <section className={styles.container}>
       <div>
-        <div style={{ borderRadius: 'var(--corner--xsmall)' }} />
+        <div style={{ borderRadius: 'var(--corner-xsmall)' }} />
         <p>--corner--xsmall</p>
       </div>
 
       <div>
-        <div style={{ borderRadius: 'var(--corner--small)' }} />
+        <div style={{ borderRadius: 'var(--corner-small)' }} />
         <p>--corner--small</p>
       </div>
 
       <div>
-        <div style={{ borderRadius: 'var(--corner--medium)' }} />
+        <div style={{ borderRadius: 'var(--corner-medium)' }} />
         <p>--corner--medium</p>
       </div>
 
       <div>
-        <div style={{ borderRadius: 'var(--corner--big)' }} />
+        <div style={{ borderRadius: 'var(--corner-big)' }} />
         <p>--corner--big</p>
       </div>
     </section>
