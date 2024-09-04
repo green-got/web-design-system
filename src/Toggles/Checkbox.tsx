@@ -8,6 +8,7 @@ export const Checkbox = ({
   handleChange,
   id,
   label,
+  required,
   ...props
 }: {
   checked?: boolean;
@@ -15,6 +16,7 @@ export const Checkbox = ({
   handleChange: () => void;
   id: string;
   label: string;
+  required?: boolean;
 }) => {
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -24,6 +26,7 @@ export const Checkbox = ({
         disabled={disabled}
         id={id}
         onChange={handleChange}
+        required={required}
         type="checkbox"
       />
       <label className="label" htmlFor={id}>
