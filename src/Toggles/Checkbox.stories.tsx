@@ -20,6 +20,7 @@ export const CheckboxMain: Story = () => {
           id="a"
           handleChange={() => {}}
           label="Accept terms and conditions."
+          name="a"
         />
       </div>
 
@@ -29,6 +30,7 @@ export const CheckboxMain: Story = () => {
           id="b"
           handleChange={() => {}}
           label="Accept terms and conditions."
+          name="b"
         />
       </div>
 
@@ -39,6 +41,7 @@ export const CheckboxMain: Story = () => {
           id="c"
           handleChange={() => {}}
           label="Accept terms and conditions."
+          name="c"
         />
       </div>
 
@@ -48,6 +51,7 @@ export const CheckboxMain: Story = () => {
           id="d"
           handleChange={() => setChecked(!checked)}
           label="Accept terms and conditions."
+          name="d"
           required
         />
       </div>

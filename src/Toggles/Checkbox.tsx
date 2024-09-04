@@ -8,6 +8,7 @@ export const Checkbox = ({
   handleChange,
   id,
   label,
+  name,
   required,
   ...props
 }: {
@@ -16,6 +17,7 @@ export const Checkbox = ({
   handleChange: () => void;
   id: string;
   label: string;
+  name: string;
   required?: boolean;
 }) => {
   return (
@@ -25,6 +27,7 @@ export const Checkbox = ({
         className={styles.checkbox}
         disabled={disabled}
         id={id}
+        name={name}
         onChange={handleChange}
         required={required}
         type="checkbox"
