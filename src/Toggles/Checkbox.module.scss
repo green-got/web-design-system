@@ -7,7 +7,7 @@
   border-style: solid;
   border-width: 2px;
   color: var(--colors-neutral-white);
-  display: flex;
+  flex-shrink: 0;
   height: 24px;
   justify-content: center;
   margin: 0.8rem 0.8rem 0.8rem 0;
