@@ -10,4 +10,5 @@ export * from './Pagination';
 export * from './ProgressBar';
 export * from './SegmentedController';
 export * from './Spacings';
+export * from './Table';
 export * from './Toggles';
