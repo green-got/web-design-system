@@ -1,0 +1,37 @@
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: var(--colors-neutral-dark);
+}
+
+.table>div:not([role="rowgroup"]) {
+  padding-block: var(--spacing-xxsmall);
+  text-align: center;
+}
+
+.head {
+  border: 0.1rem solid var(--colors-neutral-medium);
+  border-radius: var(--corner-medium);
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+  padding-block: var(--spacing-xsmall);
+  font-weight: 500;
+}
+
+.body {
+  border: 0.1rem solid var(--colors-neutral-medium);
+  border-block-start-width: 0;
+}
+
+.row {
+  display: grid;
+  padding-inline: var(--spacing-xsmall);
+}
+
+.row:nth-child(even) {
+  background-color: var(--colors-neutral-light);
+}
+
+.body .row {
+  padding-block: var(--spacing-xxsmall);
+}
