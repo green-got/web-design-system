@@ -1,1 +1,8 @@
-export { Table } from './Table';
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableColumn,
+  TableRow,
+  TableCell,
+} from './Table';
