@@ -1,5 +1,6 @@
 'use client';
 import type { ChangeEvent, ReactNode } from 'react';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './RadioGroup.module.scss';
 
 export type name = string;
@@ -22,6 +23,7 @@ export type TRadio = Omit<
 
 export interface IRadioGroupProps {
   checked: string;
+  className?: string;
   handleChange: (e: TChangeEvent) => void;
   legend: string;
   name: name;
@@ -38,6 +40,7 @@ export interface IRadioGroupProps {
 
 export function RadioGroup({
   checked,
+  className,
   handleChange,
   legend,
   name,
@@ -46,7 +49,7 @@ export function RadioGroup({
   required,
 }: IRadioGroupProps) {
   return (
-    <fieldset className={styles['radio-group']}>
+    <fieldset className={mergeClasses([styles['radio-group'], className])}>
       <legend>{legend}</legend>
       {radios.map((radio) =>
         renderRadio(radio, checked, handleChange, name, required),
