@@ -21,7 +21,7 @@ export const Checkbox = ({
   required?: boolean;
 }) => {
   return (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div style={{ display: 'flex', alignItems: 'flex-start' }}>
       <input
         checked={checked}
         className={styles.checkbox}
@@ -32,7 +32,7 @@ export const Checkbox = ({
         required={required}
         type="checkbox"
       />
-      <label className="label" htmlFor={id}>
+      <label className={styles.label} htmlFor={id}>
         {label}
       </label>
     </div>
