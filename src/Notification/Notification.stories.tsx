@@ -18,7 +18,7 @@ export const NotificationMain: Story = () => {
         Notify
       </button>
 
-      <Notification id="a" setShow={setShowOne} show={showOne}>
+      <Notification id="a" name="a" setShow={setShowOne} show={showOne}>
         Notifying...
       </Notification>
       <br />

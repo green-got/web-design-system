@@ -17,6 +17,7 @@ export function Stepper({ className, step, steps }: IStepperProps) {
       aria-valuenow={step}
       className={mergeClasses([styles.stepper, className])}
       role="progressbar"
+      tabIndex={0}
     >
       {[...new Array(steps)].map((_, i) => (
         <span

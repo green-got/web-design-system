@@ -6,7 +6,9 @@ import { mergeClasses } from '../utils/mergeClasses';
 interface INotificationProps {
   className?: string;
   children: ReactNode;
+  form?: string;
   id: string;
+  name: string;
   setShow: (value: boolean) => void;
   show: boolean;
 }
@@ -14,7 +16,9 @@ interface INotificationProps {
 export function Notification({
   className,
   children,
+  form,
   id,
+  name,
   setShow,
   show,
 }: INotificationProps) {
@@ -38,21 +42,22 @@ export function Notification({
   if (show) {
     return (
       <div className={styles.container}>
-        <div
+        <output
           className={mergeClasses([
             styles.notification,
             className,
             show ? styles.show : undefined,
           ])}
+          form={form}
           id={id}
+          name={name}
           ref={ref}
-          role="status"
         >
           <div className={styles.circle}>
             <CheckmarkIcon height={12} width={12} />
           </div>
           {children}
-        </div>
+        </output>
       </div>
     );
   }
