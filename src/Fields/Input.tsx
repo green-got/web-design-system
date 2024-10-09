@@ -11,6 +11,7 @@ import styles from './Input.module.scss';
 
 export interface IInputProps {
   attributes?: {
+    autoFocus?: boolean;
     maxLength?: number;
     min?: number;
     pattern?: string;

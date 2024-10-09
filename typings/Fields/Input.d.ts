@@ -1,6 +1,7 @@
 import { type ChangeEvent, type KeyboardEvent } from 'react';
 export interface IInputProps {
     attributes?: {
+        autoFocus?: boolean;
         maxLength?: number;
         min?: number;
         pattern?: string;

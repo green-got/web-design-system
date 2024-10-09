@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useState } from 'react';
+import { forwardRef, type Ref, useRef, useState } from 'react';
 import type { IInputProps } from './Input';
 import styles from './Input.module.scss';
 
@@ -9,22 +9,25 @@ interface IUnitInputProps extends IInputProps {
   unitPlacement?: 'start' | 'end';
 }
 
-export function UnitInput({
-  attributes,
-  disabled,
-  errorMessage,
-  handleKeyDown = () => {},
-  id,
-  label,
-  name,
-  required,
-  type = 'text',
-  unit,
-  unitLabel,
-  unitPlacement = 'end',
-  value,
-  ...props
-}: IUnitInputProps) {
+export const UnitInput = forwardRef(function UnitInput(
+  {
+    attributes,
+    disabled,
+    errorMessage,
+    handleKeyDown = () => {},
+    id,
+    label,
+    name,
+    required,
+    type = 'text',
+    unit,
+    unitLabel,
+    unitPlacement = 'end',
+    value,
+    ...props
+  }: IUnitInputProps,
+  inputRef?: Ref<HTMLInputElement>,
+) {
   const [isValid, setIsValid] = useState<boolean>(true);
   const unitRef = useRef(null);
 
@@ -58,6 +61,7 @@ export function UnitInput({
           onBlur={handleBlur}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
+          ref={inputRef}
           required={required}
           style={{
             [unitPlacement === 'end'
@@ -76,4 +80,4 @@ export function UnitInput({
       </div>
     </div>
   );
-}
+});

@@ -1,9 +1,11 @@
 'use client';
-import React from 'react';
+
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Checkbox.module.scss';
 
 export const Checkbox = ({
   checked,
+  className,
   disabled,
   handleChange,
   id,
@@ -13,6 +15,7 @@ export const Checkbox = ({
   ...props
 }: {
   checked?: boolean;
+  className?: string;
   disabled?: boolean;
   handleChange: () => void;
   id: string;
@@ -21,7 +24,7 @@ export const Checkbox = ({
   required?: boolean;
 }) => {
   return (
-    <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+    <div className={mergeClasses([styles.container, className])}>
       <input
         checked={checked}
         className={styles.checkbox}

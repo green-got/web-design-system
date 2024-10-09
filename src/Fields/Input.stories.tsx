@@ -3,6 +3,7 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { Input } from './Input';
 import { ClearableInput } from './ClearableInput';
 import { UnitInput } from './UnitInput';
+import { FileInput } from './FileInput';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
 export default {
@@ -198,6 +199,17 @@ export const InputUnit = () => {
   const [a, setA] = React.useState('');
   const [b, setB] = React.useState('');
   const [c, setC] = React.useState('');
+  const [d, setD] = React.useState('');
+  const [e, setE] = React.useState('100');
+  const refE = React.useRef(null);
+
+  React.useEffect(() => {
+    if (refE.current) {
+      // refE.current.setSelectionRange(0, 0);
+      refE.current.focus();
+      refE.current.select();
+    }
+  }, []);
 
   return (
     <>
@@ -254,6 +266,43 @@ export const InputUnit = () => {
         unitLabel="Euros"
         value={c}
       />
+
+      <h2>Input with long unit</h2>
+      <p>
+        Hint: change value between 0, 1, 2 and notice how the unit adjusts to
+        the input
+      </p>
+      <UnitInput
+        attributes={{ min: 0 }}
+        errorMessage="Value must be 0 or greater"
+        id="d"
+        label="Required non-negative number"
+        handleChange={(e) => setD(e.target.value)}
+        name="units"
+        required
+        type="number"
+        unit={d === '1' ? 'month' : 'months'}
+        unitLabel="Months"
+        unitPlacement="end"
+        value={d}
+      />
+
+      <h2>Input with pre-selection</h2>
+      <UnitInput
+        attributes={{ min: 0 }}
+        errorMessage="Value must be 0 or greater"
+        id="e"
+        label="Required non-negative number"
+        handleChange={(e) => setE(e.target.value)}
+        name="units"
+        ref={refE}
+        required
+        type="number"
+        unit="months"
+        unitLabel="Months"
+        unitPlacement="end"
+        value={e}
+      />
     </>
   );
 };
@@ -288,6 +337,10 @@ export const InputWithCustomValidity = () => {
       />
     </>
   );
+};
+
+export const InputFile = () => {
+  return <FileInput block label="Choose a file" id="file" name="file" />;
 };
 
 function updateInputValue(value, inputType) {
