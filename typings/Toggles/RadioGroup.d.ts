@@ -1,4 +1,4 @@
-import type { ChangeEvent, ReactNode } from 'react';
+import { type ChangeEvent, type ReactNode } from 'react';
 export type name = string;
 export type TChangeEvent = ChangeEvent<HTMLInputElement>;
 export interface IRadioProps {
@@ -22,4 +22,4 @@ export interface IRadioGroupProps {
     required?: boolean;
 }
 export declare function RadioGroup({ checked, className, handleChange, legend, name, radios, renderRadio, required, }: IRadioGroupProps): any;
-export declare function Radio({ checked, handleChange, id, label, name, required, value, }: IRadioProps): any;
+export declare const Radio: any;

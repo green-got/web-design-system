@@ -1,5 +1,5 @@
 'use client';
-import type { ChangeEvent, ReactNode } from 'react';
+import { type ChangeEvent, forwardRef, type ReactNode, type Ref } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './RadioGroup.module.scss';
 
@@ -58,15 +58,10 @@ export function RadioGroup({
   );
 }
 
-export function Radio({
-  checked,
-  handleChange,
-  id,
-  label,
-  name,
-  required,
-  value,
-}: IRadioProps) {
+export const Radio = forwardRef<HTMLInputElement, IRadioProps>(function Radio(
+  { checked, handleChange, id, label, name, required, value }: IRadioProps,
+  inputRef?: Ref<HTMLInputElement>,
+) {
   return (
     <div className={styles.radio}>
       <input
@@ -74,6 +69,7 @@ export function Radio({
         id={id}
         name={name}
         onChange={handleChange}
+        ref={inputRef}
         required={required}
         type="radio"
         value={value}
@@ -81,4 +77,4 @@ export function Radio({
       <label htmlFor={id}>{label}</label>
     </div>
   );
-}
+});
