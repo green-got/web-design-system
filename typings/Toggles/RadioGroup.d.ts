@@ -22,4 +22,4 @@ export interface IRadioGroupProps {
     required?: boolean;
 }
 export declare function RadioGroup({ checked, className, handleChange, legend, name, radios, renderRadio, required, }: IRadioGroupProps): any;
-export declare function Radio({ handleChange, id, label, name, required, value, }: IRadioProps): any;
+export declare function Radio({ checked, handleChange, id, label, name, required, value, }: IRadioProps): any;

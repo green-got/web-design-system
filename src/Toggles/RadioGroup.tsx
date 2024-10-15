@@ -59,6 +59,7 @@ export function RadioGroup({
 }
 
 export function Radio({
+  checked,
   handleChange,
   id,
   label,
@@ -69,6 +70,7 @@ export function Radio({
   return (
     <div className={styles.radio}>
       <input
+        checked={checked}
         id={id}
         name={name}
         onChange={handleChange}

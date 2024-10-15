@@ -17,7 +17,7 @@
   &.block {
     border-radius: var(--corner-big);
     display: flex;
-    padding-block: 1.6rem;
+    padding-block: var(--spacing-xsmall);
     width: 100%;
   }
 

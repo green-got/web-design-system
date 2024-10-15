@@ -15,6 +15,7 @@
 .block {
   border-radius: var(--corner-big);
   display: block;
+  padding-block: var(--spacing-xsmall);
   text-align: center;
 }
 
