@@ -10,5 +10,6 @@ export interface IFileInputProps {
     multiple?: boolean;
     name: string;
     previewClassName?: string;
+    required?: boolean;
 }
-export declare function FileInput({ accept, block, className, label, labelClassName, handleChange, id, multiple, name, previewClassName, }: IFileInputProps): any;
+export declare const FileInput: any;
