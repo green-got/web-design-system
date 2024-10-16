@@ -1,4 +1,4 @@
-export declare const Checkbox: ({ checked, className, disabled, handleChange, id, label, name, required, ...props }: {
+export interface ICheckboxProps {
     checked?: boolean;
     className?: string;
     disabled?: boolean;
@@ -7,4 +7,5 @@ export declare const Checkbox: ({ checked, className, disabled, handleChange, id
     label: string;
     name: string;
     required?: boolean;
-}) => any;
+}
+export declare const Checkbox: any;

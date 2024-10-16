@@ -1,19 +1,10 @@
 'use client';
 
+import { forwardRef, type Ref } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Checkbox.module.scss';
 
-export const Checkbox = ({
-  checked,
-  className,
-  disabled,
-  handleChange,
-  id,
-  label,
-  name,
-  required,
-  ...props
-}: {
+export interface ICheckboxProps {
   checked?: boolean;
   className?: string;
   disabled?: boolean;
@@ -22,22 +13,39 @@ export const Checkbox = ({
   label: string;
   name: string;
   required?: boolean;
-}) => {
-  return (
-    <div className={mergeClasses([styles.container, className])}>
-      <input
-        checked={checked}
-        className={styles.checkbox}
-        disabled={disabled}
-        id={id}
-        name={name}
-        onChange={handleChange}
-        required={required}
-        type="checkbox"
-      />
-      <label className={styles.label} htmlFor={id}>
-        {label}
-      </label>
-    </div>
-  );
-};
+}
+
+export const Checkbox = forwardRef<HTMLInputElement, ICheckboxProps>(
+  function Checkbox(
+    {
+      checked,
+      className,
+      disabled,
+      handleChange,
+      id,
+      label,
+      name,
+      required,
+    }: ICheckboxProps,
+    inputRef?: Ref<HTMLInputElement>,
+  ) {
+    return (
+      <div className={mergeClasses([styles.container, className])}>
+        <input
+          checked={checked}
+          className={styles.checkbox}
+          disabled={disabled}
+          id={id}
+          name={name}
+          onChange={handleChange}
+          ref={inputRef}
+          required={required}
+          type="checkbox"
+        />
+        <label className={styles.label} htmlFor={id}>
+          {label}
+        </label>
+      </div>
+    );
+  },
+);
