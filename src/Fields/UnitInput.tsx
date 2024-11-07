@@ -1,5 +1,6 @@
 'use client';
 import { forwardRef, type Ref, useRef, useState } from 'react';
+import { mergeClasses } from '../utils/mergeClasses';
 import type { IInputProps } from './Input';
 import styles from './Input.module.scss';
 
@@ -12,6 +13,7 @@ interface IUnitInputProps extends IInputProps {
 export const UnitInput = forwardRef(function UnitInput(
   {
     attributes,
+    className,
     disabled,
     errorMessage,
     handleKeyDown = () => {},
@@ -43,7 +45,7 @@ export const UnitInput = forwardRef(function UnitInput(
   }
 
   return (
-    <div className={styles.container}>
+    <div className={mergeClasses([styles.container, className])}>
       <label htmlFor={id}>
         {label}
         {required ? ' *' : ''}
