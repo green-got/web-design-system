@@ -3,15 +3,28 @@ import type { StoryDefault, Story } from '@ladle/react';
 import { RadioGroup, Radio } from './RadioGroup';
 import { Button } from '../Button';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
+import './RadioGroup.stories.scss';
 
 export default {
   title: 'Components / RadioGroup',
 } satisfies StoryDefault;
 
+function Compose({ heading, desc }: { heading?: string; desc?: string }) {
+  return (
+    <>
+      <h3>{heading}</h3>
+      <span>{desc}</span>
+    </>
+  );
+}
+
 export const RadioGroupMain: Story = () => {
   const [checked, setChecked] = useState<string | undefined>(undefined);
   const [controlled, setControlled] = useState<string>('');
   const [three, setThree] = useState<string>('');
+  const [includeClass, setIncludeClass] = useState<boolean>(false);
+  const [klass, setKlass] = useState<string>('');
+  const [complex, setComplex] = useState<string>('');
   const ref = useRef(null);
   return (
     <>
@@ -112,6 +125,80 @@ export const RadioGroupMain: Story = () => {
           Validate
         </Button>
       </form>
+
+      <h2>Radio className</h2>
+      <Button handleClick={() => setIncludeClass(!includeClass)}>
+        Toggle radio class
+      </Button>
+      <RadioGroup
+        checked={klass}
+        handleChange={(e) => setKlass(e.target.value)}
+        legend="Group Class"
+        name="class"
+        radios={[
+          { id: 'a4', label: 'A', value: 'a' },
+          { id: 'b4', label: 'B', value: 'b' },
+          { id: 'c4', label: 'C', value: 'c' },
+        ]}
+        renderRadio={(radio, checked, handleChange, name, required) => (
+          <Radio
+            checked={checked === radio.value}
+            className={includeClass ? 'top' : ''}
+            handleChange={handleChange}
+            id={radio.id}
+            key={radio.id}
+            label={radio.label}
+            name={name}
+            radio={radio}
+            required={required}
+            value={radio.value}
+          />
+        )}
+      />
+
+      <h2>Component label</h2>
+      <RadioGroup
+        checked={complex}
+        handleChange={(e) => setComplex(e.target.value)}
+        legend="Group Complex"
+        name="complex"
+        radios={[
+          {
+            id: 'complex-a',
+            label: Compose,
+            heading: 'Hello',
+            desc: 'My description',
+            value: 'a',
+          },
+          {
+            desc: 'All the details here',
+            heading: 'Option 2',
+            id: 'complex-b',
+            label: Compose,
+            value: 'b',
+          },
+          {
+            desc: 'More context',
+            heading: 'Number 3',
+            id: 'complex-c',
+            label: Compose,
+            value: 'c',
+          },
+        ]}
+        renderRadio={(radio, checked, handleChange, name, required) => (
+          <Radio
+            checked={checked === radio.value}
+            handleChange={handleChange}
+            id={radio.id}
+            key={radio.id}
+            label={radio.label}
+            name={name}
+            radio={radio}
+            required={required}
+            value={radio.value}
+          />
+        )}
+      />
     </>
   );
 };

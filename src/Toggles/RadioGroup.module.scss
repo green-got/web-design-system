@@ -8,7 +8,7 @@
   }
 
   .radio {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     margin: 1rem 0;
 
@@ -46,7 +46,9 @@
         outline-offset: -8px;
       }
     }
+
+    label {
+      padding-block-start: 0.1rem;
+    }
   }
-
-
 }
