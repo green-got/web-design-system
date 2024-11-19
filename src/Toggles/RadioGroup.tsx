@@ -53,6 +53,7 @@ export interface IRadioGroupProps {
     required: boolean,
   ) => ReactNode;
   required?: boolean;
+  requiredText?: string;
 }
 
 export function RadioGroup({
@@ -64,10 +65,14 @@ export function RadioGroup({
   radios,
   renderRadio,
   required,
+  requiredText,
 }: IRadioGroupProps) {
   return (
     <fieldset className={mergeClasses([styles['radio-group'], className])}>
-      <legend>{legend}</legend>
+      <legend>
+        {legend}
+        {required ? (requiredText ? ` ${requiredText}` : ' *') : ''}
+      </legend>
       {radios.map((radio) =>
         renderRadio(radio, checked, handleChange, name, required),
       )}

@@ -25,6 +25,7 @@ export const RadioGroupMain: Story = () => {
   const [includeClass, setIncludeClass] = useState<boolean>(false);
   const [klass, setKlass] = useState<string>('');
   const [complex, setComplex] = useState<string>('');
+  const [form, setForm] = useState<string>('');
   const ref = useRef(null);
   return (
     <>
@@ -199,6 +200,35 @@ export const RadioGroupMain: Story = () => {
           />
         )}
       />
+
+      <form>
+        <RadioGroup
+          checked={form}
+          handleChange={(e) => setForm(e.target.value)}
+          legend="Required field w/ custom required text"
+          name="form"
+          radios={[
+            { id: 'form-a', label: 'A', value: 'a' },
+            { id: 'form-b', label: 'B', value: 'b' },
+            { id: 'form-c', label: 'C', value: 'c' },
+          ]}
+          renderRadio={(radio, checked, handleChange, name, required) => (
+            <Radio
+              checked={checked === radio.value}
+              handleChange={handleChange}
+              id={radio.id}
+              key={radio.id}
+              label={radio.label}
+              name={name}
+              required={required}
+              value={radio.value}
+            />
+          )}
+          required
+          requiredText="(not optional)"
+        />
+        <Button type="submit">Submit</Button>
+      </form>
     </>
   );
 };

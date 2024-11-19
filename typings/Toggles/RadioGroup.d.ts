@@ -28,7 +28,8 @@ export interface IRadioGroupProps {
     radios: TRadio[];
     renderRadio: (radio: TRadio, checked: string, handleChange: (e: TChangeEvent) => void, name: name, required: boolean) => ReactNode;
     required?: boolean;
+    requiredText?: string;
 }
-export declare function RadioGroup({ checked, className, handleChange, legend, name, radios, renderRadio, required, }: IRadioGroupProps): any;
+export declare function RadioGroup({ checked, className, handleChange, legend, name, radios, renderRadio, required, requiredText, }: IRadioGroupProps): any;
 export declare const Radio: any;
 export {};
