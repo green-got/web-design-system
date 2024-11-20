@@ -37,7 +37,7 @@ export const UnitInput = forwardRef(function UnitInput(
     if (!isValid) {
       setIsValid(e.target.validity.valid);
     }
-    props.handleChange(e);
+    props.handleChange?.(e);
   }
 
   function handleBlur(e) {
