@@ -11,7 +11,7 @@ export interface IInputProps {
     className?: string;
     disabled?: boolean;
     errorMessage?: string;
-    handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+    handleChange?: (event: ChangeEvent<HTMLInputElement>) => void;
     handleKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;
     id: string;
     isValid?: boolean;
