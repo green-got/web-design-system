@@ -1,6 +1,11 @@
 'use client';
 
-import { type ChangeEvent, type ReactNode, useState } from 'react';
+import {
+  type ChangeEvent,
+  type KeyboardEvent,
+  type ReactNode,
+  useState,
+} from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Select.module.scss';
 
@@ -20,6 +25,7 @@ type TSelectProps = {
   disabled?: boolean;
   errorMessage?: string;
   handleChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  handleKeyDown?: (event: KeyboardEvent<HTMLSelectElement>) => void;
   id: string;
   isValid?: boolean;
   name: string;
@@ -34,6 +40,7 @@ export function Select({
   children,
   disabled,
   errorMessage,
+  handleKeyDown,
   label,
   id,
   isValid = true,
@@ -81,6 +88,7 @@ export function Select({
           name={name}
           onBlur={handleBlur}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
           required={required}
           value={value}
         >

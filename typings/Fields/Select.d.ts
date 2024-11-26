@@ -1,4 +1,4 @@
-import { type ChangeEvent, type ReactNode } from 'react';
+import { type ChangeEvent, type KeyboardEvent, type ReactNode } from 'react';
 type TAriaLabelProps = {
     ariaLabel: string;
     label?: never;
@@ -13,6 +13,7 @@ type TSelectProps = {
     disabled?: boolean;
     errorMessage?: string;
     handleChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+    handleKeyDown?: (event: KeyboardEvent<HTMLSelectElement>) => void;
     id: string;
     isValid?: boolean;
     name: string;
@@ -20,5 +21,5 @@ type TSelectProps = {
     requiredText?: string;
     value: string;
 } & (TAriaLabelProps | THtmlLabelProps);
-export declare function Select({ ariaLabel, className, children, disabled, errorMessage, label, id, isValid, name, required, requiredText, value, ...props }: TSelectProps): any;
+export declare function Select({ ariaLabel, className, children, disabled, errorMessage, handleKeyDown, label, id, isValid, name, required, requiredText, value, ...props }: TSelectProps): any;
 export {};
