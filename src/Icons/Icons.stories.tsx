@@ -53,6 +53,7 @@ import {
   SearchIcon,
   SendIcon,
   ShieldIcon,
+  SignalIcon,
   SlidersIcon,
   SmartphoneRingingIcon,
   SnowflakeIcon,
@@ -83,6 +84,11 @@ const cardStyles = {
   height: '50px',
   justifyContent: 'center',
   width: '35px',
+};
+
+const turnStyles = {
+  ...cardStyles,
+  transform: 'rotate(90deg)',
 };
 
 export const Icons: Story = () => (
@@ -315,6 +321,9 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <HistoryTimerIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <SignalIcon height={16} width={16} />
       </div>
     </div>
   </>

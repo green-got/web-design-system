@@ -12,7 +12,9 @@ export type TSwitchProps = {
     checked: boolean;
     disabled?: boolean;
     handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    helperText?: string;
     id: string;
+    labelClassName?: string;
 } & (TAriaLabelProps | THtmlLabelProps);
-export declare function Switch({ ariaLabel, className, checked, disabled, handleChange, id, label, }: TSwitchProps): any;
+export declare function Switch({ ariaLabel, className, checked, disabled, handleChange, helperText, id, label, labelClassName, }: TSwitchProps): any;
 export {};

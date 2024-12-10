@@ -18,7 +18,9 @@ export type TSwitchProps = {
   checked: boolean;
   disabled?: boolean;
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  helperText?: string;
   id: string;
+  labelClassName?: string;
 } & (TAriaLabelProps | THtmlLabelProps);
 
 export function Switch({
@@ -27,14 +29,27 @@ export function Switch({
   checked,
   disabled = false,
   handleChange,
+  helperText,
   id,
   label,
+  labelClassName,
 }: TSwitchProps) {
   return (
     <div className={mergeClasses([styles.switch, className])}>
-      {label && (
+      {label && helperText && (
+        <div className={styles['label-with-helper-text']}>
+          <label
+            className={mergeClasses([styles.label, labelClassName])}
+            htmlFor={id}
+          >
+            {label}
+          </label>
+          <span>{helperText}</span>
+        </div>
+      )}
+      {label && !helperText && (
         <label
-          className={mergeClasses([styles.switch, className])}
+          className={mergeClasses([styles.label, labelClassName])}
           htmlFor={id}
         >
           {label}

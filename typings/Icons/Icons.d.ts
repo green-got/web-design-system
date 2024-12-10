@@ -78,3 +78,4 @@ export declare function NoWeaponIcon(props: IIconProps): any;
 export declare function NoOilIcon(props: IIconProps): any;
 export declare function HomeIcon(props: IIconProps): any;
 export declare function HistoryTimerIcon(props: IIconProps): any;
+export declare function SignalIcon(props: IIconProps): any;

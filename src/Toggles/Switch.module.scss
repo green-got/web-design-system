@@ -50,4 +50,14 @@
       opacity: 0.3;
     }
   }
+
+  .label-with-helper-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .label-with-helper-text>span {
+    color: var(--colors-neutral-regular);
+    font-size: 1.4rem;
+  }
 }

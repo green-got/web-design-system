@@ -50,6 +50,7 @@ export {
   SearchIcon,
   SendIcon,
   ShieldIcon,
+  SignalIcon,
   SlidersIcon,
   SmartphoneRingingIcon,
   SnowflakeIcon,
