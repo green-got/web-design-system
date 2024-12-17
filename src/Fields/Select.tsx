@@ -24,14 +24,14 @@ type TSelectProps = {
   children: ReactNode;
   disabled?: boolean;
   errorMessage?: string;
-  handleChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  handleChange?: (event: ChangeEvent<HTMLSelectElement>) => void;
   handleKeyDown?: (event: KeyboardEvent<HTMLSelectElement>) => void;
   id: string;
   isValid?: boolean;
   name: string;
   required?: boolean;
   requiredText?: string;
-  value: string;
+  value?: string;
 } & (TAriaLabelProps | THtmlLabelProps);
 
 export function Select({
@@ -60,7 +60,7 @@ export function Select({
     if (!isFieldValid && isValid) {
       setIsFieldValid(isValid);
     }
-    props.handleChange(e);
+    props.handleChange?.(e);
   }
 
   const labelElement =
