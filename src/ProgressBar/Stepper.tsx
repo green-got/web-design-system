@@ -5,7 +5,7 @@ import { mergeClasses } from '../utils/mergeClasses';
 export interface IStepperProps {
   className?: string;
   step?: number;
-  steps: number;
+  steps: number | string[];
 }
 
 export function Stepper({ className, step, steps }: IStepperProps) {
@@ -19,13 +19,22 @@ export function Stepper({ className, step, steps }: IStepperProps) {
       role="progressbar"
       tabIndex={0}
     >
-      {[...new Array(steps)].map((_, i) => (
-        <span
-          className={step && i + 1 <= step ? styles.stepped : ''}
-          // biome-ignore lint/suspicious/noArrayIndexKey: order will not change
-          key={i}
-        />
-      ))}
+      {typeof steps === 'number'
+        ? [...new Array(steps)].map((_, i) => (
+            <span
+              className={step && i + 1 <= step ? styles.stepped : ''}
+              // biome-ignore lint/suspicious/noArrayIndexKey: order will not change
+              key={i}
+            />
+          ))
+        : steps.map((name, i) => {
+            return (
+              <div className={styles.step} key={name}>
+                <span className={step && i + 1 <= step ? styles.stepped : ''} />
+                <span>{name}</span>
+              </div>
+            );
+          })}
     </div>
   );
 }
