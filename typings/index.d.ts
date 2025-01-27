@@ -6,6 +6,7 @@ export * from './Icons';
 export * from './Infobox';
 export * from './Loaders';
 export * from './Logo';
+export * from './Notification';
 export * from './Pagination';
 export * from './ProgressBar';
 export * from './SegmentedController';
