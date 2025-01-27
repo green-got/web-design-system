@@ -48,6 +48,11 @@ export function ClearableInput({
           name={name}
           onBlur={handleBlur}
           onChange={handleChange}
+          onWheel={(e) => {
+            if (type === 'number') {
+              e.currentTarget.blur();
+            }
+          }}
           ref={inputRef}
           required={required}
           style={{ paddingInlineEnd: '4rem' }}
