@@ -63,6 +63,11 @@ export const UnitInput = forwardRef(function UnitInput(
           onBlur={handleBlur}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
+          onWheel={(e) => {
+            if (type === 'number') {
+              e.currentTarget.blur();
+            }
+          }}
           ref={inputRef}
           required={required}
           style={{
