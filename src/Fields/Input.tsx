@@ -92,6 +92,11 @@ export const Input = forwardRef(function Input(
           onBlur={handleBlur}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
+          onWheel={(e) => {
+            if (type === 'number') {
+              e.currentTarget.blur();
+            }
+          }}
           ref={inputRef}
           required={required}
           title={title}
