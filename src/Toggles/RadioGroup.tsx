@@ -41,6 +41,7 @@ export type TRadio = Omit<
 export interface IRadioGroupProps {
   checked: string;
   className?: string;
+  disabled?: boolean;
   handleChange: (e: TChangeEvent) => void;
   legend: string;
   name: name;
@@ -59,6 +60,7 @@ export interface IRadioGroupProps {
 export function RadioGroup({
   checked,
   className,
+  disabled,
   handleChange,
   legend,
   name,
@@ -68,7 +70,11 @@ export function RadioGroup({
   requiredText,
 }: IRadioGroupProps) {
   return (
-    <fieldset className={mergeClasses([styles['radio-group'], className])}>
+    <fieldset
+      aria-disabled={disabled}
+      className={mergeClasses([styles['radio-group'], className])}
+      disabled={disabled}
+    >
       <legend>
         {legend}
         {required ? (requiredText ? ` ${requiredText}` : ' *') : ''}

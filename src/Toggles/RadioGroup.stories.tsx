@@ -66,6 +66,7 @@ export const RadioGroupMain: Story = () => {
         <Button handleClick={() => setControlled('c')}>C</Button>
         <RadioGroup
           checked={controlled}
+          disabled
           handleChange={(e) => setControlled(e.target.value)}
           legend="Group 2"
           name="two"

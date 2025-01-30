@@ -22,6 +22,7 @@ export type TRadio = Omit<TRadioProps, 'checked' | 'handleChange' | 'name' | 're
 export interface IRadioGroupProps {
     checked: string;
     className?: string;
+    disabled?: boolean;
     handleChange: (e: TChangeEvent) => void;
     legend: string;
     name: name;
@@ -30,6 +31,6 @@ export interface IRadioGroupProps {
     required?: boolean;
     requiredText?: string;
 }
-export declare function RadioGroup({ checked, className, handleChange, legend, name, radios, renderRadio, required, requiredText, }: IRadioGroupProps): any;
+export declare function RadioGroup({ checked, className, disabled, handleChange, legend, name, radios, renderRadio, required, requiredText, }: IRadioGroupProps): any;
 export declare const Radio: any;
 export {};
