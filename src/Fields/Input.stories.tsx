@@ -201,7 +201,13 @@ export const InputUnit = () => {
   const [c, setC] = React.useState('');
   const [d, setD] = React.useState('');
   const [e, setE] = React.useState('100');
+  const [f, setF] = React.useState([]);
   const refE = React.useRef(null);
+  const formatter = new Intl.NumberFormat('fr-FR', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  });
 
   React.useEffect(() => {
     if (refE.current) {
@@ -302,6 +308,36 @@ export const InputUnit = () => {
         unitLabel="Months"
         unitPlacement="end"
         value={e}
+      />
+
+      <h2>Unit input with formatting</h2>
+      <UnitInput
+        attributes={{ inputMode: 'numeric', min: 0, pattern: '[0-9]' }}
+        errorMessage="Value must be 0 or greater"
+        id="f"
+        label="Required non-negative number"
+        handleChange={(e) => {
+          const smoosh = e.target.value.replace(/\s/g, '');
+          if (smoosh === '') {
+            setF([{ type: 'empty', value: '' }]);
+            return;
+          }
+          const formatted = formatter.formatToParts(smoosh);
+          if (formatted.some((part) => part.value === 'NaN')) {
+            return;
+          }
+          setF(formatted);
+        }}
+        name="units"
+        required
+        type="text"
+        unit="months"
+        unitLabel="Months"
+        unitPlacement="end"
+        value={f
+          .filter?.((part) => !['literal', 'currency'].includes(part.type))
+          .map?.((part) => part.value)
+          .join?.('')}
       />
     </>
   );
