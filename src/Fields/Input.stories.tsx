@@ -4,6 +4,7 @@ import { Input } from './Input';
 import { ClearableInput } from './ClearableInput';
 import { UnitInput } from './UnitInput';
 import { FileInput } from './FileInput';
+import { Select } from './Select';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
 export default {
@@ -202,8 +203,9 @@ export const InputUnit = () => {
   const [d, setD] = React.useState('');
   const [e, setE] = React.useState('100');
   const [f, setF] = React.useState([]);
+  const [lang, setLang] = React.useState('fr-FR');
   const refE = React.useRef(null);
-  const formatter = new Intl.NumberFormat('fr-FR', {
+  const formatter = new Intl.NumberFormat(lang, {
     style: 'currency',
     currency: 'EUR',
     maximumFractionDigits: 0,
@@ -311,13 +313,24 @@ export const InputUnit = () => {
       />
 
       <h2>Unit input with formatting</h2>
+      <Select
+        handleChange={(e) => setLang(e.target.value)}
+        id="lang"
+        label="Language"
+        name="lang"
+        value={lang}
+      >
+        <option value="fr-FR">Français</option>
+        <option value="en-US">English</option>
+        <option value="en-GB">British english</option>
+      </Select>
       <UnitInput
         attributes={{ inputMode: 'numeric', min: 0, pattern: '[0-9]' }}
         errorMessage="Value must be 0 or greater"
         id="f"
         label="Required non-negative number"
         handleChange={(e) => {
-          const smoosh = e.target.value.replace(/\s/g, '');
+          const smoosh = e.target.value.replace(/(\s|,)/g, '');
           if (smoosh === '') {
             setF([{ type: 'empty', value: '' }]);
             return;
@@ -331,8 +344,8 @@ export const InputUnit = () => {
         name="units"
         required
         type="text"
-        unit="months"
-        unitLabel="Months"
+        unit="€"
+        unitLabel="Euros"
         unitPlacement="end"
         value={f
           .filter?.((part) => !['literal', 'currency'].includes(part.type))
