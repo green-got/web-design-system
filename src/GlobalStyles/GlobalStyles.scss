@@ -114,10 +114,6 @@ body {
   isolation: isolate;
 }
 
-:global(.ladle-background) {
-  display: none;
-}
-
 /**
   Typography
 */
@@ -160,19 +156,6 @@ h6 {
 hr {
   border: none;
   border-top: 1px solid var(--colors-primary-dark);
-}
-
-:global(.strong) {
-  font-weight: 700;
-}
-
-:global(.caption) {
-  font-size: 1.2rem;
-}
-
-:global(.captionBold) {
-  font-size: 1.2rem;
-  font-weight: 700;
 }
 
 @media (prefers-reduced-motion: reduce) {
