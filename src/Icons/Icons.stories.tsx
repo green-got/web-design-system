@@ -8,6 +8,7 @@ import {
   BankIcon,
   BellIcon,
   BoltIcon,
+  BriefcaseIcon,
   CalendarIcon,
   CardIcon,
   CheckedSquareIcon,
@@ -21,6 +22,7 @@ import {
   ClockIcon,
   CoinsIcon,
   CopyIcon,
+  CrossIcon,
   DeleteIcon,
   DownloadIcon,
   EarthIcon,
@@ -35,11 +37,14 @@ import {
   HelpIcon,
   HistoryTimerIcon,
   HomeIcon,
+  IdCardIcon,
   InfoIcon,
+  LaptopIcon,
   LeftRightArrowsIcon,
   ListIcon,
   LockIcon,
   LoginIcon,
+  MaskIcon,
   MenuIcon,
   MoreHorizontalIcon,
   MoreVerticalIcon,
@@ -48,6 +53,7 @@ import {
   NoPornographyIcon,
   NoSmokingIcon,
   NoWeaponIcon,
+  PackageIcon,
   PaperclipIcon,
   PhoneIcon,
   PlusIcon,
@@ -64,6 +70,7 @@ import {
   StatementIcon,
   TextFileIcon,
   TouchIdIcon,
+  TrainIcon,
   TrashIcon,
   TreeIcon,
   UnlockIcon,
@@ -336,6 +343,27 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <TreeIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <CrossIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <TrainIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <MaskIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <LaptopIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <BriefcaseIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <PackageIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <IdCardIcon height={16} width={16} />
       </div>
     </div>
   </>

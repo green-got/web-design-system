@@ -1476,3 +1476,144 @@ export function TreeIcon(props: IIconProps) {
     />
   );
 }
+
+export function TrainIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Train icon'}</title>
+          <path d="M8 3.1V7a4 4 0 0 0 8 0V3.1" />
+          <path d="m9 15-1-1" />
+          <path d="m15 15 1-1" />
+          <path d="M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z" />
+          <path d="m8 19-2 3" />
+          <path d="m16 19 2 3" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function BriefcaseIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Briefcase icon'}</title>
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function PackageIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Package icon'}</title>
+          <line x1="16.5" y1="9.4" x2="7.5" y2="4.21" />
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+          <line x1="12" y1="22.08" x2="12" y2="12" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function LaptopIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Laptop icon'}</title>
+          <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function IdCardIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Id card icon'}</title>
+          <path d="M16 10h2" />
+          <path d="M16 14h2" />
+          <path d="M6.17 15a3 3 0 0 1 5.66 0" />
+          <circle cx="9" cy="11" r="2" />
+          <rect x="2" y="5" width="20" height="14" rx="2" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function MaskIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Mask icon'}</title>
+          <path d="M18 11c-1.5 0-2.5.5-3 2" />
+          <path d="M4 6a2 2 0 0 0-2 2v4a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5V8a2 2 0 0 0-2-2h-3a8 8 0 0 0-5 2 8 8 0 0 0-5-2z" />
+          <path d="M6 11c1.5 0 2.5.5 3 2" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function CrossIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Cross icon'}</title>
+          <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
