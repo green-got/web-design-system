@@ -79,3 +79,6 @@ export declare function NoOilIcon(props: IIconProps): any;
 export declare function HomeIcon(props: IIconProps): any;
 export declare function HistoryTimerIcon(props: IIconProps): any;
 export declare function SignalIcon(props: IIconProps): any;
+export declare function HeartIcon(props: IIconProps): any;
+export declare function EarthIcon(props: IIconProps): any;
+export declare function TreeIcon(props: IIconProps): any;

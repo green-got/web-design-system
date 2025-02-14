@@ -23,6 +23,7 @@ import {
   CopyIcon,
   DeleteIcon,
   DownloadIcon,
+  EarthIcon,
   EditIcon,
   EditLineIcon,
   ExternalLinkIcon,
@@ -30,6 +31,7 @@ import {
   EyeIcon,
   FaceIdIcon,
   GearIcon,
+  HeartIcon,
   HelpIcon,
   HistoryTimerIcon,
   HomeIcon,
@@ -63,6 +65,7 @@ import {
   TextFileIcon,
   TouchIdIcon,
   TrashIcon,
+  TreeIcon,
   UnlockIcon,
   UpDownArrowsIcon,
   UpToTheRightIcon,
@@ -324,6 +327,15 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <SignalIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <HeartIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <EarthIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <TreeIcon height={16} width={16} />
       </div>
     </div>
   </>
