@@ -27,9 +27,9 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@ladle/react": "^4.1.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@ladle/react": "^5.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
@@ -37,20 +37,20 @@
     "@commitlint/config-conventional": "^19.7.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.4",
     "@vitejs/plugin-react": "^4.3.4",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.7",
-    "jsdom": "^25.0.1",
+    "jsdom": "^26.0.0",
     "lint-staged": "^15.4.3",
-    "sass": "^1.83.4",
+    "sass": "^1.85.0",
     "typescript": "^5.7.3",
-    "vite": "^6.0.11",
-    "vitest": "^2.1.9"
+    "vite": "^6.1.0",
+    "vitest": "^3.0.6"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.0.0"
   },
   "lint-staged": {
     "*.{js,json,yml,yaml,css,scss,ts,tsx,md}": [
@@ -62,5 +62,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "packageManager": "pnpm@9.1.2+sha1.907f57a52517de34399d66401bf220a549e47b57"
 }

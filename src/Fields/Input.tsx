@@ -1,9 +1,8 @@
 'use client';
 import {
   type ChangeEvent,
-  forwardRef,
   type KeyboardEvent,
-  type Ref,
+  type RefObject,
   useState,
 } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
@@ -27,6 +26,7 @@ export interface IInputProps {
   isValid?: boolean;
   label: string;
   name: string;
+  ref?: RefObject;
   required?: boolean;
   requiredText?: string;
   title?: string;
@@ -34,26 +34,24 @@ export interface IInputProps {
   value: string;
 }
 
-export const Input = forwardRef(function Input(
-  {
-    attributes,
-    className,
-    disabled,
-    errorMessage,
-    handleKeyDown = () => {},
-    id,
-    isValid = true,
-    label,
-    name,
-    required,
-    requiredText,
-    title,
-    type = 'text',
-    value,
-    ...props
-  }: IInputProps,
-  inputRef?: Ref<HTMLInputElement>,
-) {
+export function Input({
+  attributes,
+  className,
+  disabled,
+  errorMessage,
+  handleKeyDown = () => {},
+  id,
+  isValid = true,
+  label,
+  name,
+  required,
+  requiredText,
+  ref,
+  title,
+  type = 'text',
+  value,
+  ...props
+}: IInputProps) {
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
 
   function handleChange(e) {
@@ -97,7 +95,7 @@ export const Input = forwardRef(function Input(
               e.currentTarget.blur();
             }
           }}
-          ref={inputRef}
+          ref={ref}
           required={required}
           title={title}
           type={type}
@@ -107,4 +105,4 @@ export const Input = forwardRef(function Input(
       </div>
     </div>
   );
-});
+}

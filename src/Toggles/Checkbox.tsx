@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef, type ForwardedRef } from 'react';
+import type { RefObject } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Checkbox.module.scss';
 
@@ -12,22 +12,21 @@ export interface ICheckboxProps {
   id: string;
   label: string;
   name: string;
+  ref?: RefObject;
   required?: boolean;
 }
 
-export const Checkbox = forwardRef<ICheckboxProps>(function Checkbox(
-  {
-    checked,
-    className,
-    disabled,
-    handleChange,
-    id,
-    label,
-    name,
-    required,
-  }: ICheckboxProps,
-  inputRef?: ForwardedRef<HTMLInputElement>,
-) {
+export function Checkbox({
+  checked,
+  className,
+  disabled,
+  handleChange,
+  id,
+  label,
+  name,
+  ref,
+  required,
+}: ICheckboxProps) {
   return (
     <div className={mergeClasses([styles.container, className])}>
       <input
@@ -37,7 +36,7 @@ export const Checkbox = forwardRef<ICheckboxProps>(function Checkbox(
         id={id}
         name={name}
         onChange={handleChange}
-        ref={inputRef}
+        ref={ref}
         required={required}
         type="checkbox"
       />
@@ -46,4 +45,4 @@ export const Checkbox = forwardRef<ICheckboxProps>(function Checkbox(
       </label>
     </div>
   );
-});
+}

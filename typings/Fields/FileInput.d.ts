@@ -1,4 +1,4 @@
-import { type ChangeEvent } from 'react';
+import { type ChangeEvent, type RefObject } from 'react';
 export interface IFileInputProps {
     accept?: string;
     block: boolean;
@@ -10,6 +10,7 @@ export interface IFileInputProps {
     multiple?: boolean;
     name: string;
     previewClassName?: string;
+    ref?: RefObject;
     required?: boolean;
 }
-export declare const FileInput: any;
+export declare function FileInput({ accept, block, className, label, labelClassName, handleChange, id, multiple, name, previewClassName, ref, required, }: IFileInputProps): any;

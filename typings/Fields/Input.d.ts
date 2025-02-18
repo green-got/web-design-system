@@ -1,4 +1,4 @@
-import { type ChangeEvent, type KeyboardEvent } from 'react';
+import { type ChangeEvent, type KeyboardEvent, type RefObject } from 'react';
 export interface IInputProps {
     attributes?: {
         autoFocus?: boolean;
@@ -17,10 +17,11 @@ export interface IInputProps {
     isValid?: boolean;
     label: string;
     name: string;
+    ref?: RefObject;
     required?: boolean;
     requiredText?: string;
     title?: string;
     type?: 'date' | 'email' | 'number' | 'search' | 'tel' | 'text';
     value: string;
 }
-export declare const Input: any;
+export declare function Input({ attributes, className, disabled, errorMessage, handleKeyDown, id, isValid, label, name, required, requiredText, ref, title, type, value, ...props }: IInputProps): any;

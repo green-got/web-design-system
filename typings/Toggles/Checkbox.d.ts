@@ -1,3 +1,4 @@
+import type { RefObject } from 'react';
 export interface ICheckboxProps {
     checked?: boolean;
     className?: string;
@@ -6,6 +7,7 @@ export interface ICheckboxProps {
     id: string;
     label: string;
     name: string;
+    ref?: RefObject;
     required?: boolean;
 }
-export declare const Checkbox: any;
+export declare function Checkbox({ checked, className, disabled, handleChange, id, label, name, ref, required, }: ICheckboxProps): any;

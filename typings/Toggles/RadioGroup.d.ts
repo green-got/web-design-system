@@ -1,4 +1,4 @@
-import { type ChangeEvent, type ElementType, type ReactNode } from 'react';
+import type { ChangeEvent, ElementType, ReactNode, RefObject } from 'react';
 export type name = string;
 export type TChangeEvent = ChangeEvent<HTMLInputElement>;
 type TStringLabelProps = {
@@ -15,6 +15,7 @@ export type TRadioProps = {
     handleChange: (e: TChangeEvent) => void;
     id: string;
     name: name;
+    ref?: RefObject;
     required?: boolean;
     value: string;
 } & (TStringLabelProps | TJSXLabelProps) & Record<string, unknown>;
@@ -32,5 +33,5 @@ export interface IRadioGroupProps {
     requiredText?: string;
 }
 export declare function RadioGroup({ checked, className, disabled, handleChange, legend, name, radios, renderRadio, required, requiredText, }: IRadioGroupProps): any;
-export declare const Radio: any;
+export declare function Radio({ checked, className, handleChange, id, label, name, radio, ref, required, value, }: TRadioProps): any;
 export {};

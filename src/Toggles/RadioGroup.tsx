@@ -1,11 +1,5 @@
 'use client';
-import {
-  type ChangeEvent,
-  type ElementType,
-  forwardRef,
-  type ReactNode,
-  type Ref,
-} from 'react';
+import type { ChangeEvent, ElementType, ReactNode, RefObject } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './RadioGroup.module.scss';
 
@@ -28,6 +22,7 @@ export type TRadioProps = {
   handleChange: (e: TChangeEvent) => void;
   id: string;
   name: name;
+  ref?: RefObject;
   required?: boolean;
   value: string;
 } & (TStringLabelProps | TJSXLabelProps) &
@@ -86,20 +81,18 @@ export function RadioGroup({
   );
 }
 
-export const Radio = forwardRef<HTMLInputElement, TRadioProps>(function Radio(
-  {
-    checked,
-    className,
-    handleChange,
-    id,
-    label,
-    name,
-    radio,
-    required,
-    value,
-  }: TRadioProps,
-  inputRef?: Ref<HTMLInputElement>,
-) {
+export function Radio({
+  checked,
+  className,
+  handleChange,
+  id,
+  label,
+  name,
+  radio,
+  ref,
+  required,
+  value,
+}: TRadioProps) {
   return (
     <div className={mergeClasses([styles.radio, className])}>
       <input
@@ -107,7 +100,7 @@ export const Radio = forwardRef<HTMLInputElement, TRadioProps>(function Radio(
         id={id}
         name={name}
         onChange={handleChange}
-        ref={inputRef}
+        ref={ref}
         required={required}
         type="radio"
         value={value}
@@ -117,4 +110,4 @@ export const Radio = forwardRef<HTMLInputElement, TRadioProps>(function Radio(
       </label>
     </div>
   );
-});
+}
