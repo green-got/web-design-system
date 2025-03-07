@@ -10,6 +10,7 @@ interface IInfoboxProps {
   dismissHandler?: () => void;
   dismissible?: boolean;
   dismissLabel?: string;
+  id?: string;
   theme: 'neutral' | 'primary' | 'success' | 'warning' | 'error';
 }
 
@@ -19,10 +20,14 @@ export function Infobox({
   dismissHandler,
   dismissible = false,
   dismissLabel,
+  id,
   theme,
 }: IInfoboxProps) {
   return (
-    <div className={mergeClasses([styles.container, styles[theme], className])}>
+    <div
+      className={mergeClasses([styles.container, styles[theme], className])}
+      id={id}
+    >
       {dismissible ? (
         <Button
           className={mergeClasses([styles.button, styles[theme]])}

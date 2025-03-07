@@ -5,7 +5,8 @@ interface IInfoboxProps {
     dismissHandler?: () => void;
     dismissible?: boolean;
     dismissLabel?: string;
+    id?: string;
     theme: 'neutral' | 'primary' | 'success' | 'warning' | 'error';
 }
-export declare function Infobox({ children, className, dismissHandler, dismissible, dismissLabel, theme, }: IInfoboxProps): any;
+export declare function Infobox({ children, className, dismissHandler, dismissible, dismissLabel, id, theme, }: IInfoboxProps): any;
 export {};
