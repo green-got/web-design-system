@@ -1,9 +1,12 @@
 import { type ChangeEvent, type KeyboardEvent, type RefObject } from 'react';
 export interface IInputProps {
     attributes?: {
+        'aria-disabled'?: boolean;
         autoFocus?: boolean;
+        max?: number;
         maxLength?: number;
         min?: number;
+        minLength?: number;
         pattern?: string;
         placeholder?: string;
         title?: string;
