@@ -34,7 +34,7 @@ export interface IInputProps {
   requiredText?: string;
   title?: string;
   type?: 'date' | 'email' | 'number' | 'search' | 'tel' | 'text';
-  value: string;
+  value?: string;
 }
 
 export function Input({

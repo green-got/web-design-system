@@ -25,6 +25,6 @@ export interface IInputProps {
     requiredText?: string;
     title?: string;
     type?: 'date' | 'email' | 'number' | 'search' | 'tel' | 'text';
-    value: string;
+    value?: string;
 }
 export declare function Input({ attributes, className, disabled, errorMessage, handleKeyDown, id, isValid, label, name, required, requiredText, ref, title, type, value, ...props }: IInputProps): any;
