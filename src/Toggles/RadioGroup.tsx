@@ -26,7 +26,7 @@ export type TRadioProps = {
   required?: boolean;
   value: string;
 } & (TStringLabelProps | TJSXLabelProps) &
-  Record<string, unknown>;
+  Record<string, ReactNode>;
 
 export type TRadio = Omit<
   TRadioProps,

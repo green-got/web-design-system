@@ -18,7 +18,7 @@ export type TRadioProps = {
     ref?: RefObject;
     required?: boolean;
     value: string;
-} & (TStringLabelProps | TJSXLabelProps) & Record<string, unknown>;
+} & (TStringLabelProps | TJSXLabelProps) & Record<string, ReactNode>;
 export type TRadio = Omit<TRadioProps, 'checked' | 'handleChange' | 'name' | 'required'>;
 export interface IRadioGroupProps {
     checked: string;
