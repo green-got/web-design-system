@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type MouseEvent, useState } from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { SegmentedController } from './SegmentedController';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
@@ -8,8 +8,8 @@ export default {
 } satisfies StoryDefault;
 
 export const SegmentedControllerMain: Story = () => {
-  const [a, setA] = React.useState<string>('identifier');
-  const [b, setB] = React.useState<string>('yat');
+  const [a, setA] = useState<string>('identifier');
+  const [b, setB] = useState<string>('yat');
   return (
     <>
       <GlobalStyles />
@@ -22,7 +22,7 @@ export const SegmentedControllerMain: Story = () => {
           { id: 'identifier', label: 'Label' },
           { id: 'dupe', label: 'Label' },
         ]}
-        handleClick={(e) => setA(e.target.id)}
+        handleClick={(e: MouseEvent<HTMLAnchorElement>) => setA(e.target.id)}
       />
       <br />
       <br />
