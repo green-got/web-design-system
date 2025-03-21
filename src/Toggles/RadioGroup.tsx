@@ -1,5 +1,5 @@
 'use client';
-import type { ChangeEvent, FC, ReactElement, RefObject } from 'react';
+import type { ChangeEvent, ReactElement, RefObject } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './RadioGroup.module.scss';
 
@@ -11,7 +11,7 @@ type TStringLabelProps = {
 };
 
 type TJSXLabelProps = {
-  label: FC;
+  label: ReactElement;
   radio: TRadio;
 };
 

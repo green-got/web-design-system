@@ -5,7 +5,7 @@ import styles from './SegmentedController.module.scss';
 export interface ISegmentedControllerProps {
   activeId: string;
   className?: string;
-  handleClick: (e: ClickEvent<HTMLAnchorElement>) => void;
+  handleClick: (e: ClickEvent<HTMLButtonElement>) => void;
   segments: { id: string; label: string; panelId?: string }[];
 }
 

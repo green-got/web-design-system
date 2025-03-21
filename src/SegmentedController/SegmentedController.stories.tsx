@@ -22,7 +22,7 @@ export const SegmentedControllerMain: Story = () => {
           { id: 'identifier', label: 'Label' },
           { id: 'dupe', label: 'Label' },
         ]}
-        handleClick={(e: MouseEvent<HTMLAnchorElement>) => setA(e.target.id)}
+        handleClick={(e: MouseEvent<HTMLButtonElement>) => setA(e.target.id)}
       />
       <br />
       <br />
