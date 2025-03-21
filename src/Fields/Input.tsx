@@ -12,9 +12,9 @@ export interface IInputProps {
   attributes?: {
     'aria-disabled'?: boolean;
     autoFocus?: boolean;
-    max?: number;
+    max?: number | string;
     maxLength?: number;
-    min?: number;
+    min?: number | string;
     minLength?: number;
     pattern?: string;
     placeholder?: string;
