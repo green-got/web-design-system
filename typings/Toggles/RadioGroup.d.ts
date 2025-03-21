@@ -1,5 +1,4 @@
-import type { ChangeEvent, ElementType, ReactNode, RefObject } from 'react';
-export type name = string;
+import type { ChangeEvent, ElementType, ReactElement, RefObject } from 'react';
 export type TChangeEvent = ChangeEvent<HTMLInputElement>;
 type TStringLabelProps = {
     label: string;
@@ -14,21 +13,23 @@ export type TRadioProps = {
     className?: string;
     handleChange: (e: TChangeEvent) => void;
     id: string;
-    name: name;
+    name: string;
     ref?: RefObject;
     required?: boolean;
     value: string;
-} & (TStringLabelProps | TJSXLabelProps) & Record<string, ReactNode>;
-export type TRadio = Omit<TRadioProps, 'checked' | 'handleChange' | 'name' | 'required'>;
+} & (TStringLabelProps | TJSXLabelProps);
+declare const restrictedKeys: readonly ["checked", "handleChange", "name", "required"];
+type ReservedRadioProps = (typeof restrictedKeys)[number];
+export type TRadio = Omit<TRadioProps, ReservedRadioProps> & Record<string, unknown> & Partial<Record<ReservedRadioProps, never>>;
 export interface IRadioGroupProps {
     checked: string;
     className?: string;
     disabled?: boolean;
     handleChange: (e: TChangeEvent) => void;
     legend: string;
-    name: name;
+    name: string;
     radios: TRadio[];
-    renderRadio: (radio: TRadio, checked: string, handleChange: (e: TChangeEvent) => void, name: name, required: boolean) => ReactNode;
+    renderRadio: (radio: TRadio, checked: string, handleChange: (e: TChangeEvent) => void, name: string, required: boolean) => ReactElement;
     required?: boolean;
     requiredText?: string;
 }

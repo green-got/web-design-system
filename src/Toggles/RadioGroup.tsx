@@ -1,9 +1,8 @@
 'use client';
-import type { ChangeEvent, ElementType, ReactNode, RefObject } from 'react';
+import type { ChangeEvent, ElementType, ReactElement, RefObject } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './RadioGroup.module.scss';
 
-export type name = string;
 export type TChangeEvent = ChangeEvent<HTMLInputElement>;
 
 type TStringLabelProps = {
@@ -21,17 +20,17 @@ export type TRadioProps = {
   className?: string;
   handleChange: (e: TChangeEvent) => void;
   id: string;
-  name: name;
+  name: string;
   ref?: RefObject;
   required?: boolean;
   value: string;
-} & (TStringLabelProps | TJSXLabelProps) &
-  Record<string, ReactNode>;
+} & (TStringLabelProps | TJSXLabelProps);
 
-export type TRadio = Omit<
-  TRadioProps,
-  'checked' | 'handleChange' | 'name' | 'required'
->;
+const restrictedKeys = ['checked', 'handleChange', 'name', 'required'] as const;
+type ReservedRadioProps = (typeof restrictedKeys)[number];
+export type TRadio = Omit<TRadioProps, ReservedRadioProps> &
+  Record<string, unknown> &
+  Partial<Record<ReservedRadioProps, never>>;
 
 export interface IRadioGroupProps {
   checked: string;
@@ -39,15 +38,15 @@ export interface IRadioGroupProps {
   disabled?: boolean;
   handleChange: (e: TChangeEvent) => void;
   legend: string;
-  name: name;
+  name: string;
   radios: TRadio[];
   renderRadio: (
     radio: TRadio,
     checked: string,
     handleChange: (e: TChangeEvent) => void,
-    name: name,
+    name: string,
     required: boolean,
-  ) => ReactNode;
+  ) => ReactElement;
   required?: boolean;
   requiredText?: string;
 }
