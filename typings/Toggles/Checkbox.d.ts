@@ -1,9 +1,9 @@
-import type { MouseEvent, RefObject } from 'react';
+import type { ChangeEvent, RefObject } from 'react';
 export interface ICheckboxProps {
     checked?: boolean;
     className?: string;
     disabled?: boolean;
-    handleChange?: (e: MouseEvent<HTMLInputElement>) => void;
+    handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
     id: string;
     label: string;
     name: string;
