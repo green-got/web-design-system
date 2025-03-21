@@ -1,6 +1,6 @@
 'use client';
 
-import type { RefObject } from 'react';
+import type { MouseEvent, RefObject } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Checkbox.module.scss';
 
@@ -8,7 +8,7 @@ export interface ICheckboxProps {
   checked?: boolean;
   className?: string;
   disabled?: boolean;
-  handleChange?: () => void;
+  handleChange?: (e: MouseEvent<HTMLInputElement>) => void;
   id: string;
   label: string;
   name: string;

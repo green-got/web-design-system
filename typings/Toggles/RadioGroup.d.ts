@@ -1,11 +1,11 @@
-import type { ChangeEvent, ElementType, ReactElement, RefObject } from 'react';
+import type { ChangeEvent, FC, ReactElement, RefObject } from 'react';
 export type TChangeEvent = ChangeEvent<HTMLInputElement>;
 type TStringLabelProps = {
     label: string;
     radio?: TRadioProps;
 };
 type TJSXLabelProps = {
-    label: ElementType;
+    label: FC;
     radio: TRadio;
 };
 export type TRadioProps = {
