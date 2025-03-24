@@ -12,7 +12,7 @@ export interface ICheckboxProps {
   id: string;
   label: string;
   name: string;
-  ref?: RefObject<HTMLInputElement>;
+  ref?: RefObject<HTMLInputElement | null>;
   required?: boolean;
 }
 

@@ -7,7 +7,7 @@ export interface ICheckboxProps {
     id: string;
     label: string;
     name: string;
-    ref?: RefObject<HTMLInputElement>;
+    ref?: RefObject<HTMLInputElement | null>;
     required?: boolean;
 }
 export declare function Checkbox({ checked, className, disabled, handleChange, id, label, name, ref, required, }: ICheckboxProps): import("react/jsx-runtime").JSX.Element;
