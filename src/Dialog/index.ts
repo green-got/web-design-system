@@ -1,1 +1,1 @@
-export { Dialog } from './Dialog.js';
+export { Dialog } from './Dialog';

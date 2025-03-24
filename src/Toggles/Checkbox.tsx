@@ -1,7 +1,7 @@
 'use client';
 
 import type { ChangeEvent, RefObject } from 'react';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Checkbox.module.scss';
 
 export interface ICheckboxProps {

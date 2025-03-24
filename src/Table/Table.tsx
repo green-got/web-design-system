@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Table.module.scss';
 
 export function Table({

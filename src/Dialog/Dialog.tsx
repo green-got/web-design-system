@@ -1,7 +1,7 @@
 import { type ReactNode, useEffect, useRef, useState } from 'react';
-import { Button } from '../Button/index.js';
-import { XIcon } from '../Icons/index.js';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { Button } from '../Button/index';
+import { XIcon } from '../Icons/index';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Dialog.module.scss';
 
 export interface IDialogProps {

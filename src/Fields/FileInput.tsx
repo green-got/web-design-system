@@ -1,6 +1,6 @@
 import { type ChangeEvent, type RefObject, useState } from 'react';
-import { PaperclipIcon } from '../Icons/index.js';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { PaperclipIcon } from '../Icons/index';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './FileInput.module.scss';
 
 export interface IFileInputProps {

@@ -1,7 +1,7 @@
 import { type ReactNode, useEffect, useRef } from 'react';
-import { CheckmarkIcon } from '../Icons/index.js';
+import { CheckmarkIcon } from '../Icons/index';
 import styles from './Notification.module.scss';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 
 interface INotificationProps {
   className?: string;

@@ -1,6 +1,6 @@
 'use client';
 import type { ChangeEvent } from 'react';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Switch.module.scss';
 
 type TAriaLabelProps = {

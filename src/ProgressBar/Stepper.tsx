@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Stepper.module.scss';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 
 export interface IStepperProps {
   className?: string;

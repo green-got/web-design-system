@@ -1,7 +1,7 @@
 'use client';
 import { type ChangeEvent, type FocusEvent, useRef, useState } from 'react';
-import { CircledXIcon } from '../Icons/index.js';
-import type { IInputProps } from './Input.js';
+import { CircledXIcon } from '../Icons/index';
+import type { IInputProps } from './Input';
 import styles from './Input.module.scss';
 
 export function ClearableInput({

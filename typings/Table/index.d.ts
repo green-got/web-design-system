@@ -1,1 +1,1 @@
-export { Table, TableHeader, TableBody, TableColumn, TableRow, TableCell, } from './Table.js';
+export { Table, TableHeader, TableBody, TableColumn, TableRow, TableCell, } from './Table';

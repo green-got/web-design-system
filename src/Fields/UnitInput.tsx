@@ -1,7 +1,7 @@
 'use client';
 import { type ChangeEvent, type FocusEvent, useRef, useState } from 'react';
-import { mergeClasses } from '../utils/mergeClasses.js';
-import type { IInputProps } from './Input.js';
+import { mergeClasses } from '../utils/mergeClasses';
+import type { IInputProps } from './Input';
 import styles from './Input.module.scss';
 
 interface IUnitInputProps extends IInputProps {

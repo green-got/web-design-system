@@ -5,4 +5,4 @@ export {
   TableColumn,
   TableRow,
   TableCell,
-} from './Table.js';
+} from './Table';

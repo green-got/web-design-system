@@ -1,5 +1,5 @@
 import type { MouseEvent } from 'react';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './SegmentedController.module.scss';
 
 export interface ISegmentedControllerProps {

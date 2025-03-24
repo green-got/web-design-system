@@ -6,7 +6,7 @@ import {
   type RefObject,
   useState,
 } from 'react';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Input.module.scss';
 
 export interface IInputProps {

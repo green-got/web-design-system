@@ -6,7 +6,7 @@ import type {
   ReactNode,
   RefObject,
 } from 'react';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './RadioGroup.module.scss';
 
 const restrictedKeys = ['checked', 'handleChange', 'name', 'required'] as const;

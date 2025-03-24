@@ -1,6 +1,6 @@
 import type { MouseEvent, ReactNode } from 'react';
 import styles from './Button.module.scss';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 
 export type ButtonType = 'button' | 'submit';
 

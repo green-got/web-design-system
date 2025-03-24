@@ -1,3 +1,3 @@
-export { Checkbox } from './Checkbox.js';
-export { RadioGroup, Radio } from './RadioGroup.js';
-export { Switch } from './Switch.js';
+export { Checkbox } from './Checkbox';
+export { RadioGroup, Radio } from './RadioGroup';
+export { Switch } from './Switch';

@@ -1,6 +1,6 @@
 'use client';
 import { type ChangeEvent, type FocusEvent, useState } from 'react';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './TextArea.module.scss';
 
 interface ITextAreaProps {

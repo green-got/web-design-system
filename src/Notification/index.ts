@@ -1,1 +1,1 @@
-export { Notification } from './Notification.js';
+export { Notification } from './Notification';

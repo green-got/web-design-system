@@ -1,4 +1,4 @@
-import type { IInputProps } from './Input.js';
+import type { IInputProps } from './Input';
 interface IUnitInputProps extends IInputProps {
     unit: string;
     unitLabel: string;

@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from 'react';
 import styles from './Spinner.module.scss';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 
 const SpinSizes = ['small', 'large'] as const;
 export type SpinSize = (typeof SpinSizes)[number];

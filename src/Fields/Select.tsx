@@ -7,7 +7,7 @@ import {
   type ReactNode,
   useState,
 } from 'react';
-import { mergeClasses } from '../utils/mergeClasses.js';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Select.module.scss';
 
 type TAriaLabelProps = {
