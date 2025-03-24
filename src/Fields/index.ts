@@ -1,6 +1,6 @@
-export { ClearableInput } from './ClearableInput';
-export { FileInput } from './FileInput';
-export { Input } from './Input';
-export { Select } from './Select';
-export { TextArea } from './TextArea';
-export { UnitInput } from './UnitInput';
+export { ClearableInput } from './ClearableInput.js';
+export { FileInput } from './FileInput.js';
+export { Input } from './Input.js';
+export { Select } from './Select.js';
+export { TextArea } from './TextArea.js';
+export { UnitInput } from './UnitInput.js';

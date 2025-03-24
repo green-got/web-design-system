@@ -1,1 +1,1 @@
-export { Infobox } from './Infobox';
+export { Infobox } from './Infobox.js';

@@ -1,6 +1,6 @@
 'use client';
-import { type ChangeEvent, useState } from 'react';
-import { mergeClasses } from '../utils/mergeClasses';
+import { type ChangeEvent, type FocusEvent, useState } from 'react';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './TextArea.module.scss';
 
 interface ITextAreaProps {
@@ -39,7 +39,7 @@ export function TextArea({
 }: ITextAreaProps) {
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
 
-  function getValidity(target) {
+  function getValidity(target: EventTarget & HTMLTextAreaElement) {
     const hasRequiredLength = isLengthWithinBounds(
       target.value.length,
       minLength,
@@ -48,7 +48,7 @@ export function TextArea({
     return target.validity.valid && hasRequiredLength;
   }
 
-  function handleChange(e) {
+  function handleChange(e: ChangeEvent<HTMLTextAreaElement>) {
     const isValid = getValidity(e.target);
     if (!isFieldValid && isValid) {
       setIsFieldValid(isValid);
@@ -77,7 +77,7 @@ export function TextArea({
     return true;
   }
 
-  function handleBlur(e) {
+  function handleBlur(e: FocusEvent<HTMLTextAreaElement>) {
     const isValid = getValidity(e.target);
     setIsFieldValid(isValid);
   }

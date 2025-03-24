@@ -1,7 +1,7 @@
 import { type ReactNode, useEffect, useRef } from 'react';
-import { CheckmarkIcon } from '../Icons';
+import { CheckmarkIcon } from '../Icons/index.js';
 import styles from './Notification.module.scss';
-import { mergeClasses } from '../utils/mergeClasses';
+import { mergeClasses } from '../utils/mergeClasses.js';
 
 interface INotificationProps {
   className?: string;
@@ -22,7 +22,7 @@ export function Notification({
   setShow,
   show,
 }: INotificationProps) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLOutputElement>(null);
 
   useEffect(() => {
     if (show && ref.current) {

@@ -12,4 +12,4 @@ export type TProgressBarProps = {
     max: string | number;
     value: string | number;
 } & (TProgressAriaLabel | TProgressHtmlLabel);
-export declare function ProgressBar({ ariaLabel, className, id, label, max, value, }: TProgressBarProps): any;
+export declare function ProgressBar({ ariaLabel, className, id, label, max, value, }: TProgressBarProps): import("react/jsx-runtime").JSX.Element;

@@ -8,5 +8,5 @@ export interface ISpinnerProps extends HTMLAttributes<HTMLSpanElement> {
     size?: SpinSize;
     theme?: Theme;
 }
-export declare function Spinner({ className, size, theme, ...props }: ISpinnerProps): any;
+export declare function Spinner({ className, size, theme, ...props }: ISpinnerProps): import("react/jsx-runtime").JSX.Element;
 export {};

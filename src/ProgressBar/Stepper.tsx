@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Stepper.module.scss';
-import { mergeClasses } from '../utils/mergeClasses';
+import { mergeClasses } from '../utils/mergeClasses.js';
 
 export interface IStepperProps {
   className?: string;
@@ -12,8 +12,8 @@ export function Stepper({ className, step, steps }: IStepperProps) {
   return (
     // TODO: Switch to role tablist/tab when stepper becomes interactive
     <div
-      aria-valuemax={steps}
-      aria-valuemin="0"
+      aria-valuemax={typeof steps === 'number' ? steps : steps.length}
+      aria-valuemin={0}
       aria-valuenow={step}
       className={mergeClasses([styles.stepper, className])}
       role="progressbar"

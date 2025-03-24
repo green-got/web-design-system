@@ -8,5 +8,5 @@ interface INotificationProps {
     setShow: (value: boolean) => void;
     show: boolean;
 }
-export declare function Notification({ className, children, form, id, name, setShow, show, }: INotificationProps): any;
+export declare function Notification({ className, children, form, id, name, setShow, show, }: INotificationProps): import("react/jsx-runtime").JSX.Element | undefined;
 export {};

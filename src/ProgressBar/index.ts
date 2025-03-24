@@ -1,2 +1,2 @@
-export { ProgressBar } from './ProgressBar';
-export { Stepper } from './Stepper';
+export { ProgressBar } from './ProgressBar.js';
+export { Stepper } from './Stepper.js';

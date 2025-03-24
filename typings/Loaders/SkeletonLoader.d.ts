@@ -3,5 +3,5 @@ interface ISkeletonLoaderProps {
     height: string | number;
     width: string | number;
 }
-export declare function SkeletonLoader({ className, height, width, }: ISkeletonLoaderProps): any;
+export declare function SkeletonLoader({ className, height, width, }: ISkeletonLoaderProps): import("react/jsx-runtime").JSX.Element;
 export {};

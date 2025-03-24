@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ProgressBar.module.scss';
-import { mergeClasses } from '../utils/mergeClasses';
+import { mergeClasses } from '../utils/mergeClasses.js';
 
 export type TProgressAriaLabel = {
   ariaLabel: string;

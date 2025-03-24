@@ -9,6 +9,7 @@
   },
   "author": "fabien-h <fabien.huet@gmail.com>",
   "private": false,
+  "type": "module",
   "main": "src/index.ts",
   "types": "typings/index.d.ts",
   "scripts": {
@@ -38,6 +39,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/node": "^22.13.9",
+    "@types/react": "^19.0.12",
     "@vitejs/plugin-react": "^4.3.4",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",

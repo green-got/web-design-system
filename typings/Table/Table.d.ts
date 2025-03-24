@@ -5,24 +5,28 @@ export declare function Table({ ariaLabel, caption, children, className, id, }: 
     children: ReactNode;
     className?: string;
     id: string;
-}): any;
+}): import("react/jsx-runtime").JSX.Element;
 export declare function TableHeader({ children, className, }: {
     children: ReactNode;
     className?: string;
-}): any;
+}): import("react/jsx-runtime").JSX.Element;
 export declare function TableBody({ children, className, }: {
     children: ReactNode;
     className?: string;
-}): any;
+}): import("react/jsx-runtime").JSX.Element;
 export declare function TableColumn({ children, className, }: {
     children: ReactNode;
     className?: string;
-}): any;
-export declare function TableRow({ children, className, }: {
+}): import("react/jsx-runtime").JSX.Element;
+export declare function TableRow({ children, className, columns, }: {
     children: ReactNode;
     className?: string;
-}): any;
+    columns: {
+        field: string;
+        label: string;
+    }[];
+}): import("react/jsx-runtime").JSX.Element;
 export declare function TableCell({ children, className, }: {
     children: ReactNode;
     className?: string;
-}): any;
+}): import("react/jsx-runtime").JSX.Element;

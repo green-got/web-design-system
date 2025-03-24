@@ -39,7 +39,7 @@ export const TableMain: Story = () => {
         id="abcd"
       >
         <TableHeader>
-          <TableRow>
+          <TableRow columns={columns}>
             {columns.map((column) => (
               <TableColumn key={column.field}>{column.label}</TableColumn>
             ))}
@@ -47,7 +47,7 @@ export const TableMain: Story = () => {
         </TableHeader>
         <TableBody>
           {data.map((row, i) => (
-            <TableRow key={row.id}>
+            <TableRow columns={columns} key={row.id}>
               {columns.map((column) => (
                 <TableCell key={column.field}>{row[column.field]}</TableCell>
               ))}

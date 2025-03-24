@@ -16,5 +16,5 @@ export type TSwitchProps = {
     id: string;
     labelClassName?: string;
 } & (TAriaLabelProps | THtmlLabelProps);
-export declare function Switch({ ariaLabel, className, checked, disabled, handleChange, helperText, id, label, labelClassName, }: TSwitchProps): any;
+export declare function Switch({ ariaLabel, className, checked, disabled, handleChange, helperText, id, label, labelClassName, }: TSwitchProps): import("react/jsx-runtime").JSX.Element;
 export {};

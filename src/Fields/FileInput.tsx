@@ -1,6 +1,6 @@
 import { type ChangeEvent, type RefObject, useState } from 'react';
-import { PaperclipIcon } from '../Icons';
-import { mergeClasses } from '../utils/mergeClasses';
+import { PaperclipIcon } from '../Icons/index.js';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './FileInput.module.scss';
 
 export interface IFileInputProps {
@@ -14,7 +14,7 @@ export interface IFileInputProps {
   multiple?: boolean;
   name: string;
   previewClassName?: string;
-  ref?: RefObject;
+  ref?: RefObject<HTMLInputElement>;
   required?: boolean;
 }
 
@@ -49,7 +49,9 @@ export function FileInput({
         multiple={multiple}
         name={name}
         onChange={(e: ChangeEvent<HTMLInputElement>) => {
-          setFiles(Array.from(e.target.files));
+          if (e.target.files !== null) {
+            setFiles(Array.from(e.target.files));
+          }
           if (handleChange) {
             handleChange(e);
           }

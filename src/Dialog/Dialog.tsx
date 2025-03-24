@@ -1,13 +1,7 @@
-import {
-  type KeyboardEvent,
-  type ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
-import { Button } from '../Button';
-import { XIcon } from '../Icons';
-import { mergeClasses } from '../utils/mergeClasses';
+import { type ReactNode, useEffect, useRef, useState } from 'react';
+import { Button } from '../Button/index.js';
+import { XIcon } from '../Icons/index.js';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './Dialog.module.scss';
 
 export interface IDialogProps {
@@ -46,6 +40,12 @@ export function Dialog({
   }
 
   useEffect(() => {
+    function handleKeyDown(this: Document, e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        handleClose();
+      }
+    }
+
     if (isOpen) {
       document.addEventListener('keydown', handleKeyDown);
       const ro = new ResizeObserver((entries) => {
@@ -76,13 +76,7 @@ export function Dialog({
         ro.disconnect();
       };
     }
-  }, [isOpen, hasOverflowIndicator]);
-
-  function handleKeyDown(e: KeyboardEvent<HTMLDialogElement>) {
-    if (e.key === 'Escape') {
-      handleClose();
-    }
-  }
+  }, [handleClose, isOpen, hasOverflowIndicator]);
 
   return (
     <dialog

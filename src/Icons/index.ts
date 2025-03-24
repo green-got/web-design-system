@@ -77,4 +77,4 @@ export {
   UsersIcon,
   XIcon,
   YoutubeIcon,
-} from './Icons';
+} from './Icons.js';

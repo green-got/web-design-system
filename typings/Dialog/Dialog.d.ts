@@ -10,4 +10,4 @@ export interface IDialogProps {
     isFullscreen?: boolean;
     isOpen: boolean;
 }
-export declare function Dialog({ children, className, closeBtnAriaLabel, dismissable, handleClose, hasOverflowIndicator, id, isFullscreen, isOpen, }: IDialogProps): any;
+export declare function Dialog({ children, className, closeBtnAriaLabel, dismissable, handleClose, hasOverflowIndicator, id, isFullscreen, isOpen, }: IDialogProps): import("react/jsx-runtime").JSX.Element;

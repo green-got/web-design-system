@@ -1,1 +1,1 @@
-export { SegmentedController } from './SegmentedController';
+export { SegmentedController } from './SegmentedController.js';

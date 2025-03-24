@@ -1,11 +1,12 @@
 'use client';
 import {
   type ChangeEvent,
+  type FocusEvent,
   type KeyboardEvent,
   type RefObject,
   useState,
 } from 'react';
-import { mergeClasses } from '../utils/mergeClasses';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './Input.module.scss';
 
 export interface IInputProps {
@@ -29,7 +30,7 @@ export interface IInputProps {
   isValid?: boolean;
   label: string;
   name: string;
-  ref?: RefObject;
+  ref?: RefObject<HTMLInputElement>;
   required?: boolean;
   requiredText?: string;
   title?: string;
@@ -57,7 +58,7 @@ export function Input({
 }: IInputProps) {
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
 
-  function handleChange(e) {
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
     props.handleChange?.(e);
 
     const isValid = e.target.validity.valid;
@@ -66,7 +67,7 @@ export function Input({
     }
   }
 
-  function handleBlur(e) {
+  function handleBlur(e: FocusEvent<HTMLInputElement>) {
     setIsFieldValid(e.target.validity.valid);
   }
 

@@ -1,2 +1,2 @@
-export { SkeletonLoader } from './SkeletonLoader';
-export { Spinner } from './Spinner';
+export { SkeletonLoader } from './SkeletonLoader.js';
+export { Spinner } from './Spinner.js';

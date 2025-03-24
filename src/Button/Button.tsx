@@ -1,6 +1,6 @@
 import type { MouseEvent, ReactNode } from 'react';
 import styles from './Button.module.scss';
-import { mergeClasses } from '../utils/mergeClasses';
+import { mergeClasses } from '../utils/mergeClasses.js';
 
 export type ButtonType = 'button' | 'submit';
 
@@ -33,7 +33,7 @@ export const Button = ({
       {...attributes}
       className={mergeClasses([
         styles.button,
-        block ? styles.block : null,
+        block ? styles.block : undefined,
         className,
       ])}
       disabled={disabled}

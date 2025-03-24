@@ -1,1 +1,1 @@
-export { Bug, Lockup } from './Logo';
+export { Bug, Lockup } from './Logo.js';

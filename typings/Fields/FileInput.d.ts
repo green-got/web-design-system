@@ -10,7 +10,7 @@ export interface IFileInputProps {
     multiple?: boolean;
     name: string;
     previewClassName?: string;
-    ref?: RefObject;
+    ref?: RefObject<HTMLInputElement>;
     required?: boolean;
 }
-export declare function FileInput({ accept, block, className, label, labelClassName, handleChange, id, multiple, name, previewClassName, ref, required, }: IFileInputProps): any;
+export declare function FileInput({ accept, block, className, label, labelClassName, handleChange, id, multiple, name, previewClassName, ref, required, }: IFileInputProps): import("react/jsx-runtime").JSX.Element;

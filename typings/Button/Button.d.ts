@@ -12,4 +12,4 @@ export interface IButtonProps {
     name?: string;
     type?: ButtonType;
 }
-export declare const Button: ({ attributes, block, className, children, disabled, handleClick, name, type, }: IButtonProps) => any;
+export declare const Button: ({ attributes, block, className, children, disabled, handleClick, name, type, }: IButtonProps) => import("react/jsx-runtime").JSX.Element;

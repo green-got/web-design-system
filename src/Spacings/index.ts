@@ -1,1 +1,1 @@
-export { Spacings } from './Spacings';
+export { Spacings } from './Spacings.js';

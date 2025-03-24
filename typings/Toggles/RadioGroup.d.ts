@@ -1,38 +1,60 @@
-import type { ChangeEvent, ReactElement, RefObject } from 'react';
-export type TChangeEvent = ChangeEvent<HTMLInputElement>;
-type TStringLabelProps = {
-    label: string;
-    radio?: TRadioProps;
-};
-type TJSXLabelProps = {
-    label: ReactElement;
-    radio: TRadio;
-};
-export type TRadioProps = {
-    checked: boolean;
-    className?: string;
-    handleChange: (e: TChangeEvent) => void;
-    id: string;
-    name: string;
-    ref?: RefObject;
-    required?: boolean;
-    value: string;
-} & (TStringLabelProps | TJSXLabelProps);
+import type { ChangeEvent, ComponentType, ReactElement, RefObject } from 'react';
 declare const restrictedKeys: readonly ["checked", "handleChange", "name", "required"];
 type ReservedRadioProps = (typeof restrictedKeys)[number];
-export type TRadio = Omit<TRadioProps, ReservedRadioProps> & Record<string, unknown> & Partial<Record<ReservedRadioProps, never>>;
+type TRadio = {
+    id: string;
+    label: string | ComponentType;
+    value: string;
+} & Record<string, unknown> & Partial<Record<ReservedRadioProps, never>>;
 export interface IRadioGroupProps {
-    checked: string;
+    checked?: string;
     className?: string;
     disabled?: boolean;
-    handleChange: (e: TChangeEvent) => void;
+    handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
     legend: string;
     name: string;
     radios: TRadio[];
-    renderRadio: (radio: TRadio, checked: string, handleChange: (e: TChangeEvent) => void, name: string, required: boolean) => ReactElement;
+    renderRadio: (radio: TRadio, checked: string | undefined, handleChange: (e: ChangeEvent<HTMLInputElement>) => void, name: string, required: boolean) => ReactElement;
     required?: boolean;
     requiredText?: string;
 }
-export declare function RadioGroup({ checked, className, disabled, handleChange, legend, name, radios, renderRadio, required, requiredText, }: IRadioGroupProps): any;
-export declare function Radio({ checked, className, handleChange, id, label, name, radio, ref, required, value, }: TRadioProps): any;
+interface IRadio {
+    id: string;
+    label: string;
+    value: string;
+}
+type TRadios = {
+    radios: IRadio[];
+    renderRadio: (radio: IRadio, checked: string | undefined, handleChange: (e: ChangeEvent<HTMLInputElement>) => void, name: string, required: boolean) => ReactElement;
+};
+type TRadiosCustom = {
+    radios: TRadio[];
+    renderRadio: (radio: TRadio, checked: string | undefined, handleChange: (e: ChangeEvent<HTMLInputElement>) => void, name: string, required: boolean) => ReactElement;
+};
+type TRadioGroupProps = {
+    checked?: string;
+    className?: string;
+    disabled?: boolean;
+    handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    legend: string;
+    name: string;
+    radios: TRadio[];
+    renderRadio: (radio: TRadio, checked: string | undefined, handleChange: (e: ChangeEvent<HTMLInputElement>) => void, name: string, required: boolean) => ReactElement;
+    required?: boolean;
+    requiredText?: string;
+} & (TRadios | TRadiosCustom);
+interface IRadioProps {
+    checked: boolean;
+    className?: string;
+    handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    id: string;
+    label: string | ComponentType;
+    name: string;
+    radio?: IRadio | TRadio;
+    ref?: RefObject<HTMLInputElement | null>;
+    required?: boolean;
+    value: string;
+}
+export declare function RadioGroup({ checked, className, disabled, handleChange, legend, name, radios, renderRadio, required, requiredText, }: TRadioGroupProps): import("react/jsx-runtime").JSX.Element;
+export declare function Radio({ checked, className, handleChange, id, label, name, radio, ref, required, value, }: IRadioProps): import("react/jsx-runtime").JSX.Element;
 export {};

@@ -1,5 +1,5 @@
 import React from 'react';
-import { mergeClasses } from '../utils/mergeClasses';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './SkeletonLoader.module.scss';
 
 interface ISkeletonLoaderProps {

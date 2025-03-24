@@ -2,11 +2,12 @@
 
 import {
   type ChangeEvent,
+  type FocusEvent,
   type KeyboardEvent,
   type ReactNode,
   useState,
 } from 'react';
-import { mergeClasses } from '../utils/mergeClasses';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './Select.module.scss';
 
 type TAriaLabelProps = {
@@ -51,11 +52,11 @@ export function Select({
   ...props
 }: TSelectProps) {
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
-  function handleBlur(e) {
+  function handleBlur(e: FocusEvent<HTMLSelectElement>) {
     setIsFieldValid(e.target.validity.valid);
   }
 
-  function handleChange(e) {
+  function handleChange(e: ChangeEvent<HTMLSelectElement>) {
     const isValid = e.target.validity.valid;
     if (!isFieldValid && isValid) {
       setIsFieldValid(isValid);

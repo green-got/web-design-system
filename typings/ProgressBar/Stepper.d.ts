@@ -3,4 +3,4 @@ export interface IStepperProps {
     step?: number;
     steps: number | string[];
 }
-export declare function Stepper({ className, step, steps }: IStepperProps): any;
+export declare function Stepper({ className, step, steps }: IStepperProps): import("react/jsx-runtime").JSX.Element;

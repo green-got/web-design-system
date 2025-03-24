@@ -22,7 +22,9 @@ export const SegmentedControllerMain: Story = () => {
           { id: 'identifier', label: 'Label' },
           { id: 'dupe', label: 'Label' },
         ]}
-        handleClick={(e: MouseEvent<HTMLButtonElement>) => setA(e.target.id)}
+        handleClick={(e: MouseEvent<HTMLButtonElement>) =>
+          setA(e.currentTarget.id)
+        }
       />
       <br />
       <br />
@@ -33,7 +35,7 @@ export const SegmentedControllerMain: Story = () => {
           { id: 'swe', label: 'Hej!' },
           { id: 'yat', label: 'Yet another test' },
         ]}
-        handleClick={(e) => setB(e.target.id)}
+        handleClick={(e) => setB(e.currentTarget.id)}
       />
       <br />
     </>

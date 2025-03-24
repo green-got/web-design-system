@@ -1,1 +1,1 @@
-export declare const Pagination: () => any;
+export declare const Pagination: () => import("react/jsx-runtime").JSX.Element;

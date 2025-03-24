@@ -21,5 +21,5 @@ type TSelectProps = {
     requiredText?: string;
     value?: string;
 } & (TAriaLabelProps | THtmlLabelProps);
-export declare function Select({ ariaLabel, className, children, disabled, errorMessage, handleKeyDown, label, id, isValid, name, required, requiredText, value, ...props }: TSelectProps): any;
+export declare function Select({ ariaLabel, className, children, disabled, errorMessage, handleKeyDown, label, id, isValid, name, required, requiredText, value, ...props }: TSelectProps): import("react/jsx-runtime").JSX.Element;
 export {};

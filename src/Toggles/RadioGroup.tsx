@@ -1,54 +1,101 @@
 'use client';
-import type { ChangeEvent, ReactElement, RefObject } from 'react';
-import { mergeClasses } from '../utils/mergeClasses';
+import type {
+  ChangeEvent,
+  ComponentType,
+  ReactElement,
+  ReactNode,
+  RefObject,
+} from 'react';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './RadioGroup.module.scss';
-
-export type TChangeEvent = ChangeEvent<HTMLInputElement>;
-
-type TStringLabelProps = {
-  label: string;
-  radio?: TRadioProps;
-};
-
-type TJSXLabelProps = {
-  label: ReactElement;
-  radio: TRadio;
-};
-
-export type TRadioProps = {
-  checked: boolean;
-  className?: string;
-  handleChange: (e: TChangeEvent) => void;
-  id: string;
-  name: string;
-  ref?: RefObject;
-  required?: boolean;
-  value: string;
-} & (TStringLabelProps | TJSXLabelProps);
 
 const restrictedKeys = ['checked', 'handleChange', 'name', 'required'] as const;
 type ReservedRadioProps = (typeof restrictedKeys)[number];
-export type TRadio = Omit<TRadioProps, ReservedRadioProps> &
-  Record<string, unknown> &
+
+type TRadio = {
+  id: string;
+  label: string | ComponentType;
+  value: string;
+} & Record<string, unknown> &
   Partial<Record<ReservedRadioProps, never>>;
 
 export interface IRadioGroupProps {
-  checked: string;
+  checked?: string;
   className?: string;
   disabled?: boolean;
-  handleChange: (e: TChangeEvent) => void;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   legend: string;
   name: string;
   radios: TRadio[];
   renderRadio: (
     radio: TRadio,
-    checked: string,
-    handleChange: (e: TChangeEvent) => void,
+    checked: string | undefined,
+    handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
     name: string,
     required: boolean,
   ) => ReactElement;
   required?: boolean;
   requiredText?: string;
+}
+
+interface IRadio {
+  id: string;
+  label: string;
+  value: string;
+}
+
+type TRadios = {
+  radios: IRadio[];
+  renderRadio: (
+    radio: IRadio,
+    checked: string | undefined,
+    handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
+    name: string,
+    required: boolean,
+  ) => ReactElement;
+};
+
+type TRadiosCustom = {
+  radios: TRadio[];
+  renderRadio: (
+    radio: TRadio,
+    checked: string | undefined,
+    handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
+    name: string,
+    required: boolean,
+  ) => ReactElement;
+};
+
+type TRadioGroupProps = {
+  checked?: string;
+  className?: string;
+  disabled?: boolean;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  legend: string;
+  name: string;
+  radios: TRadio[];
+  renderRadio: (
+    radio: TRadio,
+    checked: string | undefined,
+    handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
+    name: string,
+    required: boolean,
+  ) => ReactElement;
+  required?: boolean;
+  requiredText?: string;
+} & (TRadios | TRadiosCustom);
+
+interface IRadioProps {
+  checked: boolean;
+  className?: string;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  id: string;
+  label: string | ComponentType;
+  name: string;
+  radio?: IRadio | TRadio;
+  ref?: RefObject<HTMLInputElement | null>;
+  required?: boolean;
+  value: string;
 }
 
 export function RadioGroup({
@@ -60,9 +107,9 @@ export function RadioGroup({
   name,
   radios,
   renderRadio,
-  required,
+  required = false,
   requiredText,
-}: IRadioGroupProps) {
+}: TRadioGroupProps) {
   return (
     <fieldset
       aria-disabled={disabled}
@@ -91,7 +138,7 @@ export function Radio({
   ref,
   required,
   value,
-}: TRadioProps) {
+}: IRadioProps) {
   return (
     <div className={mergeClasses([styles.radio, className])}>
       <input
@@ -105,8 +152,16 @@ export function Radio({
         value={value}
       />
       <label htmlFor={id}>
-        {typeof label === 'string' ? label : label(radio)}
+        {typeof label === 'string'
+          ? label
+          : isCallable(label)
+            ? label(radio)
+            : value}
       </label>
     </div>
   );
+}
+
+function isCallable(fn: unknown): fn is (...args: unknown[]) => ReactNode {
+  return typeof fn === 'function';
 }

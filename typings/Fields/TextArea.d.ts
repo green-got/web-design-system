@@ -16,5 +16,5 @@ interface ITextAreaProps {
     rows?: number;
     value: string;
 }
-export declare function TextArea({ className, cols, disabled, errorMessage, id, isValid, label, maxLength, minLength, name, required, requiredText, rows, value, ...props }: ITextAreaProps): any;
+export declare function TextArea({ className, cols, disabled, errorMessage, id, isValid, label, maxLength, minLength, name, required, requiredText, rows, value, ...props }: ITextAreaProps): import("react/jsx-runtime").JSX.Element;
 export {};

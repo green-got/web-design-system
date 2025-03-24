@@ -8,5 +8,5 @@ interface IInfoboxProps {
     id?: string;
     theme: 'neutral' | 'primary' | 'success' | 'warning' | 'error';
 }
-export declare function Infobox({ children, className, dismissHandler, dismissible, dismissLabel, id, theme, }: IInfoboxProps): any;
+export declare function Infobox({ children, className, dismissHandler, dismissible, dismissLabel, id, theme, }: IInfoboxProps): import("react/jsx-runtime").JSX.Element;
 export {};

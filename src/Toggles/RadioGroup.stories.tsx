@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { type FC, useRef, useState } from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { RadioGroup, Radio } from './RadioGroup';
 import { Button } from '../Button';
@@ -26,7 +26,7 @@ export const RadioGroupMain: Story = () => {
   const [klass, setKlass] = useState<string>('');
   const [complex, setComplex] = useState<string>('');
   const [form, setForm] = useState<string>('');
-  const ref = useRef(null);
+  const ref = useRef<HTMLInputElement>(null);
   return (
     <>
       <GlobalStyles />

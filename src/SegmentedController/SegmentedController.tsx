@@ -1,11 +1,11 @@
-import type { ClickEvent } from 'react';
-import { mergeClasses } from '../utils/mergeClasses';
+import type { MouseEvent } from 'react';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './SegmentedController.module.scss';
 
 export interface ISegmentedControllerProps {
   activeId: string;
   className?: string;
-  handleClick: (e: ClickEvent<HTMLButtonElement>) => void;
+  handleClick: (e: MouseEvent<HTMLButtonElement>) => void;
   segments: { id: string; label: string; panelId?: string }[];
 }
 

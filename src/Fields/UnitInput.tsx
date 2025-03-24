@@ -1,7 +1,7 @@
 'use client';
-import { type RefObject, useRef, useState } from 'react';
-import { mergeClasses } from '../utils/mergeClasses';
-import type { IInputProps } from './Input';
+import { type ChangeEvent, type FocusEvent, useRef, useState } from 'react';
+import { mergeClasses } from '../utils/mergeClasses.js';
+import type { IInputProps } from './Input.js';
 import styles from './Input.module.scss';
 
 interface IUnitInputProps extends IInputProps {
@@ -29,16 +29,16 @@ export function UnitInput({
   ...props
 }: IUnitInputProps) {
   const [isValid, setIsValid] = useState<boolean>(true);
-  const unitRef = useRef(null);
+  const unitRef = useRef<HTMLInputElement>(null);
 
-  function handleChange(e) {
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
     if (!isValid) {
       setIsValid(e.target.validity.valid);
     }
     props.handleChange?.(e);
   }
 
-  function handleBlur(e) {
+  function handleBlur(e: FocusEvent<HTMLInputElement>) {
     setIsValid(e.target.validity.valid);
   }
 

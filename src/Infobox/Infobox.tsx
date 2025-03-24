@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react';
-import { mergeClasses } from '../utils/mergeClasses';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './Infobox.module.scss';
-import { Button } from '../Button';
-import { XIcon } from '../Icons';
+import { Button } from '../Button/index.js';
+import { XIcon } from '../Icons/index.js';
 
 interface IInfoboxProps {
   children: ReactNode;

@@ -1,8 +1,4 @@
-import React, { type ReactNode } from 'react';
-// export const Icons = {
-//   icon1: 'icon',
-//   icon2: 'icon',
-// };
+import type { ReactNode } from 'react';
 
 export interface IIconProps {
   attributes?: { [key: string]: string | number };
@@ -13,7 +9,7 @@ export interface IIconProps {
 }
 
 export interface IIconBaseProps extends IIconProps {
-  renderIcon: (title: string) => ReactNode;
+  renderIcon: (title?: string) => ReactNode;
 }
 
 function Icon({
@@ -44,7 +40,7 @@ function Icon({
   );
 }
 
-export function ChevronRightIcon(props) {
+export function ChevronRightIcon(props: IIconProps) {
   return (
     <>
       <Icon

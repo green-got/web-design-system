@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { mergeClasses } from '../utils/mergeClasses';
+import { mergeClasses } from '../utils/mergeClasses.js';
 import styles from './Table.module.scss';
 
 export function Table({
@@ -72,13 +72,18 @@ export function TableColumn({
 export function TableRow({
   children,
   className,
-}: { children: ReactNode; className?: string }) {
+  columns,
+}: {
+  children: ReactNode;
+  className?: string;
+  columns: { field: string; label: string }[];
+}) {
   return (
     <div
       className={mergeClasses([styles.row, className])}
       // biome-ignore lint/a11y/useSemanticElements: styling
       role="row"
-      style={{ gridTemplateColumns: `repeat(${children.length}, 1fr)` }}
+      style={{ gridTemplateColumns: `repeat(${columns.length}, 1fr)` }}
       tabIndex={0}
     >
       {children}
