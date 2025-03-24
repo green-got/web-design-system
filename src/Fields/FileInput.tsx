@@ -14,7 +14,7 @@ export interface IFileInputProps {
   multiple?: boolean;
   name: string;
   previewClassName?: string;
-  ref?: RefObject<HTMLInputElement>;
+  ref?: RefObject<HTMLInputElement | null>;
   required?: boolean;
 }
 

@@ -20,7 +20,7 @@ export interface IInputProps {
     isValid?: boolean;
     label: string;
     name: string;
-    ref?: RefObject<HTMLInputElement>;
+    ref?: RefObject<HTMLInputElement | null>;
     required?: boolean;
     requiredText?: string;
     title?: string;
