@@ -14,68 +14,30 @@ type ReservedRadioProps = (typeof restrictedKeys)[number];
 
 type TRadio = {
   id: string;
-  label: string | ComponentType;
+  label: string;
   value: string;
 } & Record<string, unknown> &
   Partial<Record<ReservedRadioProps, never>>;
 
-export interface IRadioGroupProps {
-  checked?: string;
-  className?: string;
-  disabled?: boolean;
-  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  legend: string;
-  name: string;
-  radios: TRadio[];
-  renderRadio: (
-    radio: TRadio,
-    checked: string | undefined,
-    handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
-    name: string,
-    required: boolean,
-  ) => ReactElement;
-  required?: boolean;
-  requiredText?: string;
-}
-
-interface IRadio {
+type TRadioCustom = {
   id: string;
-  label: string;
+  label: ComponentType;
   value: string;
-}
+} & Record<string, unknown> &
+  Partial<Record<ReservedRadioProps, never>>;
 
-type TRadios = {
-  radios: IRadio[];
-  renderRadio: (
-    radio: IRadio,
-    checked: string | undefined,
-    handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
-    name: string,
-    required: boolean,
-  ) => ReactElement;
-};
+type Radio = TRadio | TRadioCustom;
 
-type TRadiosCustom = {
-  radios: TRadio[];
-  renderRadio: (
-    radio: TRadio,
-    checked: string | undefined,
-    handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
-    name: string,
-    required: boolean,
-  ) => ReactElement;
-};
-
-type TRadioGroupProps = {
+export type IRadioGroupProps<T> = {
   checked?: string;
   className?: string;
   disabled?: boolean;
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   legend: string;
   name: string;
-  radios: TRadio[];
+  radios: T[];
   renderRadio: (
-    radio: TRadio,
+    radio: T,
     checked: string | undefined,
     handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
     name: string,
@@ -83,22 +45,25 @@ type TRadioGroupProps = {
   ) => ReactElement;
   required?: boolean;
   requiredText?: string;
-} & (TRadios | TRadiosCustom);
+};
 
-interface IRadioProps {
+type TLabel<R extends Radio> = R extends TRadio ? string : ComponentType;
+
+export type TRadioProps<R extends Radio> = {
   checked: boolean;
   className?: string;
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   id: string;
-  label: string | ComponentType;
+  label: TLabel<R>;
   name: string;
-  radio?: IRadio | TRadio;
+  radio?: R;
   ref?: RefObject<HTMLInputElement | null>;
   required?: boolean;
   value: string;
-}
+  // biome-ignore lint/complexity/noBannedTypes: <explanation>
+} & (R extends TRadioCustom ? { radio: R } : {});
 
-export function RadioGroup({
+export function RadioGroup<R extends Radio>({
   checked,
   className,
   disabled,
@@ -109,7 +74,7 @@ export function RadioGroup({
   renderRadio,
   required = false,
   requiredText,
-}: TRadioGroupProps) {
+}: IRadioGroupProps<R>) {
   return (
     <fieldset
       aria-disabled={disabled}
@@ -127,7 +92,7 @@ export function RadioGroup({
   );
 }
 
-export function Radio({
+export function Radio<R extends Radio>({
   checked,
   className,
   handleChange,
@@ -138,7 +103,7 @@ export function Radio({
   ref,
   required,
   value,
-}: IRadioProps) {
+}: TRadioProps<R>) {
   return (
     <div className={mergeClasses([styles.radio, className])}>
       <input
