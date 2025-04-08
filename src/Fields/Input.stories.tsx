@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type ChangeEvent } from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { Input } from './Input';
 import { ClearableInput } from './ClearableInput';
@@ -76,7 +76,7 @@ export const InputMain: Story = () => {
 
       <Input
         attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
-        handleChange={(e) =>
+        handleChange={(e: ChangeEvent<HTMLInputElement>) =>
           setF(updateInputValue(e.target.value, e.nativeEvent.inputType))
         }
         id="f"
@@ -131,9 +131,10 @@ export const InputMain: Story = () => {
 
       <Input
         errorMessage="This field is required"
+        handleChange={(e) => setK(e.target.value)}
         id="k"
         label="Input with custom require text"
-        handleChange={(e) => setK(e.target.value)}
+        name="k"
         required
         requiredText="Required"
         type="text"
@@ -145,7 +146,7 @@ export const InputMain: Story = () => {
 
 export const InputFocus = () => {
   const [a, setA] = React.useState('');
-  const inputRef = React.useRef(null);
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
   return (
     <>
@@ -155,7 +156,9 @@ export const InputFocus = () => {
 
       <button
         onClick={() => {
-          inputRef.current.focus();
+          if (inputRef.current) {
+            inputRef.current.focus();
+          }
         }}
         type="button"
       >
@@ -165,6 +168,7 @@ export const InputFocus = () => {
         handleChange={(e) => setA(e.target.value)}
         id="a"
         label="Focusable"
+        name="focusability"
         ref={inputRef}
         type="text"
         value={a}
@@ -202,9 +206,9 @@ export const InputUnit = () => {
   const [c, setC] = React.useState('');
   const [d, setD] = React.useState('');
   const [e, setE] = React.useState('100');
-  const [f, setF] = React.useState([]);
+  const [f, setF] = React.useState<Intl.NumberFormatPart[]>([]);
   const [lang, setLang] = React.useState('fr-FR');
-  const refE = React.useRef(null);
+  const refE = React.useRef<HTMLInputElement>(null);
   const formatter = new Intl.NumberFormat(lang, {
     style: 'currency',
     currency: 'EUR',
@@ -335,7 +339,7 @@ export const InputUnit = () => {
             setF([{ type: 'empty', value: '' }]);
             return;
           }
-          const formatted = formatter.formatToParts(smoosh);
+          const formatted = formatter.formatToParts(Number(smoosh));
           if (formatted.some((part) => part.value === 'NaN')) {
             return;
           }

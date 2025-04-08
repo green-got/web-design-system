@@ -32,10 +32,8 @@ export function UnitInput({
   const unitRef = useRef<HTMLInputElement>(null);
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    if (!isValid) {
-      setIsValid(e.target.validity.valid);
-    }
     props.handleChange?.(e);
+    setTimeout(() => setIsValid(e.target.validity.valid), 0);
   }
 
   function handleBlur(e: FocusEvent<HTMLInputElement>) {
