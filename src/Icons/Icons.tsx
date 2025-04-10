@@ -1613,3 +1613,121 @@ export function CrossIcon(props: IIconProps) {
     />
   );
 }
+
+export function CrownIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Crown icon'}</title>
+          <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
+          <path d="M5 21h14" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function DumbbellIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Dumbbell icon'}</title>
+          <path d="M14.4 14.4 9.6 9.6" />
+          <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" />
+          <path d="m21.5 21.5-1.4-1.4" />
+          <path d="M3.9 3.9 2.5 2.5" />
+          <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function ShirtIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Shirt icon'}</title>
+          <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function ShoppingBagIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Shopping bag icon'}</title>
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+          <path d="M3 6h18" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function TrendingUpIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Trending up icon'}</title>
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+          <polyline points="16 7 22 7 22 13" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function UtensilsIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Utensils icon'}</title>
+          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+          <path d="M7 2v20" />
+          <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}

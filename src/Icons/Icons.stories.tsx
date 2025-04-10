@@ -23,8 +23,10 @@ import {
   CoinsIcon,
   CopyIcon,
   CrossIcon,
+  CrownIcon,
   DeleteIcon,
   DownloadIcon,
+  DumbbellIcon,
   EarthIcon,
   EditIcon,
   EditLineIcon,
@@ -62,6 +64,8 @@ import {
   SendIcon,
   ShieldIcon,
   SignalIcon,
+  ShirtIcon,
+  ShoppingBagIcon,
   SlidersIcon,
   SmartphoneRingingIcon,
   SnowflakeIcon,
@@ -73,11 +77,13 @@ import {
   TrainIcon,
   TrashIcon,
   TreeIcon,
+  TrendingUpIcon,
   UnlockIcon,
   UpDownArrowsIcon,
   UpToTheRightIcon,
   UserIcon,
   UsersIcon,
+  UtensilsIcon,
   XIcon,
   YoutubeIcon,
 } from './Icons';
@@ -364,6 +370,24 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <IdCardIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <CrownIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <DumbbellIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <ShirtIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <ShoppingBagIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <TrendingUpIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <UtensilsIcon height={16} width={16} />
       </div>
     </div>
   </>

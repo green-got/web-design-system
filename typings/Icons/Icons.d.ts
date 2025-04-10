@@ -89,3 +89,9 @@ export declare function LaptopIcon(props: IIconProps): import("react/jsx-runtime
 export declare function IdCardIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function MaskIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function CrossIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function CrownIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function DumbbellIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function ShirtIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function ShoppingBagIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function TrendingUpIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function UtensilsIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
