@@ -95,3 +95,4 @@ export declare function ShirtIcon(props: IIconProps): import("react/jsx-runtime"
 export declare function ShoppingBagIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function TrendingUpIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function UtensilsIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function PaletteIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;

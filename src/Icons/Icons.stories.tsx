@@ -56,6 +56,7 @@ import {
   NoSmokingIcon,
   NoWeaponIcon,
   PackageIcon,
+  PaletteIcon,
   PaperclipIcon,
   PhoneIcon,
   PlusIcon,
@@ -388,6 +389,9 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <UtensilsIcon height={16} width={16} />
+      </div>
+      <div style={cardStyles}>
+        <PaletteIcon height={16} width={16} />
       </div>
     </div>
   </>

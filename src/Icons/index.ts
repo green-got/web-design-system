@@ -53,6 +53,7 @@ export {
   NoSmokingIcon,
   NoWeaponIcon,
   PackageIcon,
+  PaletteIcon,
   PaperclipIcon,
   PhoneIcon,
   PlusIcon,
