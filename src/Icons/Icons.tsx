@@ -44,13 +44,13 @@ export function ChevronRightIcon(props: IIconProps) {
   return (
     <>
       <Icon
-        attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+        attributes={props.attributes}
         className={props.className}
         height={props.height}
         renderIcon={(title) => (
           <>
             <title>{title ? title : 'Chevron right icon'}</title>
-            <polyline points="9 18 15 12 9 6" />
+            <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" />
           </>
         )}
         title={props.title}
@@ -63,13 +63,13 @@ export function ChevronRightIcon(props: IIconProps) {
 export function ChevronLeftIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Chevron left icon'}</title>
-          <polyline points="15 18 9 12 15 6" />
+          <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" />
         </>
       )}
       title={props.title}
@@ -81,13 +81,13 @@ export function ChevronLeftIcon(props: IIconProps) {
 export function ChevronUpIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Chevron up icon'}</title>
-          <polyline points="18 15 12 9 6 15" />
+          <path d="M11.9999 10.8284L7.0502 15.7782L5.63599 14.364L11.9999 8L18.3639 14.364L16.9497 15.7782L11.9999 10.8284Z" />
         </>
       )}
       title={props.title}
@@ -99,13 +99,13 @@ export function ChevronUpIcon(props: IIconProps) {
 export function ChevronDownIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Chevron down icon'}</title>
-          <polyline points="6 9 12 15 18 9" />
+          <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z" />
         </>
       )}
       title={props.title}
@@ -117,15 +117,13 @@ export function ChevronDownIcon(props: IIconProps) {
 export function ExternalLinkIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'External link icon'}</title>
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-          <polyline points="15 3 21 3 21 9" />
-          <line x1="10" y1="14" x2="21" y2="3" />
+          <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
         </>
       )}
       title={props.title}
@@ -137,15 +135,13 @@ export function ExternalLinkIcon(props: IIconProps) {
 export function HelpIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Help icon'}</title>
-          <circle cx="12" cy="12" r="10" />
-          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-          <line x1="12" y1="17" x2="12.01" y2="17" />
+          <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM13 13.3551V14H11V12.5C11 11.9477 11.4477 11.5 12 11.5C12.8284 11.5 13.5 10.8284 13.5 10C13.5 9.17157 12.8284 8.5 12 8.5C11.2723 8.5 10.6656 9.01823 10.5288 9.70577L8.56731 9.31346C8.88637 7.70919 10.302 6.5 12 6.5C13.933 6.5 15.5 8.067 15.5 10C15.5 11.5855 14.4457 12.9248 13 13.3551Z" />
         </>
       )}
       title={props.title}
@@ -157,15 +153,13 @@ export function HelpIcon(props: IIconProps) {
 export function InfoIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Info icon'}</title>
-          <circle cx="12" cy="12" r="10" />
-          <line x1="12" y1="16" x2="12" y2="12" />
-          <line x1="12" y1="8" x2="12.01" y2="8" />
+          <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z" />
         </>
       )}
       title={props.title}
@@ -177,13 +171,13 @@ export function InfoIcon(props: IIconProps) {
 export function PaperclipIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Paperclip icon'}</title>
-          <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+          <path d="M14.8287 7.75737L9.1718 13.4142C8.78127 13.8047 8.78127 14.4379 9.1718 14.8284C9.56232 15.219 10.1955 15.219 10.586 14.8284L16.2429 9.17158C17.4144 8.00001 17.4144 6.10052 16.2429 4.92894C15.0713 3.75737 13.1718 3.75737 12.0002 4.92894L6.34337 10.5858C4.39075 12.5384 4.39075 15.7042 6.34337 17.6569C8.29599 19.6095 11.4618 19.6095 13.4144 17.6569L19.0713 12L20.4855 13.4142L14.8287 19.0711C12.095 21.8047 7.66283 21.8047 4.92916 19.0711C2.19549 16.3374 2.19549 11.9053 4.92916 9.17158L10.586 3.51473C12.5386 1.56211 15.7045 1.56211 17.6571 3.51473C19.6097 5.46735 19.6097 8.63317 17.6571 10.5858L12.0002 16.2427C10.8287 17.4142 8.92916 17.4142 7.75759 16.2427C6.58601 15.0711 6.58601 13.1716 7.75759 12L13.4144 6.34316L14.8287 7.75737Z" />
         </>
       )}
       title={props.title}
@@ -195,14 +189,13 @@ export function PaperclipIcon(props: IIconProps) {
 export function YoutubeIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Youtube icon'}</title>
-          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-          <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+          <path d="M19.6069 6.99482C19.5307 6.69695 19.3152 6.47221 19.0684 6.40288C18.6299 6.28062 16.501 6 12.001 6C7.50098 6 5.37252 6.28073 4.93225 6.40323C4.68776 6.47123 4.4723 6.69593 4.3951 6.99482C4.2863 7.41923 4.00098 9.19595 4.00098 12C4.00098 14.804 4.2863 16.5808 4.3954 17.0064C4.47126 17.3031 4.68676 17.5278 4.93251 17.5968C5.37252 17.7193 7.50098 18 12.001 18C16.501 18 18.6299 17.7194 19.0697 17.5968C19.3142 17.5288 19.5297 17.3041 19.6069 17.0052C19.7157 16.5808 20.001 14.8 20.001 12C20.001 9.2 19.7157 7.41923 19.6069 6.99482ZM21.5442 6.49818C22.001 8.28 22.001 12 22.001 12C22.001 12 22.001 15.72 21.5442 17.5018C21.2897 18.4873 20.547 19.2618 19.6056 19.5236C17.8971 20 12.001 20 12.001 20C12.001 20 6.10837 20 4.39637 19.5236C3.45146 19.2582 2.70879 18.4836 2.45774 17.5018C2.00098 15.72 2.00098 12 2.00098 12C2.00098 12 2.00098 8.28 2.45774 6.49818C2.71227 5.51273 3.45495 4.73818 4.39637 4.47636C6.10837 4 12.001 4 12.001 4C12.001 4 17.8971 4 19.6056 4.47636C20.5505 4.74182 21.2932 5.51636 21.5442 6.49818ZM10.001 15.5V8.5L16.001 12L10.001 15.5Z" />
         </>
       )}
       title={props.title}
@@ -214,14 +207,13 @@ export function YoutubeIcon(props: IIconProps) {
 export function ClockIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Clock icon'}</title>
-          <circle cx="12" cy="12" r="10" />
-          <polyline points="12 6 12 12 16 14" />
+          <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z" />
         </>
       )}
       title={props.title}
@@ -233,15 +225,13 @@ export function ClockIcon(props: IIconProps) {
 export function CircledXIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Circled x icon'}</title>
-          <circle cx="12" cy="12" r="10" />
-          <line x1="15" y1="9" x2="9" y2="15" />
-          <line x1="9" y1="9" x2="15" y2="15" />
+          <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 10.5858L14.8284 7.75736L16.2426 9.17157L13.4142 12L16.2426 14.8284L14.8284 16.2426L12 13.4142L9.17157 16.2426L7.75736 14.8284L10.5858 12L7.75736 9.17157L9.17157 7.75736L12 10.5858Z" />
         </>
       )}
       title={props.title}
@@ -253,17 +243,13 @@ export function CircledXIcon(props: IIconProps) {
 export function TextFileIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Text file icon'}</title>
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-          <polyline points="14 2 14 8 20 8" />
-          <line x1="16" y1="13" x2="8" y2="13" />
-          <line x1="16" y1="17" x2="8" y2="17" />
-          <polyline points="10 9 9 9 8 9" />
+          <path d="M21 8V20.9932C21 21.5501 20.5552 22 20.0066 22H3.9934C3.44495 22 3 21.556 3 21.0082V2.9918C3 2.45531 3.4487 2 4.00221 2H14.9968L21 8ZM19 9H14V4H5V20H19V9ZM8 7H11V9H8V7ZM8 11H16V13H8V11ZM8 15H16V17H8V15Z" />
         </>
       )}
       title={props.title}
@@ -275,13 +261,13 @@ export function TextFileIcon(props: IIconProps) {
 export function EditIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Edit icon'}</title>
-          <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+          <path d="M15.7279 9.57627L14.3137 8.16206L5 17.4758V18.89H6.41421L15.7279 9.57627ZM17.1421 8.16206L18.5563 6.74785L17.1421 5.33363L15.7279 6.74785L17.1421 8.16206ZM7.24264 20.89H3V16.6473L16.435 3.21231C16.8256 2.82179 17.4587 2.82179 17.8492 3.21231L20.6777 6.04074C21.0682 6.43126 21.0682 7.06443 20.6777 7.45495L7.24264 20.89Z" />
         </>
       )}
       title={props.title}
@@ -293,14 +279,13 @@ export function EditIcon(props: IIconProps) {
 export function EditLineIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Edit line icon'}</title>
-          <path d="M12 20h9" />
-          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+          <path d="M5 18.89H6.41421L15.7279 9.57627L14.3137 8.16206L5 17.4758V18.89ZM21 20.89H3V16.6473L16.435 3.21231C16.8256 2.82179 17.4587 2.82179 17.8492 3.21231L20.6777 6.04074C21.0682 6.43126 21.0682 7.06443 20.6777 7.45495L9.24264 18.89H21V20.89ZM15.7279 6.74785L17.1421 8.16206L18.5563 6.74785L17.1421 5.33363L15.7279 6.74785Z" />
         </>
       )}
       title={props.title}
@@ -312,14 +297,13 @@ export function EditLineIcon(props: IIconProps) {
 export function PlusIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Plus icon'}</title>
-          <line x1="12" y1="5" x2="12" y2="19" />
-          <line x1="5" y1="12" x2="19" y2="12" />
+          <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" />
         </>
       )}
       title={props.title}
@@ -331,14 +315,13 @@ export function PlusIcon(props: IIconProps) {
 export function XIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'X icon'}</title>
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
+          <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z" />
         </>
       )}
       title={props.title}
@@ -350,15 +333,13 @@ export function XIcon(props: IIconProps) {
 export function DownloadIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Download icon'}</title>
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-          <polyline points="7 10 12 15 17 10" />
-          <line x1="12" y1="15" x2="12" y2="3" />
+          <path d="M13 10H18L12 16L6 10H11V3H13V10ZM4 19H20V12H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V12H4V19Z" />
         </>
       )}
       title={props.title}
@@ -370,14 +351,13 @@ export function DownloadIcon(props: IIconProps) {
 export function TrashIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Trash icon'}</title>
-          <polyline points="3 6 5 6 21 6" />
-          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+          <path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 4V6H15V4H9Z" />
         </>
       )}
       title={props.title}
@@ -389,15 +369,13 @@ export function TrashIcon(props: IIconProps) {
 export function CircledPlusIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Circled plus icon'}</title>
-          <circle cx="12" cy="12" r="10" />
-          <line x1="12" y1="8" x2="12" y2="16" />
-          <line x1="8" y1="12" x2="16" y2="12" />
+          <path d="M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z" />
         </>
       )}
       title={props.title}
@@ -409,14 +387,13 @@ export function CircledPlusIcon(props: IIconProps) {
 export function CheckedSquareIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Checked square icon'}</title>
-          <polyline points="9 11 12 14 22 4" />
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+          <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM5 5V19H19V5H5ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z" />
         </>
       )}
       title={props.title}
@@ -428,14 +405,13 @@ export function CheckedSquareIcon(props: IIconProps) {
 export function LockIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Lock icon'}</title>
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          <path d="M19 10H20C20.5523 10 21 10.4477 21 11V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V11C3 10.4477 3.44772 10 4 10H5V9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9V10ZM5 12V20H19V12H5ZM11 14H13V18H11V14ZM17 10V9C17 6.23858 14.7614 4 12 4C9.23858 4 7 6.23858 7 9V10H17Z" />
         </>
       )}
       title={props.title}
@@ -447,14 +423,13 @@ export function LockIcon(props: IIconProps) {
 export function UnlockIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Unlock icon'}</title>
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-          <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+          <path d="M7 10H20C20.5523 10 21 10.4477 21 11V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V11C3 10.4477 3.44772 10 4 10H5V9C5 5.13401 8.13401 2 12 2C14.7405 2 17.1131 3.5748 18.2624 5.86882L16.4731 6.76344C15.6522 5.12486 13.9575 4 12 4C9.23858 4 7 6.23858 7 9V10ZM5 12V20H19V12H5ZM10 15H14V17H10V15Z" />
         </>
       )}
       title={props.title}
@@ -466,15 +441,13 @@ export function UnlockIcon(props: IIconProps) {
 export function DeleteIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Delete icon'}</title>
-          <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
-          <line x1="18" y1="9" x2="12" y2="15" />
-          <line x1="12" y1="9" x2="18" y2="15" />
+          <path d="M6.53451 3H20.9993C21.5516 3 21.9993 3.44772 21.9993 4V20C21.9993 20.5523 21.5516 21 20.9993 21H6.53451C6.20015 21 5.88792 20.8329 5.70246 20.5547L0.369122 12.5547C0.145189 12.2188 0.145189 11.7812 0.369122 11.4453L5.70246 3.4453C5.88792 3.1671 6.20015 3 6.53451 3ZM7.06969 5L2.40302 12L7.06969 19H19.9993V5H7.06969ZM12.9993 10.5858L15.8277 7.75736L17.242 9.17157L14.4135 12L17.242 14.8284L15.8277 16.2426L12.9993 13.4142L10.1709 16.2426L8.75668 14.8284L11.5851 12L8.75668 9.17157L10.1709 7.75736L12.9993 10.5858Z" />
         </>
       )}
       title={props.title}
@@ -486,18 +459,13 @@ export function DeleteIcon(props: IIconProps) {
 export function ListIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'List icon'}</title>
-          <line x1="8" y1="6" x2="21" y2="6" />
-          <line x1="8" y1="12" x2="21" y2="12" />
-          <line x1="8" y1="18" x2="21" y2="18" />
-          <line x1="3" y1="6" x2="3.01" y2="6" />
-          <line x1="3" y1="12" x2="3.01" y2="12" />
-          <line x1="3" y1="18" x2="3.01" y2="18" />
+          <path d="M8 4H21V6H8V4ZM3 3.5H6V6.5H3V3.5ZM3 10.5H6V13.5H3V10.5ZM3 17.5H6V20.5H3V17.5ZM8 11H21V13H8V11ZM8 18H21V20H8V18Z" />
         </>
       )}
       title={props.title}
@@ -509,13 +477,13 @@ export function ListIcon(props: IIconProps) {
 export function StarIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Star icon'}</title>
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26ZM12.0006 15.968L16.2473 18.3451L15.2988 13.5717L18.8719 10.2674L14.039 9.69434L12.0006 5.27502L9.96214 9.69434L5.12921 10.2674L8.70231 13.5717L7.75383 18.3451L12.0006 15.968Z" />
         </>
       )}
       title={props.title}
@@ -527,14 +495,13 @@ export function StarIcon(props: IIconProps) {
 export function UserIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'User icon'}</title>
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-          <circle cx="12" cy="7" r="4" />
+          <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z" />
         </>
       )}
       title={props.title}
@@ -546,13 +513,13 @@ export function UserIcon(props: IIconProps) {
 export function CheckmarkIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Checkmark icon'}</title>
-          <polyline points="20 6 9 17 4 12" />
+          <path d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z" />
         </>
       )}
       title={props.title}
@@ -564,14 +531,13 @@ export function CheckmarkIcon(props: IIconProps) {
 export function BellIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Bell icon'}</title>
-          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-          <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          <path d="M5 18H19V11.0314C19 7.14806 15.866 4 12 4C8.13401 4 5 7.14806 5 11.0314V18ZM12 2C16.9706 2 21 6.04348 21 11.0314V20H3V11.0314C3 6.04348 7.02944 2 12 2ZM9.5 21H14.5C14.5 22.3807 13.3807 23.5 12 23.5C10.6193 23.5 9.5 22.3807 9.5 21Z" />
         </>
       )}
       title={props.title}
@@ -583,14 +549,13 @@ export function BellIcon(props: IIconProps) {
 export function GearIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Gear icon'}</title>
-          <circle cx="12" cy="12" r="3" />
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+          <path d="M2.21232 14.0601C1.91928 12.6755 1.93115 11.2743 2.21316 9.94038C3.32308 10.0711 4.29187 9.7035 4.60865 8.93871C4.92544 8.17392 4.50032 7.22896 3.62307 6.53655C4.3669 5.3939 5.34931 4.39471 6.53554 3.62289C7.228 4.50059 8.17324 4.92601 8.93822 4.60914C9.7032 4.29227 10.0708 3.32308 9.93979 2.21281C11.3243 1.91977 12.7255 1.93164 14.0595 2.21364C13.9288 3.32356 14.2964 4.29235 15.0612 4.60914C15.8259 4.92593 16.7709 4.5008 17.4633 3.62356C18.606 4.36739 19.6052 5.3498 20.377 6.53602C19.4993 7.22849 19.0739 8.17373 19.3907 8.93871C19.7076 9.70369 20.6768 10.0713 21.7871 9.94028C22.0801 11.3248 22.0682 12.726 21.7862 14.06C20.6763 13.9293 19.7075 14.2969 19.3907 15.0616C19.0739 15.8264 19.4991 16.7714 20.3763 17.4638C19.6325 18.6064 18.6501 19.6056 17.4638 20.3775C16.7714 19.4998 15.8261 19.0743 15.0612 19.3912C14.2962 19.7081 13.9286 20.6773 14.0596 21.7875C12.675 22.0806 11.2738 22.0687 9.93989 21.7867C10.0706 20.6768 9.70301 19.708 8.93822 19.3912C8.17343 19.0744 7.22848 19.4995 6.53606 20.3768C5.39341 19.633 4.39422 18.6506 3.62241 17.4643C4.5001 16.7719 4.92552 15.8266 4.60865 15.0616C4.29179 14.2967 3.32259 13.9291 2.21232 14.0601ZM3.99975 12.2104C5.09956 12.5148 6.00718 13.2117 6.45641 14.2963C6.90564 15.3808 6.75667 16.5154 6.19421 17.5083C6.29077 17.61 6.38998 17.7092 6.49173 17.8056C7.4846 17.2432 8.61912 17.0943 9.70359 17.5435C10.7881 17.9927 11.485 18.9002 11.7894 19.9999C11.9295 20.0037 12.0697 20.0038 12.2099 20.0001C12.5143 18.9003 13.2112 17.9927 14.2958 17.5435C15.3803 17.0942 16.5149 17.2432 17.5078 17.8057C17.6096 17.7091 17.7087 17.6099 17.8051 17.5081C17.2427 16.5153 17.0938 15.3807 17.543 14.2963C17.9922 13.2118 18.8997 12.5149 19.9994 12.2105C20.0032 12.0704 20.0033 11.9301 19.9996 11.7899C18.8998 11.4856 17.9922 10.7886 17.543 9.70407C17.0937 8.61953 17.2427 7.48494 17.8052 6.49204C17.7086 6.39031 17.6094 6.2912 17.5076 6.19479C16.5148 6.75717 15.3803 6.9061 14.2958 6.4569C13.2113 6.0077 12.5144 5.10016 12.21 4.00044C12.0699 3.99666 11.9297 3.99659 11.7894 4.00024C11.4851 5.10005 10.7881 6.00767 9.70359 6.4569C8.61904 6.90613 7.48446 6.75715 6.49155 6.1947C6.38982 6.29126 6.29071 6.39047 6.19431 6.49222C6.75668 7.48509 6.90561 8.61961 6.45641 9.70407C6.00721 10.7885 5.09967 11.4855 3.99995 11.7899C3.99617 11.93 3.9961 12.0702 3.99975 12.2104ZM11.9997 15.0002C10.3428 15.0002 8.99969 13.657 8.99969 12.0002C8.99969 10.3433 10.3428 9.00018 11.9997 9.00018C13.6565 9.00018 14.9997 10.3433 14.9997 12.0002C14.9997 13.657 13.6565 15.0002 11.9997 15.0002ZM11.9997 13.0002C12.552 13.0002 12.9997 12.5525 12.9997 12.0002C12.9997 11.4479 12.552 11.0002 11.9997 11.0002C11.4474 11.0002 10.9997 11.4479 10.9997 12.0002C10.9997 12.5525 11.4474 13.0002 11.9997 13.0002Z" />
         </>
       )}
       title={props.title}
@@ -602,14 +567,13 @@ export function GearIcon(props: IIconProps) {
 export function EyeIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Eye icon'}</title>
-          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-          <circle cx="12" cy="12" r="3" />
+          <path d="M12.0003 3C17.3924 3 21.8784 6.87976 22.8189 12C21.8784 17.1202 17.3924 21 12.0003 21C6.60812 21 2.12215 17.1202 1.18164 12C2.12215 6.87976 6.60812 3 12.0003 3ZM12.0003 19C16.2359 19 19.8603 16.052 20.7777 12C19.8603 7.94803 16.2359 5 12.0003 5C7.7646 5 4.14022 7.94803 3.22278 12C4.14022 16.052 7.7646 19 12.0003 19ZM12.0003 16.5C9.51498 16.5 7.50026 14.4853 7.50026 12C7.50026 9.51472 9.51498 7.5 12.0003 7.5C14.4855 7.5 16.5003 9.51472 16.5003 12C16.5003 14.4853 14.4855 16.5 12.0003 16.5ZM12.0003 14.5C13.381 14.5 14.5003 13.3807 14.5003 12C14.5003 10.6193 13.381 9.5 12.0003 9.5C10.6196 9.5 9.50026 10.6193 9.50026 12C9.50026 13.3807 10.6196 14.5 12.0003 14.5Z" />
         </>
       )}
       title={props.title}
@@ -621,14 +585,13 @@ export function EyeIcon(props: IIconProps) {
 export function EyeClosedIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Eye closed icon'}</title>
-          <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
-          <line x1="1" y1="1" x2="23" y2="23" />
+          <path d="M17.8827 19.2968C16.1814 20.3755 14.1638 21.0002 12.0003 21.0002C6.60812 21.0002 2.12215 17.1204 1.18164 12.0002C1.61832 9.62282 2.81932 7.5129 4.52047 5.93457L1.39366 2.80777L2.80788 1.39355L22.6069 21.1925L21.1927 22.6068L17.8827 19.2968ZM5.9356 7.3497C4.60673 8.56015 3.6378 10.1672 3.22278 12.0002C4.14022 16.0521 7.7646 19.0002 12.0003 19.0002C13.5997 19.0002 15.112 18.5798 16.4243 17.8384L14.396 15.8101C13.7023 16.2472 12.8808 16.5002 12.0003 16.5002C9.51498 16.5002 7.50026 14.4854 7.50026 12.0002C7.50026 11.1196 7.75317 10.2981 8.19031 9.60442L5.9356 7.3497ZM12.9139 14.328L9.67246 11.0866C9.5613 11.3696 9.50026 11.6777 9.50026 12.0002C9.50026 13.3809 10.6196 14.5002 12.0003 14.5002C12.3227 14.5002 12.6309 14.4391 12.9139 14.328ZM20.8068 16.5925L19.376 15.1617C20.0319 14.2268 20.5154 13.1586 20.7777 12.0002C19.8603 7.94818 16.2359 5.00016 12.0003 5.00016C11.1544 5.00016 10.3329 5.11773 9.55249 5.33818L7.97446 3.76015C9.22127 3.26959 10.5793 3.00016 12.0003 3.00016C17.3924 3.00016 21.8784 6.87992 22.8189 12.0002C22.5067 13.6998 21.8038 15.2628 20.8068 16.5925ZM11.7229 7.50857C11.8146 7.50299 11.9071 7.50016 12.0003 7.50016C14.4855 7.50016 16.5003 9.51488 16.5003 12.0002C16.5003 12.0933 16.4974 12.1858 16.4919 12.2775L11.7229 7.50857Z" />
         </>
       )}
       title={props.title}
@@ -640,21 +603,13 @@ export function EyeClosedIcon(props: IIconProps) {
 export function SlidersIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Sliders icon'}</title>
-          <line x1="4" y1="21" x2="4" y2="14" />
-          <line x1="4" y1="10" x2="4" y2="3" />
-          <line x1="12" y1="21" x2="12" y2="12" />
-          <line x1="12" y1="8" x2="12" y2="3" />
-          <line x1="20" y1="21" x2="20" y2="16" />
-          <line x1="20" y1="12" x2="20" y2="3" />
-          <line x1="1" y1="14" x2="7" y2="14" />
-          <line x1="9" y1="8" x2="15" y2="8" />
-          <line x1="17" y1="16" x2="23" y2="16" />
+          <path d="M21 18V21H19V18H17V16H23V18H21ZM5 18V21H3V18H1V16H7V18H5ZM11 6V3H13V6H15V8H9V6H11ZM11 10H13V21H11V10ZM3 14V3H5V14H3ZM19 14V3H21V14H19Z" />
         </>
       )}
       title={props.title}
@@ -666,13 +621,13 @@ export function SlidersIcon(props: IIconProps) {
 export function BoltIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Bolt icon'}</title>
-          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          <path d="M13 9H21L11 24V15H4L13 0V9ZM11 11V7.22063L7.53238 13H13V17.3944L17.263 11H11Z" />
         </>
       )}
       title={props.title}
@@ -684,15 +639,13 @@ export function BoltIcon(props: IIconProps) {
 export function MoreHorizontalIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Horizontal more icon'}</title>
-          <circle cx="12" cy="12" r="1" />
-          <circle cx="19" cy="12" r="1" />
-          <circle cx="5" cy="12" r="1" />
+          <path d="M5 10C3.9 10 3 10.9 3 12C3 13.1 3.9 14 5 14C6.1 14 7 13.1 7 12C7 10.9 6.1 10 5 10ZM19 10C17.9 10 17 10.9 17 12C17 13.1 17.9 14 19 14C20.1 14 21 13.1 21 12C21 10.9 20.1 10 19 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z" />
         </>
       )}
       title={props.title}
@@ -704,15 +657,13 @@ export function MoreHorizontalIcon(props: IIconProps) {
 export function MoreVerticalIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Vertical more icon'}</title>
-          <circle cx="12" cy="12" r="1" />
-          <circle cx="12" cy="5" r="1" />
-          <circle cx="12" cy="19" r="1" />
+          <path d="M12 3C10.9 3 10 3.9 10 5C10 6.1 10.9 7 12 7C13.1 7 14 6.1 14 5C14 3.9 13.1 3 12 3ZM12 17C10.9 17 10 17.9 10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z" />
         </>
       )}
       title={props.title}
@@ -724,14 +675,13 @@ export function MoreVerticalIcon(props: IIconProps) {
 export function CopyIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Copy icon'}</title>
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+          <path d="M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z" />
         </>
       )}
       title={props.title}
@@ -743,16 +693,13 @@ export function CopyIcon(props: IIconProps) {
 export function UsersIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Users icon'}</title>
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-          <circle cx="9" cy="7" r="4" />
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H16C16 18.6863 13.3137 16 10 16C6.68629 16 4 18.6863 4 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM10 11C12.21 11 14 9.21 14 7C14 4.79 12.21 3 10 3C7.79 3 6 4.79 6 7C6 9.21 7.79 11 10 11ZM18.2837 14.7028C21.0644 15.9561 23 18.752 23 22H21C21 19.564 19.5483 17.4671 17.4628 16.5271L18.2837 14.7028ZM17.5962 3.41321C19.5944 4.23703 21 6.20361 21 8.5C21 11.3702 18.8042 13.7252 16 13.9776V11.9646C17.6967 11.7222 19 10.264 19 8.5C19 7.11935 18.2016 5.92603 17.041 5.35635L17.5962 3.41321Z" />
         </>
       )}
       title={props.title}
@@ -764,14 +711,13 @@ export function UsersIcon(props: IIconProps) {
 export function SendIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Send icon'}</title>
-          <line x1="22" y1="2" x2="11" y2="13" />
-          <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          <path d="M3.5 1.34558C3.58425 1.34558 3.66714 1.36687 3.74096 1.40747L22.2034 11.5618C22.4454 11.6949 22.5337 11.9989 22.4006 12.2409C22.3549 12.324 22.2865 12.3924 22.2034 12.4381L3.74096 22.5924C3.499 22.7255 3.19497 22.6372 3.06189 22.3953C3.02129 22.3214 3 22.2386 3 22.1543V1.84558C3 1.56944 3.22386 1.34558 3.5 1.34558ZM5 4.38249V10.9999H10V12.9999H5V19.6174L18.8499 11.9999L5 4.38249Z" />
         </>
       )}
       title={props.title}
@@ -783,15 +729,13 @@ export function SendIcon(props: IIconProps) {
 export function LoginIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Log in icon'}</title>
-          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-          <polyline points="10 17 15 12 10 7" />
-          <line x1="15" y1="12" x2="3" y2="12" />
+          <path d="M4 15H6V20H18V4H6V9H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V15ZM10 11V8L15 12L10 16V13H2V11H10Z" />
         </>
       )}
       title={props.title}
@@ -803,16 +747,13 @@ export function LoginIcon(props: IIconProps) {
 export function CalendarIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Calendar icon'}</title>
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-          <line x1="16" y1="2" x2="16" y2="6" />
-          <line x1="8" y1="2" x2="8" y2="6" />
-          <line x1="3" y1="10" x2="21" y2="10" />
+          <path d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z" />
         </>
       )}
       title={props.title}
@@ -824,14 +765,13 @@ export function CalendarIcon(props: IIconProps) {
 export function CardIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Card icon'}</title>
-          <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-          <line x1="1" y1="10" x2="23" y2="10" />
+          <path d="M3.00488 2.99979H21.0049C21.5572 2.99979 22.0049 3.4475 22.0049 3.99979V19.9998C22.0049 20.5521 21.5572 20.9998 21.0049 20.9998H3.00488C2.4526 20.9998 2.00488 20.5521 2.00488 19.9998V3.99979C2.00488 3.4475 2.4526 2.99979 3.00488 2.99979ZM20.0049 11.9998H4.00488V18.9998H20.0049V11.9998ZM20.0049 7.99979V4.99979H4.00488V7.99979H20.0049Z" />
         </>
       )}
       title={props.title}
@@ -843,13 +783,13 @@ export function CardIcon(props: IIconProps) {
 export function PhoneIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Phone icon'}</title>
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          <path d="M9.36556 10.6821C10.302 12.3288 11.6712 13.698 13.3179 14.6344L14.2024 13.3961C14.4965 12.9845 15.0516 12.8573 15.4956 13.0998C16.9024 13.8683 18.4571 14.3353 20.0789 14.4637C20.599 14.5049 21 14.9389 21 15.4606V19.9234C21 20.4361 20.6122 20.8657 20.1022 20.9181C19.5723 20.9726 19.0377 21 18.5 21C9.93959 21 3 14.0604 3 5.5C3 4.96227 3.02742 4.42771 3.08189 3.89776C3.1343 3.38775 3.56394 3 4.07665 3H8.53942C9.0611 3 9.49513 3.40104 9.5363 3.92109C9.66467 5.54288 10.1317 7.09764 10.9002 8.50444C11.1427 8.9484 11.0155 9.50354 10.6039 9.79757L9.36556 10.6821ZM6.84425 10.0252L8.7442 8.66809C8.20547 7.50514 7.83628 6.27183 7.64727 5H5.00907C5.00303 5.16632 5 5.333 5 5.5C5 12.9558 11.0442 19 18.5 19C18.667 19 18.8337 18.997 19 18.9909V16.3527C17.7282 16.1637 16.4949 15.7945 15.3319 15.2558L13.9748 17.1558C13.4258 16.9425 12.8956 16.6915 12.3874 16.4061L12.3293 16.373C10.3697 15.2587 8.74134 13.6303 7.627 11.6707L7.59394 11.6126C7.30849 11.1044 7.05754 10.5742 6.84425 10.0252Z" />
         </>
       )}
       title={props.title}
@@ -879,14 +819,13 @@ export function ArcIcon(props: IIconProps) {
 export function UpToTheRightIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Up and to the right icon'}</title>
-          <polyline points="15 14 20 9 15 4" />
-          <path d="M4 20v-7a4 4 0 0 1 4-4h12" />
+          <path d="M4.99989 10.0001L4.99976 19L6.99976 19L6.99986 12.0001L17.1717 12L13.222 15.9498L14.6362 17.364L21.0001 11L14.6362 4.63605L13.222 6.05026L17.1717 10L4.99989 10.0001Z" />
         </>
       )}
       title={props.title}
@@ -898,14 +837,13 @@ export function UpToTheRightIcon(props: IIconProps) {
 export function ShieldIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Shield icon'}</title>
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          <polyline points="9 12 11 14 15 10" />
+          <path d="M12 1L20.2169 2.82598C20.6745 2.92766 21 3.33347 21 3.80217V13.7889C21 15.795 19.9974 17.6684 18.3282 18.7812L12 23L5.6718 18.7812C4.00261 17.6684 3 15.795 3 13.7889V3.80217C3 3.33347 3.32553 2.92766 3.78307 2.82598L12 1ZM12 3.04879L5 4.60434V13.7889C5 15.1263 5.6684 16.3752 6.7812 17.1171L12 20.5963L17.2188 17.1171C18.3316 16.3752 19 15.1263 19 13.7889V4.60434L12 3.04879ZM16.4524 8.22183L17.8666 9.63604L11.5026 16L7.25999 11.7574L8.67421 10.3431L11.5019 13.1709L16.4524 8.22183Z" />
         </>
       )}
       title={props.title}
@@ -917,22 +855,13 @@ export function ShieldIcon(props: IIconProps) {
 export function SnowflakeIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Snowflake icon'}</title>
-          <path d="M12,2L12,22" />
-          <path d="M7.969,3.969L12,8" />
-          <path d="M12,8L16.031,3.969" />
-          <path d="M16.031,20.031L12,16" />
-          <path d="M12,16L7.969,20.031" />
-          <path d="M22,12L2,12" />
-          <path d="M20.031,7.969L16,12" />
-          <path d="M16,12L20.031,16.031" />
-          <path d="M3.969,16.031L8,12" />
-          <path d="M8,12L3.969,7.969" />
+          <path d="M11.9998 3.29814L14.4451 1.66794L15.5545 3.33204L12.9998 5.03517V10.2678L17.5313 7.65149L17.7289 4.58748L19.7247 4.7162L19.5356 7.64899L22.17 8.95159L21.2836 10.7444L18.5313 9.38354L14.0001 11.9996L18.5317 14.616L21.284 13.2551L22.1704 15.0479L19.536 16.3505L19.7251 19.2833L17.7293 19.412L17.5317 16.348L12.9998 13.7315V18.9648L15.5545 20.6679L14.4451 22.332L11.9998 20.7018L9.55446 22.332L8.44506 20.6679L10.9998 18.9648V13.7319L6.46786 16.3484L6.27026 19.4124L4.2744 19.2836L4.46355 16.3508L1.8291 15.0483L2.71555 13.2554L5.46786 14.6163L10.0001 11.9996L5.46824 9.38319L2.71594 10.7441L1.82948 8.95124L4.46393 7.64864L4.27478 4.71585L6.27064 4.58713L6.46824 7.65113L10.9998 10.2674V5.03517L8.44506 3.33204L9.55446 1.66794L11.9998 3.29814Z" />
         </>
       )}
       title={props.title}
@@ -944,14 +873,13 @@ export function SnowflakeIcon(props: IIconProps) {
 export function SearchIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Search icon'}</title>
-          <circle cx="11" cy="11" r="8" />
-          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z" />
         </>
       )}
       title={props.title}
@@ -963,15 +891,13 @@ export function SearchIcon(props: IIconProps) {
 export function MenuIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Menu icon'}</title>
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="18" x2="21" y2="18" />
+          <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
         </>
       )}
       title={props.title}
@@ -983,18 +909,13 @@ export function MenuIcon(props: IIconProps) {
 export function BankIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Bank icon'}</title>
-          <path d="M1.62118 17.6449C1.85454 16.8273 2.59269 16.2647 3.43191 16.2647H20.5681C21.4073 16.2647 22.1455 16.8273 22.3788 17.6449L22.9245 19.5566C23.2735 20.7794 22.3689 22 21.1138 22H2.88623C1.63111 22 0.726513 20.7793 1.07551 19.5566L1.62118 17.6449ZM20.5681 18.1765H3.43191L2.88623 20.0882L21.1138 20.0882L20.5681 18.1765Z" />
-          <path d="M11.2999 2.13674C11.7493 1.95442 12.2507 1.95442 12.7001 2.13674L21.1829 5.57793C21.8985 5.86826 22.3678 6.57124 22.3678 7.35297V8.61758C22.3678 9.67342 21.5239 10.5294 20.4828 10.5294H3.51723C2.47614 10.5294 1.63217 9.67342 1.63217 8.61758V7.35297C1.63217 6.57124 2.10145 5.86826 2.81713 5.57793L11.2999 2.13674ZM12 3.91177L3.51723 7.35297V8.61758H20.4828V7.35297L12 3.91177Z" />
-          <path d="M5.69315 9.57346V17.2206H3.80809V9.57346H5.69315Z" />
-          <path d="M18.3069 17.2206V9.57346H20.1919V17.2206H18.3069Z" />
-          <path d="M9.46327 9.57346V17.2206H7.57821V9.57346H9.46327Z" />
-          <path d="M14.5367 17.2206V9.57346H16.4218V17.2206H14.5367Z" />
+          <path d="M2 20H22V22H2V20ZM4 12H6V19H4V12ZM9 12H11V19H9V12ZM13 12H15V19H13V12ZM18 12H20V19H18V12ZM2 7L12 2L22 7V11H2V7ZM4 8.23607V9H20V8.23607L12 4.23607L4 8.23607ZM12 8C11.4477 8 11 7.55228 11 7C11 6.44772 11.4477 6 12 6C12.5523 6 13 6.44772 13 7C13 7.55228 12.5523 8 12 8Z" />
         </>
       )}
       title={props.title}
@@ -1006,15 +927,13 @@ export function BankIcon(props: IIconProps) {
 export function StatementIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Statement icon'}</title>
-          <path d="M4 7C3.44772 7 3 7.44772 3 8V16C3 16.5523 3.44772 17 4 17H20C20.5523 17 21 16.5523 21 16V8C21 7.44772 20.5523 7 20 7H4ZM1 8C1 6.34315 2.34315 5 4 5H20C21.6569 5 23 6.34315 23 8V16C23 17.6569 21.6569 19 20 19H4C2.34315 19 1 17.6569 1 16V8Z" />
-          <path d="M5 10C5 9.44772 5.44772 9 6 9H11C11.5523 9 12 9.44772 12 10C12 10.5523 11.5523 11 11 11H6C5.44772 11 5 10.5523 5 10Z" />
-          <path d="M5 14C5 13.4477 5.44772 13 6 13H17C17.5523 13 18 13.4477 18 14C18 14.5523 17.5523 15 17 15H6C5.44772 15 5 14.5523 5 14Z" />
+          <path d="M3 6H21V18H3V6ZM2 4C1.44772 4 1 4.44772 1 5V19C1 19.5523 1.44772 20 2 20H22C22.5523 20 23 19.5523 23 19V5C23 4.44772 22.5523 4 22 4H2ZM13 9H19V11H13V9ZM18 13H13V15H18V13ZM6 13H7V16H9V11H6V13ZM9 8H7V10H9V8Z" />
         </>
       )}
       title={props.title}
@@ -1026,15 +945,13 @@ export function StatementIcon(props: IIconProps) {
 export function NoCardIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'No card icon'}</title>
-          <path d="M3.75 5.58333C3.24374 5.58333 2.83333 5.99374 2.83333 6.5V17.5C2.83333 18.0063 3.24374 18.4167 3.75 18.4167H19.3333C19.8396 18.4167 20.25 18.8271 20.25 19.3333C20.25 19.8396 19.8396 20.25 19.3333 20.25H3.75C2.23122 20.25 1 19.0188 1 17.5V6.5C1 4.98122 2.23122 3.75 3.75 3.75H4.66667C5.17293 3.75 5.58333 4.16041 5.58333 4.66667C5.58333 5.17293 5.17293 5.58333 4.66667 5.58333H3.75ZM7.55431 4.66667C7.55431 4.16041 7.96472 3.75 8.47098 3.75H20.25C21.7688 3.75 23 4.98122 23 6.5V17.5C23 18.0063 22.5896 18.4167 22.0833 18.4167C21.5771 18.4167 21.1667 18.0063 21.1667 17.5V6.5C21.1667 5.99374 20.7563 5.58333 20.25 5.58333H8.47098C7.96472 5.58333 7.55431 5.17293 7.55431 4.66667Z" />
-          <path d="M1 10.1667C1 9.66041 1.41041 9.25 1.91667 9.25H10.1667C10.6729 9.25 11.0833 9.66041 11.0833 10.1667C11.0833 10.6729 10.6729 11.0833 10.1667 11.0833H1.91667C1.41041 11.0833 1 10.6729 1 10.1667ZM13.375 10.1667C13.375 9.66041 13.7854 9.25 14.2917 9.25H22.0833C22.5896 9.25 23 9.66041 23 10.1667C23 10.6729 22.5896 11.0833 22.0833 11.0833H14.2917C13.7854 11.0833 13.375 10.6729 13.375 10.1667Z" />
-          <path d="M1.26849 1.26849C1.62647 0.910505 2.20687 0.910505 2.56485 1.26849L22.7315 21.4352C23.0895 21.7931 23.0895 22.3735 22.7315 22.7315C22.3735 23.0895 21.7931 23.0895 21.4352 22.7315L1.26849 2.56485C0.910505 2.20687 0.910505 1.62647 1.26849 1.26849Z" />
+          <path d="M19.5859 21L21.1925 22.6067L22.6068 21.1925L2.80777 1.39348L1.39355 2.80769L2.11974 3.53387C2.04627 3.67306 2.00468 3.83167 2.00468 4V20C2.00468 20.5523 2.4524 21 3.00468 21H19.5859ZM17.5859 19H4.00468V12H10.5859L17.5859 19ZM6.58586 8H4.00468V5.41882L6.58586 8ZM22.0047 4V17.7622L20.0047 15.7622V12H16.2425L12.2425 8H20.0047V5H9.24251L7.24251 3H21.0047C21.557 3 22.0047 3.44771 22.0047 4Z" />
         </>
       )}
       title={props.title}
@@ -1046,17 +963,13 @@ export function NoCardIcon(props: IIconProps) {
 export function SpeechBubblesIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Speech bubbles icon'}</title>
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M10.5667 4.6815C13.8171 4.6815 16.452 7.31641 16.452 10.5667C16.452 13.8171 13.8171 16.452 10.5667 16.452C9.39688 16.452 8.30909 16.1115 7.39404 15.5245C7.08011 15.3232 6.67834 15.2583 6.29808 15.3863L5.43596 15.6765L5.73705 15.0179C5.92632 14.604 5.87126 14.1403 5.64005 13.7874C5.03398 12.8625 4.6815 11.757 4.6815 10.5667C4.6815 7.31641 7.31642 4.6815 10.5667 4.6815ZM17.8729 8.59083C17.004 5.37006 14.0622 3 10.5667 3C6.38775 3 3 6.38774 3 10.5667C3 12.0151 3.40775 13.3706 4.1149 14.522L3.50304 15.8602C3.04388 16.8645 4.00573 17.9321 5.05229 17.5798L6.64998 17.042C7.24776 17.4043 7.89979 17.6862 8.59068 17.8726C9.7834 19.7524 11.883 21 14.274 21C15.5413 21 16.7287 20.6488 17.7418 20.0381L18.7518 20.4999C19.756 20.959 20.8236 19.9972 20.4714 18.9506L20.055 17.7137C20.6553 16.7067 21 15.5295 21 14.274C21 11.8831 19.7525 9.78358 17.8729 8.59083ZM18.1207 11.0104C17.8995 14.8361 14.8361 17.8995 11.0104 18.1207C11.8901 18.8678 13.0295 19.3185 14.274 19.3185C15.2852 19.3185 16.2245 19.0219 17.0128 18.5111C17.3635 18.2839 17.8254 18.2274 18.24 18.417L18.568 18.5669L18.3999 18.0675C18.2717 17.6866 18.3376 17.2864 18.5358 16.9744C19.0314 16.1941 19.3185 15.2689 19.3185 14.274C19.3185 13.0294 18.8678 11.8901 18.1207 11.0104Z"
-          />
+          <path d="M10 3H14C18.4183 3 22 6.58172 22 11C22 15.4183 18.4183 19 14 19V22.5C9 20.5 2 17.5 2 11C2 6.58172 5.58172 3 10 3ZM12 17H14C17.3137 17 20 14.3137 20 11C20 7.68629 17.3137 5 14 5H10C6.68629 5 4 7.68629 4 11C4 14.61 6.46208 16.9656 12 19.4798V17Z" />
         </>
       )}
       title={props.title}
@@ -1068,16 +981,13 @@ export function SpeechBubblesIcon(props: IIconProps) {
 export function LeftRightArrowsIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Left and right arrows icon'}</title>
-          <path d="M15.5355 4.29289C15.9261 3.90237 16.5592 3.90237 16.9497 4.29289L21.1924 8.53553C21.5829 8.92606 21.5829 9.55922 21.1924 9.94975L16.9497 14.1924C16.5592 14.5829 15.9261 14.5829 15.5355 14.1924C15.145 13.8019 15.145 13.1687 15.5355 12.7782L19.0711 9.24264L15.5355 5.70711C15.145 5.31658 15.145 4.68342 15.5355 4.29289Z" />
-          <path d="M9.99996 9C9.99996 8.44772 10.4477 8 11 8H19C19.5522 8 20 8.44772 20 9C20 9.55228 19.5522 10 19 10H11C10.4477 10 9.99996 9.55228 9.99996 9Z" />
-          <path d="M7.94975 10.2929C7.55922 9.90237 6.92606 9.90237 6.53553 10.2929L2.29289 14.5355C1.90237 14.9261 1.90237 15.5592 2.29289 15.9497L6.53553 20.1924C6.92606 20.5829 7.55922 20.5829 7.94975 20.1924C8.34027 19.8019 8.34027 19.1687 7.94975 18.7782L4.41421 15.2426L7.94975 11.7071C8.34027 11.3166 8.34027 10.6834 7.94975 10.2929Z" />
-          <path d="M13.4853 15C13.4853 14.4477 13.0376 14 12.4853 14H4.48532C3.93303 14 3.48532 14.4477 3.48532 15C3.48532 15.5523 3.93303 16 4.48532 16H12.4853C13.0376 16 13.4853 15.5523 13.4853 15Z" />
+          <path d="M16.0503 12.0498L21 16.9996L16.0503 21.9493L14.636 20.5351L17.172 17.9988L4 17.9996V15.9996L17.172 15.9988L14.636 13.464L16.0503 12.0498ZM7.94975 2.0498L9.36396 3.46402L6.828 5.9988L20 5.99955V7.99955L6.828 7.9988L9.36396 10.5351L7.94975 11.9493L3 6.99955L7.94975 2.0498Z" />
         </>
       )}
       title={props.title}
@@ -1089,16 +999,13 @@ export function LeftRightArrowsIcon(props: IIconProps) {
 export function UpDownArrowsIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Up and down arrows icon'}</title>
-          <path d="M3.79289 8.44976C3.40237 8.05923 3.40237 7.42607 3.79289 7.03554L8.03553 2.7929C8.42606 2.40238 9.05922 2.40238 9.44975 2.7929L13.6924 7.03554C14.0829 7.42607 14.0829 8.05923 13.6924 8.44976C13.3019 8.84028 12.6687 8.84028 12.2782 8.44976L8.74264 4.91422L5.20711 8.44976C4.81658 8.84028 4.18342 8.84028 3.79289 8.44976Z" />
-          <path d="M8.5 13.9853C7.94772 13.9853 7.5 13.5376 7.5 12.9853V4.98532C7.5 4.43304 7.94772 3.98532 8.5 3.98532C9.05228 3.98532 9.5 4.43304 9.5 4.98532V12.9853C9.5 13.5376 9.05228 13.9853 8.5 13.9853Z" />
-          <path d="M9.79289 16.0355C9.40237 16.4261 9.40237 17.0592 9.79289 17.4498L14.0355 21.6924C14.4261 22.0829 15.0592 22.0829 15.4497 21.6924L19.6924 17.4498C20.0829 17.0592 20.0829 16.4261 19.6924 16.0355C19.3019 15.645 18.6687 15.645 18.2782 16.0355L14.7426 19.5711L11.2071 16.0355C10.8166 15.645 10.1834 15.645 9.79289 16.0355Z" />
-          <path d="M14.5 10.5C13.9477 10.5 13.5 10.9477 13.5 11.5V19.5C13.5 20.0523 13.9477 20.5 14.5 20.5C15.0523 20.5 15.5 20.0523 15.5 19.5V11.5C15.5 10.9477 15.0523 10.5 14.5 10.5Z" />
+          <path d="M11.9498 7.94975L10.5356 9.36396L8.00079 6.828L8.00004 20H6.00004L6.00079 6.828L3.46451 9.36396L2.05029 7.94975L7.00004 3L11.9498 7.94975ZM21.9498 16.0503L17 21L12.0503 16.0503L13.4645 14.636L16.0008 17.172L16 4H18L18.0008 17.172L20.5356 14.636L21.9498 16.0503Z" />
         </>
       )}
       title={props.title}
@@ -1110,17 +1017,13 @@ export function UpDownArrowsIcon(props: IIconProps) {
 export function SmartphoneRingingIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Ringing smartphone icon'}</title>
-          <path d="M9.89968 19.42C10.1795 19.42 10.4063 19.1932 10.4063 18.9134C10.4063 18.6335 10.1795 18.4067 9.89968 18.4067C9.61986 18.4067 9.39301 18.6335 9.39301 18.9134C9.39301 19.1932 9.61986 19.42 9.89968 19.42ZM8.60635 18.9134C8.60635 18.1991 9.18539 17.62 9.89968 17.62C10.614 17.62 11.193 18.1991 11.193 18.9134C11.193 19.6276 10.614 20.2067 9.89968 20.2067C9.18539 20.2067 8.60635 19.6276 8.60635 18.9134Z" />
-          <path d="M7.11676 2.85002H6.00002C5.3649 2.85002 4.85002 3.3649 4.85002 4.00002V19.6667C4.85002 20.3018 5.3649 20.8167 6.00003 20.8167H13.8C14.4352 20.8167 14.95 20.3018 14.95 19.6667V17.75C14.95 17.2806 15.3306 16.9 15.8 16.9C16.2695 16.9 16.65 17.2806 16.65 17.75V19.6667C16.65 21.2407 15.374 22.5167 13.8 22.5167H6.00003C4.42602 22.5167 3.15002 21.2407 3.15002 19.6667V4.00002C3.15002 2.42601 4.42601 1.15002 6.00002 1.15002H7.96963C8.08318 1.11743 8.20312 1.09998 8.32715 1.09998H11.4738C11.5978 1.09998 11.7178 1.11743 11.8313 1.15002H13.8C15.374 1.15002 16.65 2.42601 16.65 4.00002V6.40002C16.65 6.86947 16.2695 7.25002 15.8 7.25002C15.3306 7.25002 14.95 6.86947 14.95 6.40002V4.00002C14.95 3.3649 14.4352 2.85002 13.8 2.85002H12.6842C12.4996 3.33893 12.0273 3.68664 11.4738 3.68664H8.32715C7.77364 3.68664 7.30134 3.33893 7.11676 2.85002Z" />
-          <path d="M13.7993 10.399C14.1313 10.067 14.6695 10.067 15.0014 10.399C15.4817 10.8792 15.604 11.552 15.5874 12.0649C15.5713 12.567 15.4132 13.1893 15.0014 13.601C14.6695 13.933 14.1313 13.933 13.7993 13.601C13.4694 13.2711 13.4674 12.7375 13.7933 12.4051C13.7945 12.4029 13.8137 12.3761 13.8361 12.3113C13.864 12.2306 13.8846 12.125 13.8883 12.0101C13.8968 11.748 13.8191 11.6208 13.7993 11.601C13.4674 11.2691 13.4674 10.7309 13.7993 10.399Z" />
-          <path d="M17.7993 6.39896C18.1313 6.06701 18.6695 6.06701 19.0014 6.39896C21.8602 9.25778 21.7892 14.2612 19.0534 17.5442C18.7528 17.9048 18.2169 17.9535 17.8562 17.653C17.4956 17.3525 17.4469 16.8165 17.7474 16.4558C20.0116 13.7388 19.9405 9.74222 17.7993 7.60104C17.4674 7.2691 17.4674 6.7309 17.7993 6.39896Z" />
-          <path d="M15.804 8.39432C16.1385 8.06496 16.6767 8.06913 17.0061 8.40363C17.9716 9.38424 18.2877 10.8549 18.2469 12.1395C18.2064 13.4136 17.8058 14.7842 17.0061 15.5964C16.6767 15.9309 16.1385 15.935 15.804 15.6057C15.4695 15.2763 15.4653 14.7381 15.7947 14.4036C16.1766 14.0158 16.5144 13.1364 16.5478 12.0855C16.5808 11.0451 16.3061 10.1158 15.7947 9.59637C15.4653 9.26186 15.4695 8.72369 15.804 8.39432Z" />
+          <path d="M11 2V4H7V20H17V11H19V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2H11ZM13 7C14.1046 7 15 7.89543 15 9H13V7ZM13 4C15.7614 4 18 6.23858 18 9H16C16 7.34315 14.6569 6 13 6V4ZM13 1C17.4183 1 21 4.58172 21 9H19C19 5.68629 16.3137 3 13 3V1Z" />
         </>
       )}
       title={props.title}
@@ -1163,12 +1066,7 @@ export function TouchIdIcon(props: IIconProps) {
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Touch ID icon'}</title>
-          <path d="M11.7436 14.3776C12.2407 14.378 12.6433 14.7812 12.643 15.2783C12.6425 15.9945 12.8019 16.7017 13.1096 17.3484C13.4172 17.9951 13.8655 18.565 14.4215 19.0164C14.9775 19.4678 15.6272 19.7893 16.3234 19.9576C17.0195 20.1258 17.7444 20.1365 18.4452 19.9889C18.9316 19.8864 19.4089 20.1976 19.5114 20.684C19.6139 21.1704 19.3027 21.6478 18.8163 21.7502C17.8533 21.9531 16.8571 21.9384 15.9005 21.7072C14.9439 21.476 14.051 21.0341 13.2869 20.4138C12.5229 19.7935 11.907 19.0104 11.4841 18.1217C11.0613 17.233 10.8423 16.2612 10.843 15.277C10.8433 14.7799 11.2466 14.3773 11.7436 14.3776Z" />
-          <path d="M11.743 10.4672C10.4672 10.4672 9.24358 10.974 8.34143 11.8761L8.33634 11.8812C7.43796 12.7822 6.93311 14.0026 6.93243 15.2751L6.93243 15.2784C6.93064 17.8312 7.86134 20.2968 9.54961 22.2116C9.87832 22.5845 9.84255 23.1532 9.46971 23.4819C9.09687 23.8106 8.52815 23.7749 8.19943 23.402C6.22177 21.1589 5.13118 18.2709 5.13243 15.2806L5.13243 15.2777C5.13243 13.5244 5.8289 11.843 7.06861 10.6033L7.07463 10.5973C8.31377 9.36136 9.99259 8.66715 11.743 8.66715C13.4962 8.66715 15.1776 9.3636 16.4173 10.6033C17.657 11.843 18.3535 13.5245 18.3535 15.2777C18.3535 15.7747 17.9506 16.1777 17.4535 16.1777C16.9565 16.1777 16.5535 15.7747 16.5535 15.2777C16.5535 14.0018 16.0467 12.7783 15.1445 11.8761C14.2424 10.974 13.0188 10.4672 11.743 10.4672Z" />
-          <path d="M11.743 7.6117C9.70992 7.6117 7.7601 8.41934 6.32249 9.85695C4.885 11.2944 4.07737 13.2441 4.07723 15.277C4.07924 16.8462 4.35786 18.4028 4.90029 19.8752C5.07211 20.3417 4.83329 20.8591 4.36688 21.0309C3.90046 21.2027 3.38307 20.9639 3.21125 20.4975C2.59562 18.8262 2.27944 17.0596 2.27723 15.2786L2.27723 15.2775C2.27723 12.767 3.27451 10.3593 5.04969 8.58416C6.82488 6.80898 9.23254 5.81171 11.743 5.81171C14.2535 5.81171 16.6612 6.80898 18.4363 8.58416C20.2115 10.3593 21.2088 12.767 21.2088 15.2775C21.2088 15.7746 20.8059 16.1775 20.3088 16.1775C19.8118 16.1775 19.4088 15.7746 19.4088 15.2775C19.4088 13.2444 18.6012 11.2946 17.1635 9.85695C15.7259 8.41934 13.7761 7.6117 11.743 7.6117Z" />
-          <path d="M9.08769 12.6221C9.79195 11.9178 10.7471 11.5222 11.7431 11.5222C12.739 11.5222 13.6942 11.9178 14.3984 12.6221C15.1027 13.3263 15.4983 14.2815 15.4983 15.2775C15.4983 15.796 15.7043 16.2934 16.071 16.6601C16.4377 17.0267 16.935 17.2327 17.4536 17.2327C17.9722 17.2327 18.4695 17.0267 18.8362 16.6601C19.2029 16.2934 19.4088 15.7961 19.4088 15.2775C19.4088 14.7804 19.8118 14.3775 20.3089 14.3775C20.8059 14.3775 21.2088 14.7804 21.2088 15.2775C21.2088 16.2735 20.8132 17.2286 20.109 17.9329C19.4047 18.6371 18.4496 19.0327 17.4536 19.0327C16.4576 19.0327 15.5025 18.6371 14.7982 17.9329C14.094 17.2286 13.6983 16.2734 13.6983 15.2775C13.6983 14.7589 13.4923 14.2616 13.1256 13.8949C12.759 13.5282 12.2616 13.3222 11.7431 13.3222C11.2245 13.3222 10.7272 13.5282 10.3605 13.8949C9.9938 14.2616 9.7878 14.7589 9.7878 15.2775C9.78718 16.7214 10.1944 18.1366 10.9626 19.3593C11.7307 20.5819 12.8286 21.5628 14.1298 22.1889C14.5777 22.4044 14.7661 22.9422 14.5506 23.3901C14.335 23.838 13.7972 24.0264 13.3493 23.8109C11.7426 23.0378 10.387 21.8266 9.43842 20.3168C8.48994 18.8072 7.98711 17.0604 7.9878 15.2775M9.08769 12.6221C8.38353 13.3263 7.9879 14.2817 7.9878 15.2775L9.08769 12.6221Z" />
-          <path d="M11.7529 4.7491C9.9483 4.7491 8.17404 5.21326 6.60064 6.09699C5.02723 6.98072 3.70759 8.2543 2.76853 9.79533C2.50988 10.2198 1.95611 10.3542 1.53165 10.0955C1.1072 9.83689 0.972784 9.28312 1.23144 8.85867C2.33115 7.054 3.87657 5.56252 5.71916 4.5276C7.56175 3.49267 9.63956 2.9491 11.7529 2.9491C13.8662 2.9491 15.9441 3.49267 17.7867 4.5276C19.6292 5.56252 21.1747 7.054 22.2744 8.85867C22.533 9.28312 22.3986 9.83689 21.9742 10.0955C21.5497 10.3542 20.9959 10.2198 20.7373 9.79533C19.7982 8.2543 18.4786 6.98072 16.9052 6.09699C15.3318 5.21326 13.5575 4.7491 11.7529 4.7491Z" />
-          <path d="M11.7528 1.89998C9.35019 1.89998 6.9919 2.54711 4.92576 3.77338C4.49832 4.02707 3.94615 3.88622 3.69246 3.45878C3.43877 3.03134 3.57963 2.47917 4.00707 2.22548C6.35124 0.834197 9.02687 0.0999756 11.7528 0.0999756C14.4788 0.0999756 17.1544 0.834197 19.4986 2.22548C19.926 2.47917 20.0669 3.03134 19.8132 3.45878C19.5595 3.88622 19.0073 4.02707 18.5799 3.77338C16.5137 2.54711 14.1555 1.89998 11.7528 1.89998Z" />
+          <path d="M17.0003 13V14C17.0003 16.7696 16.3364 19.445 15.0853 21.8455L14.8585 22.2663L13.1116 21.2924C14.2716 19.2115 14.9211 16.8817 14.9935 14.4559L15.0003 14V13H17.0003ZM11.0003 10H13.0003V14L12.9948 14.3787C12.9153 17.1495 11.9645 19.7731 10.3038 21.928L10.073 22.2189L8.52406 20.9536C10.0408 19.0969 10.9145 16.8017 10.9943 14.3663L11.0003 14V10ZM12.0003 6C14.7617 6 17.0003 8.23858 17.0003 11H15.0003C15.0003 9.34315 13.6571 8 12.0003 8C10.3434 8 9.00025 9.34315 9.00025 11V14C9.00025 16.2354 8.1806 18.3444 6.72928 19.9768L6.51767 20.2067L5.06955 18.8273C6.23328 17.6056 6.92099 16.0118 6.99381 14.3027L7.00025 14V11C7.00025 8.23858 9.23883 6 12.0003 6ZM12.0003 2C16.9708 2 21.0003 6.02944 21.0003 11V14C21.0003 15.6979 20.7985 17.3699 20.4035 18.9903L20.2647 19.5285L18.3349 19.0032C18.726 17.5662 18.9475 16.0808 18.9919 14.5684L19.0003 14V11C19.0003 7.13401 15.8662 4 12.0003 4C10.4279 4 8.97663 4.51841 7.80805 5.39364L6.38308 3.96769C7.92267 2.73631 9.87547 2 12.0003 2ZM4.96794 5.38282L6.39389 6.8078C5.5635 7.91652 5.0543 9.27971 5.00431 10.7593L4.99961 10.999L5.00378 13C5.00378 14.1195 4.73991 15.2026 4.24263 16.1772L4.08648 16.4663L2.34961 15.4747C2.72889 14.8103 2.95077 14.0681 2.99539 13.2924L3.00378 13L3.00361 11C3.00025 8.87522 3.73656 6.92242 4.96794 5.38282Z" />
         </>
       )}
       title={props.title}
@@ -1180,13 +1078,13 @@ export function TouchIdIcon(props: IIconProps) {
 export function AsteriskIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Asterisk icon'}</title>
-          <path d="M11.9999 21C11.4477 21 10.9999 20.5523 10.9999 20L10.9999 13.732L5.5717 16.866C5.09341 17.1422 4.48182 16.9783 4.20567 16.5C3.92953 16.0217 4.09341 15.4101 4.5717 15.134L9.9999 12L4.5717 8.86602C4.09341 8.58988 3.92953 7.97829 4.20567 7.5C4.48182 7.0217 5.09341 6.85783 5.5717 7.13397L10.9999 10.268L10.9999 4C10.9999 3.44772 11.4477 3 11.9999 3C12.5522 3 12.9999 3.44772 12.9999 4L12.9999 10.2679L18.4281 7.13397C18.9064 6.85783 19.518 7.02171 19.7941 7.5C20.0703 7.97829 19.9064 8.58988 19.4281 8.86602L13.9999 12L19.4281 15.134C19.9064 15.4101 20.0703 16.0217 19.7941 16.5C19.518 16.9783 18.9064 17.1422 18.4281 16.866L12.9999 13.7321L12.9999 20C12.9999 20.5523 12.5522 21 11.9999 21Z" />
+          <path d="M12.9998 3L12.9996 10.267L19.294 6.63397L20.294 8.36602L14.0006 11.999L20.294 15.634L19.294 17.366L12.9996 13.732L12.9998 21H10.9998L10.9996 13.732L4.70557 17.366L3.70557 15.634L9.99857 12L3.70557 8.36602L4.70557 6.63397L10.9996 10.267L10.9998 3H12.9998Z" />
         </>
       )}
       title={props.title}
@@ -1198,15 +1096,13 @@ export function AsteriskIcon(props: IIconProps) {
 export function AlertTriangleIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={{ fill: 'currentColor', strokeWidth: 0, ...props.attributes }}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Alert triangle icon'}</title>
-          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-          <line x1="12" y1="9" x2="12" y2="13" />
-          <line x1="12" y1="17" x2="12.01" y2="17" />
+          <path d="M12.8659 3.00017L22.3922 19.5002C22.6684 19.9785 22.5045 20.5901 22.0262 20.8662C21.8742 20.954 21.7017 21.0002 21.5262 21.0002H2.47363C1.92135 21.0002 1.47363 20.5525 1.47363 20.0002C1.47363 19.8246 1.51984 19.6522 1.60761 19.5002L11.1339 3.00017C11.41 2.52187 12.0216 2.358 12.4999 2.63414C12.6519 2.72191 12.7782 2.84815 12.8659 3.00017ZM4.20568 19.0002H19.7941L11.9999 5.50017L4.20568 19.0002ZM10.9999 16.0002H12.9999V18.0002H10.9999V16.0002ZM10.9999 9.00017H12.9999V14.0002H10.9999V9.00017Z" />
         </>
       )}
       title={props.title}
@@ -1354,13 +1250,13 @@ export function NoOilIcon(props: IIconProps) {
 export function HomeIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Home icon'}</title>
-          <path d="M5,22C3.903,22 3,21.097 3,20L3,9L12,2L21,9L21,20C21,21.097 20.097,22 19,22M15,22L19,22M9,22L9,12L15,12L15,22M5,22L9,22Z" />
+          <path d="M21 20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9.48907C3 9.18048 3.14247 8.88917 3.38606 8.69972L11.3861 2.47749C11.7472 2.19663 12.2528 2.19663 12.6139 2.47749L20.6139 8.69972C20.8575 8.88917 21 9.18048 21 9.48907V20ZM19 19V9.97815L12 4.53371L5 9.97815V19H19Z" />
         </>
       )}
       title={props.title}
@@ -1412,13 +1308,13 @@ export function SignalIcon(props: IIconProps) {
 export function HeartIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Heart icon'}</title>
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          <path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853ZM18.827 6.1701C17.3279 4.66794 14.9076 4.60701 13.337 6.01687L12.0019 7.21524L10.6661 6.01781C9.09098 4.60597 6.67506 4.66808 5.17157 6.17157C3.68183 7.66131 3.60704 10.0473 4.97993 11.6232L11.9999 18.6543L19.0201 11.6232C20.3935 10.0467 20.319 7.66525 18.827 6.1701Z" />
         </>
       )}
       title={props.title}
@@ -1430,18 +1326,13 @@ export function HeartIcon(props: IIconProps) {
 export function EarthIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{
-        fill: 'currentColor',
-        strokeWidth: 0,
-        fillRule: 'evenodd',
-        ...props.attributes,
-      }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Earth icon'}</title>
-          <path d="M22.417,7.528C23.007,8.9 23.333,10.412 23.333,12C23.333,18.259 18.259,23.333 12,23.333C5.741,23.333 0.667,18.259 0.667,12C0.667,5.741 5.741,0.667 12,0.667C16.624,0.667 20.602,3.436 22.364,7.407C22.384,7.446 22.402,7.487 22.417,7.528ZM7.879,3.691C9.12,3.074 10.52,2.727 12,2.727C15.215,2.727 18.048,4.363 19.711,6.848L18.182,6.848C16.479,6.848 15.091,8.237 15.091,9.939C15.091,10.213 14.982,10.475 14.789,10.668C14.596,10.861 14.334,10.97 14.061,10.97C13.496,10.97 13.03,10.504 13.03,9.939C13.03,9.12 12.705,8.333 12.125,7.754C11.545,7.174 10.759,6.848 9.939,6.848C9.393,6.848 8.869,6.631 8.482,6.245C8.096,5.858 7.879,5.334 7.879,4.788L7.879,3.691ZM5.828,5.079C4.415,6.34 3.391,8.028 2.957,9.939L4.788,9.939C5.608,9.939 6.394,10.265 6.973,10.845C7.553,11.424 7.879,12.211 7.879,13.03L7.879,14.061C7.879,14.334 7.987,14.596 8.181,14.789C8.374,14.982 8.636,15.091 8.909,15.091C9.729,15.091 10.515,15.417 11.095,15.996C11.674,16.576 12,17.362 12,18.182L12,21.273C12.708,21.273 13.398,21.193 14.061,21.043L14.061,17.151C14.061,16.332 14.386,15.546 14.966,14.966C15.546,14.386 16.332,14.061 17.152,14.061L21.043,14.061C21.193,13.398 21.273,12.708 21.273,12C21.273,10.916 21.087,9.876 20.745,8.909L18.182,8.909C17.618,8.909 17.152,9.375 17.152,9.939C17.152,10.759 16.826,11.545 16.246,12.125C15.667,12.705 14.88,13.03 14.061,13.03C12.358,13.03 10.97,11.642 10.97,9.939C10.97,9.666 10.861,9.404 10.668,9.211C10.475,9.018 10.213,8.909 9.939,8.909C8.846,8.909 7.798,8.475 7.025,7.702C6.321,6.998 5.898,6.066 5.828,5.079ZM20.309,16.121L17.152,16.121C16.878,16.121 16.616,16.23 16.423,16.423C16.23,16.616 16.121,16.878 16.121,17.151L16.121,20.309C17.933,19.408 19.408,17.933 20.309,16.121ZM9.939,21.043L9.939,18.182C9.939,17.909 9.831,17.646 9.638,17.453C9.444,17.26 9.182,17.151 8.909,17.151C8.089,17.151 7.303,16.826 6.724,16.246C6.144,15.667 5.818,14.88 5.818,14.061L5.818,13.03C5.818,12.757 5.71,12.495 5.516,12.302C5.323,12.109 5.061,12 4.788,12L2.727,12C2.727,16.413 5.81,20.106 9.939,21.043Z" />
+          <path d="M6.23509 6.45329C4.85101 7.89148 4 9.84636 4 12C4 16.4183 7.58172 20 12 20C13.0808 20 14.1116 19.7857 15.0521 19.3972C15.1671 18.6467 14.9148 17.9266 14.8116 17.6746C14.582 17.115 13.8241 16.1582 12.5589 14.8308C12.2212 14.4758 12.2429 14.2035 12.3636 13.3943L12.3775 13.3029C12.4595 12.7486 12.5971 12.4209 14.4622 12.1248C15.4097 11.9746 15.6589 12.3533 16.0043 12.8777C16.0425 12.9358 16.0807 12.9928 16.1198 13.0499C16.4479 13.5297 16.691 13.6394 17.0582 13.8064C17.2227 13.881 17.428 13.9751 17.7031 14.1314C18.3551 14.504 18.3551 14.9247 18.3551 15.8472V15.9518C18.3551 16.3434 18.3168 16.6872 18.2566 16.9859C19.3478 15.6185 20 13.8854 20 12C20 8.70089 18.003 5.8682 15.1519 4.64482C14.5987 5.01813 13.8398 5.54726 13.575 5.91C13.4396 6.09538 13.2482 7.04166 12.6257 7.11976C12.4626 7.14023 12.2438 7.12589 12.012 7.11097C11.3905 7.07058 10.5402 7.01606 10.268 7.75495C10.0952 8.2232 10.0648 9.49445 10.6239 10.1543C10.7134 10.2597 10.7307 10.4547 10.6699 10.6735C10.59 10.9608 10.4286 11.1356 10.3783 11.1717C10.2819 11.1163 10.0896 10.8931 9.95938 10.7412C9.64554 10.3765 9.25405 9.92233 8.74797 9.78176C8.56395 9.73083 8.36166 9.68867 8.16548 9.64736C7.6164 9.53227 6.99443 9.40134 6.84992 9.09302C6.74442 8.8672 6.74488 8.55621 6.74529 8.22764C6.74529 7.8112 6.74529 7.34029 6.54129 6.88256C6.46246 6.70541 6.35689 6.56446 6.23509 6.45329ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22Z" />
         </>
       )}
       title={props.title}
@@ -1453,18 +1344,13 @@ export function EarthIcon(props: IIconProps) {
 export function TreeIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{
-        fill: 'currentColor',
-        strokeWidth: 0,
-        fillRule: 'evenodd',
-        ...props.attributes,
-      }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Tree icon'}</title>
-          <path d="M10.92,20.192L10.92,22.357C10.92,22.955 11.405,23.44 12.003,23.44C12.601,23.44 13.086,22.955 13.086,22.357L13.086,20.192L16.336,20.192C17.494,20.19 18.62,19.817 19.551,19.128C20.481,18.439 21.166,17.47 21.505,16.364C21.844,15.257 21.82,14.07 21.435,12.979C21.168,12.22 20.737,11.535 20.177,10.969C20.447,10.418 20.612,9.818 20.659,9.2C20.735,8.225 20.515,7.249 20.028,6.401C19.542,5.552 18.811,4.869 17.931,4.442C17.386,4.177 16.799,4.018 16.202,3.968C16.012,3.218 15.623,2.525 15.066,1.969C14.254,1.156 13.152,0.7 12.003,0.7C10.854,0.7 9.753,1.156 8.94,1.969C8.386,2.523 7.998,3.211 7.807,3.957C7.208,4.006 6.621,4.166 6.075,4.431C5.195,4.859 4.465,5.541 3.978,6.39C3.491,7.239 3.271,8.214 3.347,9.189C3.394,9.806 3.559,10.405 3.828,10.955C3.264,11.52 2.829,12.206 2.559,12.966C2.171,14.061 2.145,15.251 2.485,16.362C2.824,17.472 3.512,18.444 4.447,19.134C5.381,19.823 6.512,20.194 7.673,20.192L10.92,20.192ZM12.003,2.866C11.429,2.866 10.878,3.094 10.472,3.5C10.066,3.906 9.837,4.457 9.837,5.031L9.837,5.064C9.837,5.379 9.701,5.678 9.463,5.883C9.224,6.089 8.909,6.181 8.598,6.135C8.06,6.057 7.511,6.141 7.022,6.379C6.533,6.617 6.127,6.996 5.857,7.467C5.586,7.939 5.464,8.481 5.506,9.023C5.548,9.564 5.752,10.081 6.091,10.506C6.281,10.742 6.362,11.047 6.316,11.346C6.27,11.646 6.101,11.912 5.85,12.081C5.272,12.47 4.834,13.034 4.6,13.691C4.367,14.347 4.352,15.062 4.556,15.728C4.759,16.394 5.172,16.977 5.733,17.391C6.294,17.805 6.972,18.027 7.669,18.026L16.333,18.026C17.027,18.025 17.704,17.801 18.262,17.388C18.82,16.975 19.231,16.393 19.434,15.729C19.638,15.065 19.623,14.353 19.392,13.698C19.162,13.043 18.727,12.479 18.152,12.089C17.902,11.919 17.735,11.653 17.689,11.355C17.644,11.056 17.726,10.752 17.915,10.516C18.254,10.092 18.458,9.575 18.5,9.033C18.542,8.491 18.42,7.95 18.15,7.478C17.879,7.007 17.473,6.627 16.984,6.39C16.495,6.152 15.946,6.067 15.409,6.146C15.097,6.192 14.782,6.1 14.544,5.894C14.306,5.688 14.169,5.389 14.169,5.075L14.169,5.031C14.169,4.457 13.941,3.906 13.534,3.5C13.128,3.094 12.577,2.866 12.003,2.866Z" />
+          <path d="M6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 7.26214 17.9831 7.5207 17.9504 7.77457C19.77 8.80413 21 10.7575 21 13C21 16.3137 18.3137 19 15 19H13V22H11V19H8.5C5.46243 19 3 16.5376 3 13.5C3 11.2863 4.30712 9.37966 6.19098 8.50704C6.06635 8.02551 6 7.52039 6 7ZM7.00964 10.3319C5.82176 10.8918 5 12.1008 5 13.5C5 15.433 6.567 17 8.5 17H15C17.2091 17 19 15.2091 19 13C19 11.3056 17.9461 9.85488 16.4544 9.27234L15.6129 8.94372C15.7907 8.30337 16 7.67183 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 8.30783 8.6266 9.46903 9.60019 10.2005L8.39884 11.7995C7.85767 11.3929 7.38716 10.8963 7.00964 10.3319Z" />
         </>
       )}
       title={props.title}
@@ -1476,18 +1362,13 @@ export function TreeIcon(props: IIconProps) {
 export function TrainIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Train icon'}</title>
-          <path d="M8 3.1V7a4 4 0 0 0 8 0V3.1" />
-          <path d="m9 15-1-1" />
-          <path d="m15 15 1-1" />
-          <path d="M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z" />
-          <path d="m8 19-2 3" />
-          <path d="m16 19 2 3" />
+          <path d="M17.2 20L19 21.5V22H5V21.5L6.8 20H5C3.89543 20 3 19.1046 3 18V7C3 4.79086 4.79086 3 7 3H17C19.2091 3 21 4.79086 21 7V18C21 19.1046 20.1046 20 19 20H17.2ZM7 5C5.89543 5 5 5.89543 5 7V18H19V7C19 5.89543 18.1046 5 17 5H7ZM12 17C10.8954 17 10 16.1046 10 15C10 13.8954 10.8954 13 12 13C13.1046 13 14 13.8954 14 15C14 16.1046 13.1046 17 12 17ZM6 7H18V11H6V7Z" />
         </>
       )}
       title={props.title}
@@ -1499,14 +1380,13 @@ export function TrainIcon(props: IIconProps) {
 export function BriefcaseIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Briefcase icon'}</title>
-          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          <path d="M7 5V2C7 1.44772 7.44772 1 8 1H16C16.5523 1 17 1.44772 17 2V5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V6C2 5.44772 2.44772 5 3 5H7ZM15 7H9V19H15V7ZM7 7H4V19H7V7ZM17 7V19H20V7H17ZM9 3V5H15V3H9Z" />
         </>
       )}
       title={props.title}
@@ -1518,16 +1398,13 @@ export function BriefcaseIcon(props: IIconProps) {
 export function PackageIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Package icon'}</title>
-          <line x1="16.5" y1="9.4" x2="7.5" y2="4.21" />
-          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-          <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-          <line x1="12" y1="22.08" x2="12" y2="12" />
+          <path d="M12 1L21.5 6.5V17.5L12 23L2.5 17.5V6.5L12 1ZM5.49388 7.0777L12.0001 10.8444L18.5062 7.07774L12 3.311L5.49388 7.0777ZM4.5 8.81329V16.3469L11.0001 20.1101V12.5765L4.5 8.81329ZM13.0001 20.11L19.5 16.3469V8.81337L13.0001 12.5765V20.11Z" />
         </>
       )}
       title={props.title}
@@ -1539,13 +1416,13 @@ export function PackageIcon(props: IIconProps) {
 export function LaptopIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Laptop icon'}</title>
-          <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
+          <path d="M4 5V16H20V5H4ZM2 4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V18H2V4.00748ZM1 19H23V21H1V19Z" />
         </>
       )}
       title={props.title}
@@ -1557,17 +1434,13 @@ export function LaptopIcon(props: IIconProps) {
 export function IdCardIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Id card icon'}</title>
-          <path d="M16 10h2" />
-          <path d="M16 14h2" />
-          <path d="M6.17 15a3 3 0 0 1 5.66 0" />
-          <circle cx="9" cy="11" r="2" />
-          <rect x="2" y="5" width="20" height="14" rx="2" />
+          <path d="M3 6H21V18H3V6ZM2 4C1.44772 4 1 4.44772 1 5V19C1 19.5523 1.44772 20 2 20H22C22.5523 20 23 19.5523 23 19V5C23 4.44772 22.5523 4 22 4H2ZM13 8H19V10H13V8ZM18 12H13V14H18V12ZM10.5 10C10.5 11.3807 9.38071 12.5 8 12.5C6.61929 12.5 5.5 11.3807 5.5 10C5.5 8.61929 6.61929 7.5 8 7.5C9.38071 7.5 10.5 8.61929 10.5 10ZM8 13.5C6.067 13.5 4.5 15.067 4.5 17H11.5C11.5 15.067 9.933 13.5 8 13.5Z" />
         </>
       )}
       title={props.title}
@@ -1617,14 +1490,13 @@ export function CrossIcon(props: IIconProps) {
 export function CrownIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Crown icon'}</title>
-          <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
-          <path d="M5 21h14" />
+          <path d="M2.00488 19H22.0049V21H2.00488V19ZM2.00488 5L7.00488 8.5L12.0049 2L17.0049 8.5L22.0049 5V17H2.00488V5ZM4.00488 8.84131V15H20.0049V8.84131L16.5854 11.2349L12.0049 5.28024L7.42435 11.2349L4.00488 8.84131Z" />
         </>
       )}
       title={props.title}
@@ -1636,17 +1508,13 @@ export function CrownIcon(props: IIconProps) {
 export function DumbbellIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Dumbbell icon'}</title>
-          <path d="M14.4 14.4 9.6 9.6" />
-          <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" />
-          <path d="m21.5 21.5-1.4-1.4" />
-          <path d="M3.9 3.9 2.5 2.5" />
-          <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z" />
+          <path d="M14.0004 6C14.0004 7.10457 13.1049 8 12.0004 8C10.8958 8 10.0004 7.10457 10.0004 6C10.0004 4.89543 10.8958 4 12.0004 4C13.1049 4 14.0004 4.89543 14.0004 6ZM15.4652 8C15.8056 7.41165 16.0004 6.72857 16.0004 6C16.0004 3.79086 14.2095 2 12.0004 2C9.79122 2 8.00036 3.79086 8.00036 6C8.00036 6.72857 8.19515 7.41165 8.53549 8H5.06615C4.57888 8 4.16255 8.3512 4.08045 8.8315L2.2001 19.8315C2.0957 20.4423 2.56618 21 3.18581 21H20.8149C21.4345 21 21.905 20.4423 21.8006 19.8315L19.9203 8.8315C19.8382 8.3512 19.4218 8 18.9346 8H15.4652ZM12.0004 10H18.091L19.6295 19H4.37125L5.90971 10H12.0004Z" />
         </>
       )}
       title={props.title}
@@ -1658,13 +1526,13 @@ export function DumbbellIcon(props: IIconProps) {
 export function ShirtIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Shirt icon'}</title>
-          <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
+          <path d="M8.99805 3C8.99805 4.65685 10.3412 6 11.998 6C13.6549 6 14.998 4.65685 14.998 3H20.998C21.5503 3 21.998 3.44772 21.998 4V11C21.998 11.5523 21.5503 12 20.998 12H18.997L18.998 20C18.998 20.5523 18.5503 21 17.998 21H5.99805C5.44576 21 4.99805 20.5523 4.99805 20L4.99705 11.999L2.99805 12C2.44576 12 1.99805 11.5523 1.99805 11V4C1.99805 3.44772 2.44576 3 2.99805 3H8.99805ZM19.998 4.999H16.581L16.5642 5.04018C15.8115 6.7223 14.1566 7.91251 12.2149 7.99538L11.998 8C9.96331 8 8.21245 6.7846 7.43186 5.04018L7.41405 4.999H3.99805V9.999L6.9968 9.998L6.99705 19H16.998L16.9968 10L19.998 9.999V4.999Z" />
         </>
       )}
       title={props.title}
@@ -1676,15 +1544,13 @@ export function ShirtIcon(props: IIconProps) {
 export function ShoppingBagIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Shopping bag icon'}</title>
-          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-          <path d="M3 6h18" />
-          <path d="M16 10a4 4 0 0 1-8 0" />
+          <path d="M6.50488 2H17.5049C17.8196 2 18.116 2.14819 18.3049 2.4L21.0049 6V21C21.0049 21.5523 20.5572 22 20.0049 22H4.00488C3.4526 22 3.00488 21.5523 3.00488 21V6L5.70488 2.4C5.89374 2.14819 6.19013 2 6.50488 2ZM19.0049 8H5.00488V20H19.0049V8ZM18.5049 6L17.0049 4H7.00488L5.50488 6H18.5049ZM9.00488 10V12C9.00488 13.6569 10.348 15 12.0049 15C13.6617 15 15.0049 13.6569 15.0049 12V10H17.0049V12C17.0049 14.7614 14.7663 17 12.0049 17C9.24346 17 7.00488 14.7614 7.00488 12V10H9.00488Z" />
         </>
       )}
       title={props.title}
@@ -1696,14 +1562,13 @@ export function ShoppingBagIcon(props: IIconProps) {
 export function TrendingUpIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Trending up icon'}</title>
-          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-          <polyline points="16 7 22 7 22 13" />
+          <path d="M4.41085 14.5258L7.81249 11.1241L10.6409 13.9526L13.7978 10.7957L12.0049 9.00281H17.0049V14.0028L15.212 12.2099L10.6409 16.781L7.81249 13.9526L5.33834 16.4267C6.77158 18.5822 9.22233 20.0028 12.0049 20.0028C16.4232 20.0028 20.0049 16.4211 20.0049 12.0028C20.0049 7.58453 16.4232 4.00281 12.0049 4.00281C7.5866 4.00281 4.00488 7.58453 4.00488 12.0028C4.00488 12.8844 4.14747 13.7326 4.41085 14.5258ZM2.87288 16.084L2.86275 16.0739L2.86662 16.07C2.31276 14.8274 2.00488 13.4511 2.00488 12.0028C2.00488 6.47996 6.48204 2.00281 12.0049 2.00281C17.5277 2.00281 22.0049 6.47996 22.0049 12.0028C22.0049 17.5257 17.5277 22.0028 12.0049 22.0028C7.93574 22.0028 4.43426 19.5724 2.87288 16.084Z" />
         </>
       )}
       title={props.title}
@@ -1715,15 +1580,13 @@ export function TrendingUpIcon(props: IIconProps) {
 export function UtensilsIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Utensils icon'}</title>
-          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
-          <path d="M7 2v20" />
-          <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+          <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z" />
         </>
       )}
       title={props.title}
@@ -1735,17 +1598,13 @@ export function UtensilsIcon(props: IIconProps) {
 export function PaletteIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ fill: 'none', strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Palette icon'}</title>
-          <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
-          <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
-          <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
-          <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
-          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+          <path d="M12 2C17.5222 2 22 5.97778 22 10.8889C22 13.9556 19.5111 16.4444 16.4444 16.4444H14.4778C13.5556 16.4444 12.8111 17.1889 12.8111 18.1111C12.8111 18.5333 12.9778 18.9222 13.2333 19.2111C13.5 19.5111 13.6667 19.9 13.6667 20.3333C13.6667 21.2556 12.9 22 12 22C6.47778 22 2 17.5222 2 12C2 6.47778 6.47778 2 12 2ZM10.8111 18.1111C10.8111 16.0843 12.451 14.4444 14.4778 14.4444H16.4444C18.4065 14.4444 20 12.851 20 10.8889C20 7.1392 16.4677 4 12 4C7.58235 4 4 7.58235 4 12C4 16.19 7.2226 19.6285 11.324 19.9718C10.9948 19.4168 10.8111 18.7761 10.8111 18.1111ZM7.5 12C6.67157 12 6 11.3284 6 10.5C6 9.67157 6.67157 9 7.5 9C8.32843 9 9 9.67157 9 10.5C9 11.3284 8.32843 12 7.5 12ZM16.5 12C15.6716 12 15 11.3284 15 10.5C15 9.67157 15.6716 9 16.5 9C17.3284 9 18 9.67157 18 10.5C18 11.3284 17.3284 12 16.5 12ZM12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5C13.5 8.32843 12.8284 9 12 9Z" />
         </>
       )}
       title={props.title}

@@ -153,5 +153,29 @@ export const Colors: Story = () => (
         <p>--colors-warning-light</p>
       </div>
     </section>
+
+    <section className={styles.container}>
+      <h2>Info</h2>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-info-dark)' }} />
+        <p>--colors-info-dark</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-info)' }} />
+        <p>--colors-info</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-info-medium)' }} />
+        <p>--colors-info-medium</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-info-light)' }} />
+        <p>--colors-info-light</p>
+      </div>
+    </section>
   </>
 );

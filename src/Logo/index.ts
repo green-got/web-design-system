@@ -1,1 +1,1 @@
-export { Bug, Lockup } from './Logo';
+export { Fox, Head, Principal, Running, Sitting, Stacked } from './Logo';

@@ -121,148 +121,224 @@ export const Icons: Story = () => (
       }}
     >
       <div style={cardStyles}>
-        <ChevronLeftIcon height={16} width={16} />
+        <ChevronLeftIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <ChevronRightIcon height={16} title="Chevron droit" width={16} />
+        <ChevronRightIcon height={18} title="Chevron droit" width={18} />
       </div>
       <div style={cardStyles}>
-        <ChevronDownIcon height={16} width={16} />
+        <ChevronDownIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <ChevronUpIcon height={16} width={16} />
+        <ChevronUpIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <ExternalLinkIcon height={16} width={16} />
+        <LeftRightArrowsIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <HelpIcon height={16} width={16} />
+        <UpDownArrowsIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <InfoIcon height={16} width={16} />
+        <ExternalLinkIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <PaperclipIcon height={16} width={16} />
+        <AsteriskIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <YoutubeIcon height={16} width={16} />
+        <PlusIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <ClockIcon height={16} width={16} />
+        <XIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <CircledXIcon height={16} width={16} />
+        <CircledXIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <TextFileIcon height={16} width={16} />
+        <CircledPlusIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <EditIcon height={16} width={16} />
+        <HelpIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <EditLineIcon height={16} width={16} />
+        <InfoIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <PlusIcon height={16} width={16} />
+        <AlertTriangleIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <XIcon height={16} width={16} />
+        <CheckmarkIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <DownloadIcon height={16} width={16} />
+        <CheckedSquareIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <TrashIcon height={16} width={16} />
+        <ShieldIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <CircledPlusIcon height={16} width={16} />
+        <PaperclipIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <CheckedSquareIcon height={16} width={16} />
+        <ClockIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <UnlockIcon height={16} width={16} />
+        <CalendarIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <LockIcon height={16} width={16} />
+        <TextFileIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <DeleteIcon height={16} width={16} />
+        <EditIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <ListIcon height={16} width={16} />
+        <EditLineIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <StarIcon height={16} width={16} />
+        <DownloadIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <UserIcon height={16} width={16} />
+        <TrashIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <CheckmarkIcon height={16} width={16} />
+        <DeleteIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <BellIcon height={16} width={16} />
+        <UnlockIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <GearIcon height={16} width={16} />
+        <LockIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <EyeIcon height={16} width={16} />
+        <UserIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <EyeClosedIcon height={16} width={16} />
+        <UsersIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <SlidersIcon height={16} width={16} />
+        <BellIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <BoltIcon height={16} width={16} />
+        <GearIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <MoreHorizontalIcon height={16} width={16} />
+        <EyeIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <MoreVerticalIcon height={16} width={16} />
+        <EyeClosedIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <CopyIcon height={16} width={16} />
+        <SearchIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <UsersIcon height={16} width={16} />
+        <SlidersIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <SendIcon height={16} width={16} />
+        <StarIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <LoginIcon height={16} width={16} />
+        <BoltIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <CalendarIcon height={16} width={16} />
+        <CopyIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <CardIcon height={16} width={16} />
+        <SendIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <PhoneIcon height={16} width={16} />
+        <LoginIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <ArcIcon height={16} width={16} />
+        <UpToTheRightIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <UpToTheRightIcon height={16} width={16} />
+        <CardIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <ShieldIcon height={16} width={16} />
+        <NoCardIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <SnowflakeIcon height={16} width={16} />
+        <PhoneIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <SearchIcon height={16} width={16} />
+        <ListIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <MenuIcon height={16} width={16} />
+        <MenuIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <MoreHorizontalIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <MoreVerticalIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <YoutubeIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <SnowflakeIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <BankIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <StatementIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <IdCardIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <TouchIdIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <SpeechBubblesIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <SmartphoneRingingIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <HomeIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <HeartIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <EarthIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <TreeIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <TrainIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <LaptopIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <BriefcaseIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <PackageIcon height={18} width={18} />
+      </div>
+
+      <div style={cardStyles}>
+        <CrownIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <DumbbellIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <ShirtIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <ShoppingBagIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <TrendingUpIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <UtensilsIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <PaletteIcon height={18} width={18} />
       </div>
     </div>
     <h1 style={{ margin: '2rem 0' }}>Custom icons</h1>
@@ -275,44 +351,11 @@ export const Icons: Story = () => (
       }}
     >
       <div style={cardStyles}>
-        <BankIcon height={16} width={16} />
+        <ArcIcon height={16} width={16} />
       </div>
-      <div style={cardStyles}>
-        <StatementIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <NoCardIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <StarIcon
-          attributes={{ fill: 'currentColor' }}
-          height={16}
-          width={16}
-        />
-      </div>
-      <div style={cardStyles}>
-        <SpeechBubblesIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <LeftRightArrowsIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <UpDownArrowsIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <SmartphoneRingingIcon height={16} width={16} />
-      </div>
+
       <div style={cardStyles}>
         <FaceIdIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <TouchIdIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <AsteriskIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <AlertTriangleIcon height={16} width={16} />
       </div>
 
       <div style={cardStyles}>
@@ -333,65 +376,20 @@ export const Icons: Story = () => (
       <div style={cardStyles}>
         <NoOilIcon height={16} width={16} />
       </div>
-      <div style={cardStyles}>
-        <HomeIcon height={16} width={16} />
-      </div>
+
       <div style={cardStyles}>
         <HistoryTimerIcon height={16} width={16} />
       </div>
       <div style={cardStyles}>
         <SignalIcon height={16} width={16} />
       </div>
-      <div style={cardStyles}>
-        <HeartIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <EarthIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <TreeIcon height={16} width={16} />
-      </div>
+
       <div style={cardStyles}>
         <CrossIcon height={16} width={16} />
       </div>
-      <div style={cardStyles}>
-        <TrainIcon height={16} width={16} />
-      </div>
+
       <div style={cardStyles}>
         <MaskIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <LaptopIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <BriefcaseIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <PackageIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <IdCardIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <CrownIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <DumbbellIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <ShirtIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <ShoppingBagIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <TrendingUpIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <UtensilsIcon height={16} width={16} />
-      </div>
-      <div style={cardStyles}>
-        <PaletteIcon height={16} width={16} />
       </div>
     </div>
   </>
