@@ -1,4 +1,4 @@
-import type { MouseEvent, ReactNode } from 'react';
+import type { MouseEvent, ReactNode, RefObject } from 'react';
 import styles from './Button.module.scss';
 import { mergeClasses } from '../utils/mergeClasses';
 
@@ -15,6 +15,7 @@ export interface IButtonProps {
   disabled?: boolean;
   handleClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   name?: string;
+  ref?: RefObject<HTMLButtonElement | null>;
   type?: ButtonType;
 }
 
@@ -26,6 +27,7 @@ export const Button = ({
   disabled,
   handleClick,
   name,
+  ref,
   type = 'button',
 }: IButtonProps) => {
   return (
@@ -39,6 +41,7 @@ export const Button = ({
       disabled={disabled}
       name={name}
       onClick={handleClick}
+      ref={ref}
       type={type}
     >
       {children}
