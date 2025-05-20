@@ -24,7 +24,7 @@
 }
 
 .block~.input {
-  height: 0;
+  height: 0.1rem; // Show native browser validation errors
   position: absolute;
 }
 
