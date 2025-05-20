@@ -5,7 +5,7 @@ import styles from './FileInput.module.scss';
 
 export interface IFileInputProps {
   accept?: string;
-  block: boolean;
+  block?: boolean;
   className?: string;
   handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   id: string;

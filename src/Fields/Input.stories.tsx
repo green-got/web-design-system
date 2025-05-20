@@ -393,7 +393,25 @@ export const InputWithCustomValidity = () => {
 };
 
 export const InputFile = () => {
-  return <FileInput block label="Choose a file" id="file" name="file" />;
+  return (
+    <>
+      <GlobalStyles />
+      <h1>Basic</h1>
+      <FileInput block label="Choose a file" id="file" name="file" />
+
+      <h1>Form validation</h1>
+      <form>
+        <FileInput
+          block={true}
+          label="Choose a file*"
+          id="required"
+          name="file"
+          required
+        />
+        <input type="submit" />
+      </form>
+    </>
+  );
 };
 
 function updateInputValue(value, inputType) {
