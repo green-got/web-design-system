@@ -41,7 +41,7 @@
     }
 
     &:checked {
-      background-color: #2fd058;
+      background-color: var(--colors-primary);
       --thumb-position: calc((var(--track-size) - 100%) * var(--is-ltr));
     }
 
