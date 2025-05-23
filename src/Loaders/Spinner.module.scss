@@ -1,7 +1,7 @@
 .container {
   width: 32px;
   height: 32px;
-  border: 2px solid var(--colors-primary);
+  border: 2px solid var(--colors-primary-dark);
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -14,7 +14,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: var(--colors-primary);
+    background: var(--colors-primary-dark);
     width: 6px;
     height: 6px;
     transform: translate(0px, 0px);
@@ -27,7 +27,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    background: var(--colors-primary);
+    background: var(--colors-primary-dark);
     width: 10px;
     height: 10px;
     border-radius: 50%;

@@ -1,5 +1,6 @@
 .container {
   label {
+    color: var(--colors-neutral-dark);
     font-size: 1.2rem;
     font-weight: 500;
     padding-inline-start: 0.2rem;
@@ -17,11 +18,11 @@
 
   .validation-wrapper {
     background-color: transparent;
-    border-radius: 1.4rem; // TODO: Existing corner variables don't support the design
+    border-radius: 1rem; // TODO: Existing corner variables don't support the design
     padding: 0.2rem;
 
     &:has(input:user-valid) {
-      background-color: color-mix(in srgb, var(--colors-primary), transparent 60%);
+      background-color: color-mix(in srgb, var(--colors-primary-dark), transparent 60%);
     }
 
     &:has(input:user-invalid) {
@@ -30,9 +31,9 @@
 
     input {
       appearance: none;
-      background-color: var(--colors-neutral-light);
-      border: 0.2rem solid var(--colors-neutral-medium);
-      border-radius: var(--corner-medium);
+      background-color: var(--colors-neutral-off-white);
+      border: 0.1rem solid var(--colors-neutral-medium);
+      border-radius: var(--corner-small);
       color: var(--colors-neutral-dark);
       font-size: 1.6rem;
       height: 5.4rem;
@@ -59,7 +60,7 @@
       }
 
       &:user-invalid {
-        border-color: var(--colors-error);
+        border-color: var(--colors-error-dark);
       }
 
       &[aria-disabled="true"],
@@ -77,11 +78,11 @@
       +abbr {
         align-items: center;
         appearance: none;
-        background-color: var(--colors-neutral-light);
+        background-color: var(--colors-neutral-off-white);
         border-start-end-radius: 1rem;
         border-end-end-radius: 1rem;
         border-width: 0;
-        color: var(--colors-neutral-regular);
+        color: var(--colors-neutral-medium);
         display: flex;
         height: 5rem;
         inset-block-start: 0.4rem;
@@ -102,7 +103,7 @@
       }
 
       ~span {
-        color: var(--colors-error);
+        color: var(--colors-error-dark);
         display: inline-block;
         font-size: 1.2rem;
         margin-block-start: 0.8rem;

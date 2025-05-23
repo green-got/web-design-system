@@ -5,6 +5,7 @@ import { mergeClasses } from '../utils/mergeClasses';
 export type ButtonType = 'button' | 'submit';
 
 export interface IButtonProps {
+  accent?: boolean;
   // 1. Maybe we nix `attributes` ?
   // 2. Re-purpose `disabled` to be applied
   // as aria-disabled="<disabled>" ?
@@ -16,10 +17,12 @@ export interface IButtonProps {
   handleClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   name?: string;
   ref?: RefObject<HTMLButtonElement | null>;
+  secondary?: boolean;
   type?: ButtonType;
 }
 
 export const Button = ({
+  accent,
   attributes,
   block,
   className,
@@ -28,6 +31,7 @@ export const Button = ({
   handleClick,
   name,
   ref,
+  secondary,
   type = 'button',
 }: IButtonProps) => {
   return (
@@ -35,7 +39,9 @@ export const Button = ({
       {...attributes}
       className={mergeClasses([
         styles.button,
+        accent ? styles.accent : undefined,
         block ? styles.block : undefined,
+        secondary ? styles.secondary : undefined,
         className,
       ])}
       disabled={disabled}

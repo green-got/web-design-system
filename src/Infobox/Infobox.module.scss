@@ -1,55 +1,61 @@
 .container {
-  border-radius: var(--corner-medium);
+  border-radius: var(--corner-small);
   padding-block: var(--spacing-small);
   padding-inline: var(--spacing-small);
   position: relative; // TODO: Can we avoid position: relative
 
   &.neutral {
-    background-color: var(--colors-neutral-light);
+    background-color: var(--colors-neutral-sand);
+    color: var(--colors-neutral-regular);
+
+    &.border {
+      border: 0.1rem solid var(--colors-success-light);
+    }
   }
 
   &.primary {
     background-color: var(--colors-primary-light);
+    color: var(--colors-primary-dark);
+
+    &.border {
+      border: 0.1rem solid var(--colors-primary);
+    }
   }
 
   &.success {
-    background-color: var(--colors-success-light);
+    background-color: var(--colors-success-extra-light);
+    color: var(--colors-primary-dark);
+
+    &.border {
+      border: 0.1rem solid var(--colors-success-medium);
+    }
   }
 
   &.warning {
     background-color: var(--colors-warning-light);
+    color: var(--colors-warning-dark);
+
+    &.border {
+      border: 0.1rem solid var(--colors-warning-medium);
+    }
   }
 
   &.error {
     background-color: var(--colors-error-light);
+    color: var(--colors-error-dark);
+
+    &.border {
+      border: 0.1rem solid var(--colors-error-medium);
+    }
   }
 
   .button {
+    background-color: transparent;
     color: var(--colors-neutral-dark);
     padding-block: 0;
     padding-inline: 0;
     position: absolute;
     inset-block-start: var(--spacing-xsmall);
     inset-inline-end: var(--spacing-xsmall);
-
-    &.neutral {
-      background-color: var(--colors-neutral-light);
-    }
-
-    &.primary {
-      background-color: var(--colors-primary-light);
-    }
-
-    &.success {
-      background-color: var(--colors-success-light);
-    }
-
-    &.warning {
-      background-color: var(--colors-warning-light);
-    }
-
-    &.error {
-      background-color: var(--colors-error-light);
-    }
   }
 }

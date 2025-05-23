@@ -47,11 +47,21 @@ export const CheckboxMain: Story = () => {
 
       <div>
         <Checkbox
-          checked={checked}
+          disabled
           id="d"
-          handleChange={() => setChecked(!checked)}
+          handleChange={() => {}}
           label="Accept terms and conditions."
           name="d"
+        />
+      </div>
+
+      <div>
+        <Checkbox
+          checked={checked}
+          id="e"
+          handleChange={() => setChecked(!checked)}
+          label="Accept terms and conditions."
+          name="e"
           required
         />
       </div>

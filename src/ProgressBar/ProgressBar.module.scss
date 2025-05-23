@@ -6,12 +6,12 @@
 }
 
 .progress::-webkit-progress-bar {
-  background-color: var(--colors-neutral-medium);
+  background-color: var(--colors-neutral-extra-light);
   border-radius: 2px;
 }
 
 .progress::-webkit-progress-value {
-  background-color: var(--colors-primary);
+  background-color: var(--colors-primary-dark);
   border-radius: 2px;
 }
 

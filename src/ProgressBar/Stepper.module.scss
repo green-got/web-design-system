@@ -3,29 +3,30 @@
   display: flex;
 
   >span {
-    background-color: var(--colors-neutral-medium);
+    background-color: var(--colors-neutral-extra-light);
     border-radius: 0.2rem;
     flex-grow: 1;
     height: 0.4rem;
 
     &.stepped {
-      background-color: var(--colors-primary);
+      background-color: var(--colors-primary-dark);
     }
   }
 
   .step {
+    color: var(--colors-neutral-regular);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 
     span:first-of-type {
-      background-color: var(--colors-neutral-medium);
+      background-color: var(--colors-neutral-extra-light);
       border-radius: 0.2rem;
       flex-grow: 1;
       height: 0.4rem;
 
       &.stepped {
-        background-color: var(--colors-primary);
+        background-color: var(--colors-primary-dark);
       }
     }
 

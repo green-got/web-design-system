@@ -1,10 +1,10 @@
-h2 {
+.h2 {
   margin-block-start: 2rem;
   margin-block-end: 1rem;
 }
 
-label>div,
-h3 {
+input[type=radio]+label>div,
+input[type=radio]+label>h3 {
   font-size: 2rem;
   font-weight: 500;
 }

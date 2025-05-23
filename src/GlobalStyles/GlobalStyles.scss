@@ -28,37 +28,45 @@
 */
 :root {
   --colors-neutral-black: #040600;
-  --colors-neutral-dark: #4f593a;
-  --colors-neutral-regular: #8a8886; // ??
-  --colors-neutral-medium: #ecf6db;
-  --colors-neutral-light: #f7ffea;
-  --colors-neutral-sand: #faf5ef; // ??
+  --colors-neutral-dark: #202015;
+  --colors-neutral-regular: #535348;
+  --colors-neutral-medium: #979791;
+  --colors-neutral-light: #b9b9b5;
+  --colors-neutral-sand: #f6f9ef;
+  --colors-neutral-extra-light: #dcdcda;
+  --colors-neutral-off-white: #f6f6f5;
   --colors-neutral-white: #fff;
 
-  --colors-primary-dark: #131b00;
+  --colors-primary-dark: #5e8b04;
   --colors-primary: #cdfb6e;
-  --colors-primary-medium: #9ed4cf; // ??
-  --colors-primary-light: #e7f4f3; // ??
+  --colors-primary-medium: #eafdc3;
+  --colors-primary-light: #f8feef;
 
-  --colors-error-dark: #923232; // ??
-  --colors-error: #f87171; // ??
-  --colors-error-medium: #ffb2b2; // ??
-  --colors-error-light: #fff1f1; // ??
+  --colors-error-dark: #8c4751;
+  --colors-error: #ea7788;
+  --colors-error-medium: #efa9b4;
+  --colors-error-light: #f8dde1;
 
-  --colors-success-dark: #1aa06f;
-  --colors-success: #34d399;
-  --colors-success-medium: #a1ffdc;
-  --colors-success-light: #eefff9;
+  --colors-success-dark: #4f593a;
+  --colors-success: #849461;
+  --colors-success-medium: #aab690;
+  --colors-success-light: #d0d7c1;
+  --colors-success-extra-light: #eef6d3;
 
-  --colors-warning-dark: #995a1f; // ??
-  --colors-warning: #ffb55e;
-  --colors-warning-medium: #ffcfa1; // ??
-  --colors-warning-light: #fff6ee; // ??
+  --colors-warning-dark: #926e41;
+  --colors-warning: #f4b86d;
+  --colors-warning-medium: #f8d3a2;
+  --colors-warning-light: #fceeda;
 
-  --colors-info-dark: #995a1f; // ??
-  --colors-info: #c2e9ff;
-  --colors-info-medium: #ffcfa1; // ??
-  --colors-info-light: #f1faff; // ??
+  --colors-info-dark: #788a97;
+  --colors-info: #cae8fd;
+  --colors-info-medium: #ddf0fd;
+  --colors-info-light: #f2f9fe;
+
+  --colors-accent-dark: #90914a;
+  --colors-accent: #f1f38e;
+  --colors-accent-medium: #f5f7aa;
+  --colors-accent-light: #fbfcdd;
 
   --shadow-light: 0px 0px 8px 0px rgba(61, 60, 59, 0.08);
   --shadow-regular: 0px 0px 8px 0px rgba(61, 60, 59, 0.12);
@@ -75,7 +83,7 @@
   --corner-xsmall: 0.4rem;
   --corner-small: 0.8rem;
   --corner-medium: 1.2rem;
-  --corner-big: 1.8rem;
+  --corner-big: 1.6rem;
 }
 
 [data-theme="dark"] {

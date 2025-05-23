@@ -30,6 +30,7 @@ export function Checkbox({
   return (
     <div className={mergeClasses([styles.container, className])}>
       <input
+        aria-disabled={disabled}
         checked={checked}
         className={styles.checkbox}
         disabled={disabled}

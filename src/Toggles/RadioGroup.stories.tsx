@@ -59,7 +59,7 @@ export const RadioGroupMain: Story = () => {
         />
       </div>
 
-      <h2>Update programmatically</h2>
+      <h2 className="h2">Update programmatically</h2>
       <div>
         <Button handleClick={() => setControlled('a')}>A</Button>
         <Button handleClick={() => setControlled('b')}>B</Button>
@@ -89,7 +89,7 @@ export const RadioGroupMain: Story = () => {
           )}
         />
       </div>
-      <h2>Pass a ref</h2>
+      <h2 className="h2">Pass a ref</h2>
       <form>
         <RadioGroup
           checked={three}
@@ -128,7 +128,7 @@ export const RadioGroupMain: Story = () => {
         </Button>
       </form>
 
-      <h2>Radio className</h2>
+      <h2 className="h2">Radio className</h2>
       <Button handleClick={() => setIncludeClass(!includeClass)}>
         Toggle radio class
       </Button>
@@ -158,7 +158,7 @@ export const RadioGroupMain: Story = () => {
         )}
       />
 
-      <h2>Component label</h2>
+      <h2 className="h2">Component label</h2>
       <RadioGroup
         checked={complex}
         handleChange={(e) => setComplex(e.target.value)}

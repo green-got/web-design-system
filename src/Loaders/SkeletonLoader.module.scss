@@ -3,7 +3,7 @@
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  background-color: var(--colors-neutral-medium);
+  background-color: var(--colors-neutral-light);
   border-radius: var(--corner-big);
   height: 100%;
   width: 100%;
@@ -11,14 +11,14 @@
 
 @keyframes breathe {
   0% {
-    background-color: var(--colors-neutral-medium);
-  }
-
-  50% {
     background-color: var(--colors-neutral-light);
   }
 
+  50% {
+    background-color: var(--colors-neutral-extra-light);
+  }
+
   100% {
-    background-color: var(--colors-neutral-medium);
+    background-color: var(--colors-neutral-light);
   }
 }

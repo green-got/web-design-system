@@ -16,7 +16,7 @@
     --thumb-size: 2.4rem;
     align-items: center;
     appearance: none;
-    background-color: #e5e5e7;
+    background-color: var(--colors-neutral-extra-light);
     block-size: var(--thumb-size);
     border-radius: var(--track-size);
     box-sizing: content-box;
@@ -41,7 +41,7 @@
     }
 
     &:checked {
-      background-color: var(--colors-primary);
+      background-color: var(--colors-primary-dark);
       --thumb-position: calc((var(--track-size) - 100%) * var(--is-ltr));
     }
 

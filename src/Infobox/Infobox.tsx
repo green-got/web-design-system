@@ -5,6 +5,7 @@ import { Button } from '../Button/index';
 import { XIcon } from '../Icons/index';
 
 interface IInfoboxProps {
+  border?: boolean;
   children: ReactNode;
   className?: string;
   dismissHandler?: () => void;
@@ -15,6 +16,7 @@ interface IInfoboxProps {
 }
 
 export function Infobox({
+  border,
   children,
   className,
   dismissHandler,
@@ -25,7 +27,12 @@ export function Infobox({
 }: IInfoboxProps) {
   return (
     <div
-      className={mergeClasses([styles.container, styles[theme], className])}
+      className={mergeClasses([
+        styles.container,
+        styles[theme],
+        border ? styles.border : undefined,
+        className,
+      ])}
       id={id}
     >
       {dismissible ? (

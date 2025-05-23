@@ -17,7 +17,7 @@ export const SpinnerMain: Story = () => (
       style={{
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: 'var(--colors-primary)',
+        backgroundColor: 'var(--colors-primary-dark)',
         padding: 40,
         marginTop: 50,
       }}

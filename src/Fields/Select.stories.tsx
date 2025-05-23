@@ -26,7 +26,8 @@ export const SelectMain: Story = () => {
           name="a"
           value={a}
         >
-          <option value="">echo@gmail.com</option>
+          <option value="" />
+          <option value="echo">echo@gmail.com</option>
           <option value="thomas">thomas@green-got.com</option>
         </Select>
       </div>
@@ -41,7 +42,8 @@ export const SelectMain: Story = () => {
           required
           value={b}
         >
-          <option value="">echo@gmail.com</option>
+          <option value="" />
+          <option value="echo">echo@gmail.com</option>
           <option value="thomas">thomas@green-got.com</option>
         </Select>
       </div>
@@ -55,7 +57,8 @@ export const SelectMain: Story = () => {
           name="c"
           value=""
         >
-          <option value="">echo@gmail.com</option>
+          <option value="" />
+          <option value="echo">echo@gmail.com</option>
           <option value="thomas">thomas@green-got.com</option>
         </Select>
       </div>
@@ -70,7 +73,8 @@ export const SelectMain: Story = () => {
           requiredText="For sure required"
           value=""
         >
-          <option value="">echo@gmail.com</option>
+          <option value="" />
+          <option value="echo">echo@gmail.com</option>
           <option value="thomas">thomas@green-got.com</option>
         </Select>
       </div>
@@ -85,10 +89,10 @@ export const SelectMain: Story = () => {
           id="d"
           name="d"
           required
-          requiredText="For sure required"
           value=""
         >
-          <option value="">echo@gmail.com</option>
+          <option value="" />
+          <option value="echo">echo@gmail.com</option>
           <option value="thomas">thomas@green-got.com</option>
         </Select>
       </div>

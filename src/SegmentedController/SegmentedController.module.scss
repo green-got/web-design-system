@@ -1,6 +1,6 @@
 .container {
-  background-color: var(--colors-neutral-light);
-  border-radius: var(--corner-small);
+  background-color: var(--colors-neutral-off-white);
+  border-radius: var(--corner-xsmall);
   display: inline-grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
@@ -10,9 +10,9 @@
 
     button {
       background-color: transparent;
-      border-radius: var(--corner-small);
+      border-radius: var(--corner-xsmall);
       border-width: 0;
-      color: var(--colors-neutral-regular);
+      color: var(--colors-neutral-dark);
       cursor: pointer;
       font-size: 1.4rem;
       line-height: 0.7;
@@ -22,8 +22,9 @@
       width: 100%;
 
       &.active {
-        background-color: var(--colors-primary);
+        background-color: var(--colors-primary-dark);
         color: var(--colors-neutral-white);
+        font-weight: 500;
       }
     }
   }

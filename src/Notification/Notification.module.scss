@@ -21,8 +21,11 @@
 }
 
 .show {
+  align-items: center;
   animation-name: notify;
   animation-duration: 3.5s;
+  background-color: var(--colors-neutral-white);
+  display: flex;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -69,7 +72,7 @@
 
 .circle {
   align-items: center;
-  background-color: var(--colors-success);
+  background-color: var(--colors-primary-dark);
   border-radius: 50%;
   color: var(--colors-neutral-white);
   display: flex;

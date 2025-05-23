@@ -1,8 +1,8 @@
 .button {
   align-items: center;
   appearance: none;
-  background-color: var(--colors-primary);
-  border-radius: var(--corner-medium);
+  background-color: var(--colors-neutral-black);
+  border-radius: var(--corner-xsmall);
   border-width: 0;
   color: var(--colors-neutral-white);
   cursor: pointer;
@@ -11,23 +11,49 @@
   font-weight: 700;
   justify-content: center;
   line-height: 1.15;
-  padding-block: 1.2rem;
-  padding-inline: 1.2rem;
+  padding-block: 1.1rem;
+  padding-inline: 1.1rem;
+
+  &.accent {
+    background-color: var(--colors-primary);
+    color: var(--colors-neutral-black);
+
+    &:active {
+      background-color: var(--colors-neutral-black);
+      color: var(--colors-neutral-white);
+    }
+  }
 
   &.block {
-    border-radius: var(--corner-big);
     display: flex;
     padding-block: var(--spacing-xsmall);
     width: 100%;
   }
 
+  &.secondary {
+    background-color: var(--colors-neutral-white);
+    border-width: 0.1rem;
+    color: var(--colors-neutral-black);
+    padding: 1rem;
+
+    &.block {
+      padding-block: 1.5rem;
+    }
+
+    &[aria-disabled="true"],
+    &:disabled {
+      border: 0.1rem solid var(--colors-neutral-extra-light);
+    }
+  }
+
   &:active {
-    background-color: var(--colors-primary-dark);
+    background-color: var(--colors-neutral-off-white);
+    color: var(--colors-neutral-black);
   }
 
   &[aria-disabled="true"],
   &:disabled {
-    background-color: var(--colors-neutral-medium);
+    background-color: var(--colors-neutral-extra-light);
     color: var(--colors-neutral-regular);
     cursor: auto;
   }
