@@ -47,7 +47,7 @@
 
     &:hover,
     &:active {
-      background-color: var(--colors-neutral-medium);
+      background-color: var(--colors-neutral-off-white);
     }
   }
 
@@ -81,7 +81,8 @@
 
       &:hover,
       &:active {
-        background-color: var(--colors-neutral-light);
+        // background-color: var(--colors-neutral-light);
+        // color: var(--colors-neutral-dark);
       }
     }
   }
