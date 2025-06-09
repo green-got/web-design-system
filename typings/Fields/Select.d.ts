@@ -1,4 +1,4 @@
-import { type ChangeEvent, type KeyboardEvent, type ReactNode } from 'react';
+import { type ChangeEvent, type KeyboardEvent, type ReactNode, type RefObject } from 'react';
 type TAriaLabelProps = {
     ariaLabel: string;
     label?: never;
@@ -17,9 +17,10 @@ type TSelectProps = {
     id: string;
     isValid?: boolean;
     name: string;
+    ref?: RefObject<HTMLSelectElement | null>;
     required?: boolean;
     requiredText?: string;
     value?: string;
 } & (TAriaLabelProps | THtmlLabelProps);
-export declare function Select({ ariaLabel, className, children, disabled, errorMessage, handleKeyDown, label, id, isValid, name, required, requiredText, value, ...props }: TSelectProps): import("react/jsx-runtime").JSX.Element;
+export declare function Select({ ariaLabel, className, children, disabled, errorMessage, handleKeyDown, label, id, isValid, name, ref, required, requiredText, value, ...props }: TSelectProps): import("react/jsx-runtime").JSX.Element;
 export {};

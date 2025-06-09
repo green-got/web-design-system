@@ -5,6 +5,7 @@ import {
   type FocusEvent,
   type KeyboardEvent,
   type ReactNode,
+  type RefObject,
   useState,
 } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
@@ -30,6 +31,7 @@ type TSelectProps = {
   id: string;
   isValid?: boolean;
   name: string;
+  ref?: RefObject<HTMLSelectElement | null>;
   required?: boolean;
   requiredText?: string;
   value?: string;
@@ -46,6 +48,7 @@ export function Select({
   id,
   isValid = true,
   name,
+  ref,
   required,
   requiredText,
   value,
@@ -90,6 +93,7 @@ export function Select({
           onBlur={handleBlur}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
+          ref={ref}
           required={required}
           value={value}
         >
