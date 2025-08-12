@@ -10,6 +10,7 @@ type THtmlLabelProps = {
 type TSelectProps = {
     className?: string;
     children: ReactNode;
+    defaultValue?: string;
     disabled?: boolean;
     errorMessage?: string;
     handleChange?: (event: ChangeEvent<HTMLSelectElement>) => void;
@@ -22,5 +23,5 @@ type TSelectProps = {
     requiredText?: string;
     value?: string;
 } & (TAriaLabelProps | THtmlLabelProps);
-export declare function Select({ ariaLabel, className, children, disabled, errorMessage, handleKeyDown, label, id, isValid, name, ref, required, requiredText, value, ...props }: TSelectProps): import("react/jsx-runtime").JSX.Element;
+export declare function Select({ ariaLabel, className, children, defaultValue, disabled, errorMessage, handleKeyDown, label, id, isValid, name, ref, required, requiredText, value, ...props }: TSelectProps): import("react/jsx-runtime").JSX.Element;
 export {};

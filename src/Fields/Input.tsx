@@ -23,6 +23,7 @@ export interface IInputProps {
     title?: string;
   };
   className?: string;
+  defaultValue?: string;
   disabled?: boolean;
   errorMessage?: string;
   handleChange?: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -49,6 +50,7 @@ export interface IInputProps {
 export function Input({
   attributes,
   className,
+  defaultValue,
   disabled,
   errorMessage,
   handleKeyDown = () => {},
@@ -96,6 +98,7 @@ export function Input({
         <input
           {...attributes}
           autoCorrect="off"
+          defaultValue={defaultValue}
           disabled={disabled}
           id={id}
           name={name}

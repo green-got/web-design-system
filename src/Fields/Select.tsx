@@ -24,6 +24,7 @@ type THtmlLabelProps = {
 type TSelectProps = {
   className?: string;
   children: ReactNode;
+  defaultValue?: string;
   disabled?: boolean;
   errorMessage?: string;
   handleChange?: (event: ChangeEvent<HTMLSelectElement>) => void;
@@ -41,6 +42,7 @@ export function Select({
   ariaLabel,
   className,
   children,
+  defaultValue,
   disabled,
   errorMessage,
   handleKeyDown,
@@ -87,6 +89,7 @@ export function Select({
         <select
           aria-label={ariaLabel}
           className={styles.select}
+          defaultValue={defaultValue}
           disabled={disabled}
           id={id}
           name={name}

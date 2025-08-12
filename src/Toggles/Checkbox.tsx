@@ -7,6 +7,7 @@ import styles from './Checkbox.module.scss';
 export interface ICheckboxProps {
   checked?: boolean;
   className?: string;
+  defaultChecked?: boolean;
   disabled?: boolean;
   handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   id: string;
@@ -19,6 +20,7 @@ export interface ICheckboxProps {
 export function Checkbox({
   checked,
   className,
+  defaultChecked,
   disabled,
   handleChange,
   id,
@@ -33,6 +35,7 @@ export function Checkbox({
         aria-disabled={disabled}
         checked={checked}
         className={styles.checkbox}
+        defaultChecked={defaultChecked}
         disabled={disabled}
         id={id}
         name={name}

@@ -13,6 +13,7 @@ export interface IInputProps {
         title?: string;
     };
     className?: string;
+    defaultValue?: string;
     disabled?: boolean;
     errorMessage?: string;
     handleChange?: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -28,4 +29,4 @@ export interface IInputProps {
     type?: 'date' | 'datetime-local' | 'email' | 'number' | 'search' | 'tel' | 'text';
     value?: string;
 }
-export declare function Input({ attributes, className, disabled, errorMessage, handleKeyDown, id, isValid, label, name, required, requiredText, ref, title, type, value, ...props }: IInputProps): import("react/jsx-runtime").JSX.Element;
+export declare function Input({ attributes, className, defaultValue, disabled, errorMessage, handleKeyDown, id, isValid, label, name, required, requiredText, ref, title, type, value, ...props }: IInputProps): import("react/jsx-runtime").JSX.Element;
