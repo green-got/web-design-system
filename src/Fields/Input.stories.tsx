@@ -1,4 +1,4 @@
-import React, { type ChangeEvent } from 'react';
+import React, { type ChangeEvent, useState } from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { Input } from './Input';
 import { ClearableInput } from './ClearableInput';
@@ -139,6 +139,14 @@ export const InputMain: Story = () => {
         requiredText="Required"
         type="text"
         value={k}
+      />
+
+      <Input
+        defaultValue="Default value"
+        id="l"
+        label="Default value"
+        name="l"
+        type="text"
       />
     </>
   );
@@ -393,6 +401,7 @@ export const InputWithCustomValidity = () => {
 };
 
 export const InputFile = () => {
+  const [files, setFiles] = useState<File[]>([]);
   return (
     <>
       <GlobalStyles />
@@ -410,6 +419,20 @@ export const InputFile = () => {
         />
         <input type="submit" />
       </form>
+
+      <h1>Controlled</h1>
+      <FileInput
+        block={true}
+        handleChange={(e: ChangeEvent<HTMLInputElement>) => {
+          if (e.target.files !== null) {
+            setFiles(Array.from(e.target.files));
+          }
+        }}
+        label="Choose a file*"
+        id="controlled"
+        name="file"
+        required
+      />
     </>
   );
 };

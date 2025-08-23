@@ -65,6 +65,16 @@ export const CheckboxMain: Story = () => {
           required
         />
       </div>
+
+      <div>
+        <Checkbox
+          defaultChecked={true}
+          id="f"
+          label="Default accept terms and conditions."
+          name="f"
+          required
+        />
+      </div>
     </>
   );
 };

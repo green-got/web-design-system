@@ -129,6 +129,19 @@ export const SelectMain: Story = () => {
           <option value="">tap enter when focused</option>
         </Select>
         <Button type="submit">This works too</Button>
+
+        <Select
+          defaultValue="FRA"
+          label="Start with a default value"
+          id="g"
+          name="g"
+        >
+          <option value="BEL">Belgium</option>
+          <option value="FRA">France</option>
+          <option value="ITA">Italy</option>
+          <option value="ESP">Spain</option>
+          <option value="PRT">Portugal</option>
+        </Select>
       </form>
     </>
   );
