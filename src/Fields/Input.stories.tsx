@@ -23,6 +23,7 @@ export const InputMain: Story = () => {
   const [i, setI] = React.useState<string>('');
   const [j, setJ] = React.useState<string>(';lakj');
   const [k, setK] = React.useState<string>('');
+  const [m, setM] = React.useState<string>('50');
 
   return (
     <>
@@ -147,6 +148,16 @@ export const InputMain: Story = () => {
         label="Default value"
         name="l"
         type="text"
+      />
+
+      <Input
+        handleBlur={() => setM('50')}
+        handleChange={(e) => setM(e.target.value)}
+        id="m"
+        label="Always goes back to 50 on blur"
+        name="m"
+        type="text"
+        value={m}
       />
     </>
   );

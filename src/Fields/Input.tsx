@@ -26,6 +26,7 @@ export interface IInputProps {
   defaultValue?: string;
   disabled?: boolean;
   errorMessage?: string;
+  handleBlur?: (event: FocusEvent<HTMLInputElement>) => void;
   handleChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   handleKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;
   id: string;
@@ -78,6 +79,7 @@ export function Input({
   }
 
   function handleBlur(e: FocusEvent<HTMLInputElement>) {
+    props.handleBlur?.(e);
     setIsFieldValid(e.target.validity.valid);
   }
 

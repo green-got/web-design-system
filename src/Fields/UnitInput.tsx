@@ -37,6 +37,7 @@ export function UnitInput({
   }
 
   function handleBlur(e: FocusEvent<HTMLInputElement>) {
+    props.handleBlur?.(e);
     setIsValid(e.target.validity.valid);
   }
 

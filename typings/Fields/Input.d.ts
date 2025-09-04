@@ -1,4 +1,4 @@
-import { type ChangeEvent, type KeyboardEvent, type RefObject } from 'react';
+import { type ChangeEvent, type FocusEvent, type KeyboardEvent, type RefObject } from 'react';
 export interface IInputProps {
     attributes?: {
         'aria-disabled'?: boolean;
@@ -16,6 +16,7 @@ export interface IInputProps {
     defaultValue?: string;
     disabled?: boolean;
     errorMessage?: string;
+    handleBlur?: (event: FocusEvent<HTMLInputElement>) => void;
     handleChange?: (event: ChangeEvent<HTMLInputElement>) => void;
     handleKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;
     id: string;
