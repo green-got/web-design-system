@@ -14,6 +14,7 @@ export interface IButtonProps {
   children?: ReactNode;
   className?: string;
   disabled?: boolean;
+  formAction?: (formData: FormData) => void;
   handleClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   name?: string;
   ref?: RefObject<HTMLButtonElement | null>;
@@ -28,6 +29,7 @@ export const Button = ({
   className,
   children,
   disabled,
+  formAction,
   handleClick,
   name,
   ref,
@@ -45,6 +47,7 @@ export const Button = ({
         className,
       ])}
       disabled={disabled}
+      formAction={formAction}
       name={name}
       onClick={handleClick}
       ref={ref}
