@@ -57,7 +57,7 @@ export function FileInput({
           }
         }}
         ref={ref}
-        required={required}
+        required={required && files.length === 0}
         type="file"
       />
       {files.length > 0 && (
