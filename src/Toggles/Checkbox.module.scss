@@ -64,9 +64,13 @@
   color: var(--colors-neutral-dark);
   display: inline-block;
   padding-block-start: 1.2rem;
+
+  &:has(~ .description) {
+    font-weight: 500;
+  }
 }
 
 .description {
-  color: var(--colors-neutral-medium);
+  color: var(--colors-neutral-regular);
   display: block;
 }
