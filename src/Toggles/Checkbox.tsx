@@ -8,6 +8,7 @@ export interface ICheckboxProps {
   checked?: boolean;
   className?: string;
   defaultChecked?: boolean;
+  description?: string;
   disabled?: boolean;
   handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   id: string;
@@ -21,6 +22,7 @@ export function Checkbox({
   checked,
   className,
   defaultChecked,
+  description,
   disabled,
   handleChange,
   id,
@@ -32,6 +34,7 @@ export function Checkbox({
   return (
     <div className={mergeClasses([styles.container, className])}>
       <input
+        aria-describedby={description ? `${id}-description` : undefined}
         aria-disabled={disabled}
         checked={checked}
         className={styles.checkbox}
@@ -44,9 +47,20 @@ export function Checkbox({
         required={required}
         type="checkbox"
       />
-      <label className={styles.label} htmlFor={id}>
-        {label}
-      </label>
+      {description ? (
+        <div>
+          <label className={styles.label} htmlFor={id}>
+            {label}
+          </label>
+          <span className={styles.description} id={`${id}-description`}>
+            {description}
+          </span>
+        </div>
+      ) : (
+        <label className={styles.label} htmlFor={id}>
+          {label}
+        </label>
+      )}
     </div>
   );
 }

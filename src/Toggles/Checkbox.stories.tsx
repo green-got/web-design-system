@@ -75,6 +75,16 @@ export const CheckboxMain: Story = () => {
           required
         />
       </div>
+
+      <div>
+        <Checkbox
+          description="Here's the description"
+          id="g"
+          label="Checkbox with description"
+          name="g"
+          required
+        />
+      </div>
     </>
   );
 };
