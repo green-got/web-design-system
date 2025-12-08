@@ -1,13 +1,13 @@
 .dialog {
-  background-color: var(--colors-neutral-white);
-  border-radius: var(--corner-small);
+  background-color: var(--colors-neutral-25);
+  border-radius: var(--corner-sm);
   border-width: 0;
-  color: var(--colors-neutral-dark);
+  color: var(--colors-neutral-800);
   margin: auto;
   padding: 4rem;
 
   &::backdrop {
-    background-color: rgb(from var(--colors-neutral-black) r g b / 53%);
+    background-color: rgb(from var(--colors-neutral-950) r g b / 53%);
   }
 
   &.wrapped {
@@ -38,16 +38,16 @@
   }
 
   .close-btn {
-    background-color: var(--colors-neutral-white);
-    color: var(--colors-neutral-dark);
-    padding: var(--spacing-xxsmall);
+    background-color: var(--colors-neutral-25);
+    color: var(--colors-neutral-800);
+    padding: var(--spacing-2xs);
     inset-block-start: 4rem;
     inset-inline-end: 4rem;
     position: absolute;
 
     &:hover,
     &:active {
-      background-color: var(--colors-neutral-off-white);
+      background-color: var(--colors-neutral-50);
     }
   }
 
@@ -65,7 +65,7 @@
   .mask {
     /* border-style property is required to render border-image properly on Webkit */
     border-style: solid;
-    border-image: linear-gradient(transparent, var(--colors-neutral-white) 70%) 20 / 2rem;
+    border-image: linear-gradient(transparent, var(--colors-neutral-25) 70%) 20 / 2rem;
     inset-block-end: 0;
     height: 4rem;
     pointer-events: none;

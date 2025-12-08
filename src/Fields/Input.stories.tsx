@@ -369,7 +369,7 @@ export const InputUnit = () => {
         type="text"
         unit="€"
         unitLabel="Euros"
-        unitPlacement="end"
+        unitPlacement={lang === 'en-US' ? 'start' : 'end'}
         value={f
           .filter?.((part) => !['literal', 'currency'].includes(part.type))
           .map?.((part) => part.value)

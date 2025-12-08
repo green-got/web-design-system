@@ -1,61 +1,73 @@
 .button {
   align-items: center;
   appearance: none;
-  background-color: var(--colors-neutral-black);
-  border-radius: var(--corner-xsmall);
+  border-radius: var(--corner-sm);
   border-width: 0;
-  color: var(--colors-neutral-white);
+  color: var(--colors-neutral-950);
   cursor: pointer;
   display: inline-flex;
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: var(--text-xs);
+  font-weight: 600;
   justify-content: center;
-  line-height: 1.15;
-  padding-block: 1.1rem;
-  padding-inline: 1.1rem;
-
-  &.accent {
-    background-color: var(--colors-primary);
-    color: var(--colors-neutral-black);
-
-    &:active {
-      background-color: var(--colors-neutral-black);
-      color: var(--colors-neutral-white);
-    }
-  }
+  line-height: 1.14;
+  padding-block: 1.4rem;
+  padding-inline: var(--spacing-xs);
 
   &.block {
     display: flex;
-    padding-block: var(--spacing-xsmall);
     width: 100%;
   }
 
-  &.secondary {
-    background-color: var(--colors-neutral-white);
-    border-width: 0.1rem;
-    color: var(--colors-neutral-black);
-    padding: 1rem;
+  &.primary {
+    background-color: var(--colors-primary-700);
 
-    &.block {
-      padding-block: 1.5rem;
+    &:active {
+      background-color: var(--colors-neutral-950);
+      color: var(--colors-neutral-25);
     }
 
     &[aria-disabled="true"],
     &:disabled {
-      border: 0.1rem solid var(--colors-neutral-extra-light);
+      background-color: var(--colors-primary-100);
+      color: var(--colors-neutral-600);
     }
   }
 
-  &:active {
-    background-color: var(--colors-neutral-off-white);
-    color: var(--colors-neutral-black);
+  &.secondary {
+    background-color: var(--colors-neutral-200);
+    border: 0.1rem solid var(--colors-primary-950);
+    color: var(--colors-primary-950);
+    padding-block: 1.3rem;
+
+    &:active {
+      background-color: var(--colors-neutral-950);
+      color: var(--colors-neutral-25);
+    }
+
+    &[aria-disabled="true"],
+    &:disabled {
+      background-color: var(--colors-primary-25);
+      border: 0.1rem solid var(--colors-neutral-300);
+      color: var(--colors-neutral-600);
+    }
   }
 
-  &[aria-disabled="true"],
-  &:disabled {
-    background-color: var(--colors-neutral-extra-light);
-    color: var(--colors-neutral-regular);
-    cursor: auto;
+  &.danger {
+    background-color: var(--colors-error-200);
+    border: 0.1rem solid var(--colors-error-500);
+    padding-block: 1.3rem;
+
+    &:active {
+      background-color: var(--colors-neutral-950);
+      color: var(--colors-neutral-25);
+    }
+
+    &[aria-disabled="true"],
+    &:disabled {
+      background-color: var(--colors-error-50);
+      border: 0.1rem solid var(--colors-neutral-300);
+      color: var(--colors-neutral-600);
+    }
   }
 
   *:has(+ svg),

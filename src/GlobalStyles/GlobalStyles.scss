@@ -11,110 +11,111 @@
 }
 
 /**
-  Fonts
-*/
-@font-face {
-  font-family: "Terrane Sans";
-  src: local("Terrane Sans Medium"), local("TerraneSans-Medium"),
-    url("../../fonts/TerraneSansWeb-Medium.woff2") format('woff2'),
-    url("../../fonts/TerraneSansWeb-Medium.woff") format('woff');
-}
-
-/**
   Colors
   Shadows
   Spacings
   Roundings
 */
 :root {
-  --colors-neutral-black: #040600;
-  --colors-neutral-dark: #202015;
-  --colors-neutral-regular: #535348;
-  --colors-neutral-medium: #979791;
-  --colors-neutral-light: #b9b9b5;
-  --colors-neutral-sand: #f6f9ef;
-  --colors-neutral-extra-light: #dcdcda;
-  --colors-neutral-off-white: #f6f6f5;
-  --colors-neutral-white: #fff;
+  --colors-neutral-950: #0E121B;
+  --colors-neutral-900: #181B25;
+  --colors-neutral-800: #222530;
+  --colors-neutral-700: #2B303B;
+  --colors-neutral-600: #525866;
+  --colors-neutral-500: #717784;
+  --colors-neutral-400: #99A0AE;
+  --colors-neutral-300: #CACFD8;
+  --colors-neutral-200: #E1E4EA;
+  --colors-neutral-100: #F2F5F8;
+  --colors-neutral-50: #F5F7FA;
+  --colors-neutral-25: #FFFFFF;
 
-  --colors-primary-dark: #5e8b04;
-  --colors-primary: #cdfb6e;
-  --colors-primary-medium: #eafdc3;
-  --colors-primary-light: #f8feef;
+  --colors-primary-950: #131B00;
+  --colors-primary-900: #354120;
+  --colors-primary-800: #B7E550;
+  --colors-primary-700: #CDFB6E;
+  --colors-primary-600: #95B555;
+  --colors-primary-500: #AECA7C;
+  --colors-primary-400: #C1DC93;
+  --colors-primary-300: #D1EAA7;
+  --colors-primary-200: #DEF3BD;
+  --colors-primary-100: #EBF8D6;
+  --colors-primary-50: #F7FBF2;
+  --colors-primary-25: #FCFDFA;
 
-  --colors-error-dark: #8c4751;
-  --colors-error: #ea7788;
-  --colors-error-medium: #efa9b4;
-  --colors-error-light: #f8dde1;
+  --colors-warning-950: #4E1D09;
+  --colors-warning-900: #7A2E0E;
+  --colors-warning-800: #93370D;
+  --colors-warning-700: #B54708;
+  --colors-warning-600: #DC6803;
+  --colors-warning-500: #F79009;
+  --colors-warning-400: #FDB022;
+  --colors-warning-300: #FEC84B;
+  --colors-warning-200: #FEDF89;
+  --colors-warning-100: #FEF0C7;
+  --colors-warning-50: #FFFAEB;
+  --colors-warning-25: #FFFCF5;
 
-  --colors-success-dark: #4f593a;
-  --colors-success: #849461;
-  --colors-success-medium: #aab690;
-  --colors-success-light: #d0d7c1;
-  --colors-success-extra-light: #eef6d3;
+  --colors-success-950: #053321;
+  --colors-success-900: #074D31;
+  --colors-success-800: #085D3A;
+  --colors-success-700: #067647;
+  --colors-success-600: #079455;
+  --colors-success-500: #17B26A;
+  --colors-success-400: #47CD89;
+  --colors-success-300: #75E0A7;
+  --colors-success-200: #ABEFC6;
+  --colors-success-100: #DCFAE6;
+  --colors-success-50: #ECFDF3;
+  --colors-success-25: #F6FEF9;
 
-  --colors-warning-dark: #926e41;
-  --colors-warning: #f4b86d;
-  --colors-warning-medium: #f8d3a2;
-  --colors-warning-light: #fceeda;
+  --colors-error-950: #55160C;
+  --colors-error-900: #7A271A;
+  --colors-error-800: #912018;
+  --colors-error-700: #B42318;
+  --colors-error-600: #D92D20;
+  --colors-error-500: #F04438;
+  --colors-error-400: #F97066;
+  --colors-error-300: #FDA29B;
+  --colors-error-200: #FECDCA;
+  --colors-error-100: #FEE4E2;
+  --colors-error-50: #FEF3F2;
+  --colors-error-25: #FFFBFA;
 
-  --colors-info-dark: #788a97;
-  --colors-info: #cae8fd;
-  --colors-info-medium: #ddf0fd;
-  --colors-info-light: #f2f9fe;
+  --shadow-xs: 0px 1px 2px rgba(10, 13, 18, 0.05);
+  --shadow-xs-skeuomorphic: 0px -2px 0px rgba(10, 13, 18, 0.05) inset;
+  --shadow-sm: 0px 1px 2px -1px rgba(10, 13, 18, 0.10);
+  --shadow-md: 0px 2px 4px -2px rgba(10, 13, 18, 0.06);
+  --shadow-lg: 0px 2px 2px -1px rgba(10, 13, 18, 0.04);
+  --shadow-xl: 0px 3px 3px -1.5px rgba(10, 13, 18, 0.04);
+  --shadow-2xl: 0px 4px 4px -2px rgba(10, 13, 18, 0.04);
+  --shaodw-3xl: 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
 
-  --colors-accent-dark: #90914a;
-  --colors-accent: #f1f38e;
-  --colors-accent-medium: #f5f7aa;
-  --colors-accent-light: #fbfcdd;
+  --spacing-2xs: 0.8rem;
+  --spacing-xs: 1.6rem;
+  --spacing-sm: 2.4rem;
+  --spacing-md: 3.2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 4.8rem;
+  --spacing-2xl: 6.4rem;
 
-  --shadow-light: 0px 0px 8px 0px rgba(61, 60, 59, 0.08);
-  --shadow-regular: 0px 0px 8px 0px rgba(61, 60, 59, 0.12);
-  --shadow-deep: 0px 0px 16px 0px rgba(61, 60, 59, 0.15);
+  --corner-xs: 0.4rem;
+  --corner-sm: 0.8rem;
+  --corner-md: 1.2rem;
+  --corner-lg: 1.6rem;
 
-  --spacing-xxsmall: 0.8rem;
-  --spacing-xsmall: 1.6rem;
-  --spacing-small: 2.4rem;
-  --spacing-medium: 3.2rem;
-  --spacing-large: 4rem;
-  --spacing-xlarge: 4.8rem;
-  --spacing-xxlarge: 6.4rem;
-
-  --corner-xsmall: 0.4rem;
-  --corner-small: 0.8rem;
-  --corner-medium: 1.2rem;
-  --corner-big: 1.6rem;
+  --text-3xl: 3.6rem;
+  --text-2xl: 3rem;
+  --text-xl: 2.4rem;
+  --text-lg: 2rem;
+  --text-md: 1.8rem;
+  --text-sm: 1.6rem;
+  --text-xs: 1.4rem;
+  --text-2xs: 1.2rem;
+  --text-3xs: 1rem;
 }
 
-[data-theme="dark"] {
-  --colors-neutral-black: #fff;
-  --colors-neutral-dark: #faf5ef;
-  --colors-neutral-regular: #f9f8f6;
-  --colors-neutral-medium: #e5e2df;
-  --colors-neutral-light: #8a8886;
-  --colors-neutral-sand: #4d4c4a;
-  --colors-neutral-white: #000;
-
-  --colors-primary-dark: #134e4a;
-  --colors-primary: #0d9488;
-  --colors-primary-medium: #edf7f6;
-  --colors-primary-light: #e7f4f3;
-
-  --colors-error-dark: #923232;
-  --colors-error: #f87171;
-  --colors-error-medium: #ffb2b2;
-  --colors-error-light: #fff1f1;
-
-  --colors-success-dark: #1aa06f;
-  --colors-success: #34d399;
-  --colors-success-medium: #a1ffdc;
-  --colors-success-light: #eefff9;
-
-  --colors-warning-dark: #995a1f;
-  --colors-warning: #ffa855;
-  --colors-warning-medium: #ffcfa1;
-  --colors-warning-light: #fff6ee;
-}
+[data-theme="dark"] {}
 
 html {
   font-size: 10px;
@@ -122,7 +123,7 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: var(--colors-neutral-sand);
+  background-color: var(--colors-neutral-50);
   color: var(--colors-primary-dark);
   font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   font-size: 1.4rem;
@@ -141,44 +142,54 @@ body {
   Typography
 */
 h1 {
-  font-family: "Terrane Sans";
-  font-size: 4rem;
-  line-height: 1.1;
+  // font-size: 12.8rem;
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.125;
 }
 
 h2 {
-  font-family: "Terrane Sans";
-  font-size: 3.6rem;
-  line-height: 1.1;
+  // font-size: 9.6rem;
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: 1.375;
 }
 
 h3 {
-  font-family: "Terrane Sans";
-  font-size: 3rem;
-  line-height: 1.2;
+  // font-size: 8.4rem;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.385;
 }
 
 h4 {
-  font-family: "Terrane Sans";
-  font-size: 2.6rem;
-  line-height: 1.2;
+  // font-size: 7.2rem;
+  font-size: var(--text-md);
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 h5 {
-  font-family: "Terrane Sans";
-  font-size: 2.4rem;
-  line-height: 1.3;
+  // font-size: 6rem;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 h6 {
-  font-family: "Terrane Sans";
-  font-size: 2.2rem;
-  line-height: 1.3;
+  // font-size: 4.8rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  font-size: var(--text-sm);
 }
 
 hr {
   border: none;
-  border-top: 1px solid var(--colors-primary-dark);
+  border-top: 1px solid var(--colors-neutral-400);
 }
 
 @media (prefers-reduced-motion: reduce) {

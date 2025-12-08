@@ -9,22 +9,22 @@
 
 .notification {
   animation-fill-mode: both;
-  border: 0.1rem solid var(--colors-neutral-medium);
-  border-radius: var(--corner-medium);
-  box-shadow: var(--shadow-light);
+  border: 0.1rem solid var(--colors-neutral-400);
+  border-radius: var(--corner-md);
+  box-shadow: var(--shadow-sm);
   display: inline-flex;
-  color: var(--colors-neutral-dark);
+  color: var(--colors-neutral-800);
   font-size: 1.2rem;
-  gap: var(--spacing-xxsmall);
+  gap: var(--spacing-2xs);
   padding: 1.2rem; // TODO: Existing spacing variables don't support the design
-  transform: translateY(calc(var(--spacing-small) * -1));
+  transform: translateY(calc(var(--spacing-sm) * -1));
 }
 
 .show {
   align-items: center;
   animation-name: notify;
   animation-duration: 3.5s;
-  background-color: var(--colors-neutral-white);
+  background-color: var(--colors-neutral-25);
   display: flex;
 }
 
@@ -36,45 +36,45 @@
 
 @keyframes notify {
   0% {
-    translate: 50% calc(var(--spacing-small) * -1);
+    translate: 50% calc(var(--spacing-sm) * -1);
   }
 
   5% {
-    translate: 50% var(--spacing-large);
+    translate: 50% var(--spacing-lg);
   }
 
   95% {
-    translate: 50% var(--spacing-large);
+    translate: 50% var(--spacing-lg);
   }
 
   100% {
-    translate: 50% calc(var(--spacing-small) * -1);
+    translate: 50% calc(var(--spacing-sm) * -1);
   }
 }
 
 @keyframes notify-reduced {
   0% {
-    translate: 50% calc(var(--spacing-small) * -1);
+    translate: 50% calc(var(--spacing-sm) * -1);
   }
 
   1% {
-    translate: 50% var(--spacing-large);
+    translate: 50% var(--spacing-lg);
   }
 
   99% {
-    translate: 50% var(--spacing-large);
+    translate: 50% var(--spacing-lg);
   }
 
   100% {
-    translate: 50% calc(var(--spacing-small) * -1);
+    translate: 50% calc(var(--spacing-sm) * -1);
   }
 }
 
 .circle {
   align-items: center;
-  background-color: var(--colors-primary-dark);
+  background-color: var(--colors-primary-800);
   border-radius: 50%;
-  color: var(--colors-neutral-white);
+  color: var(--colors-neutral-25);
   display: flex;
   height: 1.4rem;
   justify-content: center;

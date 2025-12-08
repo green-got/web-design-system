@@ -1,5 +1,6 @@
 import React from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
+import { PlusIcon } from '../Icons/Icons';
 import { Button } from './Button';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
@@ -15,11 +16,11 @@ export const ButtonMain: Story = () => (
 
     <h1>Button</h1>
     <br />
+    <h2>Primary button</h2>
     <Button handleClick={noop}>My button</Button>
     <br />
     <br />
     <Button block handleClick={noop}>
-      {' '}
       My button
     </Button>
     <br />
@@ -28,57 +29,47 @@ export const ButtonMain: Story = () => (
     </Button>
     <br />
     <br />
-    <Button attributes={{ 'aria-disabled': true }} handleClick={noop}>
+    <Button aria-disabled={true} handleClick={noop}>
       Aria disabled
     </Button>
-  </>
-);
 
-export const SecondaryButton: Story = () => (
-  <>
-    <h1>Secondary button</h1>
+    <h2>Secondary button</h2>
     <br />
-    <Button handleClick={noop} secondary>
+    <Button handleClick={noop} variant="secondary">
       My button
     </Button>
     <br />
     <br />
-    <Button block handleClick={noop} secondary>
-      {' '}
+    <Button block handleClick={noop} variant="secondary">
       My button
     </Button>
     <br />
-    <Button disabled handleClick={noop} secondary>
+    <Button disabled handleClick={noop} variant="secondary">
       Disabled
     </Button>
     <br />
     <br />
-    <Button attributes={{ 'aria-disabled': true }} handleClick={noop} secondary>
+    <Button aria-disabled={true} handleClick={noop} variant="secondary">
       Aria disabled
     </Button>
-  </>
-);
 
-export const AccentButton: Story = () => (
-  <>
-    <h1>Accent button</h1>
+    <h2>Danger button</h2>
     <br />
-    <Button handleClick={noop} accent>
+    <Button handleClick={noop} variant="danger">
       My button
     </Button>
     <br />
     <br />
-    <Button block handleClick={noop} accent>
-      {' '}
+    <Button block handleClick={noop} variant="danger">
       My button
     </Button>
     <br />
-    <Button disabled handleClick={noop} accent>
+    <Button disabled handleClick={noop} variant="danger">
       Disabled
     </Button>
     <br />
     <br />
-    <Button attributes={{ 'aria-disabled': true }} handleClick={noop} accent>
+    <Button aria-disabled={true} handleClick={noop} variant="danger">
       Aria disabled
     </Button>
   </>
@@ -87,6 +78,11 @@ export const AccentButton: Story = () => (
 export const IconButton: Story = () => (
   <>
     <h1>Icon Button</h1>
+    <br />
+    <Button round>
+      <PlusIcon height={14} width={14} />
+    </Button>
+    <br />
     <br />
     <Button handleClick={noop}>
       <svg
@@ -143,7 +139,7 @@ export const IconButton: Story = () => (
       </svg>
     </Button>
     <br />
-    <Button attributes={{ 'aria-label': 'Zap' }} handleClick={noop}>
+    <Button aria-label="Zap" handleClick={noop}>
       <svg
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"

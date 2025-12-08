@@ -16,7 +16,7 @@
     --thumb-size: 2.4rem;
     align-items: center;
     appearance: none;
-    background-color: var(--colors-neutral-extra-light);
+    background-color: var(--colors-neutral-100);
     block-size: var(--thumb-size);
     border-radius: var(--track-size);
     box-sizing: content-box;
@@ -28,7 +28,7 @@
     // pointer-events: none;
 
     &::before {
-      background-color: var(--colors-neutral-white);
+      background-color: var(--colors-neutral-25);
       block-size: var(--thumb-size);
       border-radius: 50%;
       box-shadow: 0 0 0 0 hsl(0 0% 0% / 25%);
@@ -41,7 +41,7 @@
     }
 
     &:checked {
-      background-color: var(--colors-primary-dark);
+      background-color: var(--colors-primary-700);
       --thumb-position: calc((var(--track-size) - 100%) * var(--is-ltr));
     }
 
@@ -57,7 +57,7 @@
   }
 
   .label-with-helper-text>span {
-    color: var(--colors-neutral-regular);
+    color: var(--colors-neutral-500);
     font-size: 1.4rem;
   }
 }

@@ -1,19 +1,26 @@
-import type { MouseEvent, ReactNode, RefObject } from 'react';
+import type {
+  ButtonHTMLAttributes,
+  MouseEvent,
+  ReactNode,
+  RefObject,
+} from 'react';
 export type ButtonType = 'button' | 'submit';
-export interface IButtonProps {
-    accent?: boolean;
-    attributes?: {
-        [key: string]: string | boolean;
-    };
-    block?: boolean;
-    children?: ReactNode;
-    className?: string;
-    disabled?: boolean;
-    formAction?: (formData: FormData) => void;
-    handleClick?: (event: MouseEvent<HTMLButtonElement>) => void;
-    name?: string;
-    ref?: RefObject<HTMLButtonElement | null>;
-    secondary?: boolean;
-    type?: ButtonType;
+export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  block?: boolean;
+  children?: ReactNode;
+  className?: string;
+  handleClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  ref?: RefObject<HTMLButtonElement | null>;
+  type?: ButtonType;
+  variant?: 'danger' | 'primary' | 'secondary';
 }
-export declare const Button: ({ accent, attributes, block, className, children, disabled, formAction, handleClick, name, ref, secondary, type, }: IButtonProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Button: ({
+  block,
+  className,
+  children,
+  handleClick,
+  ref,
+  type,
+  variant,
+  ...props
+}: IButtonProps) => import('react/jsx-runtime').JSX.Element;

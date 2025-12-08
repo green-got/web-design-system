@@ -92,7 +92,7 @@ export function Dialog({
       {dismissable &&
         (showOverflowIndicator ? (
           <Button
-            attributes={{ 'aria-label': closeBtnAriaLabel }}
+            aria-label={closeBtnAriaLabel}
             className={styles['close-btn']}
             handleClick={handleClose}
           >
@@ -101,7 +101,7 @@ export function Dialog({
         ) : (
           <div className={styles.chrome}>
             <Button
-              attributes={{ 'aria-label': closeBtnAriaLabel }}
+              aria-label={closeBtnAriaLabel}
               className={styles['close-btn']}
               handleClick={handleClose}
             >

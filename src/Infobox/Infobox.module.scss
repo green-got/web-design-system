@@ -1,61 +1,61 @@
 .container {
-  border-radius: var(--corner-small);
-  padding-block: var(--spacing-small);
-  padding-inline: var(--spacing-small);
+  border-radius: var(--corner-sm);
+  padding-block: var(--spacing-sm);
+  padding-inline: var(--spacing-sm);
   position: relative; // TODO: Can we avoid position: relative
 
   &.neutral {
-    background-color: var(--colors-neutral-sand);
-    color: var(--colors-neutral-regular);
+    background-color: var(--colors-neutral-200);
+    color: var(--colors-neutral-500);
 
     &.border {
-      border: 0.1rem solid var(--colors-success-light);
+      border: 0.1rem solid var(--colors-success-300);
     }
   }
 
   &.primary {
-    background-color: var(--colors-primary-light);
-    color: var(--colors-primary-dark);
+    background-color: var(--colors-primary-300);
+    color: var(--colors-primary-800);
 
     &.border {
-      border: 0.1rem solid var(--colors-primary);
+      border: 0.1rem solid var(--colors-primary-700);
     }
   }
 
   &.success {
-    background-color: var(--colors-success-extra-light);
+    background-color: var(--colors-success-200);
     color: var(--colors-primary-dark);
 
     &.border {
-      border: 0.1rem solid var(--colors-success-medium);
+      border: 0.1rem solid var(--colors-success-400);
     }
   }
 
   &.warning {
-    background-color: var(--colors-warning-light);
+    background-color: var(--colors-warning-300);
     color: var(--colors-warning-dark);
 
     &.border {
-      border: 0.1rem solid var(--colors-warning-medium);
+      border: 0.1rem solid var(--colors-warning-400);
     }
   }
 
   &.error {
-    background-color: var(--colors-error-light);
+    background-color: var(--colors-error-300);
     color: var(--colors-error-dark);
 
     &.border {
-      border: 0.1rem solid var(--colors-error-medium);
+      border: 0.1rem solid var(--colors-error-400);
     }
   }
 
   .button {
     background-color: transparent;
-    color: var(--colors-neutral-dark);
+    color: var(--colors-neutral-800);
     padding-block: 0;
     padding-inline: 0;
     position: absolute;
-    inset-block-start: var(--spacing-xsmall);
-    inset-inline-end: var(--spacing-xsmall);
+    inset-block-start: var(--spacing-xs);
+    inset-inline-end: var(--spacing-xs);
   }
 }

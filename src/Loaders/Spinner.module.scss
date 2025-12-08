@@ -1,7 +1,7 @@
 .container {
   width: 32px;
   height: 32px;
-  border: 2px solid var(--colors-primary-dark);
+  border: 2px solid var(--colors-primary-900);
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -14,7 +14,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: var(--colors-primary-dark);
+    background: var(--colors-primary-900);
     width: 6px;
     height: 6px;
     transform: translate(0px, 0px);
@@ -27,7 +27,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    background: var(--colors-primary-dark);
+    background: var(--colors-primary-900);
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -70,15 +70,15 @@
 }
 
 .dark {
-  border-color: var(--colors-neutral-sand);
+  border-color: var(--colors-neutral-200);
 
 
   &::after {
-    background: var(--colors-neutral-sand);
+    background: var(--colors-neutral-200);
   }
 
   &:before {
-    background: var(--colors-neutral-sand);
+    background: var(--colors-neutral-200);
   }
 }
 

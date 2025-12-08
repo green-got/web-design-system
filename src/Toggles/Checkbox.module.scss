@@ -6,12 +6,12 @@
 .checkbox {
   align-items: center;
   appearance: none;
-  background-color: var(--colors-neutral-white);
-  border-color: var(--colors-neutral-dark);
+  background-color: var(--colors-neutral-25);
+  border-color: var(--colors-neutral-800);
   border-radius: 6px;
   border-style: solid;
   border-width: 2px;
-  color: var(--colors-neutral-white);
+  color: var(--colors-neutral-25);
   display: flex;
   flex-shrink: 0;
   height: 24px;
@@ -21,8 +21,8 @@
   width: 24px;
 
   &:checked {
-    background-color: var(--colors-neutral-dark);
-    border-color: var(--colors-neutral-dark);
+    background-color: var(--colors-neutral-800);
+    border-color: var(--colors-neutral-800);
 
     &::after {
       background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBvbHlsaW5lIHBvaW50cz0iMjAgNiA5IDE3IDQgMTIiPjwvcG9seWxpbmU+PC9zdmc+');
@@ -34,8 +34,8 @@
 
     &:not([aria-disabled="true"]):hover,
     &:not(:disabled):hover {
-      background-color: var(--colors-success-dark);
-      border-color: var(--colors-success-dark);
+      background-color: var(--colors-success-800);
+      border-color: var(--colors-success-800);
     }
   }
 
@@ -56,12 +56,12 @@
 
   &:not([aria-disabled="true"]):hover,
   &:not(:disabled):hover {
-    border-color: var(--colors-success-dark);
+    border-color: var(--colors-success-800);
   }
 }
 
 .label {
-  color: var(--colors-neutral-dark);
+  color: var(--colors-neutral-800);
   display: inline-block;
   padding-block-start: 1.2rem;
 
@@ -71,6 +71,6 @@
 }
 
 .description {
-  color: var(--colors-neutral-regular);
+  color: var(--colors-neutral-500);
   display: block;
 }

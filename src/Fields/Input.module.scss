@@ -1,6 +1,6 @@
 .container {
   label {
-    color: var(--colors-neutral-dark);
+    color: var(--colors-neutral-800);
     font-size: 1.2rem;
     font-weight: 500;
     padding-inline-start: 0.2rem;
@@ -11,7 +11,7 @@
     justify-content: space-between;
 
     >span {
-      color: var(--colors-neutral-dark);
+      color: var(--colors-neutral-800);
       font-size: 1.2rem;
     }
   }
@@ -22,19 +22,19 @@
     padding: 0.2rem;
 
     &:has(input:user-valid) {
-      background-color: color-mix(in srgb, var(--colors-primary-dark), transparent 60%);
+      background-color: color-mix(in srgb, var(--colors-primary-800), transparent 60%);
     }
 
     &:has(input:user-invalid) {
-      background-color: var(--colors-error-light);
+      background-color: var(--colors-error-300);
     }
 
     input {
       appearance: none;
-      background-color: var(--colors-neutral-off-white);
-      border: 0.1rem solid var(--colors-neutral-medium);
-      border-radius: var(--corner-small);
-      color: var(--colors-neutral-dark);
+      background-color: var(--colors-neutral-100);
+      border: 0.1rem solid var(--colors-neutral-400);
+      border-radius: var(--corner-sm);
+      color: var(--colors-neutral-800);
       font-size: 1.6rem;
       height: 5.4rem;
       line-height: 1.375;
@@ -56,11 +56,11 @@
       }
 
       &:user-valid {
-        border-color: var(--colors-primary);
+        border-color: var(--colors-primary-700);
       }
 
       &:user-invalid {
-        border-color: var(--colors-error-dark);
+        border-color: var(--colors-error-800);
       }
 
       &[aria-disabled="true"],
@@ -78,11 +78,11 @@
       +abbr {
         align-items: center;
         appearance: none;
-        background-color: var(--colors-neutral-off-white);
+        background-color: var(--colors-neutral-100);
         border-start-end-radius: 1rem;
         border-end-end-radius: 1rem;
         border-width: 0;
-        color: var(--colors-neutral-medium);
+        color: var(--colors-neutral-400);
         display: flex;
         height: 5rem;
         inset-block-start: 0.4rem;
@@ -103,7 +103,7 @@
       }
 
       ~span {
-        color: var(--colors-error-dark);
+        color: var(--colors-error-800);
         display: inline-block;
         font-size: 1.2rem;
         margin-block-start: 0.8rem;

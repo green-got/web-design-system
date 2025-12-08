@@ -18,12 +18,12 @@ export const Typography: Story = () => (
 
     <hr />
 
-    <h1>h1 . Faucibus vitae orci at proin est mi rhoncus.</h1>
-    <h2>h2 . Faucibus vitae orci at proin est mi rhoncus.</h2>
-    <h3>h3 . Faucibus vitae orci at proin est mi rhoncus.</h3>
-    <h4>h4 . Faucibus vitae orci at proin est mi rhoncus.</h4>
-    <h5>h5 . Faucibus vitae orci at proin est mi rhoncus.</h5>
-    <h6>h6 . Faucibus vitae orci at proin est mi rhoncus.</h6>
+    <h1>h1 . Faucipus vitae orci at droin est mi rhoncus.</h1>
+    <h2>h2 . Faucipus vitae orci at droin est mi rhoncus.</h2>
+    <h3>h3 . Faucipus vitae orci at droin est mi rhoncus.</h3>
+    <h4>h4 . Faucipus vitae orci at droin est mi rhoncus.</h4>
+    <h5>h5 . Faucipus vitae orci at droin est mi rhoncus.</h5>
+    <h6>h6 . Faucipus vitae orci at droin est mi rhoncus.</h6>
 
     <hr />
 

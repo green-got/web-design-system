@@ -23,38 +23,63 @@ export const Colors: Story = () => (
       <h2>Neutral</h2>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-neutral-black)' }} />
-        <p>--colors-neutral-black</p>
+        <div style={{ backgroundColor: 'var(--colors-neutral-950)' }} />
+        <p>--colors-neutral-950</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-neutral-dark)' }} />
-        <p>--colors-neutral-dark</p>
+        <div style={{ backgroundColor: 'var(--colors-neutral-900)' }} />
+        <p>--colors-neutral-900</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-neutral-regular)' }} />
-        <p>--colors-neutral-regular</p>
+        <div style={{ backgroundColor: 'var(--colors-neutral-800)' }} />
+        <p>--colors-neutral-800</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-neutral-medium)' }} />
-        <p>--colors-neutral-medium</p>
+        <div style={{ backgroundColor: 'var(--colors-neutral-700)' }} />
+        <p>--colors-neutral-700</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-neutral-light)' }} />
-        <p>--colors-neutral-light</p>
+        <div style={{ backgroundColor: 'var(--colors-neutral-600)' }} />
+        <p>--colors-neutral-600</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-neutral-sand)' }} />
-        <p>--colors-neutral-sand</p>
+        <div style={{ backgroundColor: 'var(--colors-neutral-500)' }} />
+        <p>--colors-neutral-500</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-neutral-white)' }} />
-        <p>--colors-neutral-white</p>
+        <div style={{ backgroundColor: 'var(--colors-neutral-400)' }} />
+        <p>--colors-neutral-400</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-neutral-300)' }} />
+        <p>--colors-neutral-300</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-neutral-200)' }} />
+        <p>--colors-neutral-200</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-neutral-100)' }} />
+        <p>--colors-neutral-100</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-neutral-50)' }} />
+        <p>--colors-neutral-50</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-neutral-25)' }} />
+        <p>--colors-neutral-25</p>
       </div>
     </section>
 
@@ -62,71 +87,63 @@ export const Colors: Story = () => (
       <h2>Primary</h2>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-primary-dark)' }} />
-        <p>--colors-primary-dark</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-950)' }} />
+        <p>--colors-primary-950</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-primary)' }} />
-        <p>--colors-primary</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-900)' }} />
+        <p>--colors-primary-900</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-primary-medium)' }} />
-        <p>--colors-primary-medium</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-800)' }} />
+        <p>--colors-primary-800</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-primary-light)' }} />
-        <p>--colors-primary-light</p>
-      </div>
-    </section>
-
-    <section className={styles.container}>
-      <h2>Error</h2>
-
-      <div>
-        <div style={{ backgroundColor: 'var(--colors-error-dark)' }} />
-        <p>--colors-error-dark</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-700)' }} />
+        <p>--colors-primary-700</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-error)' }} />
-        <p>--colors-error</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-600)' }} />
+        <p>--colors-primary-600</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-error-medium)' }} />
-        <p>--colors-error-medium</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-500)' }} />
+        <p>--colors-primary-500</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-error-light)' }} />
-        <p>--colors-error-light</p>
-      </div>
-    </section>
-
-    <section className={styles.container}>
-      <h2>Success</h2>
-
-      <div>
-        <div style={{ backgroundColor: 'var(--colors-success-dark)' }} />
-        <p>--colors-success-dark</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-400)' }} />
+        <p>--colors-primary-400</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-success)' }} />
-        <p>--colors-success</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-300)' }} />
+        <p>--colors-primary-300</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-success-medium)' }} />
-        <p>--colors-success-medium</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-200)' }} />
+        <p>--colors-primary-200</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-success-light)' }} />
-        <p>--colors-success-light</p>
+        <div style={{ backgroundColor: 'var(--colors-primary-100)' }} />
+        <p>--colors-primary-100</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-primary-50)' }} />
+        <p>--colors-primary-50</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-primary-25)' }} />
+        <p>--colors-primary-25</p>
       </div>
     </section>
 
@@ -134,47 +151,191 @@ export const Colors: Story = () => (
       <h2>Warning</h2>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-warning-dark)' }} />
-        <p>--colors-warning-dark</p>
+        <div style={{ backgroundColor: 'var(--colors-warning-950)' }} />
+        <p>--colors-warning-950</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-warning)' }} />
-        <p>--colors-warning</p>
+        <div style={{ backgroundColor: 'var(--colors-warning-900)' }} />
+        <p>--colors-warning-900</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-warning-medium)' }} />
-        <p>--colors-warning-medium</p>
+        <div style={{ backgroundColor: 'var(--colors-warning-800)' }} />
+        <p>--colors-warning-800</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-warning-light)' }} />
-        <p>--colors-warning-light</p>
+        <div style={{ backgroundColor: 'var(--colors-warning-700)' }} />
+        <p>--colors-warning-700</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-warning-600)' }} />
+        <p>--colors-warning-600</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-warning-500)' }} />
+        <p>--colors-warning-500</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-warning-400)' }} />
+        <p>--colors-warning-400</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-warning-300)' }} />
+        <p>--colors-warning-300</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-warning-200)' }} />
+        <p>--colors-warning-200</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-warning-100)' }} />
+        <p>--colors-warning-100</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-warning-50)' }} />
+        <p>--colors-warning-50</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-warning-25)' }} />
+        <p>--colors-warning-25</p>
       </div>
     </section>
 
     <section className={styles.container}>
-      <h2>Info</h2>
+      <h2>Success</h2>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-info-dark)' }} />
-        <p>--colors-info-dark</p>
+        <div style={{ backgroundColor: 'var(--colors-success-950)' }} />
+        <p>--colors-success-950</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-info)' }} />
-        <p>--colors-info</p>
+        <div style={{ backgroundColor: 'var(--colors-success-900)' }} />
+        <p>--colors-success-900</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-info-medium)' }} />
-        <p>--colors-info-medium</p>
+        <div style={{ backgroundColor: 'var(--colors-success-800)' }} />
+        <p>--colors-success-800</p>
       </div>
 
       <div>
-        <div style={{ backgroundColor: 'var(--colors-info-light)' }} />
-        <p>--colors-info-light</p>
+        <div style={{ backgroundColor: 'var(--colors-success-700)' }} />
+        <p>--colors-success-700</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-success-600)' }} />
+        <p>--colors-success-600</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-success-500)' }} />
+        <p>--colors-success-500</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-success-400)' }} />
+        <p>--colors-success-400</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-success-300)' }} />
+        <p>--colors-success-300</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-success-200)' }} />
+        <p>--colors-success-200</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-success-100)' }} />
+        <p>--colors-success-100</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-success-50)' }} />
+        <p>--colors-success-50</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-success-25)' }} />
+        <p>--colors-success-25</p>
+      </div>
+    </section>
+
+    <section className={styles.container}>
+      <h2>Error</h2>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-950)' }} />
+        <p>--colors-error-950</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-900)' }} />
+        <p>--colors-error-900</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-800)' }} />
+        <p>--colors-error-800</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-700)' }} />
+        <p>--colors-error-700</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-600)' }} />
+        <p>--colors-error-600</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-500)' }} />
+        <p>--colors-error-500</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-400)' }} />
+        <p>--colors-error-400</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-300)' }} />
+        <p>--colors-error-300</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-200)' }} />
+        <p>--colors-error-200</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-100)' }} />
+        <p>--colors-error-100</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-50)' }} />
+        <p>--colors-error-50</p>
+      </div>
+
+      <div>
+        <div style={{ backgroundColor: 'var(--colors-error-25)' }} />
+        <p>--colors-error-25</p>
       </div>
     </section>
   </>
