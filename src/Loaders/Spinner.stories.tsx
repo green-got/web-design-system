@@ -1,4 +1,3 @@
-import React from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { Spinner } from './Spinner';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';

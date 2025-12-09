@@ -412,7 +412,7 @@ export const InputWithCustomValidity = () => {
 };
 
 export const InputFile = () => {
-  const [files, setFiles] = useState<File[]>([]);
+  const [_files, setFiles] = useState<File[]>([]);
   return (
     <>
       <GlobalStyles />

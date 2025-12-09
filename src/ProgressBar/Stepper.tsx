@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Stepper.module.scss';
 import { mergeClasses } from '../utils/mergeClasses';
 
@@ -17,7 +16,6 @@ export function Stepper({ className, step, steps }: IStepperProps) {
       aria-valuenow={step}
       className={mergeClasses([styles.stepper, className])}
       role="progressbar"
-      tabIndex={0}
     >
       {typeof steps === 'number'
         ? [...new Array(steps)].map((_, i) => (

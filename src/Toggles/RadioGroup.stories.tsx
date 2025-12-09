@@ -1,4 +1,4 @@
-import React, { type FC, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { RadioGroup, Radio } from './RadioGroup';
 import { Button } from '../Button';

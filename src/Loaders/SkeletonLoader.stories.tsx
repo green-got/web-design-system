@@ -1,4 +1,3 @@
-import React from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { SkeletonLoader } from './SkeletonLoader';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';

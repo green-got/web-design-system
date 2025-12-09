@@ -60,8 +60,7 @@ export type TRadioProps<R extends Radio> = {
   ref?: RefObject<HTMLInputElement | null>;
   required?: boolean;
   value: string;
-  // biome-ignore lint/complexity/noBannedTypes: <explanation>
-} & (R extends TRadioCustom ? { radio: R } : {});
+} & (R extends TRadioCustom ? { radio: R } : { [key: string]: never });
 
 export function RadioGroup<R extends Radio>({
   checked,

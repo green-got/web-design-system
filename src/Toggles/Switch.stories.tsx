@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { Switch } from './Switch';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';

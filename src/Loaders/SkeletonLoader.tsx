@@ -1,4 +1,3 @@
-import React from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './SkeletonLoader.module.scss';
 

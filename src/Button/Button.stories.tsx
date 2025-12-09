@@ -1,4 +1,3 @@
-import React from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { PlusIcon } from '../Icons/Icons';
 import { Button } from './Button';
