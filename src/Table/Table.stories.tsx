@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import {
   Table,
@@ -46,7 +45,7 @@ export const TableMain: Story = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data.map((row, i) => (
+          {data.map((row) => (
             <TableRow columns={columns} key={row.id}>
               {columns.map((column) => (
                 <TableCell key={column.field}>{row[column.field]}</TableCell>

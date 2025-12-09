@@ -1,4 +1,3 @@
-import React from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 import {
@@ -101,11 +100,6 @@ const cardStyles = {
   height: '50px',
   justifyContent: 'center',
   width: '35px',
-};
-
-const turnStyles = {
-  ...cardStyles,
-  transform: 'rotate(90deg)',
 };
 
 export const Icons: Story = () => (

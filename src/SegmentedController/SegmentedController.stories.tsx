@@ -1,4 +1,4 @@
-import React, { type MouseEvent, useState } from 'react';
+import { type MouseEvent, useState } from 'react';
 import type { StoryDefault, Story } from '@ladle/react';
 import { SegmentedController } from './SegmentedController';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
