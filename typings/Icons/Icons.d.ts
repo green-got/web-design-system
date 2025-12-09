@@ -1,98 +1,268 @@
 import type { ReactNode } from 'react';
 export interface IIconProps {
-    attributes?: {
-        [key: string]: string | number;
-    };
-    className?: string;
-    height: number;
-    title?: string;
-    width: number;
+  attributes?: {
+    [key: string]: string | number;
+  };
+  className?: string;
+  height: number;
+  title?: string;
+  width: number;
 }
 export interface IIconBaseProps extends IIconProps {
-    renderIcon: (title?: string) => ReactNode;
+  renderIcon: (title?: string) => ReactNode;
 }
-export declare function ChevronRightIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ChevronLeftIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ChevronUpIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ChevronDownIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ExternalLinkIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function HelpIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function InfoIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function PaperclipIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function YoutubeIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ClockIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CircledXIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function TextFileIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function EditIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function EditLineIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function PlusIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function XIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function DownloadIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function TrashIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CircledPlusIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CheckedSquareIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function LockIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function UnlockIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function DeleteIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ListIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function StarIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function UserIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CheckmarkIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function BellIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function GearIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function EyeIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function EyeClosedIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function SlidersIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function BoltIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function MoreHorizontalIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function MoreVerticalIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CopyIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function UsersIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function SendIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function LoginIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CalendarIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CardIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function PhoneIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ArcIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function UpToTheRightIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ShieldIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function SnowflakeIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function SearchIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function MenuIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function BankIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function StatementIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function NoCardIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function SpeechBubblesIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function LeftRightArrowsIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function UpDownArrowsIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function SmartphoneRingingIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function FaceIdIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function TouchIdIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function AsteriskIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function AlertTriangleIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function RotateClockwiseIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CoinsIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function NoSmokingIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function NoPornographyIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function NoWeaponIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function NoOilIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function HomeIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function HistoryTimerIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function SignalIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function HeartIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function EarthIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function TreeIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function TrainIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function BriefcaseIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function PackageIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function LaptopIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function IdCardIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function MaskIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CrossIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function CrownIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function DumbbellIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ShirtIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function ShoppingBagIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function TrendingUpIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function UtensilsIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
-export declare function PaletteIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function ChevronRightIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ChevronLeftIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ChevronUpIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ChevronDownIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ExternalLinkIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function HelpIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function InfoIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function PaperclipIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function YoutubeIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ClockIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CircledXIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function TextFileIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function EditIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function EditLineIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function PlusIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function XIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function DownloadIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function TrashIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CircledPlusIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CheckedSquareIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function LockIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function UnlockIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function DeleteIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ListIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function StarIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function UserIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CheckmarkIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function BellIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function GearIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function EyeIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function EyeClosedIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function SlidersIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function BoltIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function MoreHorizontalIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function MoreVerticalIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CopyIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function UsersIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function SendIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function LoginIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CalendarIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CardIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function PhoneIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ArcIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function UpToTheRightIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ShieldIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function SnowflakeIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function SearchIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function MenuIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function BankIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function StatementIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function NoCardIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function SpeechBubblesIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function LeftRightArrowsIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function UpDownArrowsIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function SmartphoneRingingIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function FaceIdIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function TouchIdIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function AsteriskIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function AlertTriangleIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function RotateClockwiseIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CoinsIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function NoSmokingIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function NoPornographyIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function NoWeaponIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function NoOilIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function HomeIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function HistoryTimerIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function SignalIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function HeartIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function EarthIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function TreeIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function TrainIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function BriefcaseIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function PackageIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function LaptopIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function IdCardIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function MaskIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CrossIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function CrownIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function DumbbellIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ShirtIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function ShoppingBagIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function TrendingUpIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function UtensilsIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;
+export declare function PaletteIcon(
+  props: IIconProps,
+): import('react/jsx-runtime').JSX.Element;

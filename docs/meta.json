@@ -7,10 +7,7 @@
   "stories": {
     "components--buttons--button-main": {
       "name": "Button main",
-      "levels": [
-        "Components",
-        "Buttons"
-      ],
+      "levels": ["Components", "Buttons"],
       "locStart": 10,
       "locEnd": 18,
       "filePath": "src/Button/Button.stories.tsx",
@@ -18,10 +15,7 @@
     },
     "components--buttons--primary-button": {
       "name": "Primary button",
-      "levels": [
-        "Components",
-        "Buttons"
-      ],
+      "levels": ["Components", "Buttons"],
       "locStart": 20,
       "locEnd": 22,
       "filePath": "src/Button/Button.stories.tsx",
@@ -29,10 +23,7 @@
     },
     "components--buttons--secondary-button": {
       "name": "Secondary button",
-      "levels": [
-        "Components",
-        "Buttons"
-      ],
+      "levels": ["Components", "Buttons"],
       "locStart": 24,
       "locEnd": 26,
       "filePath": "src/Button/Button.stories.tsx",
@@ -40,10 +31,7 @@
     },
     "foundations--colors--colors": {
       "name": "Colors",
-      "levels": [
-        "Foundations",
-        "Colors"
-      ],
+      "levels": ["Foundations", "Colors"],
       "locStart": 10,
       "locEnd": 157,
       "filePath": "src/Colors/Colors.stories.tsx",
@@ -51,10 +39,7 @@
     },
     "foundations--corners--corners": {
       "name": "Corners",
-      "levels": [
-        "Foundations",
-        "Corners"
-      ],
+      "levels": ["Foundations", "Corners"],
       "locStart": 10,
       "locEnd": 44,
       "filePath": "src/Corners/Corners.stories.tsx",
@@ -62,10 +47,7 @@
     },
     "foundations--global-styles--global-styles-main": {
       "name": "Global styles main",
-      "levels": [
-        "Foundations",
-        "Global styles"
-      ],
+      "levels": ["Foundations", "Global styles"],
       "locStart": 9,
       "locEnd": 18,
       "filePath": "src/GlobalStyles/GlobalStyles.stories.tsx",
@@ -73,10 +55,7 @@
     },
     "foundations--icons--icons": {
       "name": "Icons",
-      "levels": [
-        "Foundations",
-        "Icons"
-      ],
+      "levels": ["Foundations", "Icons"],
       "locStart": 9,
       "locEnd": 14,
       "filePath": "src/Icons/Icons.stories.tsx",
@@ -84,10 +63,7 @@
     },
     "components--skeletonloader--skeleton-loader-main": {
       "name": "Skeleton loader main",
-      "levels": [
-        "Components",
-        "Skeletonloader"
-      ],
+      "levels": ["Components", "Skeletonloader"],
       "locStart": 10,
       "locEnd": 18,
       "filePath": "src/Loaders/SkeletonLoader.stories.tsx",
@@ -95,10 +71,7 @@
     },
     "components--spinners--spinner-main": {
       "name": "Spinner main",
-      "levels": [
-        "Components",
-        "Spinners"
-      ],
+      "levels": ["Components", "Spinners"],
       "locStart": 10,
       "locEnd": 48,
       "filePath": "src/Loaders/Spinner.stories.tsx",
@@ -106,10 +79,7 @@
     },
     "components--pagination--pagination-story": {
       "name": "Pagination story",
-      "levels": [
-        "Components",
-        "Pagination"
-      ],
+      "levels": ["Components", "Pagination"],
       "locStart": 9,
       "locEnd": 14,
       "filePath": "src/Pagination/Pagination.stories.tsx",
@@ -117,10 +87,7 @@
     },
     "foundations--shadows--shadows": {
       "name": "Shadows",
-      "levels": [
-        "Foundations",
-        "Shadows"
-      ],
+      "levels": ["Foundations", "Shadows"],
       "locStart": 10,
       "locEnd": 39,
       "filePath": "src/Shadows/Shadows.stories.tsx",
@@ -128,10 +95,7 @@
     },
     "foundations--spacings--spacings": {
       "name": "Spacings",
-      "levels": [
-        "Foundations",
-        "Spacings"
-      ],
+      "levels": ["Foundations", "Spacings"],
       "locStart": 9,
       "locEnd": 14,
       "filePath": "src/Spacings/Spacings.stories.tsx",
@@ -139,10 +103,7 @@
     },
     "components--checkbox--checkbox-main": {
       "name": "Checkbox main",
-      "levels": [
-        "Components",
-        "Checkbox"
-      ],
+      "levels": ["Components", "Checkbox"],
       "locStart": 10,
       "locEnd": 45,
       "filePath": "src/Toggles/Checkbox.stories.tsx",
@@ -150,10 +111,7 @@
     },
     "foundations--typography--typography": {
       "name": "Typography",
-      "levels": [
-        "Foundations",
-        "Typography"
-      ],
+      "levels": ["Foundations", "Typography"],
       "locStart": 9,
       "locEnd": 55,
       "filePath": "src/Typography/Typography.stories.tsx",
@@ -161,9 +119,7 @@
     },
     "home--home": {
       "name": "Home",
-      "levels": [
-        "Home"
-      ],
+      "levels": ["Home"],
       "locStart": 10,
       "locEnd": 16,
       "filePath": "src/home.stories.tsx",

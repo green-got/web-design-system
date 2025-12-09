@@ -1,1 +1,12 @@
-import{j as t}from"./index-ff920237.js";import{G as o}from"./GlobalStyles-5a148353.js";const i={title:"Components / Pagination"},a=()=>t.jsxs(t.Fragment,{children:[t.jsx(o,{}),"Here is a pagination component story."]});typeof window<"u"&&window.document&&window.document.createElement&&document.documentElement.setAttribute("data-storyloaded","");export{a as PaginationStory,i as default};
+import { j as t } from './index-ff920237.js';
+import { G as o } from './GlobalStyles-5a148353.js';
+const i = { title: 'Components / Pagination' },
+  a = () =>
+    t.jsxs(t.Fragment, {
+      children: [t.jsx(o, {}), 'Here is a pagination component story.'],
+    });
+typeof window < 'u' &&
+  window.document &&
+  window.document.createElement &&
+  document.documentElement.setAttribute('data-storyloaded', '');
+export { a as PaginationStory, i as default };
