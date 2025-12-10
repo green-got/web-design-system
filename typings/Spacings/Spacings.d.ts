@@ -1,4 +1,4 @@
 export declare const Spacings: {
-  small: number;
-  large: number;
+    small: number;
+    large: number;
 };
