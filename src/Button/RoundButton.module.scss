@@ -1,0 +1,27 @@
+.round-button {
+  align-items: center;
+  background-color: var(--colors-neutral-25);
+  border-color: var(--colors-neutral-800);
+  border-radius: 50%;
+  border-width: 0.1rem;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--colors-neutral-100);
+  }
+
+  &.sm {
+    border-style: dotted;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &.md {
+    border-color: var(--colors-neutral-300);
+    border-style: solid;
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+}

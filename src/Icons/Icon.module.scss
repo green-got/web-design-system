@@ -1,0 +1,41 @@
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+
+  &.soft {
+    border-radius: var(--corner-md);
+  }
+
+  &.firm {
+    border-radius: var(--corner-sm);
+  }
+
+  &.hard {
+    border-radius: var(--corner-xs);
+  }
+
+  &.round {
+    border-radius: 50%;
+  }
+
+  &.md {
+    height: 4.6rem;
+    width: 4.6rem;
+  }
+
+  &.lg {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  &.light {
+    background-color: var(--colors-neutral-25);
+    color: var(--colors-primary-950);
+  }
+
+  &.dark {
+    background-color: var(--colors-primary-950);
+    color: var(--colors-neutral-25);
+  }
+}

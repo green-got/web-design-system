@@ -1,0 +1,20 @@
+.button-card {
+  align-items: center;
+  border-radius: var(--corner-sm);
+  border-width: 0;
+  display: inline-flex;
+  font-size: 1.4rem;
+  gap: var(--spacing-2xs);
+  padding: calc(var(--spacing-2xs) / 2);
+  padding-inline-end: var(--spacing-xs);
+
+  &.dark {
+    background-color: var(--colors-primary-950);
+    color: var(--colors-neutral-25);
+  }
+
+  &.light {
+    background-color: var(--colors-neutral-25);
+    color: var(--colors-primary-950);
+  }
+}

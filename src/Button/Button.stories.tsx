@@ -1,6 +1,15 @@
 import type { StoryDefault, Story } from '@ladle/react';
-import { PlusIcon } from '../Icons/Icons';
+import {
+  LeftRightArrowsIcon,
+  LockIcon,
+  PlusIcon,
+  UpRightArrowIcon,
+  XIcon,
+} from '../Icons/Icons';
 import { Button } from './Button';
+import { RoundButton } from './RoundButton';
+import { ButtonCard } from './ButtonCard';
+import { Icon } from '../Icons';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
 export default {
@@ -71,6 +80,47 @@ export const ButtonMain: Story = () => (
     <Button aria-disabled={true} handleClick={noop} variant="danger">
       Aria disabled
     </Button>
+
+    <h2>Ghost button</h2>
+    <br />
+    <Button handleClick={noop} variant="ghost">
+      My button
+    </Button>
+    <br />
+    <br />
+    <Button block handleClick={noop} variant="ghost">
+      My button
+    </Button>
+    <br />
+    <Button disabled handleClick={noop} variant="ghost">
+      Disabled
+    </Button>
+    <br />
+    <br />
+    <Button aria-disabled={true} handleClick={noop} variant="ghost">
+      Aria disabled
+    </Button>
+
+    <h2>Tab button</h2>
+    <br />
+    <Button active handleClick={noop} variant="tab">
+      My button
+    </Button>
+    <br />
+    <br />
+    <Button handleClick={noop} variant="tab">
+      My button
+    </Button>
+    <br />
+    <br />
+    <Button disabled handleClick={noop} variant="tab">
+      Disabled
+    </Button>
+    <br />
+    <br />
+    <Button aria-disabled={true} handleClick={noop} variant="tab">
+      Aria disabled
+    </Button>
   </>
 );
 
@@ -78,9 +128,14 @@ export const IconButton: Story = () => (
   <>
     <h1>Icon Button</h1>
     <br />
-    <Button round>
+    <RoundButton size="sm">
       <PlusIcon height={14} width={14} />
-    </Button>
+    </RoundButton>
+    <br />
+    <br />
+    <RoundButton>
+      <XIcon height={20} width={20} />
+    </RoundButton>
     <br />
     <br />
     <Button handleClick={noop}>
@@ -156,4 +211,30 @@ export const IconButton: Story = () => (
       </svg>
     </Button>
   </>
+);
+
+export const ButtonCards: Story = () => (
+  <section
+    style={{
+      backgroundColor: 'var(--colors-primary-700',
+      padding: 'var(--spacing-sm)',
+    }}
+  >
+    <ButtonCard handleClick={noop}>
+      <Icon corner="hard">
+        <UpRightArrowIcon height={16} width={16} />
+      </Icon>
+      Button label
+    </ButtonCard>
+    <br />
+    <br />
+    <ButtonCard handleClick={noop} variant="light">
+      <Icon corner="firm" variant="dark">
+        <UpRightArrowIcon height={16} width={16} />
+      </Icon>
+      Button label
+    </ButtonCard>
+    <br />
+    <br />
+  </section>
 );

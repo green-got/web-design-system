@@ -70,6 +70,50 @@
     }
   }
 
+  &.ghost {
+    background-color: transparent;
+
+    &:active {
+      background-color: var(--colors-neutral-950);
+      color: var(--colors-neutral-25);
+    }
+
+    &[aria-disabled="true"],
+    &:disabled {
+      background-color: var(--colors-neutral-50);
+      color: var(--colors-neutral-600);
+    }
+  }
+
+  &.tab {
+    background-color: var(--colors-neutral-25);
+    border: 0.1rem solid var(--colors-neutral-200);
+    color: var(--colors-primary-950);
+    font-weight: 400;
+    padding-block: 0.9rem;
+
+    &:hover {
+      background-color: var(--colors-neutral-200);
+    }
+
+    &:active {
+      background-color: var(--colors-neutral-950);
+      color: var(--colors-neutral-25);
+    }
+
+    &[aria-disabled="true"],
+    &:disabled {
+      background-color: var(--colors-neutral-50);
+      color: var(--colors-neutral-600);
+    }
+
+    &.active {
+      background-color: var(--colors-primary-950);
+      border: 0.1rem solid var(--colors-primary-950);
+      color: var(--colors-neutral-25);
+    }
+  }
+
   *:has(+ svg),
   svg:has(+ *) {
     margin-inline-end: 0.8rem;

@@ -814,7 +814,7 @@ export function ArcIcon(props: IIconProps) {
   );
 }
 
-export function UpToTheRightIcon(props: IIconProps) {
+export function TurnRightIcon(props: IIconProps) {
   return (
     <Icon
       attributes={props.attributes}
@@ -1004,6 +1004,25 @@ export function UpDownArrowsIcon(props: IIconProps) {
         <>
           <title>{title ? title : 'Up and down arrows icon'}</title>
           <path d="M11.9498 7.94975L10.5356 9.36396L8.00079 6.828L8.00004 20H6.00004L6.00079 6.828L3.46451 9.36396L2.05029 7.94975L7.00004 3L11.9498 7.94975ZM21.9498 16.0503L17 21L12.0503 16.0503L13.4645 14.636L16.0008 17.172L16 4H18L18.0008 17.172L20.5356 14.636L21.9498 16.0503Z" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function UpRightArrowIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={{ strokeWidth: 2, ...props.attributes }}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Up right arrow icon'}</title>
+          <path d="M13 5H19V11" />
+          <path d="M19 5L5 19" />
         </>
       )}
       title={props.title}

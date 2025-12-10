@@ -76,12 +76,14 @@ export {
   TrashIcon,
   TreeIcon,
   TrendingUpIcon,
+  TurnRightIcon,
   UnlockIcon,
   UpDownArrowsIcon,
-  UpToTheRightIcon,
+  UpRightArrowIcon,
   UserIcon,
   UsersIcon,
   UtensilsIcon,
   XIcon,
   YoutubeIcon,
 } from './Icons';
+export { Icon } from './Icon';

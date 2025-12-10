@@ -80,7 +80,8 @@ import {
   TrendingUpIcon,
   UnlockIcon,
   UpDownArrowsIcon,
-  UpToTheRightIcon,
+  UpRightArrowIcon,
+  TurnRightIcon,
   UserIcon,
   UsersIcon,
   UtensilsIcon,
@@ -131,6 +132,9 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <UpDownArrowsIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <UpRightArrowIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
         <ExternalLinkIcon height={18} width={18} />
@@ -241,7 +245,7 @@ export const Icons: Story = () => (
         <LoginIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
-        <UpToTheRightIcon height={18} width={18} />
+        <TurnRightIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
         <CardIcon height={18} width={18} />

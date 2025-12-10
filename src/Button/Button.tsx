@@ -10,16 +10,18 @@ import { mergeClasses } from '../utils/mergeClasses';
 export type ButtonType = 'button' | 'submit';
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  active?: boolean;
   block?: boolean;
   children?: ReactNode;
   className?: string;
   handleClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   ref?: RefObject<HTMLButtonElement | null>;
   type?: ButtonType;
-  variant?: 'danger' | 'primary' | 'secondary';
+  variant?: 'danger' | 'ghost' | 'primary' | 'secondary' | 'tab';
 }
 
 export const Button = ({
+  active = false,
   block,
   className,
   children,
@@ -40,7 +42,12 @@ export const Button = ({
             ? styles.secondary
             : variant === 'danger'
               ? styles.danger
-              : undefined,
+              : variant === 'ghost'
+                ? styles.ghost
+                : variant === 'tab'
+                  ? styles.tab
+                  : undefined,
+        active ? styles.active : undefined,
         block ? styles.block : undefined,
         className,
       ])}
