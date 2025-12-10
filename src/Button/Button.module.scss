@@ -3,15 +3,15 @@
   appearance: none;
   border-radius: var(--corner-sm);
   border-width: 0;
-  color: var(--colors-neutral-950);
+  color: var(--colors-neutral-900);
   cursor: pointer;
   display: inline-flex;
   font-size: var(--text-xs);
   font-weight: 600;
   justify-content: center;
   line-height: 1.14;
-  padding-block: 1.4rem;
-  padding-inline: var(--spacing-xs);
+  padding-block: var(--spacing-xs);
+  padding-inline: var(--spacing-sm);
 
   &.block {
     display: flex;
@@ -20,53 +20,65 @@
 
   &.primary {
     background-color: var(--colors-primary-700);
+    color: var(--colors-primary-950);
+
+    &:hover {
+      background-color: var(--colors-primary-800);
+    }
 
     &:active {
-      background-color: var(--colors-neutral-950);
-      color: var(--colors-neutral-25);
+      background-color: var(--colors-primary-700);
     }
 
     &[aria-disabled="true"],
     &:disabled {
-      background-color: var(--colors-primary-100);
-      color: var(--colors-neutral-600);
+      background-color: var(--colors-neutral-50);
+      color: var(--colors-neutral-400);
+      cursor: auto;
     }
   }
 
   &.secondary {
-    background-color: var(--colors-neutral-200);
-    border: 0.1rem solid var(--colors-primary-950);
-    color: var(--colors-primary-950);
-    padding-block: 1.3rem;
+    background-color: var(--colors-neutral-50);
+    border: 0.1rem solid var(--colors-neutral-400);
+    color: var(--colors-neutral-900);
+
+    &:hover {
+      background-color: var(--colors-neutral-300);
+    }
 
     &:active {
-      background-color: var(--colors-neutral-950);
-      color: var(--colors-neutral-25);
+      background-color: var(--colors-neutral-50);
     }
 
     &[aria-disabled="true"],
     &:disabled {
-      background-color: var(--colors-primary-25);
+      background-color: var(--colors-neutral-50);
       border: 0.1rem solid var(--colors-neutral-300);
-      color: var(--colors-neutral-600);
+      color: var(--colors-neutral-400);
+      cursor: auto;
     }
   }
 
   &.danger {
     background-color: var(--colors-error-200);
-    border: 0.1rem solid var(--colors-error-500);
-    padding-block: 1.3rem;
+    border: 0.1rem solid var(--colors-error-400);
+    color: var(--colors-error-900);
+
+    &:hover {
+      background-color: var(--colors-error-300);
+    }
 
     &:active {
-      background-color: var(--colors-neutral-950);
-      color: var(--colors-neutral-25);
+      background-color: var(--colors-error-200);
     }
 
     &[aria-disabled="true"],
     &:disabled {
-      background-color: var(--colors-error-50);
+      background-color: var(--colors-neutral-50);
       border: 0.1rem solid var(--colors-neutral-300);
-      color: var(--colors-neutral-600);
+      color: var(--colors-neutral-400);
+      cursor: auto;
     }
   }
 
@@ -116,6 +128,6 @@
 
   *:has(+ svg),
   svg:has(+ *) {
-    margin-inline-end: 0.8rem;
+    margin-inline-end: var(--spacing-2xs);
   }
 }

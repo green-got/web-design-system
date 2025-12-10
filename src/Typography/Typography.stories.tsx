@@ -32,23 +32,28 @@ export const Typography: Story = () => (
       ullamcorper. Sit lobortis sed cras pharetra. Eget pharetra, eu vulputate
       eu. Donec gravida elit commodo, arcu, id diam sed turpis.
     </p>
-    <p className="strong">
-      .strong : Aliquam vivamus bibendum cras arcu. Ornare laoreet id lectus
-      suspendisse risus, lacinia in. Metus justo cras sed volutpat luctus
-      vivamus ullamcorper. Sit lobortis sed cras pharetra. Eget pharetra, eu
-      vulputate eu. Donec gravida elit commodo, arcu, id diam sed turpis.
+    <p>
+      <strong>
+        .strong : Aliquam vivamus bibendum cras arcu. Ornare laoreet id lectus
+        suspendisse risus, lacinia in. Metus justo cras sed volutpat luctus
+        vivamus ullamcorper. Sit lobortis sed cras pharetra. Eget pharetra, eu
+        vulputate eu. Donec gravida elit commodo, arcu, id diam sed turpis.
+      </strong>
     </p>
-    <p className="caption">
+    <figcaption>
       .caption : Aliquam vivamus bibendum cras arcu. Ornare laoreet id lectus
       suspendisse risus, lacinia in. Metus justo cras sed volutpat luctus
       vivamus ullamcorper. Sit lobortis sed cras pharetra. Eget pharetra, eu
       vulputate eu. Donec gravida elit commodo, arcu, id diam sed turpis.
-    </p>
-    <p className="captionBold">
-      .captionBold : Aliquam vivamus bibendum cras arcu. Ornare laoreet id
-      lectus suspendisse risus, lacinia in. Metus justo cras sed volutpat luctus
-      vivamus ullamcorper. Sit lobortis sed cras pharetra. Eget pharetra, eu
-      vulputate eu. Donec gravida elit commodo, arcu, id diam sed turpis.
-    </p>
+    </figcaption>
+    <figcaption>
+      <strong>
+        .captionBold : Aliquam vivamus bibendum cras arcu. Ornare laoreet id
+        lectus suspendisse risus, lacinia in. Metus justo cras sed volutpat
+        luctus vivamus ullamcorper. Sit lobortis sed cras pharetra. Eget
+        pharetra, eu vulputate eu. Donec gravida elit commodo, arcu, id diam sed
+        turpis.
+      </strong>
+    </figcaption>
   </>
 );

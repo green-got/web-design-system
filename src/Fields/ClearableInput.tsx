@@ -5,7 +5,6 @@ import type { IInputProps } from './Input';
 import styles from './Input.module.scss';
 
 export function ClearableInput({
-  attributes,
   disabled,
   errorMessage,
   id,
@@ -41,7 +40,7 @@ export function ClearableInput({
         style={{ position: 'relative' }}
       >
         <input
-          {...attributes}
+          {...props}
           autoCorrect="off"
           disabled={disabled}
           id={id}
@@ -61,7 +60,7 @@ export function ClearableInput({
         />
         {!!value?.length && (
           <button
-            className={styles['clear-btn']}
+            className={styles.clear}
             onClick={() => {
               props.handleChange?.({
                 target: { value: '' },

@@ -104,11 +104,10 @@
   --corner-md: 1.2rem;
   --corner-lg: 1.6rem;
 
-  --text-3xl: 3.6rem;
-  --text-2xl: 3rem;
-  --text-xl: 2.4rem;
-  --text-lg: 2rem;
-  --text-md: 1.8rem;
+  --text-2xl: 3.2rem;
+  --text-xl: 2.8rem;
+  --text-lg: 2.4rem;
+  --text-md: 2rem;
   --text-sm: 1.6rem;
   --text-xs: 1.4rem;
   --text-2xs: 1.2rem;
@@ -144,47 +143,53 @@ body {
 h1 {
   // font-size: 12.8rem;
   font-size: var(--text-2xl);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.125;
 }
 
 h2 {
   // font-size: 9.6rem;
   font-size: var(--text-xl);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.375;
 }
 
 h3 {
   // font-size: 8.4rem;
   font-size: var(--text-lg);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.385;
 }
 
 h4 {
   // font-size: 7.2rem;
   font-size: var(--text-md);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.25;
 }
 
 h5 {
   // font-size: 6rem;
   font-size: var(--text-sm);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
 }
 
 h6 {
   // font-size: 4.8rem;
   font-size: var(--text-xs);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.25;
 }
 
 p {
   font-size: var(--text-sm);
+  font-weight: 400;
+}
+
+figcaption>strong,
+p>strong {
+  font-weight: 500;
 }
 
 hr {
