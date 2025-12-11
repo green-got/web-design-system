@@ -2,6 +2,7 @@
 import {
   type ChangeEvent,
   type FocusEvent,
+  type InputHTMLAttributes,
   type KeyboardEvent,
   type RefObject,
   useState,
@@ -9,19 +10,7 @@ import {
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Input.module.scss';
 
-export interface IInputProps {
-  attributes?: {
-    'aria-disabled'?: boolean;
-    autoFocus?: boolean;
-    inputMode?: 'numeric' | 'decimal';
-    max?: number | string;
-    maxLength?: number;
-    min?: number | string;
-    minLength?: number;
-    pattern?: string;
-    placeholder?: string;
-    title?: string;
-  };
+export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   defaultValue?: string;
   disabled?: boolean;
@@ -49,7 +38,6 @@ export interface IInputProps {
 }
 
 export function Input({
-  attributes,
   className,
   defaultValue,
   disabled,
@@ -98,7 +86,7 @@ export function Input({
       )}
       <div className={styles['validation-wrapper']}>
         <input
-          {...attributes}
+          {...props}
           autoCorrect="off"
           defaultValue={defaultValue}
           disabled={disabled}

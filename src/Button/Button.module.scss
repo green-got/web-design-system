@@ -9,9 +9,9 @@
   font-size: var(--text-xs);
   font-weight: 600;
   justify-content: center;
-  line-height: 1.14;
+  line-height: 1.5715;
   padding-block: var(--spacing-xs);
-  padding-inline: var(--spacing-sm);
+  padding-inline: var(--spacing-xs);
 
   &.block {
     display: flex;
@@ -20,19 +20,23 @@
 
   &.primary {
     background-color: var(--colors-primary-700);
+    border: 0.1rem solid var(--colors-primary-700);
     color: var(--colors-primary-950);
 
     &:hover {
       background-color: var(--colors-primary-800);
+      border: 0.1rem solid var(--colors-primary-800);
     }
 
     &:active {
       background-color: var(--colors-primary-700);
+      border: 0.1rem solid var(--colors-primary-700);
     }
 
     &[aria-disabled="true"],
     &:disabled {
       background-color: var(--colors-neutral-50);
+      border: 0.1rem solid var(--colors-neutral-50);
       color: var(--colors-neutral-400);
       cursor: auto;
     }
@@ -102,7 +106,8 @@
     border: 0.1rem solid var(--colors-neutral-200);
     color: var(--colors-primary-950);
     font-weight: 400;
-    padding-block: 0.9rem;
+    line-height: 1;
+    padding-block: var(--spacing-2xs);
 
     &:hover {
       background-color: var(--colors-neutral-200);

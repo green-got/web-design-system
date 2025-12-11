@@ -24,6 +24,7 @@ export function Table({
       aria-label={ariaLabel}
       className={mergeClasses([styles.table, className])}
       id={id}
+      // biome-ignore lint/a11y/useSemanticElements: styling
       role="table"
     >
       {caption && <div id={`${id}_description`}>{caption}</div>}
@@ -35,10 +36,7 @@ export function Table({
 export function TableHeader({
   children,
   className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+}: { children: ReactNode; className?: string }) {
   return (
     // biome-ignore lint/a11y/useSemanticElements: styling
     <div className={mergeClasses([styles.head, className])} role="rowgroup">
@@ -50,10 +48,7 @@ export function TableHeader({
 export function TableBody({
   children,
   className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+}: { children: ReactNode; className?: string }) {
   return (
     // biome-ignore lint/a11y/useSemanticElements: styling
     <div className={mergeClasses([styles.body, className])} role="rowgroup">
@@ -65,10 +60,7 @@ export function TableBody({
 export function TableColumn({
   children,
   className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+}: { children: ReactNode; className?: string }) {
   return (
     // biome-ignore lint/a11y/useSemanticElements: styling
     <span className={className} role="columnheader">
@@ -89,6 +81,7 @@ export function TableRow({
   return (
     <div
       className={mergeClasses([styles.row, className])}
+      // biome-ignore lint/a11y/useSemanticElements: styling
       role="row"
       style={{ gridTemplateColumns: `repeat(${columns.length}, 1fr)` }}
       tabIndex={0}
@@ -101,10 +94,7 @@ export function TableRow({
 export function TableCell({
   children,
   className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+}: { children: ReactNode; className?: string }) {
   return (
     // biome-ignore lint/a11y/useSemanticElements: styling
     <span className={className} role="cell">

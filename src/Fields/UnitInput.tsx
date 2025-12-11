@@ -11,7 +11,6 @@ interface IUnitInputProps extends IInputProps {
 }
 
 export function UnitInput({
-  attributes,
   className,
   disabled,
   errorMessage,
@@ -52,7 +51,7 @@ export function UnitInput({
         style={{ position: 'relative' }}
       >
         <input
-          {...attributes}
+          {...props}
           autoCorrect="off"
           disabled={disabled}
           id={id}

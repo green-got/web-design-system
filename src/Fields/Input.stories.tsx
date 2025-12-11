@@ -417,6 +417,8 @@ export const InputFile = () => {
     <>
       <GlobalStyles />
       <h1>Basic</h1>
+      <FileInput label="Choose a file" id="file" name="file" />
+      <h1>Block</h1>
       <FileInput block label="Choose a file" id="file" name="file" />
 
       <h1>Form validation</h1>
