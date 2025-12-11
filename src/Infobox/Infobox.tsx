@@ -39,6 +39,7 @@ export function Infobox({
         <Button
           className={mergeClasses([styles.button, styles[theme]])}
           handleClick={dismissHandler}
+          variant="ghost"
         >
           <XIcon height={16} title={dismissLabel ?? 'Close'} width={16} />
         </Button>

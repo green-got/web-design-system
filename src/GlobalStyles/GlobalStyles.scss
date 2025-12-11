@@ -17,18 +17,59 @@
   Roundings
 */
 :root {
-  --colors-neutral-950: #0E121B;
-  --colors-neutral-900: #181B25;
-  --colors-neutral-800: #222530;
-  --colors-neutral-700: #2B303B;
-  --colors-neutral-600: #525866;
-  --colors-neutral-500: #717784;
-  --colors-neutral-400: #99A0AE;
-  --colors-neutral-300: #CACFD8;
-  --colors-neutral-200: #E1E4EA;
-  --colors-neutral-100: #F2F5F8;
-  --colors-neutral-50: #F5F7FA;
-  --colors-neutral-25: #FFFFFF;
+
+
+  --brand-950: #131b00;
+  --brand-900: #354120;
+  --brand-800: #b7e550;
+  --brand-700: #cdfb6e;
+  --brand-600: #95b555;
+  --brand-500: #aeca7c;
+  --brand-400: #c1dc93;
+  --brand-300: #d1eaa7;
+  --brand-200: #def3bd;
+  --brand-100: #ebf8d6;
+  --brand-50: #f7fbf2;
+  --brand-25: #fcfdfa;
+
+  --error-950: #55160c;
+  --error-900: #7a271a;
+  --error-800: #912018;
+  --error-700: #b42318;
+  --error-600: #d92d20;
+  --error-500: #f04438;
+  --error-400: #f97066;
+  --error-300: #fda29b;
+  --error-200: #fecdca;
+  --error-100: #fee4e2;
+  --error-50: #fef3f2;
+  --error-25: #fffbfa;
+
+  --success-950: #053321;
+  --success-900: #074d31;
+  --success-800: #085d3a;
+  --success-700: #067647;
+  --success-600: #079455;
+  --success-500: #17b26a;
+  --success-400: #47cd89;
+  --success-300: #75e0a7;
+  --success-200: #abefc6;
+  --success-100: #dcfae6;
+  --success-50: #ecfdf3;
+  --success-25: #f6fef9;
+
+  --colors-neutral-950: #111111;
+  --colors-neutral-900: #181818;
+  --colors-neutral-800: #1e1f24;
+  --colors-neutral-700: #62636c;
+  --colors-neutral-600: #7f818c;
+  --colors-neutral-500: #8d8d8d;
+  --colors-neutral-400: #b9bbc6;
+  --colors-neutral-300: #e0e0e0;
+  --colors-neutral-200: #eeeeee;
+  --colors-neutral-100: #f9f9fb;
+  --colors-neutral-50: #f4f4f4;
+  --colors-neutral-25: #ffffff;
 
   --colors-primary-950: #131B00;
   --colors-primary-900: #354120;
