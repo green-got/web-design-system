@@ -90,8 +90,8 @@
     background-color: transparent;
 
     &:active {
-      background-color: var(--colors-neutral-950);
-      color: var(--colors-neutral-25);
+      background-color: var(--colors-neutral-50);
+      color: var(--colors-neutral-950);
     }
 
     &[aria-disabled="true"],

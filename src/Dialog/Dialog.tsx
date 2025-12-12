@@ -1,5 +1,5 @@
 import { type ReactNode, useEffect, useRef, useState } from 'react';
-import { Button } from '../Button/index';
+import { RoundButton } from '../Button/index';
 import { XIcon } from '../Icons/index';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Dialog.module.scss';
@@ -91,22 +91,22 @@ export function Dialog({
     >
       {dismissable &&
         (showOverflowIndicator ? (
-          <Button
+          <RoundButton
             aria-label={closeBtnAriaLabel}
             className={styles['close-btn']}
             handleClick={handleClose}
           >
             <XIcon height={16} width={16} />
-          </Button>
+          </RoundButton>
         ) : (
           <div className={styles.chrome}>
-            <Button
+            <RoundButton
               aria-label={closeBtnAriaLabel}
               className={styles['close-btn']}
               handleClick={handleClose}
             >
               <XIcon height={16} width={16} />
-            </Button>
+            </RoundButton>
           </div>
         ))}
       {showOverflowIndicator ? (

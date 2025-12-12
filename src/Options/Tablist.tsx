@@ -16,20 +16,20 @@ export function Tablist({ children }: ITablistProps) {
 
 interface ITabProps {
   active?: boolean;
+  children: ReactNode;
   className?: string;
   disabled?: boolean;
   href: string;
   id: string;
-  label: string;
 }
 
 export function Tab({
   active,
+  children,
   className,
   disabled,
   href,
   id,
-  label,
 }: ITabProps) {
   return (
     <a
@@ -44,7 +44,7 @@ export function Tab({
       id={id}
       role="tab"
     >
-      {label}
+      {children}
     </a>
   );
 }

@@ -33,12 +33,13 @@ export type TRadioProps<R extends Radio> = {
     id: string;
     label: TLabel<R>;
     name: string;
-    radio?: R;
     ref?: RefObject<HTMLInputElement | null>;
     required?: boolean;
     value: string;
 } & (R extends TRadioCustom ? {
     radio: R;
-} : {});
+} : {
+    radio?: R;
+});
 export declare function Radio<R extends Radio>({ checked, className, handleChange, id, label, name, radio, ref, required, value, }: TRadioProps<R>): import("react/jsx-runtime").JSX.Element;
 export {};

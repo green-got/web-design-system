@@ -5,11 +5,11 @@ interface ITablistProps {
 export declare function Tablist({ children }: ITablistProps): import("react/jsx-runtime").JSX.Element;
 interface ITabProps {
     active?: boolean;
+    children: ReactNode;
     className?: string;
     disabled?: boolean;
     href: string;
     id: string;
-    label: string;
 }
-export declare function Tab({ active, className, disabled, href, id, label, }: ITabProps): import("react/jsx-runtime").JSX.Element;
+export declare function Tab({ active, children, className, disabled, href, id, }: ITabProps): import("react/jsx-runtime").JSX.Element;
 export {};
