@@ -12,6 +12,7 @@ type TRadioCustom = {
     value: string;
 } & Record<string, unknown> & Partial<Record<ReservedRadioProps, never>>;
 type Radio = TRadio | TRadioCustom;
+type TLabel<R extends Radio> = R extends TRadio ? string : ComponentType;
 export type IRadioGroupProps<T> = {
     checked?: string;
     className?: string;
@@ -24,7 +25,7 @@ export type IRadioGroupProps<T> = {
     required?: boolean;
     requiredText?: string;
 };
-type TLabel<R extends Radio> = R extends TRadio ? string : ComponentType;
+export declare function RadioGroup<R extends Radio>({ checked, className, disabled, handleChange, legend, name, radios, renderRadio, required, requiredText, }: IRadioGroupProps<R>): import("react/jsx-runtime").JSX.Element;
 export type TRadioProps<R extends Radio> = {
     checked: boolean;
     className?: string;
@@ -38,9 +39,6 @@ export type TRadioProps<R extends Radio> = {
     value: string;
 } & (R extends TRadioCustom ? {
     radio: R;
-} : {
-    [key: string]: never;
-});
-export declare function RadioGroup<R extends Radio>({ checked, className, disabled, handleChange, legend, name, radios, renderRadio, required, requiredText, }: IRadioGroupProps<R>): import("react/jsx-runtime").JSX.Element;
+} : {});
 export declare function Radio<R extends Radio>({ checked, className, handleChange, id, label, name, radio, ref, required, value, }: TRadioProps<R>): import("react/jsx-runtime").JSX.Element;
 export {};

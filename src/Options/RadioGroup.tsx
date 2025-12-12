@@ -27,6 +27,7 @@ type TRadioCustom = {
   Partial<Record<ReservedRadioProps, never>>;
 
 type Radio = TRadio | TRadioCustom;
+type TLabel<R extends Radio> = R extends TRadio ? string : ComponentType;
 
 export type IRadioGroupProps<T> = {
   checked?: string;
@@ -46,21 +47,6 @@ export type IRadioGroupProps<T> = {
   required?: boolean;
   requiredText?: string;
 };
-
-type TLabel<R extends Radio> = R extends TRadio ? string : ComponentType;
-
-export type TRadioProps<R extends Radio> = {
-  checked: boolean;
-  className?: string;
-  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  id: string;
-  label: TLabel<R>;
-  name: string;
-  radio?: R;
-  ref?: RefObject<HTMLInputElement | null>;
-  required?: boolean;
-  value: string;
-} & (R extends TRadioCustom ? { radio: R } : { [key: string]: never });
 
 export function RadioGroup<R extends Radio>({
   checked,
@@ -90,6 +76,18 @@ export function RadioGroup<R extends Radio>({
     </fieldset>
   );
 }
+
+export type TRadioProps<R extends Radio> = {
+  checked: boolean;
+  className?: string;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  id: string;
+  label: TLabel<R>;
+  name: string;
+  ref?: RefObject<HTMLInputElement | null>;
+  required?: boolean;
+  value: string;
+} & (R extends TRadioCustom ? { radio: R } : { radio?: R });
 
 export function Radio<R extends Radio>({
   checked,

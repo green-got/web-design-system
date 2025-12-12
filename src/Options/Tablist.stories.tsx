@@ -18,6 +18,6 @@ export const TablistMain: Story = () => {
         <Tab href="#" label="Option C" id="option-c" />
         <Tab disabled href="#" label="Option D" id="option-d" />
       </Tablist>
-      </>
+    </>
   );
-}
+};

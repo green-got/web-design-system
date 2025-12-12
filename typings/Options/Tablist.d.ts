@@ -11,5 +11,5 @@ interface ITabProps {
     id: string;
     label: string;
 }
-export declare function Tab({ active, className, disabled, href, id, label }: ITabProps): import("react/jsx-runtime").JSX.Element;
+export declare function Tab({ active, className, disabled, href, id, label, }: ITabProps): import("react/jsx-runtime").JSX.Element;
 export {};

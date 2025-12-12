@@ -11,7 +11,7 @@ export function Tablist({ children }: ITablistProps) {
     <div className={styles.tablist} role="tablist">
       {children}
     </div>
-  )
+  );
 }
 
 interface ITabProps {
@@ -29,7 +29,7 @@ export function Tab({
   disabled,
   href,
   id,
-  label
+  label,
 }: ITabProps) {
   return (
     <a
@@ -37,10 +37,8 @@ export function Tab({
       aria-disabled={disabled}
       className={mergeClasses([
         styles.tab,
-        active ? styles.active 
-          : disabled ? styles.disabled
-          : undefined,
-        className
+        active ? styles.active : disabled ? styles.disabled : undefined,
+        className,
       ])}
       href={href}
       id={id}
@@ -48,5 +46,5 @@ export function Tab({
     >
       {label}
     </a>
-  )
+  );
 }
