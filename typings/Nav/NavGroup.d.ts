@@ -7,5 +7,5 @@ interface INavGroupProps {
     label: string;
     renderIcon?: () => ReactElement<IIconProps>;
 }
-export declare function NavGroup({ active, children, id, label, renderIcon }: INavGroupProps): import("react/jsx-runtime").JSX.Element;
+export declare function NavGroup({ active, children, id, label, renderIcon, }: INavGroupProps): import("react/jsx-runtime").JSX.Element;
 export {};

@@ -1,0 +1,21 @@
+.bread-crumbs {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-2xs);
+
+  a.crumb {
+    color: var(--colors-primary-800);
+    font-weight: 500;
+  }
+
+  span.crumb {
+    color: var(--colors-neutral-400);
+    font-weight: 500;
+  }
+
+  .crumb>span {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--spacing-2xs);
+  }
+}

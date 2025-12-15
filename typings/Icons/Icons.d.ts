@@ -66,6 +66,7 @@ export declare function SpeechBubblesIcon(props: IIconProps): import("react/jsx-
 export declare function LeftRightArrowsIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function UpDownArrowsIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function UpRightArrowIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function LayoutMasonryIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function SmartphoneRingingIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function FaceIdIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function TouchIdIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;

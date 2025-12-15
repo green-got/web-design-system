@@ -1015,14 +1015,31 @@ export function UpDownArrowsIcon(props: IIconProps) {
 export function UpRightArrowIcon(props: IIconProps) {
   return (
     <Icon
-      attributes={{ strokeWidth: 2, ...props.attributes }}
+      attributes={props.attributes}
       className={props.className}
       height={props.height}
       renderIcon={(title) => (
         <>
           <title>{title ? title : 'Up right arrow icon'}</title>
-          <path d="M13 5H19V11" />
-          <path d="M19 5L5 19" />
+          <path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path>
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function LayoutMasonryIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={props.attributes}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Masonry layout'}</title>
+          <path d="M22 20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V20ZM11 15H4V19H11V15ZM20 11H13V19H20V11ZM11 5H4V13H11V5ZM20 5H13V9H20V5Z"></path>
         </>
       )}
       title={props.title}

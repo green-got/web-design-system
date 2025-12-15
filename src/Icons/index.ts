@@ -39,6 +39,7 @@ export {
   IdCardIcon,
   InfoIcon,
   LaptopIcon,
+  LayoutMasonryIcon,
   LeftRightArrowsIcon,
   ListIcon,
   LockIcon,
