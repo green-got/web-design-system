@@ -2,6 +2,7 @@
   align-items: center;
   border-radius: var(--corner-sm);
   border-width: 0;
+  cursor: pointer;
   display: inline-flex;
   font-size: 1.4rem;
   gap: var(--spacing-2xs);
@@ -16,5 +17,9 @@
   &.light {
     background-color: var(--colors-neutral-25);
     color: var(--colors-primary-950);
+  }
+
+  >div {
+    box-shadow: var(--shadow);
   }
 }

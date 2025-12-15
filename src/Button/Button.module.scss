@@ -26,6 +26,7 @@
     &:hover {
       background-color: var(--colors-primary-800);
       border: 0.1rem solid var(--colors-primary-800);
+      box-shadow: var(--shadow);
     }
 
     &:active {
@@ -49,6 +50,7 @@
 
     &:hover {
       background-color: var(--colors-neutral-300);
+      box-shadow: var(--shadow);
     }
 
     &:active {
@@ -71,6 +73,7 @@
 
     &:hover {
       background-color: var(--colors-error-300);
+      box-shadow: var(--shadow);
     }
 
     &:active {

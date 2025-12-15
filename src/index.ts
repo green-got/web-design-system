@@ -6,6 +6,7 @@ export * from './Icons';
 export * from './Infobox';
 export * from './Loaders';
 export * from './Logo';
+export * from './Nav';
 export * from './Notification';
 export * from './Options';
 export * from './Pagination';

@@ -1,0 +1,26 @@
+.nav-sub-item {
+  border: 0.1rem solid transparent;
+  border-radius: var(--corner-sm);
+  list-style-type: none;
+  padding-inline-start: calc(var(--spacing-xl) - var(--spacing-2xs));
+
+  &:hover:not(.active) {
+    background-color: var(--colors-neutral-200);
+    border-radius: 0;
+  }
+
+  &.active>button,
+  &.active>a {
+    color: var(--colors-primary-600);
+  }
+
+  >button,
+  >a {
+    align-items: center;
+    color: var(--colors-neutral-900);
+    display: flex;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    text-decoration: none;
+  }
+}

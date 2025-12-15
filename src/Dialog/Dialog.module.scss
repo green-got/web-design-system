@@ -38,17 +38,9 @@
   }
 
   .close-btn {
-    background-color: var(--colors-neutral-25);
-    color: var(--colors-neutral-800);
-    padding: var(--spacing-2xs);
     inset-block-start: 4rem;
     inset-inline-end: 4rem;
     position: absolute;
-
-    &:hover,
-    &:active {
-      background-color: var(--colors-neutral-50);
-    }
   }
 
   .wrapper {

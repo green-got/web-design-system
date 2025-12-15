@@ -1,0 +1,29 @@
+.nav-item {
+  background-color: var(--colors-neutral-25);
+  border: 0.1rem solid transparent;
+  border-radius: var(--corner-sm);
+  list-style-type: none;
+
+  &:hover:not(.active) {
+    background-color: var(--colors-neutral-100);
+    border: 0.1rem solid var(--colors-neutral-200);
+    box-shadow: var(--shadow);
+  }
+
+  &:active,
+  &.active {
+    background-color: var(--colors-neutral-50);
+    border: 0.1rem solid var(--colors-neutral-300);
+  }
+
+  >button,
+  >a {
+    align-items: center;
+    color: var(--colors-neutral-900);
+    display: flex;
+    font-size: var(--text-sm);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    text-decoration: none;
+  }
+}

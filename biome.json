@@ -5,7 +5,13 @@
     "includes": ["**", "!docs/**", "!typings/**"]
   },
   "linter": {
-    "includes": ["**", "!**/*.yml", "!**/*.yaml", "!**/*.scss"],
+    "includes": [
+      "**",
+      "!**/*.yml",
+      "!**/*.yaml",
+      "!**/*.scss",
+      "!**/*.stories.tsx"
+    ],
     "enabled": true,
     "rules": {
       "recommended": true
