@@ -1,5 +1,6 @@
 export * from './BreadCrumbs';
 export * from './Button';
+export * from './Card';
 export * from './Dialog';
 export * from './Fields';
 export * from './GlobalStyles';
