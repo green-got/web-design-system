@@ -1,4 +1,6 @@
 .card {
+  aspect-ratio: 1 / 1;
   background-position: center;
   background-size: cover;
+  border-radius: var(--corner-2xl);
 }

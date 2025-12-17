@@ -26,8 +26,8 @@ export function Card({
         ...(variant === 'img'
           ? { backgroundImage: `url(${bg})` }
           : { backgroundColor: bg }),
-        borderRadius: radius ?? 'var(--corner-2xl)',
-        aspectRatio: ratio ?? '1 / 1',
+        ...(radius ? { borderRadius: radius } : {}),
+        ...(ratio ? { aspectRatio: ratio } : {}),
       }}
     >
       {children}

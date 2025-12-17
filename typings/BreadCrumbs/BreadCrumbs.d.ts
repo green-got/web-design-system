@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import { type IIconProps } from "../Icons/Icons";
+import { type IIconProps } from '../Icons/Icons';
 interface ILevel {
     href: string;
     label: string | (() => ReactElement<IIconProps>);
