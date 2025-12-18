@@ -9,6 +9,10 @@
     border-radius: 0;
   }
 
+  &:active:not(.active) {
+    background-color: var(--colors-neutral-300);
+  }
+
   &.active>button,
   &.active>a {
     color: var(--colors-primary-600);

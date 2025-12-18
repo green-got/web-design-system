@@ -34,9 +34,15 @@ export const NavMain: Story = () => {
       <br />
       <p>Group</p>
       <NavGroup
-        id="nav-group"
-        label="My route"
-        renderIcon={() => <InfoIcon height={20} width={20} />}
+        renderItem={() => (
+          <a href="#">
+            <span>
+              <InfoIcon height={20} width={20} />
+              <span>My route</span>
+            </span>
+            <ChevronDownIcon height={16} width={16} />
+          </a>
+        )}
       >
         <NavSubItem>
           <a href="#">
@@ -55,11 +61,49 @@ export const NavMain: Story = () => {
         </NavSubItem>
       </NavGroup>
       <br />
-      <p>Group with selected</p>
+      <p>Group with selected nav item</p>
       <NavGroup
-        id="nav-group"
-        label="My other route"
-        renderIcon={() => <InfoIcon height={20} width={20} />}
+        active
+        activeGroup
+        renderItem={() => (
+          <a href="#">
+            <span>
+              <InfoIcon height={20} width={20} />
+              <span>My other route</span>
+            </span>
+            <ChevronDownIcon height={16} width={16} />
+          </a>
+        )}
+      >
+        <NavSubItem>
+          <a href="#">
+            <span>Navigation label</span>
+          </a>
+        </NavSubItem>
+        <NavSubItem>
+          <a href="#">
+            <span>Navigation label</span>
+          </a>
+        </NavSubItem>
+        <NavSubItem>
+          <a href="#">
+            <span>Navigation label</span>
+          </a>
+        </NavSubItem>
+      </NavGroup>
+      <br />
+      <p>Group with selected sub nav item</p>
+      <NavGroup
+        active
+        renderItem={() => (
+          <a href="#">
+            <span>
+              <InfoIcon height={20} width={20} />
+              <span>Yet another route</span>
+            </span>
+            <ChevronDownIcon height={16} width={16} />
+          </a>
+        )}
       >
         <NavSubItem>
           <a href="#">

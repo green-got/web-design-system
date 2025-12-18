@@ -1,34 +1,31 @@
-import type { ReactElement, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import styles from './NavGroup.module.scss';
 import { mergeClasses } from '../utils/mergeClasses';
-import { ChevronDownIcon } from '../Icons';
-import type { IIconProps } from '../Icons/Icons';
+import { NavItem } from './NavItem';
 
 interface INavGroupProps {
   active?: boolean;
+  activeGroup?: boolean;
   children: ReactNode;
-  id: string;
-  label: string;
-  renderIcon?: () => ReactElement<IIconProps>;
+  className?: string;
+  renderItem: () => ReactNode;
 }
 export function NavGroup({
   active,
+  activeGroup,
   children,
-  id,
-  label,
-  renderIcon,
+  className,
+  renderItem,
 }: INavGroupProps) {
-  const icon = renderIcon?.();
-  return (
-    <details className={mergeClasses([styles['nav-group']])} name={id}>
-      <summary className={mergeClasses([active ? styles.active : undefined])}>
-        <span>
-          {icon && icon}
-          <span>{label}</span>
-        </span>
-        <ChevronDownIcon height={16} width={16} />
-      </summary>
-      <ul>{children}</ul>
-    </details>
-  );
+  if (active) {
+    return (
+      <div className={mergeClasses([styles['nav-group'], className])}>
+        <NavItem active={activeGroup} isGroup>
+          {renderItem()}
+        </NavItem>
+        <ul>{children}</ul>
+      </div>
+    );
+  }
+  return <NavItem>{renderItem()}</NavItem>;
 }

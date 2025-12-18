@@ -4,16 +4,33 @@
   border-radius: var(--corner-sm);
   list-style-type: none;
 
-  &:hover:not(.active) {
+  &:not(.group):hover,
+  &:not(.active):hover {
     background-color: var(--colors-neutral-100);
     border: 0.1rem solid var(--colors-neutral-200);
     box-shadow: var(--shadow);
   }
 
-  &:active,
+  &.group,
   &.active {
     background-color: var(--colors-neutral-50);
     border: 0.1rem solid var(--colors-neutral-300);
+    box-shadow: var(--shadow);
+
+    &:hover {
+      background-color: var(--colors-neutral-50);
+      border: 0.1rem solid var(--colors-neutral-300);
+      box-shadow: var(--shadow);
+    }
+
+    >button,
+    >a {
+      &:has(span > span) {
+        >svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 
   >button,
@@ -25,5 +42,25 @@
     gap: var(--spacing-xs);
     padding: var(--spacing-sm);
     text-decoration: none;
+
+    &:has(span > span) {
+      justify-content: space-between;
+    }
+
+    >span:has(span) {
+      align-items: center;
+      display: flex;
+      gap: var(--spacing-xs);
+    }
+  }
+
+  &.group {
+    &.active {
+
+      >button,
+      a {
+        color: var(--colors-primary-600);
+      }
+    }
   }
 }

@@ -1,11 +1,10 @@
-import type { ReactElement, ReactNode } from 'react';
-import type { IIconProps } from '../Icons/Icons';
+import type { ReactNode } from 'react';
 interface INavGroupProps {
     active?: boolean;
+    activeGroup?: boolean;
     children: ReactNode;
-    id: string;
-    label: string;
-    renderIcon?: () => ReactElement<IIconProps>;
+    className?: string;
+    renderItem: () => ReactNode;
 }
-export declare function NavGroup({ active, children, id, label, renderIcon, }: INavGroupProps): import("react/jsx-runtime").JSX.Element;
+export declare function NavGroup({ active, activeGroup, children, className, renderItem, }: INavGroupProps): import("react/jsx-runtime").JSX.Element;
 export {};

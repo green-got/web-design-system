@@ -1,55 +1,5 @@
 .nav-group {
-  background-color: var(--colors-neutral-100);
+  background-color: var(--colors-neutral-50);
   border-radius: var(--corner-sm);
   overflow: hidden;
-
-  summary {
-    align-items: center;
-    background-color: var(--colors-neutral-25);
-    border: 0.1rem solid transparent;
-    border-radius: var(--corner-sm);
-    cursor: pointer;
-    display: flex;
-    font-size: var(--text-sm);
-    justify-content: space-between;
-    padding: var(--spacing-sm);
-
-    >span {
-      align-items: center;
-      display: inline-flex;
-      gap: var(--spacing-xs);
-    }
-  }
-
-  &[open] summary {
-    background-color: var(--colors-neutral-50);
-    border: 0.1rem solid var(--colors-neutral-300);
-    box-shadow: var(--shadow);
-
-    >svg {
-      transform: rotate(180deg);
-    }
-  }
-
-  &[open] ul li {
-    >a {
-      padding-block: var(--spacing-xs);
-    }
-
-    &:first-of-type>a {
-      padding-block-start: var(--spacing-sm);
-    }
-
-    &:last-of-type>a {
-      padding-block-end: var(--spacing-sm);
-    }
-  }
-
-  &:not([open]) summary {
-    &:hover {
-      background-color: var(--colors-neutral-100);
-      border: 0.1rem solid var(--colors-neutral-200);
-      box-shadow: var(--shadow);
-    }
-  }
 }
