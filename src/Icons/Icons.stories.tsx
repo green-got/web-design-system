@@ -88,6 +88,8 @@ import {
   UtensilsIcon,
   XIcon,
   YoutubeIcon,
+  SeedlingIcon,
+  SunsetIcon,
 } from './Icons';
 
 export default {
@@ -307,6 +309,12 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <PlantIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <SeedlingIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <SunsetIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
         <TrainIcon height={18} width={18} />

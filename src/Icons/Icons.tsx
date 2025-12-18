@@ -1056,8 +1056,44 @@ export function PlantIcon(props: IIconProps) {
       height={props.height}
       renderIcon={(title) => (
         <>
-          <title>{title ? title : 'Plant'}</title>
+          <title>{title ? title : 'Plant icon'}</title>
           <path d="M5.99805 2C8.68733 2 11.0224 3.51653 12.1947 5.74104C13.372 4.08252 15.3086 3 17.498 3H20.998V5.5C20.998 9.08985 18.0879 12 14.498 12H12.998V13H17.998V20C17.998 21.1046 17.1026 22 15.998 22H7.99805C6.89348 22 5.99805 21.1046 5.99805 20V13H10.998V11H8.99805C5.13205 11 1.99805 7.86599 1.99805 4V2H5.99805ZM15.998 15H7.99805V20H15.998V15ZM18.998 5H17.498C15.0128 5 12.998 7.01472 12.998 9.5V10H14.498C16.9833 10 18.998 7.98528 18.998 5.5V5ZM5.99805 4H3.99805C3.99805 6.76142 6.23662 9 8.99805 9H10.998C10.998 6.23858 8.75947 4 5.99805 4Z"></path>
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function SeedlingIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={props.attributes}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Seedling icon'}</title>
+          <path d="M5.99805 3C9.48787 3 12.3812 5.55379 12.9112 8.8945C14.0863 7.72389 15.7076 7 17.498 7H21.998V9.5C21.998 13.0899 19.0879 16 15.498 16H12.998V21H10.998V13H8.99805C5.13205 13 1.99805 9.86599 1.99805 6V3H5.99805ZM19.998 9H17.498C15.0128 9 12.998 11.0147 12.998 13.5V14H15.498C17.9833 14 19.998 11.9853 19.998 9.5V9ZM5.99805 5H3.99805V6C3.99805 8.76142 6.23662 11 8.99805 11H10.998V10C10.998 7.23858 8.75947 5 5.99805 5Z"></path>
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
+export function SunsetIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={props.attributes}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Sunset icon'}</title>
+          <path d="M6.08296 13C6.0284 12.6748 6 12.3407 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 12.3407 17.9716 12.6748 17.917 13H15.874C15.9562 12.6804 16 12.3453 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 12.3453 8.04375 12.6804 8.12602 13H6.08296ZM2 15H12V17H2V15ZM14 15H22V17H14V15ZM16 19H20V21H16V19ZM4 19H14V21H4V19ZM11 1H13V4H11V1ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path>
         </>
       )}
       title={props.title}

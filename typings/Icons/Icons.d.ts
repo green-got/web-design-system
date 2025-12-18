@@ -68,6 +68,8 @@ export declare function UpDownArrowsIcon(props: IIconProps): import("react/jsx-r
 export declare function UpRightArrowIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function LayoutMasonryIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function PlantIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function SeedlingIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function SunsetIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function SmartphoneRingingIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function FaceIdIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function TouchIdIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
