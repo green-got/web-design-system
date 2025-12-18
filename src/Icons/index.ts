@@ -57,6 +57,7 @@ export {
   PaletteIcon,
   PaperclipIcon,
   PhoneIcon,
+  PlantIcon,
   PlusIcon,
   RotateClockwiseIcon,
   SearchIcon,
