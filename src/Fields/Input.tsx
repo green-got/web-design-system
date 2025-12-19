@@ -42,6 +42,8 @@ export function Input({
   defaultValue,
   disabled,
   errorMessage,
+  handleBlur,
+  handleChange,
   handleKeyDown = () => {},
   id,
   isValid = true,
@@ -57,8 +59,8 @@ export function Input({
 }: IInputProps) {
   const [isFieldValid, setIsFieldValid] = useState<boolean>(isValid);
 
-  function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    props.handleChange?.(e);
+  function onChange(e: ChangeEvent<HTMLInputElement>) {
+    handleChange?.(e);
 
     const isValid = e.target.validity.valid;
     if (!isFieldValid && isValid) {
@@ -66,8 +68,8 @@ export function Input({
     }
   }
 
-  function handleBlur(e: FocusEvent<HTMLInputElement>) {
-    props.handleBlur?.(e);
+  function onBlur(e: FocusEvent<HTMLInputElement>) {
+    handleBlur?.(e);
     setIsFieldValid(e.target.validity.valid);
   }
 
@@ -92,8 +94,8 @@ export function Input({
           disabled={disabled}
           id={id}
           name={name}
-          onBlur={handleBlur}
-          onChange={handleChange}
+          onBlur={onBlur}
+          onChange={onChange}
           onKeyDown={handleKeyDown}
           onWheel={(e) => {
             if (type === 'number') {

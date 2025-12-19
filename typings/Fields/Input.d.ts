@@ -18,4 +18,4 @@ export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
     type?: 'date' | 'datetime-local' | 'email' | 'number' | 'search' | 'tel' | 'text';
     value?: string;
 }
-export declare function Input({ className, defaultValue, disabled, errorMessage, handleKeyDown, id, isValid, label, name, required, requiredText, ref, title, type, value, ...props }: IInputProps): import("react/jsx-runtime").JSX.Element;
+export declare function Input({ className, defaultValue, disabled, errorMessage, handleBlur, handleChange, handleKeyDown, id, isValid, label, name, required, requiredText, ref, title, type, value, ...props }: IInputProps): import("react/jsx-runtime").JSX.Element;
