@@ -13,15 +13,21 @@
   }
 
   &.sm {
-    border-style: dotted;
     height: 2rem;
     width: 2rem;
   }
 
   &.md {
     border-color: var(--colors-neutral-300);
-    border-style: solid;
     height: 3.2rem;
     width: 3.2rem;
+  }
+
+  &.solid {
+    border-style: solid;
+  }
+
+  &.dotted {
+    border-style: dotted;
   }
 }

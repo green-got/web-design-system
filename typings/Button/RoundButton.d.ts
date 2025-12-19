@@ -8,5 +8,6 @@ export interface IRoundButtonProps extends ButtonHTMLAttributes<HTMLButtonElemen
     ref?: RefObject<HTMLButtonElement | null>;
     size?: 'sm' | 'md';
     type?: ButtonType;
+    variant?: 'solid' | 'dotted';
 }
-export declare function RoundButton({ block, className, children, handleClick, ref, size, type, ...props }: IRoundButtonProps): import("react/jsx-runtime").JSX.Element;
+export declare function RoundButton({ block, className, children, handleClick, ref, size, type, variant, ...props }: IRoundButtonProps): import("react/jsx-runtime").JSX.Element;

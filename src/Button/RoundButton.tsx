@@ -18,6 +18,7 @@ export interface IRoundButtonProps
   ref?: RefObject<HTMLButtonElement | null>;
   size?: 'sm' | 'md';
   type?: ButtonType;
+  variant?: 'solid' | 'dotted';
 }
 
 export function RoundButton({
@@ -28,6 +29,7 @@ export function RoundButton({
   ref,
   size = 'md',
   type = 'button',
+  variant = 'solid',
   ...props
 }: IRoundButtonProps) {
   return (
@@ -36,6 +38,7 @@ export function RoundButton({
       className={mergeClasses([
         styles['round-button'],
         size === 'sm' ? styles.sm : size === 'md' ? styles.md : undefined,
+        variant === 'dotted' ? styles.dotted : styles.solid,
         className,
       ])}
       onClick={handleClick}

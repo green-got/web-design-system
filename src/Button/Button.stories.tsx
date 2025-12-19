@@ -128,7 +128,7 @@ export const IconButton: Story = () => (
   <>
     <h1>Icon Button</h1>
     <br />
-    <RoundButton size="sm">
+    <RoundButton size="sm" variant="dotted">
       <PlusIcon height={14} width={14} />
     </RoundButton>
     <br />

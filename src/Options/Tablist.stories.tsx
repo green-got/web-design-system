@@ -13,10 +13,18 @@ export const TablistMain: Story = () => {
 
       <h1>Tablist</h1>
       <Tablist>
-        <Tab active href="#" label="Option A" id="option-a" />
-        <Tab href="#" label="Option B" id="option-b" />
-        <Tab href="#" label="Option C" id="option-c" />
-        <Tab disabled href="#" label="Option D" id="option-d" />
+        <Tab active href="#" id="option-a">
+          Option A
+        </Tab>
+        <Tab href="#" id="option-b">
+          Option B
+        </Tab>
+        <Tab href="#" id="option-c">
+          Option C
+        </Tab>
+        <Tab disabled href="#" id="option-d">
+          Option D
+        </Tab>
       </Tablist>
     </>
   );
