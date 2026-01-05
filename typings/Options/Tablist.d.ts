@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { MouseEvent, ReactNode } from 'react';
 interface ITablistProps {
     children: ReactNode;
 }
@@ -8,8 +8,9 @@ interface ITabProps {
     children: ReactNode;
     className?: string;
     disabled?: boolean;
+    handleClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
     href: string;
     id: string;
 }
-export declare function Tab({ active, children, className, disabled, href, id, }: ITabProps): import("react/jsx-runtime").JSX.Element;
+export declare function Tab({ active, children, className, disabled, handleClick, href, id, }: ITabProps): import("react/jsx-runtime").JSX.Element;
 export {};

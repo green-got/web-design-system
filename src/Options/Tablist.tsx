@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { MouseEvent, ReactNode } from 'react';
 import { mergeClasses } from '../utils/mergeClasses';
 import styles from './Tablist.module.scss';
 
@@ -19,6 +19,7 @@ interface ITabProps {
   children: ReactNode;
   className?: string;
   disabled?: boolean;
+  handleClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
   href: string;
   id: string;
 }
@@ -28,6 +29,7 @@ export function Tab({
   children,
   className,
   disabled,
+  handleClick,
   href,
   id,
 }: ITabProps) {
@@ -42,6 +44,7 @@ export function Tab({
       ])}
       href={href}
       id={id}
+      onClick={handleClick}
       role="tab"
     >
       {children}
