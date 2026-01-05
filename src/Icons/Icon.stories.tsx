@@ -1,6 +1,7 @@
 import type { StoryDefault, Story } from '@ladle/react';
 import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 import { Icon } from './Icon';
+import { Head } from '../Logo';
 import {
   LeftRightArrowsIcon,
   LockIcon,
@@ -42,6 +43,11 @@ export const IconMain: Story = () => {
         <br />
         <Icon corner="hard" size="lg" variant="dark">
           <UpRightArrowIcon height={24} width={24} />
+        </Icon>
+        <br />
+        <br />
+        <Icon size="md" corner="round" variant="light">
+          <Head height={46} width={46} />
         </Icon>
         <br />
         <br />
