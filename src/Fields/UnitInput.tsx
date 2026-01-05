@@ -14,6 +14,8 @@ export function UnitInput({
   className,
   disabled,
   errorMessage,
+  handleBlur,
+  handleChange,
   handleKeyDown = () => {},
   id,
   label,
@@ -30,13 +32,13 @@ export function UnitInput({
   const [isValid, setIsValid] = useState<boolean>(true);
   const unitRef = useRef<HTMLInputElement>(null);
 
-  function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    props.handleChange?.(e);
+  function onChange(e: ChangeEvent<HTMLInputElement>) {
+    handleChange?.(e);
     setTimeout(() => setIsValid(e.target.validity.valid), 0);
   }
 
-  function handleBlur(e: FocusEvent<HTMLInputElement>) {
-    props.handleBlur?.(e);
+  function onBlur(e: FocusEvent<HTMLInputElement>) {
+    handleBlur?.(e);
     setIsValid(e.target.validity.valid);
   }
 
@@ -56,8 +58,8 @@ export function UnitInput({
           disabled={disabled}
           id={id}
           name={name}
-          onBlur={handleBlur}
-          onChange={handleChange}
+          onBlur={onBlur}
+          onChange={onChange}
           onKeyDown={handleKeyDown}
           onWheel={(e) => {
             if (type === 'number') {
