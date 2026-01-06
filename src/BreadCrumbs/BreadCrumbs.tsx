@@ -42,7 +42,7 @@ function Crumb({ level }: IBreadCrumbsProps) {
         <span className={styles.crumb}>
           {isStringLabel ? (
             <span>
-              <ChevronRightIcon height={14} width={14} />
+              <ChevronRightIcon height={16} width={16} />
               <span>{lbl}</span>
             </span>
           ) : (
