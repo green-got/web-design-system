@@ -6,7 +6,8 @@ interface ILevel {
     nextLevel?: ILevel;
 }
 interface IBreadCrumbsProps {
+    className?: string;
     level: ILevel;
 }
-export declare function BreadCrumbs({ level }: IBreadCrumbsProps): import("react/jsx-runtime").JSX.Element;
+export declare function BreadCrumbs({ className, level }: IBreadCrumbsProps): import("react/jsx-runtime").JSX.Element;
 export {};

@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react';
 import { ChevronRightIcon, type IIconProps } from '../Icons/Icons';
+import { mergeClasses } from '../utils/mergeClasses';
 import styles from './BreadCrumbs.module.scss';
 
 interface ILevel {
@@ -8,12 +9,13 @@ interface ILevel {
   nextLevel?: ILevel;
 }
 interface IBreadCrumbsProps {
+  className?: string;
   level: ILevel;
 }
 
-export function BreadCrumbs({ level }: IBreadCrumbsProps) {
+export function BreadCrumbs({ className, level }: IBreadCrumbsProps) {
   return (
-    <div className={styles['bread-crumbs']}>
+    <div className={mergeClasses([styles['bread-crumbs'], className])}>
       <Crumb level={level} />
     </div>
   );
