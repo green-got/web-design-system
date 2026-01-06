@@ -39,4 +39,9 @@
     background-color: var(--colors-primary-950);
     color: var(--colors-neutral-25);
   }
+
+  &.dark-light {
+    background-color: var(--colors-neutral-200);
+    color: var(--colors-primary-950);
+  }
 }

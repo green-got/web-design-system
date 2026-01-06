@@ -26,6 +26,11 @@ export const IconMain: Story = () => {
           padding: 'var(--spacing-md)',
         }}
       >
+        <Icon size="md" variant="dark-light">
+          <UserIcon height={24} width={24} />
+        </Icon>
+        <br />
+        <br />
         <Icon size="lg">
           <UserIcon height={24} width={24} />
         </Icon>

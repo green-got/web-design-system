@@ -7,7 +7,7 @@ interface IIconProps {
   children: ReactNode;
   corner?: 'soft' | 'firm' | 'hard' | 'round';
   size?: 'md' | 'lg';
-  variant?: 'light' | 'dark';
+  variant?: 'light' | 'dark' | 'dark-light';
 }
 export function Icon({
   className,
@@ -28,7 +28,7 @@ export function Icon({
             : corner === 'firm'
               ? styles.firm
               : styles.round,
-        variant === 'light' ? styles.light : styles.dark,
+        styles[variant ?? 'dark'],
         className,
       ])}
     >
