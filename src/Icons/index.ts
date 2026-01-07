@@ -73,6 +73,7 @@ export {
   SpeechBubblesIcon,
   StarIcon,
   StatementIcon,
+  StemlessUpArrowIcon,
   SunsetIcon,
   TextFileIcon,
   TouchIdIcon,

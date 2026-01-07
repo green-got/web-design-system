@@ -73,6 +73,7 @@ import {
   SpeechBubblesIcon,
   StarIcon,
   StatementIcon,
+  StemlessUpArrowIcon,
   TextFileIcon,
   TouchIdIcon,
   TrainIcon,
@@ -129,6 +130,9 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <ChevronUpIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <StemlessUpArrowIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
         <LeftRightArrowsIcon height={18} width={18} />

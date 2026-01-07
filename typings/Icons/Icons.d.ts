@@ -15,6 +15,7 @@ export declare function ChevronRightIcon(props: IIconProps): import("react/jsx-r
 export declare function ChevronLeftIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function ChevronUpIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function ChevronDownIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
+export declare function StemlessUpArrowIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function ExternalLinkIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function HelpIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;
 export declare function InfoIcon(props: IIconProps): import("react/jsx-runtime").JSX.Element;

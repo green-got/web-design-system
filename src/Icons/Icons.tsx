@@ -112,6 +112,24 @@ export function ChevronDownIcon(props: IIconProps) {
   );
 }
 
+export function StemlessUpArrowIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={props.attributes}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Up arrow icon'}</title>
+          <path d="M12 8L18 14H6L12 8Z" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
 export function ExternalLinkIcon(props: IIconProps) {
   return (
     <Icon
