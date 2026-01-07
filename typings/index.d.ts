@@ -1,3 +1,4 @@
+export * from './Badge';
 export * from './BreadCrumbs';
 export * from './Button';
 export * from './Card';
