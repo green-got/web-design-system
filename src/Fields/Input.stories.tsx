@@ -24,6 +24,7 @@ export const InputMain: Story = () => {
   const [j, setJ] = React.useState<string>(';lakj');
   const [k, setK] = React.useState<string>('');
   const [m, setM] = React.useState<string>('50');
+  const [n, setN] = React.useState<string>('');
 
   return (
     <>
@@ -48,11 +49,11 @@ export const InputMain: Story = () => {
       />
 
       <Input
-        attributes={{ placeholder: 'harry@green-got.com' }}
         handleChange={(e) => setC(e.target.value)}
         id="c"
         label="Email with placeholder text"
         name="c"
+        placeholder="harry@green-got.com"
         type="email"
         value={c}
       />
@@ -76,23 +77,25 @@ export const InputMain: Story = () => {
       />
 
       <Input
-        attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
         handleChange={(e: ChangeEvent<HTMLInputElement>) =>
           setF(updateInputValue(e.target.value, e.nativeEvent.inputType))
         }
         id="f"
         label="US Telephone"
+        maxLength={14}
         name="f"
+        pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}"
         type="tel"
         value={f}
       />
 
       <Input
-        attributes={{ maxLength: 14, pattern: '([0-9]{3}) [0-9]{3}-[0-9]{4}' }}
         handleChange={(e) => setG(e.target.value)}
         id="g"
         label="Date"
+        maxLength={14}
         name="g"
+        pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}"
         type="date"
         value={g}
       />
@@ -119,13 +122,13 @@ export const InputMain: Story = () => {
       />
 
       <Input
-        attributes={{ pattern: 'right' }}
         errorMessage="That's not right!"
         handleChange={(e) => setJ(e.target.value)}
         id="j"
         isValid={false}
         label="Programmatically invalid text"
         name="j"
+        pattern="right"
         type="text"
         value={j}
       />
@@ -158,6 +161,17 @@ export const InputMain: Story = () => {
         name="m"
         type="text"
         value={m}
+      />
+
+      <Input
+        aria-label="No label"
+        handleBlur={() => setM('50')}
+        handleChange={(e) => setN(e.target.value)}
+        id="n"
+        name="n"
+        placeholder="Just an aria-label"
+        type="text"
+        value={n}
       />
     </>
   );

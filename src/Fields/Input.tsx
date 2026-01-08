@@ -20,7 +20,7 @@ export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   handleKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;
   id: string;
   isValid?: boolean;
-  label: string;
+  label?: string;
   name: string;
   ref?: RefObject<HTMLInputElement | null>;
   required?: boolean;
@@ -47,7 +47,7 @@ export function Input({
   handleKeyDown = () => {},
   id,
   isValid = true,
-  label,
+  label = '',
   name,
   required,
   requiredText,
@@ -81,7 +81,7 @@ export function Input({
           <span>{requiredText}</span>
         </div>
       ) : (
-        <label htmlFor={id}>
+        <label className={label === '' ? styles.empty : undefined} htmlFor={id}>
           {label}
           {required && !requiredText ? ' *' : ''}
         </label>
