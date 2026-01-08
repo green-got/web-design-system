@@ -1048,6 +1048,24 @@ export function UpRightArrowIcon(props: IIconProps) {
   );
 }
 
+export function DownLeftArrowIcon(props: IIconProps) {
+  return (
+    <Icon
+      attributes={props.attributes}
+      className={props.className}
+      height={props.height}
+      renderIcon={(title) => (
+        <>
+          <title>{title ? title : 'Down left arrow icon'}</title>
+          <path d="M19.7784 5.63589L18.3644 4.22168L6.92908 15.6569L6.92908 10.0712H4.92908L4.92908 19.0712L13.9291 19.0712V17.0712L8.34326 17.0712L19.7784 5.63589Z" />
+        </>
+      )}
+      title={props.title}
+      width={props.width}
+    />
+  );
+}
+
 export function LayoutMasonryIcon(props: IIconProps) {
   return (
     <Icon

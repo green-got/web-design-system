@@ -22,6 +22,7 @@ export {
   CrossIcon,
   CrownIcon,
   DeleteIcon,
+  DownLeftArrowIcon,
   DownloadIcon,
   DumbbellIcon,
   EarthIcon,

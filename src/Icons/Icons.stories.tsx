@@ -91,6 +91,7 @@ import {
   YoutubeIcon,
   SeedlingIcon,
   SunsetIcon,
+  DownLeftArrowIcon,
 } from './Icons';
 
 export default {
@@ -142,6 +143,9 @@ export const Icons: Story = () => (
       </div>
       <div style={cardStyles}>
         <UpRightArrowIcon height={18} width={18} />
+      </div>
+      <div style={cardStyles}>
+        <DownLeftArrowIcon height={18} width={18} />
       </div>
       <div style={cardStyles}>
         <ExternalLinkIcon height={18} width={18} />
