@@ -27,7 +27,7 @@ export function ProgressBar({
   value,
 }: TProgressBarProps) {
   return (
-    <div className={mergeClasses([styles.progress, className])}>
+    <div className={mergeClasses([styles.progressbar, className])}>
       {label ? (
         <label className={styles.label} htmlFor={id}>
           {label}
