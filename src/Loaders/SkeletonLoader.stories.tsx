@@ -13,5 +13,7 @@ export const SkeletonLoaderMain: Story = () => (
     <h1>SkeletonLoader</h1>
 
     <SkeletonLoader height={50} width="100%" />
+    <br />
+    <SkeletonLoader ratio="4 / 1" />
   </>
 );

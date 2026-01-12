@@ -7,18 +7,10 @@ interface ICardProps {
   children?: ReactNode;
   className?: string;
   radius?: string;
-  ratio?: string;
   variant: 'img' | 'color';
 }
 
-export function Card({
-  bg,
-  children,
-  className,
-  radius,
-  ratio,
-  variant,
-}: ICardProps) {
+export function Card({ bg, children, className, radius, variant }: ICardProps) {
   return (
     <div
       className={mergeClasses([styles.card, className])}
@@ -27,7 +19,6 @@ export function Card({
           ? { backgroundImage: `url(${bg})` }
           : { backgroundColor: bg }),
         ...(radius ? { borderRadius: radius } : {}),
-        ...(ratio ? { aspectRatio: ratio } : {}),
       }}
     >
       {children}
