@@ -65,5 +65,19 @@ export const CardMain: Story = () => (
       <p>Hello</p>
       <p>Hello</p>
     </Card>
+
+    <Card
+      bg="https://placehold.co/100x600@2x.png"
+      mask="linear-gradient(black, black, transparent)"
+      variant="img"
+    >
+      <p>Hello</p>
+      <p>Hello</p>
+      <p>Hello</p>
+      <p>Hello</p>
+      <p>Hello</p>
+      <p>Hello</p>
+      <p>Hello</p>
+    </Card>
   </>
 );
