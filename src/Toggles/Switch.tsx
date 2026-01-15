@@ -16,6 +16,7 @@ type THtmlLabelProps = {
 export type TSwitchProps = {
   className?: string;
   checked: boolean;
+  border?: boolean;
   disabled?: boolean;
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   helperText?: string;
@@ -25,6 +26,7 @@ export type TSwitchProps = {
 
 export function Switch({
   ariaLabel,
+  border = false,
   className,
   checked,
   disabled = false,
@@ -59,7 +61,10 @@ export function Switch({
         aria-label={ariaLabel}
         aria-checked={checked}
         checked={checked}
-        className={styles.track}
+        className={mergeClasses([
+          styles.track,
+          border ? styles.border : undefined,
+        ])}
         disabled={disabled}
         id={id}
         onChange={handleChange}

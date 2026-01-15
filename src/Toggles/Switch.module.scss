@@ -27,6 +27,10 @@
     padding: 0.2rem;
     // pointer-events: none;
 
+    &.border {
+      border: 0.1rem solid var(--colors-neutral-200);
+    }
+
     &::before {
       background-color: var(--colors-neutral-25);
       block-size: var(--thumb-size);
@@ -43,6 +47,10 @@
     &:checked {
       background-color: var(--colors-primary-700);
       --thumb-position: calc((var(--track-size) - 100%) * var(--is-ltr));
+
+      &.border {
+        border: 0.1rem solid var(--colors-primary-800);
+      }
     }
 
     &[aria-disabled="true"],

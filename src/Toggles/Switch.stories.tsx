@@ -16,6 +16,7 @@ export const SwitchMain: Story = () => {
   const [toggleE, setSwitchE] = useState(true);
   const [switchF, setSwitchF] = useState(false);
   const [switchG, setSwitchG] = useState(false);
+  const [switchH, setSwitchH] = useState(false);
 
   return (
     <>
@@ -92,6 +93,17 @@ export const SwitchMain: Story = () => {
         id="g"
         label="Label test"
         labelClassName="recentered"
+      />
+
+      <br />
+
+      <Switch
+        border
+        checked={switchH}
+        disabled={false}
+        handleChange={() => setSwitchH(!switchH)}
+        id="h"
+        label="Switch with border"
       />
     </>
   );

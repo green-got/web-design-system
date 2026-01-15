@@ -10,11 +10,12 @@ type THtmlLabelProps = {
 export type TSwitchProps = {
     className?: string;
     checked: boolean;
+    border?: boolean;
     disabled?: boolean;
     handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
     helperText?: string;
     id: string;
     labelClassName?: string;
 } & (TAriaLabelProps | THtmlLabelProps);
-export declare function Switch({ ariaLabel, className, checked, disabled, handleChange, helperText, id, label, labelClassName, }: TSwitchProps): import("react/jsx-runtime").JSX.Element;
+export declare function Switch({ ariaLabel, border, className, checked, disabled, handleChange, helperText, id, label, labelClassName, }: TSwitchProps): import("react/jsx-runtime").JSX.Element;
 export {};
